@@ -1,5 +1,7 @@
 <template>
   <div>
+    <div class="sidebar">
+    </div>
     <nuxt/>
   </div>
 </template>
@@ -21,6 +23,15 @@ html {
   margin: 0;
 }
 
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #ddd;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;
@@ -28,6 +39,21 @@ html {
   color: #3b8070;
   text-decoration: none;
   padding: 10px 30px;
+}
+
+.button--blue {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #526488;
+  color: #526488;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-right: 15px;
+}
+
+.button--blue:hover {
+  color: #fff;
+  background-color: #526488;
 }
 
 .button--green:hover {

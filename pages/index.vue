@@ -1,8 +1,8 @@
 <template>
-  <section class="container">
-    <div>
+  <section class="wrapper">
+    <div class="content-container">
       <h2 class="title">
-        Under Construction
+        Under Construction!
       </h2>
       <h2 class="subtitle">
         My name is Miguel Fondeur
@@ -12,6 +12,7 @@
         If you have a web project or would like to chat feel free to contact me. <a href="mailto:miguelfondeur@gmail.com">miguelfondeur@gmail.com</a>
       </p>
       <div class="links">
+        <a href="https://www.linkedin.com/in/miguelfondeur/" target="_blank" class="button--blue">LinkedIn</a>
         <a href="https://github.com/miguelfondeur" target="_blank" class="button--green">Github</a>
         <a href="https://codepen.io/miguelfondeur/" target="_blank" class="button--grey">Codepen</a>
       </div>
@@ -35,14 +36,20 @@ body {
   line-height: 1.5;
 }
 
-.container {
+.wrapper {
   min-height: 100vh;
-  max-width: 960px;
-  margin: 0 auto;
+  width: calc(100% - 250px);
+  margin-left: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.content-container {
+  padding: 0 30px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .title {
@@ -53,8 +60,6 @@ body {
   color: #35495e;
   letter-spacing: 1px;
 }
-
-
 
 .subtitle {
   font-weight: 300;
