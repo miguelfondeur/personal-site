@@ -1,0 +1,51 @@
+.flex-table {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	flex-wrap: wrap;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+	border-right: 0;
+	margin-bottom: 48px;
+	background-color: #fff;
+}
+
+.flex-table_cell {
+	width: 25%;
+	height: 144px;
+	flex-grow: 1;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	align-items: center;
+	justify-content: center;
+	display:flex;
+	text-align: center;
+}
+
+.flex-table_cell a {
+	margin: 0;
+}
+
+.flex-table_cell img {
+	width: 80%;
+	filter: grayscale(100%);
+	transition: .2s all linear;
+}
+
+.flex-table_cell:hover img {
+	filter: grayscale(0);
+}
+
+
+/* Exceptions */
+img.knozen-img, img.gsk-img, img.stf-img {
+	width: 40%;
+}
+
+img.sirva-img {
+	width: 60%;
+}
+
+img.siny-img {
+	width: 70%;
+}

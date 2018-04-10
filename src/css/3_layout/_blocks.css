@@ -1,0 +1,20 @@
+/* =============================================== *\
+   Block Styles
+\* =============================================== */
+
+.block {
+	padding-bottom: 24px;
+	position: relative;
+}
+
+.block-hero h1 {
+	line-height: 72px;
+	font-size: 72px;
+}
+
+/* Scrolling to Blocks */
+.section-target {
+	position: absolute;
+	left: 0;
+	top: -96px;
+}

@@ -1,0 +1,66 @@
+/* =============================================== *\
+   Layout Styles
+\* =============================================== */
+
+.page-wrapper {
+  background-color: var(--color-white);
+  height: 100%;
+  width: 100%;
+}
+
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  height: 100%;
+}
+
+.site-content {
+  flex: 1 0 auto;
+  margin-top: 96px;
+}
+
+.layout-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+}
+
+.site-footer {
+  flex: none;
+  height: 72px;
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+
+.site-footer .layout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+/* With Overlay */
+body.with-overlay {
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: .2s opacity linear;
+  will-change: opacity;
+}
+
+body.with-overlay .overlay {
+  z-index: 4;
+  opacity: .85;
+}
+

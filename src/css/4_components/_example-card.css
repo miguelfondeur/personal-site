@@ -1,0 +1,111 @@
+/* =============================================== *\
+   Card Styles
+\* =============================================== */
+
+.work-card-wrapper, .card-wrapper {
+	min-height: 240px;
+	margin-bottom: 48px;
+}
+
+.example-card {
+	width: 100%;
+	/* float: left; */
+	display: inline-block;
+	background-color: #fff;
+	margin-bottom: 24px;
+	background-size: cover;
+	margin: 0;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	position: absolute;
+	width: calc(100% - 1rem);	
+	height: 240px;
+	/* top: 0;
+	left: 0; */
+	transform-origin: center;
+	transform: translate3d(0,0,0);
+	transition-property: transform, width, height;
+	transition-duration: 1s;
+	transition-timing-function: linear;
+	will-change: transform, width, height;
+}
+
+.example-card.active {
+	width: 300%;
+	height: calc(100vh - 120px);
+	transform: translate3d(0,-144px,0);
+	z-index: 5;
+	padding: 15px;
+}
+
+.work-card-wrapper .p-rel:nth-of-type(2) .example-card.active{
+	transform: translate3d(-280px,-144px,0);
+} 
+
+.work-card-wrapper .p-rel:nth-of-type(3) .example-card.active{
+	transform: translate3d(-560px,-144px,0);
+} 
+
+.example-card.active .fig-img {
+	opacity: 0;
+	height: 0;
+}
+
+.fig-img {
+	width: calc(100% - 20px);
+	margin: 10px;
+	display: block;
+	height: 150px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 1px solid #ddd;
+	opacity: 1;
+	transition: 1s opacity linear;
+}
+
+.example-card figcaption {
+	margin: 10px;
+}
+
+.example-card p,
+.example-card h5 {
+	margin: 0;
+}
+
+.example-card:not(.active):after {
+	content: '';
+	background-color: rgba(250,250,250,.5);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	transition: .2s background-color linear;
+}
+.example-card:hover:after {
+	background-color: rgba(250,250,250,0);
+	cursor: pointer;
+}
+
+
+.fig-img.knozen {
+	background-image: url('../../img/knozenthumb.png');
+}
+.fig-img.pommtree {
+	background-image: url('../../img/pommtreethumb.png');
+}
+.fig-img.simply {
+	background-image: url('../../img/s360thumb.png');
+}
+
+.fig-img.match-game {
+	background-image: url('../../img/mariomatch.png');
+}
+.fig-img.techromancer {
+	background-image: url('../../img/techromancer.png');
+}
+.fig-img.credit {
+	background-image: url('../../img/creditcard.png');
+}

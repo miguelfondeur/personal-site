@@ -1,0 +1,35 @@
+/* =============================================== *\
+   Font Settings
+\* =============================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+:root {
+
+    /* Font Stacks */
+    --font-family-primary   : 'Lato', sans-serif;
+    --font-family-secondary : Georgia, serif;
+
+    /* Font Weights */
+    --font-weight-thin          : 100;
+    --font-weight-light         : 300;
+    --font-weight-medium        : 400;
+    --font-weight-bold          : 700;
+    --font-weight-ultra-bold    : 900;
+
+    /* Text  */
+    --base-font-size    : 1.6rem;
+    --base-line-height  : 2.4rem;
+
+}
+
+
+/*============================================
+
+References:
+https://www.smashingmagazine.com/2009/04/8-simple-ways-to-improve-typography-in-your-designs/
+https://snook.ca/archives/html_and_css/font-size-with-rem
+http://webtypography.net/
+
+=============================================*/
+

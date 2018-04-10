@@ -1,0 +1,47 @@
+/* =============================================== *\
+   Color Settings
+\* =============================================== */
+
+:root {
+
+    /* Descriptive Base Colors */
+    --color-charcoal        : #404040;
+    --color-nobel           : #999;
+    --color-very-light-grey : #ddd;
+    --color-white-smoke     : #F9F9FB;
+    --color-bahama-blue     : #203C73;
+    --color-camarone        : #207357;
+    --color-chilean-fire    : #D36135;
+    --color-tulip-tree      : #e6a937;
+
+    /* Color Usage */
+    --color-black       : var(--color-charcoal);
+    --color-grey        : var(--color-nobel);
+    --color-light-grey  : var(--color-very-light-grey);
+    --color-white       : var(--color-white-smoke);
+    --color-primary     : var(--color-bahama-blue);
+    --color-secondary   : var(--color-camarone);
+    --color-tertiary    : var(--color-chilean-fire);
+    --color-accent      : var(--color-tulip-tree);
+    --color-shadow      : rgba(var(--color-charcoal), .2);
+
+    /* Color Palette Modifiers */
+    --color-grey-light  : color(#000 whiteness(10%));
+
+    /* UI Colors */
+    --color-default     : var(--color-grey);
+    --color-success     : var(--color-camarone);
+    --color-error       : var(--color-chilean-fire);
+    --color-warning     : var(--color-tulip-tree);
+    --btn-color         : var(--color-default);
+}
+
+
+
+/*============================================
+
+References:
+http://www.color-blindness.com/color-name-hue/
+https://www.hexcolortool.com
+
+=============================================*/

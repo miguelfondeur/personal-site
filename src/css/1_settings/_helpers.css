@@ -1,0 +1,46 @@
+/* =============================================== *\
+   Helper Classes
+\* =============================================== */
+
+/* Typography */
+.text-align-left {
+    text-align: left !important;
+}
+
+.text-align-right {
+    text-align: right !important;
+}
+
+.text-align-justify {
+    text-align: justify !important;
+    text-justify: inter-character;
+}
+
+/* Margins */
+.margin-top-0 {
+    margin-top: 0px !important;
+}
+.margin-top-2 {
+    margin-top: 48px !important;
+}
+.margin-bottom-0 {
+    margin-bottom: 0px !important;
+}
+.margin-bottom-2 {
+    margin-bottom: 48px !important;
+}
+
+/* Padding */
+.padding-left-0 {
+    padding-left: 0;
+}
+
+/* with horizontal rule */
+.with-hr {
+    margin-bottom: 0 !important;
+}
+
+/* positions */
+.p-rel {
+    position: relative;
+}

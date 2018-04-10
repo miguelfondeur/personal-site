@@ -1,0 +1,41 @@
+/* =============================================== *\ 
+    Buttons
+\* =============================================== */
+
+.btn {
+	color: var(--btn-color);
+	background-color: transparent;
+	border: 2px solid currentColor;
+	font-family: Tahoma,arial,sans-serif;
+	font-weight: 600;
+	padding: 0 10px;
+	font-size: 18px;
+	width: 225px;
+	display: inline-block;
+	height: 48px;
+	line-height: 44px;
+}
+.btn:after {
+	content:'›';
+	float: right;
+	font-size: 26px;
+}
+.btn:hover {
+	cursor: pointer;
+	background-color: inherit;
+}
+
+/* Button Colors
+------------------------- */
+.btn.primary {
+	color: var(--color-primary);
+}
+.btn.secondary {
+	color: var(--color-secondary);
+}
+.btn.tertiary {
+	color: var(--color-tertiary);
+}
+.btn.accent {
+	color: var(--color-accent);
+}
