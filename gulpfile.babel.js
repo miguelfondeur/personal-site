@@ -1,14 +1,14 @@
 const gulp 				= require('gulp'),
 			postcss 		= require('gulp-postcss'),
 			babel 			= require('gulp-babel'),
-			imagemin		= require('gulp-imagemin'), 
+			imagemin		= require('gulp-imagemin'),
 			del 				= require('del'),
 			browserify 	= require('browserify'),
 			htmlreplace = require('gulp-html-replace');
 
 // Plugins
 const cssnext 		= require('postcss-cssnext'),
-			css_import 	= require('postcss-import'), 
+			css_import 	= require('postcss-import'),
 			cssnano 		= require('cssnano'),
 			uglify			= require('gulp-uglify'),
 			cache 			= require('gulp-cache'),
@@ -92,9 +92,9 @@ gulp.task('clean:dist', function() {
 
 // Build Watch
 // gulp.task('watch', ['browserSync', 'css'], function (){
-//   gulp.watch('./src/css//**/*.css', ['css']); 
-//   gulp.watch('app/*.html', browserSync.reload); 
-//   gulp.watch('app/js/**/*.js', browserSync.reload); 
+//   gulp.watch('./src/css//**/*.css', ['css']);
+//   gulp.watch('app/*.html', browserSync.reload);
+//   gulp.watch('app/js/**/*.js', browserSync.reload);
 // });
 
 // Gulp Default
@@ -106,8 +106,8 @@ gulp.task('default', function() {
 
 // Build Task
 gulp.task('build', (callback) => {
-	runSequence('clean:dist', 
+	runSequence('clean:dist',
 		['html','css', 'scripts', 'images', 'fonts'],
 	callback
-	)	
+	)
 });
