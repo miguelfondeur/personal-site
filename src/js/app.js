@@ -18,20 +18,20 @@ var ready = function ( fn ) {
 //Event Delegation
 function scrollTo(e) {
 	e.preventDefault();
-  if (e.target.matches('.scroll')){ 
+  if (e.target.matches('.scroll')){
 		target = e.target.getAttribute("href");
 		document.querySelector(target).scrollIntoView({behavior: 'smooth',block: "start"});
 	}
 }
 
-function expandCard(e) {
-	document.querySelector('#work').scrollIntoView({behavior: 'smooth',block: "start"});
-	//use class to open fixed page overlay and position paged fixed
-	document.body.classList.toggle('with-overlay');
-	//remove active class from all other cards?
-	//add active class to target card and remove active class
-	e.target.classList.toggle('active');
-}
+// function expandCard(e) {
+// 	document.querySelector('#work').scrollIntoView({behavior: 'smooth',block: "start"});
+// 	//use class to open fixed page overlay and position paged fixed
+// 	document.body.classList.toggle('with-overlay');
+// 	//remove active class from all other cards?
+// 	//add active class to target card and remove active class
+// 	e.target.classList.toggle('active');
+// }
 
 // When ready
 ready(function() {
@@ -39,7 +39,7 @@ ready(function() {
 	//Variables
 	const scrollLink = document.querySelector('.scroll');
 	const siteNav = document.querySelector('.site-nav');
-	const workCards = document.querySelector('.work-card-wrapper');	
+	const workCards = document.querySelector('.work-card-wrapper');
 
 	//Event Delegation
 	siteNav.addEventListener('click', scrollTo);

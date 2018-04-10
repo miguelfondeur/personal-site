@@ -18,7 +18,7 @@
 	border: 1px solid #ddd;
 	border-radius: 3px;
 	position: absolute;
-	width: calc(100% - 1rem);	
+	width: calc(100% - 1rem);
 	height: 240px;
 	/* top: 0;
 	left: 0; */
@@ -27,7 +27,8 @@
 	transition-property: transform, width, height;
 	transition-duration: 1s;
 	transition-timing-function: linear;
-	will-change: transform, width, height;
+  will-change: transform, width, height;
+  /* pointer-events: none; */
 }
 
 .example-card.active {
@@ -40,11 +41,11 @@
 
 .work-card-wrapper .p-rel:nth-of-type(2) .example-card.active{
 	transform: translate3d(-280px,-144px,0);
-} 
+}
 
 .work-card-wrapper .p-rel:nth-of-type(3) .example-card.active{
 	transform: translate3d(-560px,-144px,0);
-} 
+}
 
 .example-card.active .fig-img {
 	opacity: 0;
@@ -61,7 +62,7 @@
 	background-repeat: no-repeat;
 	border: 1px solid #ddd;
 	opacity: 1;
-	transition: 1s opacity linear;
+  transition: 1s opacity linear;
 }
 
 .example-card figcaption {
@@ -73,23 +74,6 @@
 	margin: 0;
 }
 
-.example-card:not(.active):after {
-	content: '';
-	background-color: rgba(250,250,250,.5);
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 2;
-	transition: .2s background-color linear;
-}
-.example-card:hover:after {
-	background-color: rgba(250,250,250,0);
-	cursor: pointer;
-}
-
-
 .fig-img.knozen {
 	background-image: url('../../img/knozenthumb.png');
 }
@@ -99,7 +83,6 @@
 .fig-img.simply {
 	background-image: url('../../img/s360thumb.png');
 }
-
 .fig-img.match-game {
 	background-image: url('../../img/mariomatch.png');
 }
