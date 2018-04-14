@@ -10,214 +10,331 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <!-- endbuild -->
     </head>
-    <body>
-        <div class="overlay"></div>
-        <div class="page-wrapper">
-            <div class="content-wrapper">
-                <nav class="site-nav">
-                    <div class="layout-container">
-                        <ul>
-                            <li class="logo"><a href="/">MF</a></li>
-                            <li><a href="#about" class="scroll">About</a></li>
-                            <li><a href="#work" class="scroll active">Work</a></li>
-                            <li><a href="#projects" class="scroll">Projects</a></li>
-                            <li><a href="#contact" class="scroll">Contact</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <main class="site-content">
-                    <div class="layout-container">
+    <body class="preload">
+      <div class="overlay"></div>
+      <div class="page-wrapper">
+          <div class="content-wrapper">
+              <nav class="site-nav">
+                  <div class="layout-container">
+                      <ul>
+                          <li class="logo"><a href="/">MF</a></li>
+                          <li><a href="#about" class="scroll">About</a></li>
+                          <li><a href="#work" class="scroll active">Work</a></li>
+                          <li><a href="#projects" class="scroll">Projects</a></li>
+                          <li><a href="#contact" class="scroll">Contact</a></li>
+                      </ul>
+                  </div>
+              </nav>
+              <main class="site-content">
+                  <div class="layout-container">
 
-                        <section class="block block-hero">
-                            <div class="section-target" id="about"></div>
-                            <h1>Hello</h1>
-                            <p>My name is Miguel Fondeur, I'm a UX/UI Engineer currently based in Charlotte, NC. What is a UX/UI Engineer you ask?
-                                Well, in short, I create the things you see and interact with on the web. And I make sure you feel good doing it.
-                                If you have a web project or just want to chat feel free to reach out.
-                            </p>
-                            <h4>More About Me:</h4>
-                            <p> I have a passion for building reusable web components and design language systems.
-                                I have extensive knowledge in building responsive web apps served across multiple devices and understand the
-                                intricacies and limitations of the mobile web. I'm constantly learning new skills that will help me build scalable,
-                                maintainable and performant front end code. Although I love using new technologies and javascript frameworks,
-                                my preference is to write clean, well commented native Javascript that works across all browsers.</p>
+                      <section class="block block-hero">
+                          <div class="section-target" id="about"></div>
+                          <h1>Hello</h1>
+                          <p>My name is Miguel Fondeur, I'm a UX/UI Engineer currently based in Charlotte, NC. What is a UX/UI Engineer you ask?
+                              Well, in short, I create the things you see and interact with on the web. And I make sure you feel good doing it.
+                              If you have a web project or just want to chat feel free to reach out.
+                          </p>
+                          <h4>More About Me:</h4>
+                          <p> I have a passion for building reusable web components and design language systems.
+                              I have extensive knowledge in building responsive web apps served across multiple devices and understand the
+                              intricacies and limitations of the mobile web. I'm constantly learning new skills that will help me build scalable,
+                              maintainable and performant front end code. Although I love using new technologies and javascript frameworks,
+                              my preference is to write clean, well commented native Javascript that works across all browsers.</p>
 
-                            <hr>
-                            </section>
+                          <hr>
+                          </section>
 
-                        <section class="block">
-                            <div class="section-target" id="work"></div>
-                            <h2>Work</h2>
-                            <h4>Featured Clients</h4>
-                            <div class="row work-card-wrapper">
-                                <div class="col-xs-4 col-sm-4 p-rel">
-                                    <figure class="example-card">
-                                        <div class="fig-img knozen"></div>
-                                        <figcaption>
-                                            <h5>Knozen</h5>
-                                            <p>Personality Quiz</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-xs-4 col-sm-4 p-rel">
-                                    <figure class="example-card">
-                                        <div class="fig-img simply"></div>
-                                        <figcaption>
-                                            <h5>Simply360</h5>
-                                            <p>Non Profit Database solution</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-xs-4 col-sm-4 p-rel">
-                                    <figure class="example-card">
-                                        <div class="fig-img pommtree"></div>
-                                        <figcaption>
+                      <section class="block">
+                          <div class="section-target" id="work"></div>
+                          <h2>Work</h2>
+                          <h4>Featured Clients</h4>
+                          <div class="row work-card-wrapper">
+                              <div class="col-xs-6 col-sm-4 p-rel">
+                                  <figure class="example-card">
+                                      <div class="fig-img knozen">
+                                        <img src="img/knozen_logo.png">
+                                      </div>
+                                      <figcaption>
+                                          <span class="example-card_content-sm">
+                                              <h5>Knozen</h5>
+                                              <p>Personality Quiz</p>
+                                          </span>
+                                          <div class="example-card_content-lg">
+                                            <h2>Knozen</h2>
+                                            <h5>HTML, CSS, JQuery, Photoshop</h5>
+                                            <div class="row">
+                                              <div class="col-xs-12 col-sm-6">
+                                                <h4>Description</h4>
+                                                <p>
+                                                    Knozens goal was to bring personality to the web. My team and I built a personality quiz that rewarded players with a fun and accurate personality profile.
+                                                </p>
+                                                <p>
+                                                    As the team's frontend UI engineer I was responsible for translating our lead designers Zeplin specs to the web. I built every feature of the site using CSS3, JQuery and Django Templates. The site called for a large variety of colors, animations and fixed elements. I used GPU-friendly CSS to avoid repainting issues in the browser which greatly affect the mobile user experience. I've included a video of our mobile experience that highlights the best features of Knozen.
+                                                </p>
+                                                <p>
+                                                    Knozen retired this year but we had a great run. 1,000,000+ people completed the Knozen quiz and 50,000,000+ questions were answered. We were also featured in various media channels such as Techcrunch, Business Insider, and Product Hunt.
+                                                </p>
+                                              </div>
+                                              <div class="col-xs-12 col-xs-offset-0 col-sm-offset-1 col-sm-4">
+                                                  <video controls="" muted="" width="100%" alt="Simply360 Card View" class="phone-thumnail"><source src="img/Details.mp4" type="video/mp4"></video>
+                                              </div>
+                                            </div>
+                                            <div class="row margin-top-2">
+                                                <div class="col-xs-12 col-sm-4">
+                                                  <img class="thumb" src="img/knozen2.png">
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4">
+                                                  <img class="thumb" src="img/knozen3.png">
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4">
+                                                  <img class="thumb" src="img/knozen1.png">
+                                                </div>
+                                            </div>
+                                          </div>
+
+                                      </figcaption>
+                                  </figure>
+                              </div>
+                              <div class="col-xs-6 col-sm-4 p-rel">
+                                  <figure class="example-card">
+                                      <div class="fig-img simply">
+                                        <img src="img/s360_logo-white.png">
+                                      </div>
+                                      <figcaption>
+                                          <span class="example-card_content-sm">
+                                              <h5>Simply360</h5>
+                                              <p>Non Profit Database solution</p>
+                                          </span>
+                                          <div class="example-card_content-lg">
+                                            <h2>Simply360</h2>
+                                            <h5>HTML, CSS, Ember, Responsive</h5>
+                                            <div class="row">
+                                              <div class="col-xs-12">
+                                                <h4>Description</h4>
+                                                <p>
+                                                    "Nonprofit software made easy". Simply360 was created by <a href="http://solveitsimply.com">SolveItSimply</a> to aid nonprofits with all of their administrative needs. It's simple and user-friendly interface will allow them to manage staff, create reports, and even handle event check-ins. It is the first nonprofit software to be built as a single page responsive application using the latest industry tools.
+                                                </p>
+                                                <p>
+                                                    As the team's UX Developer I was responsible for translating the Photoshop design documents to the web using HTML/Handlebars, CSS/Sass, and Javascript/Ember.js. This included all UI elements, interaction, and responsive grid implementation.
+                                                </p>
+                                              </div>
+                                            </div>
+                                            <div class="row">
+                                              <div class="col-xs-12"><h4>Desktop Views</h4></div>
+                                              <div class="col-xs-12">
+                                                <img class="thumb margin-bottom-2" src="img/s360-people.jpg">
+                                              </div>
+                                              <div class="col-xs-12">
+                                                  <img class="thumb margin-bottom-2" src="img/s360-report.jpg">
+                                              </div>
+                                              <div class="col-xs-12">
+                                                  <img class="thumb margin-bottom-2" src="img/s360-kiosk.jpg">
+                                              </div>
+                                              <div class="col-xs-12"><h4>Mobile Views</h4></div>
+                                              <div class="col-xs-12 col-sm-4">
+                                                  <img class="thumb margin-bottom-2" src="img/s360-people_mobile.jpg">
+                                              </div>
+                                              <div class="col-xs-12 col-sm-offset-1 col-sm-4">
+                                                  <img class="thumb margin-bottom-2" src="img/s360-menu_mobile.jpg">
+                                              </div>
+                                              <div class="col-xs-12">
+                                                  <p>
+                                                      Simply360 is still in the beta stage but you can find out more at <a href="http://simply360.com">simply360.com</a>.
+                                                  </p>
+                                              </div>
+                                            </div>
+
+                                          </div>
+
+                                      </figcaption>
+                                  </figure>
+                              </div>
+                              <div class="col-xs-6 col-sm-4 p-rel">
+                                  <figure class="example-card">
+                                      <div class="fig-img pommtree">
+                                        <img src="img/pommtree_logo-white.png">
+                                      </div>
+                                      <figcaption>
+                                          <span class="example-card_content-sm">
                                             <h5>Pommtree</h5>
                                             <p>Vacation Package Startup</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                            <h4>Companies I've Worked with:</h4>
-                            <p>Click on an image to visit their site. For more details about my work with theses companies feel free to contact me.</p>
-                            <div class="flex-table">
-                                <div class="flex-table_cell"><a href="https://www.advairhcp.com/"><img src="img/gsk_logo.png" class="gsk-img" alt="GSK logo"></a></div>
-                                <div class="flex-table_cell"><a href="https://moving.allied.com"><img src="img/SIRVA_logo.png" class="sirva-img" alt="Sirva logo"></a></div>
-                                <div class="flex-table_cell"><a href="https://www.goodcall.com/"><img src="img/goodcall_logo.png" alt="GoodCall logo"></a></div>
-                                <div class="flex-table_cell"><a href="https://www.theladders.com/"><img src="img/ladders_logo.svg" alt="The Ladders logo"></a></div>
+                                          </span>
+                                          <div class="example-card_content-lg">
+                                            <h2>Pommtree</h2>
+                                            <h5>CSS3, Angular UI, Responsive</h5>
+                                            <div class="row">
+                                              <div class="col-xs-12 col-sm-6">
+                                                <h4>Description</h4>
+                                                <p>
+                                                  Pommtree is a travel package site that connects young people to luxury travel packages at an affordable price.
+                                                </p>
+                                                <p>
+                                                  I was contracted to design and build the travel package list view page and the travel package details page. For the top of the details page I used CSS transitions to fade images in and out of the background. I also used an opacity layer to make the text and icons more legible on the foreground. I've included a video example of all interactions and animations of the details page.
+                                                </p>
+                                                <p>
+                                                   Pommtree unfortunately did not launch their product but has continued to blog and inform their audience on the best vacation destinations available.
+                                                </p>
+                                              </div>
+                                              <div class="col-xs-12 col-xs-offset-0 col-sm-offset-1 col-sm-4">
+                                                  <video controls="" muted="" width="100%" alt="Simply360 Card View" class="phone-thumnail"><source src="img/pomm-details.mp4" type="video/mp4"></video>
+                                              </div>
+                                            </div>
+                                            <div class="row margin-top-2">
+                                                <div class="col-xs-12"><h4>Mobile Views</h4></div>
+                                                <div class="col-xs-12 col-sm-4">
+                                                  <img class="thumb" src="img/pommtreemobile1.png">
+                                                </div>
+                                                <div class="col-xs-12 col-sm-offset-1 col-sm-4">
+                                                  <img class="thumb" src="img/pommtreemobile2.png">
+                                                </div>
+                                            </div>
+                                          </div>
 
-                                <div class="flex-table_cell"><a href="https://www.producthunt.com/posts/knozen-2"><img src="img/knozen_logo.png" class="knozen-img" alt="Knozen logo"></a></div>
-                                <div class="flex-table_cell"><a href="/"><img src="img/pommtree_logo.png" alt="Pommtree logo"></a></div>
-                                <div class="flex-table_cell"><a href="http://www.acanynj.org/"><img src="img/aca_logo.png" alt="American Camp Association logo"></a></div>
-                                <div class="flex-table_cell"><a href="http://www.simply360.org/"><img src="img/s360_logo.png" alt="Simply360 logo"></a></div>
+                                      </figcaption>
+                                  </figure>
+                              </div>
+                          </div>
+                          <h4>Brands I've Worked with:</h4>
+                          <p>Click on an image to visit their site. For more details about my work with theses companies feel free to contact me.</p>
+                          <div class="flex-table">
+                              <div class="flex-table_cell"><a href="https://www.advairhcp.com/"><img src="img/gsk_logo.png" class="gsk-img" alt="GSK logo"></a></div>
+                              <div class="flex-table_cell"><a href="https://moving.allied.com"><img src="img/SIRVA_logo.png" class="sirva-img" alt="Sirva logo"></a></div>
+                              <div class="flex-table_cell"><a href="https://www.goodcall.com/"><img src="img/goodcall_logo.png" alt="GoodCall logo"></a></div>
+                              <div class="flex-table_cell"><a href="https://www.theladders.com/"><img src="img/ladders_logo.svg" alt="The Ladders logo"></a></div>
 
-                                <div class="flex-table_cell"><a href="https://www.krossover.com/"><img src="img/krossover_logo.jpg" alt="Krossover logo"></a></div>
-                                <div class="flex-table_cell"><a href="https://www.malltip.com/"><img src="img/malltip_logo.png" class="malltip-img" alt="Malltip logo"></a></div>
-                                <div class="flex-table_cell"><a href="https://shesthefirst.org/"><img src="img/shesthefirst_logo.png" class="stf-img" alt="She's the first logo"></a></div>
-                                <div class="flex-table_cell"><a href="https://www.startupinstitute.com/"><img src="img/startupinstitute_logo.png" class="siny-img" alt="Startup Institute logo"></a></div>
-                            </div>
+                              <div class="flex-table_cell"><a href="https://www.producthunt.com/posts/knozen-2"><img src="img/knozen_logo.png" class="knozen-img" alt="Knozen logo"></a></div>
+                              <div class="flex-table_cell"><a href="/"><img src="img/pommtree_logo.png" alt="Pommtree logo"></a></div>
+                              <div class="flex-table_cell"><a href="http://www.acanynj.org/"><img src="img/aca_logo.png" alt="American Camp Association logo"></a></div>
+                              <div class="flex-table_cell"><a href="http://www.simply360.org/"><img src="img/s360_logo.png" alt="Simply360 logo"></a></div>
 
-                            <hr>
-                        </section>
+                              <div class="flex-table_cell"><a href="https://www.krossover.com/"><img src="img/krossover_logo.jpg" alt="Krossover logo"></a></div>
+                              <div class="flex-table_cell"><a href="https://www.malltip.com/"><img src="img/malltip_logo.png" class="malltip-img" alt="Malltip logo"></a></div>
+                              <div class="flex-table_cell"><a href="https://shesthefirst.org/"><img src="img/shesthefirst_logo.png" class="stf-img" alt="She's the first logo"></a></div>
+                              <div class="flex-table_cell"><a href="https://www.startupinstitute.com/"><img src="img/startupinstitute_logo.png" class="siny-img" alt="Startup Institute logo"></a></div>
+                          </div>
 
-                        <section class="block">
-                            <div class="section-target" id="projects"></div>
-                            <h2>Projects</h2>
-                            <p>I store all front-end and UI projects on Codepen. Why? Because Codepen is awesome.</p>
-                            <div class="row card-wrapper">
-                                <div class="col-xs-4 col-sm-4 p-rel">
-                                    <a href="https://codepen.io/miguelfondeur/full/aYXNom/" class="example-card">
-                                        <div class="fig-img match-game"></div>
-                                        <figcaption>
-                                            <h5>Matching Game</h5>
-                                            <p>Inspired by Super Mario</p>
-                                        </figcaption>
-                                    </a>
-                                </div>
-                                <div class="col-xs-4 col-sm-4 p-rel">
-                                    <a href="https://codepen.io/miguelfondeur/full/vGbKRK" class="example-card">
-                                        <div class="fig-img techromancer"></div>
-                                        <figcaption>
-                                            <h5>Honeycomb Menu</h5>
-                                            <p>Inspired by Tech Romancer</p>
-                                        </figcaption>
-                                    </a>
-                                </div>
-                                <div class="col-xs-4 col-sm-4 p-rel">
-                                    <a href="https://codepen.io/miguelfondeur/full/bgrrZz" class="example-card">
-                                        <div class="fig-img credit"></div>
-                                        <figcaption>
-                                            <h5>Credit Card App</h5>
-                                            <p>Example Banking App</p>
-                                        </figcaption>
-                                    </a>
-                                </div>
-                            </div>
-                            <hr>
-                        </section>
+                          <hr>
+                      </section>
 
-                        <!-- <div class="block layout-container">
-                            <h2>Latest Thoughts</h2>
-                            <a href="/thoughts" class="btn secondary">See All</a>
-                            <hr>
-                        </div> -->
+                      <section class="block">
+                          <div class="section-target" id="projects"></div>
+                          <h2>Projects</h2>
+                          <p>I store all front-end and UI projects on Codepen. Why? Because Codepen is awesome.</p>
+                          <div class="row card-wrapper">
+                              <div class="col-xs-4 col-sm-4 p-rel">
+                                  <a href="https://codepen.io/miguelfondeur/full/aYXNom/" class="example-card">
+                                      <div class="fig-img match-game"></div>
+                                      <figcaption>
+                                          <span class="example-card_content-sm">
+                                              <h5>Matching Game</h5>
+                                              <p>Inspired by Super Mario</p>
+                                          </span>
+                                      </figcaption>
+                                  </a>
+                              </div>
+                              <div class="col-xs-4 col-sm-4 p-rel">
+                                  <a href="https://codepen.io/miguelfondeur/full/vGbKRK" class="example-card">
+                                      <div class="fig-img techromancer"></div>
+                                      <figcaption>
+                                          <span class="example-card_content-sm">
+                                              <h5>Honeycomb Menu</h5>
+                                              <p>Inspired by Dreamcast Game</p>
+                                          </span>
+                                      </figcaption>
+                                  </a>
+                              </div>
+                              <div class="col-xs-4 col-sm-4 p-rel">
+                                  <a href="https://codepen.io/miguelfondeur/full/bgrrZz" class="example-card">
+                                      <div class="fig-img credit"></div>
+                                      <figcaption>
+                                          <span class="example-card_content-sm">
+                                              <h5>Credit Card App</h5>
+                                              <p>Non Profit Database solution</p>
+                                          </span>
+                                      </figcaption>
+                                  </a>
+                              </div>
+                          </div>
+                          <hr>
+                      </section>
 
-                        <section class="block">
-                            <div class="section-target" id="contact"></div>
-                            <h2>Contact</h2>
-                            <p>Here are all of my links including my email. Please feel free to reach out if you have any questions.</p>
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-4">
-                                    <h4 class="margin-top-0">Social</h4>
-                                    <ul class="padding-left-0">
-                                        <li><a href="https://linkedin.com/in/miguelfondeur">Linkedin</a></li>
-                                        <li><a href="https://github.com/miguelfondeur">Github</a></li>
-                                        <li><a href="https://codepen.com/miguelfondeur">Codepen</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-xs-6 col-sm-4">
-                                    <h4 class="margin-top-0">Direct</h4>
-                                    <ul class="padding-left-0">
-                                        <li><a href="mailto:miguelfondeur@gmail.com?subject=Mail from miguelfondeur.com">Email</a></li>
-                                        <li><a href="img/MiguelsResume.pdf" download>Resume</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <hr>
-                        </section>
+                      <section class="block">
+                          <div class="section-target" id="contact"></div>
+                          <h2>Contact</h2>
+                          <p>Here are all of my links including my email. Please feel free to reach out if you have any questions.</p>
+                          <div class="row">
+                              <div class="col-xs-6 col-sm-4">
+                                  <h4 class="margin-top-0">Social</h4>
+                                  <ul class="padding-left-0  big-links">
+                                      <li><a href="https://linkedin.com/in/miguelfondeur">Linkedin</a></li>
+                                      <li><a href="https://github.com/miguelfondeur">Github</a></li>
+                                      <li><a href="https://codepen.com/miguelfondeur">Codepen</a></li>
+                                  </ul>
+                              </div>
+                              <div class="col-xs-6 col-sm-4">
+                                  <h4 class="margin-top-0">Direct</h4>
+                                  <ul class="padding-left-0  big-links">
+                                      <li><a href="mailto:miguelfondeur@gmail.com?subject=Mail from miguelfondeur.com">Email</a></li>
+                                      <li><a href="img/MiguelsResume.pdf" download>Resume</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <hr>
+                      </section>
 
-                        <section class="block">
-                            <!-- <div class="section-target" id="contact"></div> -->
-                            <h2>Favorites</h2>
-                            <p>A list of my favorite things on the web.</p>
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-4">
-                                    <h4 class="margin-top-0">HTML/CSS</h4>
-                                    <ul class="padding-left-0">
-                                        <li><a href="https://goodui.org/">Good UI</a></li>
-                                        <li><a href="https://www.youtube.com/watch?v=eVnUDTtOLE0">Missing Slice</a></li>
-                                        <li><a href="https://24ways.org/2015/animating-your-brand/">Animate Your Brand</a></li>
-                                        <li><a href="https://graphicdesign.stackexchange.com/questions/25356/why-not-use-pure-black-000-and-pure-white-fff">Absolute Black and White</a></li>
-                                        <li><a href="https://www.html5rocks.com/en/tutorials/speed/unnecessary-paints/">Avoid Unnecessary Paints</a></li>
+                      <section class="block">
+                          <!-- <div class="section-target" id="contact"></div> -->
+                          <h2>Favorites</h2>
+                          <p>A list of my favorite things on the web.</p>
+                          <div class="row">
+                              <div class="col-xs-6 col-sm-4">
+                                  <h4 class="margin-top-0">HTML/CSS</h4>
+                                  <ul class="padding-left-0 big-links">
+                                      <li><a href="https://goodui.org/">Good UI</a></li>
+                                      <li><a href="https://www.youtube.com/watch?v=eVnUDTtOLE0">Missing Slice</a></li>
+                                      <li><a href="https://24ways.org/2015/animating-your-brand/">Animate Your Brand</a></li>
+                                      <li><a href="https://graphicdesign.stackexchange.com/questions/25356/why-not-use-pure-black-000-and-pure-white-fff">Don't use #000 or #fff</a></li>
+                                      <li><a href="https://www.html5rocks.com/en/tutorials/speed/unnecessary-paints/">Avoid Unnecessary Paints</a></li>
 
-                                    </ul>
-                                </div>
-                                <div class="col-xs-6 col-sm-4">
-                                    <h4 class="margin-top-0">JS</h4>
-                                    <ul class="padding-left-0">
-                                        <li><a href="https://threejs.org/">Threejs.org</a></li>
-                                        <li><a href="https://gomakethings.com/ditching-jquery/">Ditching jQuery</a></li>
-                                        <li><a href="https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/">JS Framework Lifecycle</a></li>
-                                        <li><a href="https://www.youtube.com/watch?v=k7n2xnOiWI8">Case Against Frameworks</a></li>
-                                        <li><a href="https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f">Still Relevant</a></li>
+                                  </ul>
+                              </div>
+                              <div class="col-xs-6 col-sm-4">
+                                  <h4 class="margin-top-0">JS</h4>
+                                  <ul class="padding-left-0  big-links">
+                                      <li><a href="https://threejs.org/">Threejs.org</a></li>
+                                      <li><a href="https://gomakethings.com/ditching-jquery/">Ditching jQuery</a></li>
+                                      <li><a href="https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/">JS Framework Lifecycle</a></li>
+                                      <li><a href="https://www.youtube.com/watch?v=k7n2xnOiWI8">Case Against Frameworks</a></li>
+                                      <li><a href="https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f">Still Relevant</a></li>
 
 
-                                    </ul>
-                                </div>
-                                <div class="col-xs-6 col-sm-4">
-                                    <h4 class="margin-top-0">Music</h4>
-                                    <ul class="padding-left-0">
-                                        <li><a href="https://www.youtube.com/watch?v=a_ebqs8U7V4">This Band</a></li>
-                                        <li><a href="https://www.youtube.com/watch?v=Gr8KYnEW-7Y">Jojo Mayer</a></li>
-                                        <li><a href="https://www.youtube.com/watch?v=igDSyZMy8_E">Gavin Harrison</a></li>
-                                        <li><a href="https://www.youtube.com/watch?v=zaP1BCphbXQ">Richard Spaven</a></li>
-                                        <li href="https://www.youtube.com/watch?v=FaJTbhYTw4k"><a>Avishai Cohen</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </main>
-                <footer class="site-footer">
-                    <div class="layout-container">
-                        <span class="date_year">2018</span> © Miguel Fondeur. All rights reserved.
-                    </div>
-                </footer>
-            </div>
-        </div>
+                                  </ul>
+                              </div>
+                              <div class="col-xs-6 col-sm-4">
+                                  <h4 class="margin-top-0">Music</h4>
+                                  <ul class="padding-left-0  big-links">
+                                      <li><a href="https://www.youtube.com/watch?v=a_ebqs8U7V4">This Band</a></li>
+                                      <li><a href="https://www.youtube.com/watch?v=Gr8KYnEW-7Y">Jojo Mayer</a></li>
+                                      <li><a href="https://www.youtube.com/watch?v=igDSyZMy8_E">Gavin Harrison</a></li>
+                                      <li><a href="https://www.youtube.com/watch?v=zaP1BCphbXQ">Richard Spaven</a></li>
+                                      <li href="https://www.youtube.com/watch?v=FaJTbhYTw4k"><a>Avishai Cohen</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </section>
+                  </div>
+              </main>
+              <footer class="site-footer">
+                  <div class="layout-container">
+                      <span class="date_year">2018</span> © Miguel Fondeur. All rights reserved.
+                  </div>
+              </footer>
+          </div>
+      </div>
 
-        <!-- build:js -->
-        <script src="js/app.js"></script>
-        <!-- endbuild -->
+      <!-- build:js -->
+      <script src="js/app.js"></script>
+      <!-- endbuild -->
     </body>
 </html>

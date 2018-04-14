@@ -2,6 +2,10 @@
    Card Styles
 \* =============================================== */
 
+:root {
+  --animation-duration: .3s;
+}
+
 .work-card-wrapper, .card-wrapper {
 	min-height: 240px;
 	margin-bottom: 48px;
@@ -9,7 +13,6 @@
 
 .example-card {
 	width: 100%;
-	/* float: left; */
 	display: inline-block;
 	background-color: #fff;
 	margin-bottom: 24px;
@@ -20,75 +23,210 @@
 	position: absolute;
 	width: calc(100% - 1rem);
 	height: 240px;
-	/* top: 0;
-	left: 0; */
 	transform-origin: center;
 	transform: translate3d(0,0,0);
 	transition-property: transform, width, height;
-	transition-duration: 1s;
-	transition-timing-function: linear;
+	transition-duration: var(--animation-duration);
+	transition-timing-function: ease-out;
   will-change: transform, width, height;
-  /* pointer-events: none; */
+  z-index: 2;
+  cursor: pointer;
+}
+
+a.example-card {
+  color: var(--color-black);
 }
 
 .example-card.active {
-	width: 300%;
-	height: calc(100vh - 120px);
-	transform: translate3d(0,-144px,0);
-	z-index: 5;
-	padding: 15px;
+	width: calc(300% - 10px);
+	height: calc(100vh - 50px);
+	transform: translate3d(0,-190px,0);
+	z-index: 6;
 }
 
 .work-card-wrapper .p-rel:nth-of-type(2) .example-card.active{
-	transform: translate3d(-280px,-144px,0);
+	transform: translate3d(-280px,-190px,0);
 }
 
 .work-card-wrapper .p-rel:nth-of-type(3) .example-card.active{
-	transform: translate3d(-560px,-144px,0);
+  transform: translate3d(-5px,-190px,0);
+}
+.work-card-wrapper .p-rel:nth-of-type(3) .example-card{
+  right: 0;
 }
 
-.example-card.active .fig-img {
-	opacity: 0;
-	height: 0;
-}
 
 .fig-img {
 	width: calc(100% - 20px);
-	margin: 10px;
-	display: block;
+	margin: 10px 10px 0;
+	display: flex;
 	height: 150px;
 	background-position: center;
-	background-size: cover;
+	background-size: contain;
 	background-repeat: no-repeat;
 	border: 1px solid #ddd;
 	opacity: 1;
-  transition: 1s opacity linear;
+  transition: var(--animation-duration) opacity linear;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .example-card figcaption {
-	margin: 10px;
+  margin: 0 10px 10px;
 }
 
-.example-card p,
-.example-card h5 {
+.example-card.active .example-card_content-sm {
+  opacity: 0;
+}
+.example-card.active .example-card_content-lg {
+  visibility: visible;
+  opacity: 1;
+}
+
+.example-card_content-sm {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity var(--animation-duration) linear;
+  padding-top: 12px;
+}
+
+.example-card_content-lg {
+  opacity: 0;
+  transition: opacity var(--animation-duration) linear;
+  transition-delay: 0s;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 0px 30px 30px;
+  top: 0;
+  bottom: -10px;
+  overflow: scroll;
+  visibility: hidden;
+}
+.example-card.active .example-card_content-lg {
+  transition-delay: var(--animation-duration);
+}
+
+.example-card figcaption {
+  position: relative;
+}
+
+.example-card.active figcaption {
+  height: calc(100% - 170px);
+}
+
+.example-card.active figcaption:after,
+.example-card.active figcaption:before {
+  content: '';
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  z-index: 500;
+}
+
+.example-card.active figcaption:before {
+  top: 0;
+  background: linear-gradient(#fff, transparent);
+}
+
+.example-card.active figcaption:after {
+  bottom: -10px;
+  background: linear-gradient(transparent, #fff)
+}
+
+.example-card_content-lg::-webkit-scrollbar {
+  display: none;
+}
+
+.example-card_content-lg p {
+  text-align: justify;
+}
+
+.example-card .example-card_content-sm p,
+.example-card .example-card_content-sm h5 {
 	margin: 0;
 }
 
 .fig-img.knozen {
-	background-image: url('../../img/knozenthumb.png');
+  background-color: rgba(0,0,0,.8);
 }
-.fig-img.pommtree {
-	background-image: url('../../img/pommtreethumb.png');
+.fig-img.knozen:before {
+  content: "";
+  background-image: url(img/knozen-bg.jpeg);
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
 }
+
 .fig-img.simply {
-	background-image: url('../../img/s360thumb.png');
+  background-color: rgb(79,156,201,.8)
 }
+.fig-img.simply:before {
+  content: "";
+  background-image: url(img/simply.png);
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fig-img.pommtree {
+  background-color: rgba(28,134,117,.8)
+}
+.fig-img.pommtree:before {
+  content: "";
+  background-image: url(img/pommtree.jpg);
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+}
+.fig-img:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(150,150,150,.6);
+  transition: .15s all linear;
+}
+
+.example-card:hover .fig-img:after,
+.example-card.active .fig-img:after {
+  background-color: rgba(150,150,150,0);
+}
+.fig-img.knozen img {
+  width: 75px;
+}
+.fig-img.simply img {
+  width: 180px;
+}
+.fig-img.pommtree img {
+  width: 320px;
+}
+
+
 .fig-img.match-game {
+  background-size: cover;
 	background-image: url('../../img/mariomatch.png');
 }
 .fig-img.techromancer {
+  background-size: cover;
 	background-image: url('../../img/techromancer.png');
 }
 .fig-img.credit {
+  background-size: cover;
 	background-image: url('../../img/creditcard.png');
+}
+
+.big-links a {
+  color: #888;
+  line-height: 3rem;
+  font-size: 1.8rem;
 }

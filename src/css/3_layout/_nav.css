@@ -47,7 +47,7 @@
 
 .site-nav ul li.logo a::first-letter {
 	color: var(--color-black);
-} 
+}
 
 
 .site-nav ul li:not(.logo) a:after {

@@ -2,6 +2,11 @@
    Helper Classes
 \* =============================================== */
 
+/* Preload */
+body.preload * {
+  transition: none !important;
+}
+
 /* Typography */
 .text-align-left {
     text-align: left !important;
@@ -43,4 +48,18 @@
 /* positions */
 .p-rel {
     position: relative;
+}
+
+/* Thumbnails */
+.phone-thumnail {
+  background: #333;
+  border: 1px solid #b9b9b9;
+  padding: 36px 9px 45px;
+  border-radius: 18px;
+  margin-top: 24px;
+}
+
+.thumb {
+  background: #ddd;
+  padding: 9px;
 }

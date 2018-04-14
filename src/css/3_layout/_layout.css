@@ -19,7 +19,13 @@
 .site-content {
   flex: 1 0 auto;
   margin-top: 96px;
+  /* transition: opacity 2s ease-in; */
+  animation: fadein 2s;
 }
+
+/* .site-content.page-load {
+  opacity: 1;
+} */
 
 .layout-container {
   width: 100%;
@@ -55,7 +61,7 @@ body.with-overlay {
   width: 100%;
   background-color: black;
   opacity: 0;
-  transition: .2s opacity linear;
+  transition: .5s opacity linear;
   will-change: opacity;
 }
 
@@ -64,3 +70,7 @@ body.with-overlay .overlay {
   opacity: .85;
 }
 
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
