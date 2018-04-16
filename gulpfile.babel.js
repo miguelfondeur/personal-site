@@ -71,7 +71,7 @@ gulp.task('scripts', function () {
 
 // Images
 gulp.task('images', function(){
-  return gulp.src('./src/img/**/*.+(png|jpg|jpeg|gif|svg)')
+  return gulp.src('./src/img/**/*.+(png|jpg|jpeg|gif|svg|pdf|mp4)')
   // Caching images that ran through imagemin
 		.pipe(cache(imagemin({
 				interlaced: true

@@ -45,7 +45,7 @@ ready(function() {
 	//Variables
 	const scrollLink = document.querySelector('.scroll');
 	const siteNav = document.querySelector('.site-nav');
-  const workCards = document.querySelectorAll('.example-card');
+  const workCards = document.querySelectorAll('.work-card-wrapper .example-card');
 
   for(let i = 0; i < workCards.length; i++ ){
     workCards[i].addEventListener('click', function(){
