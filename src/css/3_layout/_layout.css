@@ -61,7 +61,7 @@ body.with-overlay {
   width: 100%;
   background-color: black;
   opacity: 0;
-  transition: .5s opacity linear;
+  transition: .3s opacity linear;
   will-change: opacity;
 }
 
