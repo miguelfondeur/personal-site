@@ -71,7 +71,7 @@ gulp.task('scripts', function () {
 
 // Images
 gulp.task('images', function(){
-  return gulp.src('./src/img/**/*.+(png|jpg|jpeg|gif|svg|pdf|mp4)')
+  return gulp.src('./src/img/**/*.+(png|jpg|jpeg|gif|svg)')
   // Caching images that ran through imagemin
 		.pipe(cache(imagemin({
 				interlaced: true
@@ -85,17 +85,16 @@ gulp.task('fonts', function() {
   	.pipe(gulp.dest('./dist/fonts'))
 })
 
+// Assets
+gulp.task('assets', function() {
+  return gulp.src('./src/assets/*')
+  	.pipe(gulp.dest('./dist/assets'))
+})
+
 // Clean Dist
 gulp.task('clean:dist', function() {
   return del.sync('./dist');
 })
-
-// Build Watch
-// gulp.task('watch', ['browserSync', 'css'], function (){
-//   gulp.watch('./src/css//**/*.css', ['css']);
-//   gulp.watch('app/*.html', browserSync.reload);
-//   gulp.watch('app/js/**/*.js', browserSync.reload);
-// });
 
 // Gulp Default
 gulp.task('default', function() {
@@ -107,7 +106,7 @@ gulp.task('default', function() {
 // Build Task
 gulp.task('build', (callback) => {
 	runSequence('clean:dist',
-		['html','css', 'scripts', 'images', 'fonts'],
+		['html','css', 'scripts', 'images', 'assets','fonts'],
 	callback
 	)
 });
