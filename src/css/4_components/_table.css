@@ -49,3 +49,21 @@ img.sirva-img {
 img.siny-img {
 	width: 70%;
 }
+
+@media only screen and (max-width: 768px) {
+  .flex-table_cell {
+    width: 50%;
+    height: 190px;
+  }
+  img.knozen-img, img.gsk-img {
+    width: 30%;
+  }
+  img.siny-img {
+    width: 50%;
+  }
+  .malltip-img, .pommtree-img, .goodcall-img {
+    width: 90%;
+  }
+}
+
+
