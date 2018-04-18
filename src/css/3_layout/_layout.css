@@ -70,3 +70,15 @@ body.with-overlay .overlay {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+
+@media only screen and (max-width: 768px) {
+  .site-content {
+    margin-top: 72px;
+  }
+}
+
+@media (max-width: 580px) {
+  .layout-container {
+    padding: 0 15px;
+  }
+}

@@ -235,4 +235,19 @@ a.example-card {
   .work-card-wrapper, .card-wrapper {
     min-height: 768px;
   }
+  .example-card.active {
+    width: 100%;
+    transform: translate3d(-5px,-190px,0);
+  }
+  .work-card-wrapper .p-rel:nth-of-type(2) .example-card.active{
+    transform: translate3d(-5px,-445px,0);
+  }
+  .work-card-wrapper .p-rel:nth-of-type(3) .example-card.active {
+    transform: translate3d(0px,-700px,0);
+  }
+  .example-card_content-lg {
+    padding: 0 15px 30px
+  }
 }
+
+

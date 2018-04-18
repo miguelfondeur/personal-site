@@ -8,8 +8,9 @@
 }
 
 .block-hero h1 {
-	line-height: 72px;
-	font-size: 72px;
+	line-height: 7.2rem;
+  font-size: 7.2rem;
+  font-size: calc(48px + (72 - 48) * ((100vw - 320px) / (960 - 320)));
 }
 
 /* Scrolling to Blocks */
@@ -17,4 +18,16 @@
 	position: absolute;
 	left: 0;
 	top: -96px;
+}
+
+@media (max-width: 320px) {
+  .block-hero h1 {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 960px) {
+  .block-hero h1 {
+    font-size: 72px;
+  }
 }

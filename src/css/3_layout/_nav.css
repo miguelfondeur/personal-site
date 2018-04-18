@@ -11,7 +11,8 @@
 	/* fixed */
 	position: fixed;
 	z-index: 3;
-	background-color: rgba(250, 250, 250, .95);
+  background-color: rgba(250, 250, 250, .95);
+  transition: background-color .3s linear;
 }
 
 .site-nav ul {
@@ -33,7 +34,8 @@
 }
 
 .site-nav ul li.logo {
-	margin-right: auto;
+  margin-right: auto;
+  transition: color .3s linear;
 }
 
 .site-nav ul li.logo a {
@@ -66,3 +68,18 @@
 	transform: scaleX(1);
 }
 
+@media (max-width: 580px) {
+  .site-nav ul li.logo a::first-letter {
+    color: var(--color-white);
+  }
+  .site-nav ul li.logo a {
+    color: rgba(250, 250, 250, .7);
+  }
+
+  .site-nav {
+    background-color: hsla(0,0%,15%,.95);
+  }
+  .site-nav ul li:not(.logo) {
+    display: none;
+  }
+}
