@@ -235,6 +235,9 @@ a.example-card {
   .work-card-wrapper, .card-wrapper {
     min-height: 768px;
   }
+  .work-card-wrapper .p-rel:nth-of-type(3) .example-card {
+    right: initial;
+  }
   .example-card.active {
     width: 100%;
     transform: translate3d(-5px,-190px,0);
