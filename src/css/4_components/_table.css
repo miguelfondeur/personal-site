@@ -39,8 +39,8 @@
 
 
 /* Exceptions */
-img.knozen-img, img.gsk-img, img.stf-img {
-	width: 60%;
+img.knozen-img, img.block-img, img.stf-img {
+	width: 50%;
 }
 
 img.sirva-img,
