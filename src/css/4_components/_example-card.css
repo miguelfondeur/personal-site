@@ -147,6 +147,14 @@ a.example-card {
 .example-card_content-lg p {
   text-align: justify;
 }
+.example-card_content-lg h2,
+.example-card_content-lg h4 {
+  margin-bottom: 12px;
+}
+
+.example-card_content-lg h2 + h5{
+  margin-top: 0px;
+}
 
 .example-card .example-card_content-sm p,
 .example-card .example-card_content-sm h5 {
