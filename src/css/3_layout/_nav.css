@@ -78,6 +78,7 @@
 
   .site-nav {
     background-color: hsla(0,0%,15%,.95);
+    border-bottom: 0;
   }
   .site-nav ul li:not(.logo) {
     display: none;

@@ -91,6 +91,12 @@ gulp.task('assets', function() {
   	.pipe(gulp.dest('./dist/assets'))
 })
 
+// Assets
+gulp.task('favicon', function() {
+  return gulp.src('./src/favicon.ico')
+  	.pipe(gulp.dest('./dist/'))
+})
+
 // Clean Dist
 gulp.task('clean:dist', function() {
   return del.sync('./dist');
@@ -106,7 +112,7 @@ gulp.task('default', function() {
 // Build Task
 gulp.task('build', (callback) => {
 	runSequence('clean:dist',
-		['html','css', 'scripts', 'images', 'assets','fonts'],
+		['html','css', 'scripts', 'images', 'assets','fonts', 'favicon'],
 	callback
 	)
 });
