@@ -21,6 +21,7 @@
   margin-top: 96px;
   /* transition: opacity 2s ease-in; */
   animation: fadein 2s;
+  transition: .3s margin linear;
 }
 
 .layout-container {
