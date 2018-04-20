@@ -103,6 +103,7 @@ a.example-card {
   bottom: -10px;
   overflow: scroll;
   visibility: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 .example-card.active .example-card_content-lg {
   transition-delay: var(--animation-duration);
