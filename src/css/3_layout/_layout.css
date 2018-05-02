@@ -36,7 +36,9 @@
   flex: none;
   height: 72px;
   width: 100%;
-  border-top: 1px solid #eee;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  margin-top: 2.4rem;
 }
 
 .site-footer .layout-container {
