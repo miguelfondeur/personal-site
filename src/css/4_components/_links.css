@@ -1,0 +1,15 @@
+/* =============================================== *\
+   Link Styles
+\* =============================================== */
+
+.big-links a {
+    color: #888;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    transition: .1s color linear;
+}
+
+.big-links a:hover,
+.big-links a:focus {
+    color: var(--color-primary);
+}

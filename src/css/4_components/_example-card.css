@@ -162,6 +162,10 @@ a.example-card {
 	margin: 0;
 }
 
+.example-card .example-card_content-sm p {
+  color: #aaa;
+}
+
 .fig-img.knozen {
   background-color: rgba(0,0,0,.8);
 }
@@ -206,13 +210,21 @@ a.example-card {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(150,150,150,.6);
-  transition: .15s all linear;
+  transition: .1s all linear;
+}
+
+.work-card-wrapper .fig-img:after,
+.card-wrapper .fig-img:after {
+  background-color: rgba(230,230,230, 0);
+}
+.work-card-wrapper:hover .fig-img:after,
+.card-wrapper:hover .fig-img:after {
+  background-color: rgba(230,230,230, .7);
 }
 
 .example-card:hover .fig-img:after,
 .example-card.active .fig-img:after {
-  background-color: rgba(150,150,150,0);
+  background-color: rgba(230,230,230,0);
 }
 .fig-img.knozen img {
   width: 75px;
@@ -223,7 +235,6 @@ a.example-card {
 .fig-img.pommtree img {
   width: 320px;
 }
-
 
 .fig-img.match-game {
   background-size: cover;
@@ -236,12 +247,6 @@ a.example-card {
 .fig-img.credit {
   background-size: cover;
 	background-image: url('../../img/creditcard.png');
-}
-
-.big-links a {
-  color: #888;
-  line-height: 3rem;
-  font-size: 1.8rem;
 }
 
 @media only screen and (max-width: 768px) {
