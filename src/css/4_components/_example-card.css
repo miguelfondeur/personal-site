@@ -7,30 +7,28 @@
 }
 
 .work-card-wrapper, .card-wrapper {
+  margin-bottom: 48px;
 	min-height: 240px;
-	margin-bottom: 48px;
 }
 
 .example-card {
-	width: 100%;
-	display: inline-block;
-	background-color: #fff;
-	margin-bottom: 24px;
-	background-size: cover;
-	margin: 0;
+  background-color: #fff;
+  background-size: cover;
 	border: 1px solid #ddd;
 	border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  height: 240px;
+	margin: 0 0 24px 0;
 	position: absolute;
-	width: calc(100% - 1rem);
-	height: 240px;
-	transform-origin: center;
 	transform: translate3d(0,0,0);
-	transition-property: transform, width, height;
-	transition-duration: var(--animation-duration);
-	transition-timing-function: ease-out;
+	transform-origin: center;
+  transition-duration: var(--animation-duration);
+  transition-property: transform, width, height;
+  transition-timing-function: ease-out;
+  width: calc(100% - 1rem);
   will-change: transform, width, height;
   z-index: 2;
-  cursor: pointer;
 }
 
 a.example-card {
@@ -38,9 +36,9 @@ a.example-card {
 }
 
 .example-card.active {
-	width: calc(300% - 10px);
 	height: calc(100vh - 50px);
-	transform: translate3d(0,-190px,0);
+  transform: translate3d(0,-190px,0);
+  width: calc(300% - 10px);
 	z-index: 6;
 }
 
@@ -55,21 +53,20 @@ a.example-card {
   right: 0;
 }
 
-
 .fig-img {
-	width: calc(100% - 20px);
-	margin: 10px;
-	display: flex;
-	height: 150px;
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-	border: 1px solid #ddd;
-	opacity: 1;
-  transition: var(--animation-duration) opacity linear;
-  justify-content: center;
   align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+	background-size: contain;
+	border: 1px solid #ddd;
+	display: flex;
+  height: 150px;
+  justify-content: center;
+  margin: 10px;
+  opacity: 1;
   position: relative;
+  transition: var(--animation-duration) opacity linear;
+  width: calc(100% - 20px);
 }
 
 .example-card figcaption {
@@ -79,31 +76,32 @@ a.example-card {
 .example-card.active .example-card_content-sm {
   opacity: 0;
 }
+
 .example-card.active .example-card_content-lg {
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
 }
 
 .example-card_content-sm {
   display: inline-block;
   opacity: 1;
-  transition: opacity var(--animation-duration) linear;
   padding-top: 12px;
+  transition: opacity var(--animation-duration) linear;
 }
 
 .example-card_content-lg {
-  opacity: 0;
-  transition: opacity var(--animation-duration) linear;
-  transition-delay: 0s;
-  position: absolute;
-  width: 100%;
+  bottom: -10px;
   left: 0;
+  opacity: 0;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
   padding: 0px 30px 30px;
   top: 0;
-  bottom: -10px;
-  overflow: scroll;
+  transition: opacity var(--animation-duration) linear;
+  transition-delay: 0s;
   visibility: hidden;
-  -webkit-overflow-scrolling: touch;
+  width: 100%;
 }
 .example-card.active .example-card_content-lg {
   transition-delay: var(--animation-duration);
@@ -120,25 +118,25 @@ a.example-card {
 .example-card.active figcaption:after,
 .example-card.active figcaption:before {
   content: '';
+  height: 10px;
   left: 0;
   position: absolute;
   width: 100%;
-  height: 10px;
   z-index: 500;
 }
 
 .example-card.active figcaption:before {
-  top: 0;
   border-top: 1px solid #dedede;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  top: 0;
 }
 
 .example-card.active figcaption:after {
-  bottom: -10px;
   border-bottom: 1px solid #dedede;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  bottom: -10px;
 }
 
 .example-card_content-lg::-webkit-scrollbar {
@@ -170,47 +168,50 @@ a.example-card {
   background-color: rgba(0,0,0,.8);
 }
 .fig-img.knozen:before {
-  content: "";
   background-image: url(img/knozen-bg.jpeg);
-  width: 100%;
-  position: absolute;
-  height: 100%;
-  z-index: -1;
   background-size: cover;
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
 
 .fig-img.simply {
   background-color: rgb(79,156,201,.8)
 }
+
 .fig-img.simply:before {
-  content: "";
   background-image: url(img/simply.png);
-  width: 100%;
-  position: absolute;
-  height: 100%;
-  z-index: -1;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
 
 .fig-img.pommtree {
   background-color: rgba(28,134,117,.8)
 }
+
 .fig-img.pommtree:before {
-  content: "";
   background-image: url(img/pommtree.jpg);
-  width: 100%;
-  position: absolute;
-  height: 100%;
-  z-index: -1;
   background-size: cover;
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
+
 .fig-img:after {
   content: '';
-  position: absolute;
-  width: 100%;
   height: 100%;
+  position: absolute;
   transition: .1s all linear;
+  width: 100%;
 }
 
 .work-card-wrapper .fig-img:after,
@@ -237,16 +238,16 @@ a.example-card {
 }
 
 .fig-img.match-game {
+  background-image: url('../../img/mariomatch.png');
   background-size: cover;
-	background-image: url('../../img/mariomatch.png');
 }
 .fig-img.techromancer {
+  background-image: url('../../img/techromancer.png');
   background-size: cover;
-	background-image: url('../../img/techromancer.png');
 }
 .fig-img.credit {
+  background-image: url('../../img/creditcard.png');
   background-size: cover;
-	background-image: url('../../img/creditcard.png');
 }
 
 @media only screen and (max-width: 768px) {
@@ -257,8 +258,8 @@ a.example-card {
     right: initial;
   }
   .example-card.active {
-    width: 100%;
     transform: translate3d(-5px,-190px,0);
+    width: 100%;
   }
   .work-card-wrapper .p-rel:nth-of-type(2) .example-card.active{
     transform: translate3d(-5px,-445px,0);

@@ -1,25 +1,25 @@
 .flex-table {
-	display: flex;
-	margin: 0;
-	padding: 0;
-	flex-wrap: wrap;
+	background-color: #fff;
 	border: 1px solid #ccc;
 	border-bottom: 0;
 	border-right: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
 	margin-bottom: 48px;
-	background-color: #fff;
+	padding: 0;
 }
 
 .flex-table_cell {
-	width: 25%;
-	height: 144px;
-	flex-grow: 1;
+	align-items: center;
 	border-right: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
-	align-items: center;
-	justify-content: center;
 	display:flex;
+	flex-grow: 1;
+	height: 144px;
+	justify-content: center;
 	text-align: center;
+	width: 25%;
 }
 
 .flex-table_cell a {
@@ -28,9 +28,9 @@
 }
 
 .flex-table_cell img {
-	width: 100%;
 	filter: grayscale(100%);
 	transition: .2s all linear;
+	width: 100%;
 }
 
 .flex-table_cell:hover img {
@@ -51,8 +51,8 @@ img.malltip-img {
 
 @media only screen and (max-width: 768px) {
   .flex-table_cell {
-    width: 50%;
-    height: 190px;
+	height: 190px;
+	width: 50%;
   }
 }
 

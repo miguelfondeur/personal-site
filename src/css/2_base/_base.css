@@ -36,16 +36,16 @@ h4, h5, h6 {
 hr {
     border: 0;
     display: block;
-    margin: 0;
     height: 2.4rem;
+    margin: 0;
     position: relative;
 }
 hr::after {
+    border-bottom: 1px solid #444;
+    bottom: 1.1rem;
     content: '';
     position: absolute;
-    border-bottom: 1px solid #444;
     width: 100%;
-    bottom: 1.1rem;
 }
 
 h1 {
@@ -73,17 +73,17 @@ p {
 }
 
 a {
-    font-size: 1.6rem;
-    margin: 0 0 2.4rem;
-    line-height: 2.4rem;
-    text-decoration: none;
     color:#0071bc;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin: 0 0 2.4rem;
+    text-decoration: none;
 }
 
 ul {
+    list-style: none;
     margin: 2.4rem 0;
     padding-left: 2.4rem;
-    list-style: none;
 }
 
 ul ul {

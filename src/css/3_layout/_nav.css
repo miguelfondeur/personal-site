@@ -3,34 +3,34 @@
 \* =============================================== */
 
 .site-nav {
-	flex: none;
-	width: 100%;
+	background-color: rgba(250, 250, 250, .95);
 	border-bottom: 2px solid #ddd;
+	flex: none;
 	height: 72px;
 	margin-bottom: 24px;
 	/* fixed */
 	position: fixed;
+	transition: background-color .3s linear;
+	width: 100%;
 	z-index: 3;
-  background-color: rgba(250, 250, 250, .95);
-  transition: background-color .3s linear;
 }
 
 .site-nav ul {
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
 	margin: 0;
 	padding: 0;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
 }
 
-.site-nav ul li a{
-	height: 72px;
-	padding: 0 30px;
-	line-height: 72px;
-	position: relative;
-	display: block;
-	margin: 0;
+.site-nav ul li a {
 	color: var(--color-black );
+	display: block;
+	height: 72px;
+	line-height: 72px;
+	margin: 0;
+	padding: 0 30px;
+	position: relative;
 }
 
 .site-nav ul li.logo {
@@ -39,30 +39,29 @@
 }
 
 .site-nav ul li.logo a {
+	-webkit-box-reflect: below -44px linear-gradient(transparent 45%, rgba(250,250,250,.2));
+	color: rgba(0, 0, 0, .4);
 	font-size: 35px;
+	-webkit-font-smoothing: auto;
 	font-weight: bolder;
 	letter-spacing: -9px;
 	padding-left: 4px;
-	-webkit-font-smoothing: auto;
-	color: rgba(0, 0, 0, .4);
-	-webkit-box-reflect: below -44px linear-gradient(transparent 45%, rgba(250,250,250,.2));
 }
 
 .site-nav ul li.logo a::first-letter {
 	color: var(--color-black);
 }
 
-
 .site-nav ul li:not(.logo) a:after {
+	background-color: var(--color-primary);
+	bottom: 0;
 	content: '';
 	height: 2px;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
 	left: 0;
+	position: absolute;
 	transform: scaleX(0);
 	transition: .2s all ease-in-out;
-	background-color: var(--color-primary);
+	width: 100%;
 }
 
 .site-nav ul li a:hover:after {
@@ -80,7 +79,8 @@
   .site-nav {
     background-color: hsla(0,0%,15%,.95);
     border-bottom: 0;
-  }
+	}
+	
   .site-nav ul li:not(.logo) {
     display: none;
   }

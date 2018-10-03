@@ -4,10 +4,10 @@
 
 .side-bar {
 	background-color: var(--color-light-grey);
+	height: 100vh;
 	left: 0;
 	position: absolute; 
 	top: 0;
 	width: 250px;
-	height: 100vh;
 	z-index: var(--z-index-one);
 }

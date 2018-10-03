@@ -54,9 +54,9 @@ body.preload * {
 .phone-thumnail {
   background: #333;
   border: 1px solid #b9b9b9;
-  padding: 36px 9px 45px;
   border-radius: 18px;
   margin-top: 24px;
+  padding: 36px 9px 45px;
 }
 
 .thumb {

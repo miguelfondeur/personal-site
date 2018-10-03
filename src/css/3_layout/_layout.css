@@ -9,44 +9,43 @@
 }
 
 .content-wrapper {
-  width: 100%;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   height: 100%;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .site-content {
+  animation: fadein 2s;
   flex: 1 0 auto;
   margin-top: 96px;
-  /* transition: opacity 2s ease-in; */
-  animation: fadein 2s;
   transition: .15s margin linear;
 }
 
 .layout-container {
-  width: 100%;
-  max-width: 900px;
   margin: 0 auto;
+  max-width: 900px;
   padding: 0 30px;
   position: relative;
+  width: 100%;
 }
 
 .site-footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
   flex: none;
   height: 72px;
-  width: 100%;
-  color: var(--color-white);
-  background-color: var(--color-black);
   margin-top: 2.4rem;
+  width: 100%;
 }
 
 .site-footer .layout-container {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  display: flex;
   height: 100%;
+  justify-content: center;
+  text-align: center;
 }
 
 /* With Overlay */
@@ -55,18 +54,18 @@ body.with-overlay {
 }
 
 .overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
   background-color: black;
+  height: 100%;
   opacity: 0;
+  position: absolute;
   transition: .3s opacity linear;
+  width: 100%;
   will-change: opacity;
 }
 
 body.with-overlay .overlay {
-  z-index: 4;
   opacity: .85;
+  z-index: 4;
 }
 
 @keyframes fadein {

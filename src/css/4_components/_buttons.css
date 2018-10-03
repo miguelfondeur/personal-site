@@ -3,17 +3,17 @@
 \* =============================================== */
 
 .btn {
-	color: var(--btn-color);
 	background-color: transparent;
 	border: 2px solid currentColor;
-	font-family: Tahoma,arial,sans-serif;
-	font-weight: 600;
-	padding: 0 10px;
-	font-size: 18px;
-	width: 225px;
+	color: var(--btn-color);
 	display: inline-block;
+	font-family: Tahoma,arial,sans-serif;
+	font-size: 18px;
+	font-weight: 600;
 	height: 48px;
 	line-height: 44px;
+	padding: 0 10px;
+	width: 225px;
 }
 .btn:after {
 	content:'›';
@@ -21,8 +21,8 @@
 	font-size: 26px;
 }
 .btn:hover {
-	cursor: pointer;
 	background-color: inherit;
+	cursor: pointer;
 }
 
 /* Button Colors
