@@ -55,7 +55,7 @@ a.example-card {
 
 .fig-img {
   align-items: center;
-  background-position: center;
+  background-position: top, center;
   background-repeat: no-repeat;
 	background-size: contain;
 	border: 1px solid #ddd;
