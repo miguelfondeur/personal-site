@@ -53,13 +53,13 @@ ready(function() {
       document.querySelector('#work').scrollIntoView({behavior: 'smooth',block: "start"});
       workCards[i].classList.toggle('active');
       document.body.classList.toggle('with-overlay');
-    } );
-    if(workCards[i].classList.contains('active')) {
+
       overlay.addEventListener('click', function(){
         workCards[i].classList.remove('active');
         document.body.classList.remove('with-overlay');
       })
-    }
+
+    });
   }
 
 	//Event Delegation
