@@ -46,6 +46,7 @@ ready(function() {
 	const scrollLink = document.querySelector('.scroll');
 	const siteNav = document.querySelector('.site-nav');
   const workCards = document.querySelectorAll('.work-card-wrapper .example-card');
+  const overlay = document.querySelector('.overlay');
 
   for(let i = 0; i < workCards.length; i++ ){
     workCards[i].addEventListener('click', function(){
@@ -53,6 +54,12 @@ ready(function() {
       workCards[i].classList.toggle('active');
       document.body.classList.toggle('with-overlay');
     } );
+    if(workCards[i].classList.contains('active')) {
+      overlay.addEventListener('click', function(){
+        workCards[i].classList.remove('active');
+        document.body.classList.remove('with-overlay');
+      })
+    }
   }
 
 	//Event Delegation

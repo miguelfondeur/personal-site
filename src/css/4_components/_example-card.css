@@ -168,7 +168,7 @@ a.example-card {
   background-color: rgba(0,0,0,.8);
 }
 .fig-img.knozen:before {
-  background-image: url(img/knozen-bg.jpeg);
+  background-image: url(img/knozen-bg.png);
   background-size: cover;
   content: "";
   height: 100%;

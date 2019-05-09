@@ -64,7 +64,7 @@ body.with-overlay {
 }
 
 body.with-overlay .overlay {
-  opacity: .85;
+  opacity: .75;
   z-index: 4;
 }
 
