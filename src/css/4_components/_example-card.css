@@ -214,7 +214,7 @@ a.example-card {
   width: 100%;
 }
 
-.work-card-wrapper .fig-img:after,
+/* .work-card-wrapper .fig-img:after,
 .card-wrapper .fig-img:after {
   background-color: rgba(230,230,230, 0);
 }
@@ -226,7 +226,7 @@ a.example-card {
 .example-card:hover .fig-img:after,
 .example-card.active .fig-img:after {
   background-color: rgba(230,230,230,0);
-}
+} */
 .fig-img.knozen img {
   width: 75px;
 }
