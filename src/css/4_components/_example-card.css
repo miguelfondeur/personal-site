@@ -252,10 +252,12 @@ a.example-card {
 .fig-img.fluidtype {
   background-image: url('../../img/fluidtype.png');
   background-size: cover;
+  background-position: top left;
 }
 .fig-img.flexlayout {
   background-image: url('../../img/flexlayout.png');
   background-size: cover;
+  background-position: top left;
 }
 
 @media only screen and (max-width: 768px) {
