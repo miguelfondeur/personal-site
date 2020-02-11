@@ -249,6 +249,14 @@ a.example-card {
   background-image: url('../../img/creditcard.png');
   background-size: cover;
 }
+.fig-img.fluidtype {
+  background-image: url('../../img/fluidtype.png');
+  background-size: cover;
+}
+.fig-img.flexlayout {
+  background-image: url('../../img/flexlayout.png');
+  background-size: cover;
+}
 
 @media only screen and (max-width: 768px) {
   .work-card-wrapper, .card-wrapper {
