@@ -1,8 +1,0 @@
-{
-  "files.exclude": {
-    "node_modules": "explorerExcludedFiles",
-    "npm-debug.log": "explorerExcludedFiles",
-    ".nuxt": "explorerExcludedFiles",
-    "dist": "explorerExcludedFiles"
-  }
-}

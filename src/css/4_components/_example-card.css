@@ -181,6 +181,10 @@ a.example-card {
   background-color: rgb(79,156,201,.8)
 }
 
+.fig-img.Block {
+  background-color: var(--color-white);
+}
+
 .fig-img.simply:before {
   background-image: url(img/simply.png);
   background-repeat: no-repeat;
