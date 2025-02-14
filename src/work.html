@@ -1,0 +1,92 @@
+---
+title: Work
+layout: layout.html 
+---
+<section class="hero-section">
+   <div class="container" data-width="small">
+       <h1>Things I’ve made trying to put my dent in the universe.</h1>
+       <p>
+         I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. 
+         Many of them are open-source, so if you see something that piques your interest, check out the code 
+         and contribute if you have ideas for how it can be improved.
+       </p>
+   </div>
+</section>
+<section class="content-section">
+   <ul class="work-grid" role="list">
+      
+      {% for item in collections.work %}
+         <li class="work-item">
+            <button popovertarget="{{ item.data.id }}" aria-label="View details for {{ item.data.name }}">
+               <div class="work-thumb">
+                  <img loading="lazy" src="{{ item.data.thumb }}" alt="{{ item.data.name }} thumbnail">
+               </div>
+               <h3>{{ item.data.name }}</h3>
+               <p>{{ item.data.description }}</p>
+            </button>
+            <div class="work-hover-state"></div>
+         </li>
+
+         <!-- Work Dialog -->
+         <dialog class="work-modal" id="{{ item.data.id }}" popover aria-labelledby="{{ item.data.id }}-header" aria-describedby="{{ item.data.id }}-content">
+            <button class="close-dialog-button" popovertarget="{{ item.data.id }}" popovertargetaction="hide">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>                
+            </button>
+            <div class="container" data-width="small-center">
+               <header id="{{ item.data.id }}-header">
+                  <div class="work-thumb" data-size="large">
+                     <img loading="lazy" src="{{ item.data.thumb }}" alt="{{ item.data.name }} thumbnail">
+                  </div>
+                  <div class="work-header">
+                     <h1>{{ item.data.name }}</h1>
+                     <div class="work-subtitle">
+                        <h3>{{ item.data.role }}</h3>
+                        <p>
+                           <time datetime="{{ item.data.start }}">{{ item.data.start }}</time> 
+                           <span aria-hidden="true">—</span> 
+                           <time datetime="{{ item.data.end }}">{{ item.data.end }}</time>
+                        </p>
+                     </div>
+                  </div>
+               </header>
+               <main id="{{ item.data.id }}-content">
+                  <div class="work-header-image">
+                     <img src="{{ item.data.header_image }}" alt="Example image of {{ item.data.name }}">
+                  </div>
+                  <!-- Description -->
+                  <h2>Description</h2>
+                  <p>{{ item.data.summary }}</p>
+                  <!-- Accomplishments -->
+                  <section class="content-section">
+                     <h2>Accomplishments</h2>
+                     <ul class="work-accomplishments">
+                        {% for item in item.data.accomplishments %}
+                           <li>{{ item }}</li>
+                        {% endfor %}
+                     </ul>
+                  </section>
+                  <!-- Technologies -->
+                  <section class="content-section">
+                     <h2>Technologies</h2>
+                     <ul class="tags" role="list">
+                        {% for item in item.data.tech %}
+                           <li>{{ item }}</li>
+                        {% endfor %}
+                     </ul>
+                  </section>
+                  <!-- Details -->
+                  {% if item.content | strip %}
+                     <section class="content-section">
+                        <h2>Details</h2>
+                        {{ item.content }}
+                     </section>
+                  {% endif %}
+               </main>
+            </div>
+         </dialog>
+      {% endfor %}
+   </ul>
+   
+</section>
