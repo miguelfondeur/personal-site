@@ -1,4 +1,5 @@
 module.exports = function(eleventyConfig) {
+
     // Work
     eleventyConfig.addCollection("work", function (collectionApi) {
         return collectionApi.getFilteredByGlob("src/_content/work/*.md");
