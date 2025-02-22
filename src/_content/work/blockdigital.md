@@ -7,7 +7,7 @@ role: Business Owner / Solutions Architect
 start: Sep 2017
 end: Mar 2020
 thumb: /img/cv/cv-block.svg
-header_image: /img/work/block/blockHomepage.png
+header_image: /img/work/block/block-homepage.webp
 tech: [Hugo, React, Sass, Gulp, Netlify, Github]
 description: Website templates built with the JAM Stack to simplify development and content management.
 summary: |
@@ -31,7 +31,7 @@ accomplishments:
     <div class="details-content">
         <div class="detail-image-wrapper" data-scrollable="true">
             <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
-                <img src="/img/work/block/block-homepage.png" alt="Block Digital website" loading="lazy">
+                <img src="/img/work/block/block-homepage.webp" alt="Block Digital website" loading="lazy">
             </div>
             <div class="scroll-indicator">
                 <em><span class="sr-only">This Section is</span> Scrollable</em>
@@ -55,7 +55,7 @@ accomplishments:
         </p>
         <div class="detail-image-wrapper" data-scrollable="true">
             <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
-                <img src="/img/work/block/blockPlans.png" alt="Block Digital website" loading="lazy">
+                <img src="/img/work/block/blockPlans.webp" alt="Block Digital website" loading="lazy">
             </div>
             <div class="scroll-indicator">
                 <em><span class="sr-only">This Section is</span> Scrollable</em>
@@ -79,7 +79,7 @@ accomplishments:
             Netlify also provided a <strong>Git-based CMS</strong>, originally called <strong>Netlify CMS</strong> (now <a href="https://decapcms.org/docs/intro/" target="_blank" title="Go to Decap CMS website">Decap CMS</a>). Unlike traditional databases, Decap CMS stores content directly in a Git repository, making it a lightweight solution perfect for small business marketing sites.
         </p>
         <div class="detail-image-wrapper">
-            <img src="/img/work/block/block-jamstack-diagram.png" alt="A rough diagram of How the Hugo Static Site Generator, Netlify, and Netlify CMS technologies work together" loading="lazy">
+            <img src="/img/work/block/block-jamstack-diagram.webp" alt="A rough diagram of How the Hugo Static Site Generator, Netlify, and Netlify CMS technologies work together" loading="lazy">
         </div>
         <p>
             To enhance the CMS experience, I built <strong>custom <a href="https://react.dev/" title="Go to React.js website" target="_blank">React</a> components</strong> for the preview window, ensuring a 1:1 representation of the final website. This approach eliminated the need for paid hosting, as there was no PHP backend to maintain. Any additional functionality—such as social media feeds or event calendars—was handled through <strong>third-party APIs</strong>.
@@ -98,7 +98,7 @@ accomplishments:
     <summary>Building The CMS</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/block/block-config-columns.png" alt="Config File for Netlify CMS" loading="lazy">
+            <img src="/img/work/block/block-config-columns.webp" alt="Config File for Netlify CMS" loading="lazy">
         </div>
         <h3>The CMS Config</h3>
         <p>
@@ -134,7 +134,7 @@ accomplishments:
             For more complex layouts, I introduced "nested columns," which allowed additional components inside them. This created a flexible system where users could build intricate layouts directly from the CMS.
         </p>
         <div class="detail-image-wrapper">
-            <img src="/img/work/block/block-cms-column.png" alt="Config File for Netlify CMS" loading="lazy">
+            <img src="/img/work/block/block-cms-column.webp" alt="Config File for Netlify CMS" loading="lazy">
         </div>
         <h3>Custom Attributes and Styling</h3>
         <p>
@@ -148,7 +148,7 @@ accomplishments:
             The CMS interface itself required a dedicated HTML file at <code>/static/admin/index.html</code>, which acted as a <strong>single-page application (SPA)</strong>. Netlify CMS provided an option to extend the interface with custom React components, making it possible to preview content inside the CMS.
         </p>
         <div class="detail-image-wrapper">
-            <img src="/img/work/block/block-cms-blog.png" alt="Config File for Netlify CMS" loading="lazy">
+            <img src="/img/work/block/block-cms-blog.webp" alt="Config File for Netlify CMS" loading="lazy">
         </div>
         <p>
             Inside the <code>static/admin/previews/</code> directory, I created preview components for the blog and general page layouts. Then, in a <code>preview.js</code> file, I registered them with the CMS:
@@ -168,7 +168,7 @@ accomplishments:
     <summary>Building Custom Templates</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/block/block-markdown-code.png" alt="Screenshot of Block Digital’s Markdown code configuration for Netlify CMS" loading="lazy">
+            <img src="/img/work/block/block-markdown-code.webp" alt="Screenshot of Block Digital’s Markdown code configuration for Netlify CMS" loading="lazy">
         </div>
         <h3>Configuring Markdown Files</h3>
         <!-- <p>
@@ -185,7 +185,7 @@ accomplishments:
             Inside these templates, you can include logic to iterate through the markdown data. Since Hugo’s front matter supports structured data formats like <abbr title="Yet Another Markup Language">YAML</abbr>, you can define arrays and objects, making them accessible within the template.
         </p>
         <div class="detail-image-wrapper">
-            <img src="/img/work/block/block-component-code.png" alt="Example of Hugo template rendering components from markdown data" loading="lazy">
+            <img src="/img/work/block/block-component-code.webp" alt="Example of Hugo template rendering components from markdown data" loading="lazy">
         </div>
         <p>
             Once I ensured that the markdown structure in my content file matched the Netlify CMS <code>config.yml</code> file, it was just a matter of rendering the appropriate HTML. For both the <code>single.html</code> and the <code>list.html</code> files within <code>layouts/_default/</code>, I iterated through the markdown data structure specified in each content file. The template itself checks to see if a section or component exists, then builds the HTML accordingly.
@@ -199,7 +199,7 @@ accomplishments:
         </p>
         <div class="detail-image-wrapper" data-scrollable="true">
             <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
-                <img src="/img/work/block/blockTemplate.png" alt="Screenshot of Block Digital’s template selection page, displaying available website layouts" loading="lazy">
+                <img src="/img/work/block/blockTemplate.webp" alt="Screenshot of Block Digital’s template selection page, displaying available website layouts" loading="lazy">
             </div>
             <div class="scroll-indicator">
                 <em><span class="sr-only">This Section is</span> Scrollable</em>
@@ -213,7 +213,7 @@ accomplishments:
         </p>
         <div class="detail-image-wrapper" data-scrollable="true">
             <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
-                <img src="/img/work/block/blockDLS2.png" alt="Example of Block Digital’s storefront template, showing a preview of an e-commerce layout" loading="lazy">
+                <img src="/img/work/block/blockDLS2.webp" alt="Example of Block Digital’s storefront template, showing a preview of an e-commerce layout" loading="lazy">
             </div>
             <div class="scroll-indicator">
                 <em><span class="sr-only">This Section is</span> Scrollable</em>

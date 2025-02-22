@@ -8,7 +8,7 @@ start: Oct 2020
 end: Jan 2025
 thumb: /img/cv/cv-musora.svg
 logo: /img/work/musora/musora-logo.svg
-header_image: /img/work/musora/platform-workouts.png
+header_image: /img/work/musora/platform-workouts.webp
 tech:
   [Vue.js, Alpine, AWS, Laravel, Tailwind, Sanity, NPM, Jest, Github, Docker]
 description: Music Education Platform. Home of Drumeo, Pianote, Guitareo, and Singeo.
@@ -32,7 +32,7 @@ accomplishments:
     <summary>Guitar Quest</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/musora/guitar-quest.jpeg" alt="Image of Guitareo's Guitar Quest" loading="lazy">
+            <img src="/img/work/musora/guitar-quest.webp" alt="Image of Guitareo's Guitar Quest" loading="lazy">
         </div>
         <p>
             As part of an effort to increase engagement in the then <a href="https://www.guitareo.com" title="Go To Guitareo Website" target="_blank">Guitareo</a> application, we launched <a href="https://www.guitareo.com/shop/guitar-quest" title="Go to Guitar Quest website" target="_blank">Guitar Quest</a>—a gamified approach to learning electric guitar featuring musician and influencer <i>Rob Scallon</i>.
@@ -48,7 +48,7 @@ accomplishments:
     <summary>Musora's Unified Platform</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/musora/musora-brand-selector.png" alt="Image of Musora's brand selector" loading="lazy">
+            <img src="/img/work/musora/musora-brand-selector.webp" alt="Image of Musora's brand selector" loading="lazy">
         </div>
         <p>
             Before we built <a href="https://www.musora.com/" title="Go to Musora's website" target="_blank">Musora’s</a> unified platform, Musora operated as four separate brand applications— 
@@ -63,8 +63,8 @@ accomplishments:
             Deploying a new feature often required updates across seven different <a href="https://www.github.com" title="Go to Github's website" target="_blank">GitHub</a> repositories, slowing down development.
         </p>
         <div class="detail-image-wrapper" data-columns="2">
-            <img src="/img/work/musora/mobile-dark-mode.png" alt="Image of Musora's brand selector" loading="lazy">
-            <img src="/img/work/musora/mobile-light-mode.png" alt="Image of Musora's brand selector" loading="lazy">
+            <img src="/img/work/musora/mobile-dark-mode.webp" alt="Image of Musora's brand selector" loading="lazy">
+            <img src="/img/work/musora/mobile-light-mode.webp" alt="Image of Musora's brand selector" loading="lazy">
         </div>
         <p>
             To streamline operations and improve the student experience, we embarked on an ambitious unification project. 
@@ -93,14 +93,14 @@ accomplishments:
             Additionally, students could pin up to five playlists to the main sidebar for quick access.
         </p>
         <div class="detail-image-wrapper">
-            <img src="/img/work/musora/musora-playlist.png" alt="Image of a Musora Playlist" loading="lazy">
+            <img src="/img/work/musora/musora-playlist.webp" alt="Image of a Musora Playlist" loading="lazy">
         </div>
         <p>
             I led the front-end development of these new features, creating the Playlist index page with drag-and-drop sorting and implementing the pin functionality for the sidebar. 
             To manage playlist state across multiple <strong>Vue</strong> components, I introduced <a href="https://pinia.vuejs.org/" title="Go to Pinia's documentation" target="_blank">Pinia</a>, ensuring efficient data sharing across the application. I also updated the playback page experience to support multiple content types.
         </p>
         <div class="detail-image-wrapper">
-            <img src="/img/work/musora/musora-create-playlist.png" alt="Image of a Musora Playlist Creation" loading="lazy">
+            <img src="/img/work/musora/musora-create-playlist.webp" alt="Image of a Musora Playlist Creation" loading="lazy">
         </div>
         <p>
             In addition, I supervised and mentored another front-end developer in building the "Create Playlist" modal, which needed to be integrated across all content types. 
@@ -113,7 +113,7 @@ accomplishments:
   <summary>Workouts Feature</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/musora/platform-workouts.png" alt="Image of a Musora Workouts Page" loading="lazy">
+            <img src="/img/work/musora/platform-workouts.webp" alt="Image of a Musora Workouts Page" loading="lazy">
         </div>
         <p>
             The goal of this feature was to offer short-form workout content as an alternative to our traditional multi-lesson 
@@ -132,8 +132,13 @@ accomplishments:
 <details>
   <summary>Musora UI</summary>
     <div class="details-content">
-        <div class="detail-image-wrapper">
-            <img src="/img/work/musora/musora-ui.png" alt="Image of a Musora UI" loading="lazy">
+        <div class="detail-image-wrapper" data-scrollable="true">
+            <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+                <img src="/img/work/musora/musora-ui.webp" alt="An example image of the Simply360 application" loading="lazy">
+            </div>
+            <div class="scroll-indicator">
+                <em><span class="sr-only">This Section is</span> Scrollable</em>
+            </div>
         </div>
         <p>
             Early in my time at Musora, I aimed to improve the onboarding process by creating documentation for our frontend libraries: 
@@ -152,14 +157,14 @@ accomplishments:
     <summary>Stylesora Library</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/musora/musora-ui-colors.png" alt="Musora UI Colors" loading="lazy">
+            <img src="/img/work/musora/musora-ui-colors.webp" alt="Musora UI Colors" loading="lazy">
         </div>
         <p>
             I built a Tailwind utility class library called <strong>Stylesora</strong> to centralize Musora's custom styles. 
             Working closely with the UX team, I ensured all <a href="https://www.figma.com/" title="Go to Figma's website" target="_blank">Figma</a> designs were accurately reflected in the front-end implementation. By using CSS as JSON, I seamlessly integrated Stylesora into our Tailwind config, making it easy to maintain and scale our design system.
         </p>
         <div class="detail-image-wrapper">
-            <img src="/img/work/musora/musora-ui-buttons.png" alt="Musora UI Colors" loading="lazy">
+            <img src="/img/work/musora/musora-ui-buttons.webp" alt="Musora UI Colors" loading="lazy">
         </div>
     </div>
 </details>
@@ -175,7 +180,7 @@ accomplishments:
             themselves to fetch data directly from Sanity.
         </p>
         <div class="detail-image-wrapper">
-            <img src="/img/work/musora/mcs-diagram-dark.png" alt="Diagram of Musora Content Services Package" loading="lazy">
+            <img src="/img/work/musora/mcs-diagram-dark.webp" alt="Diagram of Musora Content Services Package" loading="lazy">
         </div>
         <p>
             I led the front-end team in refactoring our Blade templates, replacing multiple HTML partials with single-page Vue components. Each page component now retrieves its own data and passes it to child components, enabling a more modular and scalable architecture. To improve the user experience, we introduced skeleton loaders across the site, which are triggered <code>onBeforeMount</code> while awaiting data from Sanity.

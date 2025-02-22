@@ -7,7 +7,7 @@ role: Creator
 start: Jan 2024
 end: Oct 2024
 thumb: /img/cv/cv-brickart.svg
-header_image: /img/work/brickart/brickart-conversion.png
+header_image: /img/work/brickart/brickart-conversion.webp
 tech: [HTML Canvas, Web Components, Hugo, Tailwind, UI/UX]
 description: Web app to convert images to mosaic art. Inspired by Lego's Art series.
 summary: |
@@ -34,7 +34,7 @@ accomplishments:
     <summary>Goal and Approach</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/brickart/brickart-creator.png" alt="Musora UI Colors" loading="lazy">
+            <img src="/img/work/brickart/brickart-creator.webp" alt="Musora UI Colors" loading="lazy">
         </div>
         <p>
             Inspired by the <a href="https://www.lego.com/en-us/product/jim-lee-batman-collection-31205" title="Go to Lego's Jim Lee Batman Art website" target="_blank">Lego Art Series</a>, I set out to build a web app for creating mosaic-style artwork similar to Lego’s Batman, Iron Man, and Beatles sets. The goal was to allow users to generate their own pixel art mosaics, visualize the grid layout, and receive step-by-step building instructions, including a list of required parts that could be purchased from 
@@ -51,7 +51,7 @@ accomplishments:
             Since frameworks like <strong>React</strong> and <strong>Vue</strong> offer built-in state management (e.g., Redux, Pinia), I implemented a <strong>custom event bus</strong> using the <strong>publish/subscribe pattern</strong> for component communication.
         </p>
         <div class="detail-image-wrapper">
-            <img src="/img/work/brickart/brickart-code-pubsub.png" alt="Code example of brickartcreator's publish/subscribe class" loading="lazy">
+            <img src="/img/work/brickart/brickart-code-pubsub.webp" alt="Code example of brickartcreator's publish/subscribe class" loading="lazy">
         </div>
         <p><strong>The application consists of three main experiences:</strong></p>
         <ul role="list">
@@ -68,7 +68,7 @@ accomplishments:
     <summary>Building "Create"</summary>
     <div class="details-content">
         <!-- <div class="detail-image-wrapper">
-            <img src="/img/work/brickart/brickart-step-one.png" alt="Musora UI Colors" loading="lazy">
+            <img src="/img/work/brickart/brickart-step-one.webp" alt="Musora UI Colors" loading="lazy">
         </div> -->
         <p>
             The <strong>Create</strong> step consists of three parts: the HTML canvas for creating the mosaic, the left sidebar for each step of the process, and the view window itself. I built custom elements for the canvas, steps 1-4 of the creation process, and finally, the <code>index.js</code> file to house all of these elements. The index also contained the code for the view window. Let's discuss each part in more detail.  
@@ -78,7 +78,7 @@ accomplishments:
             This was by far the most complicated part of the project. The core logic for rendering the mosaic grid lies in the <code>drawGrid()</code> function. This function is responsible for initializing the blank state of the canvas and is called when a user resets their project or changes the canvas size.  
         </p>
         <div class="detail-image-wrapper">
-            <img src="/img/work/brickart/brickart-code-drawgrid.png" alt="Code example of brickartcreator's drawgrid function" loading="lazy">
+            <img src="/img/work/brickart/brickart-code-drawgrid.webp" alt="Code example of brickartcreator's drawgrid function" loading="lazy">
         </div>
         <p>
             The function first applies two guard clauses: one to ensure the drawing context exists and another to prevent errors when an invalid <code>canvasWidth</code> is provided. It then retrieves the grid configuration from <code>GRID_CONFIG</code>, which determines the grid size (rows and columns) and dimensions (width and height). These values are passed into <code>setGridSize()</code> and <code>setCanvasDimensions()</code>, ensuring the grid dynamically adjusts when resized.
@@ -94,13 +94,13 @@ accomplishments:
             The mosaic creation process consists of four steps, with Step One focused on setting up the canvas. Here, we choose the canvas size, background color, and frame color. Each step includes HTML inputs that dispatch events, which are handled by <code>index.js</code>. This file updates child components like <code>_canvas.js</code> by modifying attributes on the <code>MosaicCanvas</code> custom element. These attributes trigger updates to the UI using the <code>attributeChangedCallback</code> lifecycle method. 
         </p> 
         <div class="detail-image-wrapper">
-            <img src="/img/work/brickart/brickart-step-two.png" alt="Brick Art Creator Upload Image page" loading="lazy">
+            <img src="/img/work/brickart/brickart-step-two.webp" alt="Brick Art Creator Upload Image page" loading="lazy">
         </div>
         <p> 
             Step Two introduces image uploading. The uploaded image is received by the <code>MosaicCanvas</code> component and drawn onto a secondary canvas. This project uses two canvas elements: one for the mosaic grid and another for the reference image. I also add an <abbr title="Scalable Vector Graphics">SVG</abbr> overlay of the grid to help the user visualize what the converted image will look like. When an image is uploaded, an <code>updateImage</code> event is dispatched, updating the image attribute and triggering the <code>draw()</code> method, which redraws the imageCanvas. After editing the image with available tools, we convert it into a mosaic using the <code>convert()</code> function. 
         </p> 
         <div class="detail-image-wrapper">
-            <img src="/img/work/brickart/brickart-step-two-converted.png" alt="Brick Art Creator Convert Image page" loading="lazy">
+            <img src="/img/work/brickart/brickart-step-two-converted.webp" alt="Brick Art Creator Convert Image page" loading="lazy">
         </div>
         <p> The <code>convert()</code> function performs two key tasks: </p> 
         <ul role="list" class="long-list"> 
@@ -115,7 +115,7 @@ accomplishments:
             Finally, the <code>drawCircles()</code> function renders the updated color data onto the mosaic canvas, while the image canvas is hidden. 
         </p> 
         <div class="detail-image-wrapper">
-            <img src="/img/work/brickart/brickart-step-three.png" alt="Brick Art Creator Edit Image page" loading="lazy">
+            <img src="/img/work/brickart/brickart-step-three.webp" alt="Brick Art Creator Edit Image page" loading="lazy">
         </div>
         <p> 
             Step Three enables further editing. Users can modify colors in groups or adjust individual circles by detecting the closest grid coordinate to a mouse click. Like previous steps, updates are triggered through dispatched events that the canvas elements receive. 
@@ -139,7 +139,7 @@ accomplishments:
     <summary>Building "Buy Parts"</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/brickart/brickart-buy-parts.png" alt="Brick Art Creator Buy Parts page" loading="lazy">
+            <img src="/img/work/brickart/brickart-buy-parts.webp" alt="Brick Art Creator Buy Parts page" loading="lazy">
         </div>
         <p>
             The <strong>Buy Parts</strong> step processes the parts data from the previous step, listing each part, its quantity, and relevant metadata such as Webrick part IDs, color codes, prices, and images. This metadata is stored locally in a <abbr title="JavaScript Object Notation">JSON</abbr> file.
@@ -169,13 +169,13 @@ accomplishments:
     <summary>Building "Instructions"</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/brickart/brickart-instructions.png" alt="Brick Art Creator Instructions page" loading="lazy">
+            <img src="/img/work/brickart/brickart-instructions.webp" alt="Brick Art Creator Instructions page" loading="lazy">
         </div>
         <p>
             The final step, <strong>Instructions</strong>, closely follows LEGO's instruction format. The process begins with an introduction page comparing the finished artwork to the original image, followed by step-by-step assembly instructions.
         </p>
         <div class="detail-image-wrapper">
-            <img src="/img/work/brickart/brickart-instructions-section.png" alt="Brick Art Creator Instructions section example" loading="lazy">
+            <img src="/img/work/brickart/brickart-instructions-section.webp" alt="Brick Art Creator Instructions section example" loading="lazy">
         </div>
         <p>
             To achieve this, I divided the mosaic into smaller <strong>16x16 grids</strong>, numbering each item and providing a legend of unique colors. This ensures users don’t have to distinguish between similar shades. The legend assigns a number to each color, while the right-hand grid displays the corresponding mosaic section.
@@ -192,7 +192,7 @@ accomplishments:
             </li>
         </ul>
         <div class="detail-image-wrapper">
-            <img src="/img/work/brickart/brickart-instructions-grid.png" alt="Brick Art Creator Instructions first page example" loading="lazy">
+            <img src="/img/work/brickart/brickart-instructions-grid.webp" alt="Brick Art Creator Instructions first page example" loading="lazy">
         </div> 
         <p>
             Each section follows an overview page showing the mosaic portion being worked on. Users progress through each subsection until the entire mosaic is complete. The final step renders the finished mosaic, simulating artwork hanging on a wall.
@@ -201,7 +201,7 @@ accomplishments:
             This project came with many challenges, and there are aspects I’d like to revisit and improve. However, I'm pleased with the core experience and look forward to refining it further.
         </p>
         <div class="detail-image-wrapper">
-            <img src="/img/work/brickart/brickart-instructions-finished.png" alt="Brick Art Creator Instructions finished section example" loading="lazy">
+            <img src="/img/work/brickart/brickart-instructions-finished.webp" alt="Brick Art Creator Instructions finished section example" loading="lazy">
         </div>
     </div>
 </details>

@@ -7,7 +7,7 @@ role: UX Developer
 start: Jun 2014
 end: Jun 2015
 thumb: /img/cv/cv-s360.svg
-header_image: /img/work/s360/s360-people.png
+header_image: /img/work/s360/s360-people.webp
 tech: [Ember.js, Sass, PSD to HTML]
 description: App to help non-profit organizations manage their data.
 summary: |
@@ -27,7 +27,7 @@ links:
     <div class="details-content">
         <div class="detail-image-wrapper" data-scrollable="true">
             <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
-                <img src="/img/work/s360/s360-people.png" alt="An example image of the Simply360 application" loading="lazy">
+                <img src="/img/work/s360/s360-people.webp" alt="An example image of the Simply360 application" loading="lazy">
             </div>
             <div class="scroll-indicator">
                 <em><span class="sr-only">This Section is</span> Scrollable</em>
@@ -74,7 +74,7 @@ links:
             The biggest motivation for using modern frameworks like Ember was to mimic the smooth experience of native applications while maintaining the accessibility of a web app. Unlike traditional multi-page applications that require <strong>hard reloads</strong>, Ember allowed for seamless page updates with client-side routing.
         </p>
         <div class="detail-image-wrapper">
-            <img src="/img/work/s360/simply360-mobile.png" alt="Musora UI Colors" loading="lazy">
+            <img src="/img/work/s360/simply360-mobile.webp" alt="Musora UI Colors" loading="lazy">
         </div>
         <p>
             Beyond responsive design, I focused on interactions to make the app feel native, such as sidebar navigation animations. I achieved this using CSS transitions and transforms to create smooth motion effects.

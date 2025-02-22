@@ -7,7 +7,7 @@ role: Lead Frontend Engineer
 start: Jan 2016
 end: Aug 2016
 thumb: /img/cv/cv-knozen.svg
-header_image: /img/work/knozen/knozen-desktop.png
+header_image: /img/work/knozen/knozen-desktop.webp
 tech: [Django, JQuery, Sass, Photoshop, Mobile Web]
 description: Personality quiz that gave users a personality chart with 12 traits.
 summary: |
@@ -42,9 +42,6 @@ links:
         <p>
             As the team's Frontend UI Engineer, I was responsible for translating our lead designer’s <a href="https://zeplin.io/" title="Go to Zeplin Website" target="_blank">Zeplin</a> specs into a functional web experience. I built every feature of the site using <strong>CSS3</strong>, <a href="https://jquery.com/" title="Go To jQuery website" target="_blank">jQuery</a>, and <a href="https://docs.djangoproject.com/en/5.1/topics/templates/" title="Go To Django Documentation" target="_blank">Django</a> templates.
         </p>
-        <!-- <div class="detail-image-wrapper">
-            <img src="/img/work/knozen/kz_email_chart_anim.gif" alt="Musora UI Colors" loading="lazy">
-        </div> -->
         <p>
             I joined during what they considered Knozen 4.0. The Team had gone through 3 major rereleases up until that point, with the original being to use personality charts to find the right job applicants and vice versa. When I joined, the team had just finished porting the Knozen native mobile app to the web. The app used Facebook authentication for logging in and was primarily marketed to Facebook users—a strategy that proved highly effective. Once the web app launched, engagement grew exponentially.
         </p>
@@ -60,7 +57,7 @@ links:
     <summary>Mobile Performance Optimizations</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/knozen/knozen-performance.png" alt="Musora UI Colors" loading="lazy">
+            <img src="/img/work/knozen/knozen-performance.webp" alt="Musora UI Colors" loading="lazy">
         </div>
         <p>
             The site featured a wide range of colors, animations, and fixed elements—more than I had ever seen rendered on a single web page. The Knozen quiz itself had an infinitely scrolling background with dynamic feedback animations that indicated which traits increased or decreased based on user responses. Additionally, the background color changed with each question, and the user's personality chart updated in real time.
@@ -83,7 +80,7 @@ links:
    <summary>Feelings Feature</summary>
    <div class="details-content">
       <div class="detail-image-wrapper">
-         <img src="/img/work/knozen/knozen-feelings-feature.png" alt="Musora UI Colors" loading="lazy">
+         <img src="/img/work/knozen/knozen-feelings-feature.webp" alt="Musora UI Colors" loading="lazy">
       </div>
       <p>
          As I mentioned earlier, I was brought in to help add new features that would increase engagement while building on the success of the core feature, the Knozen Quiz. One of these new features was <strong>"Feelings."</strong>
@@ -108,7 +105,7 @@ links:
     <summary>Themed Quizzes</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/knozen/knozen-themed-quizzes.png" alt="Musora UI Colors" loading="lazy">
+            <img src="/img/work/knozen/knozen-themed-quizzes.webp" alt="Musora UI Colors" loading="lazy">
         </div>
         <p>
             The last feature we launched was <strong>Themed Quizzes</strong>. Building on the popularity of the Knozen Quiz, we made a bet that the most engaging part of the app was taking quizzes. 
