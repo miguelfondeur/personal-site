@@ -20,7 +20,7 @@
         --color-text-secondary: #52525c;
         --color-text-tertiary: #9f9fa9;
         --color-text-button: #1e1e22;
-        --color-text-accent: #6A9955;
+        --color-text-accent: #3B8C66;
         --color-text-accent-2: #CE9178;
         --color-text-error: #AB3428;
         --color-border-accent: #f5f4f4;
@@ -329,7 +329,7 @@
             color: var(--color-text-secondary);
             position: fixed;
             top: 1.6rem;
-            right: 1.6rem;
+            left: 1.6rem;
             height: 5.2rem;
             width: 5.2rem;
             border: 0;
@@ -382,13 +382,15 @@
                 }
             }
         }
-
+        & .work-header-mobile-video,
         & .work-header-image {
             border-radius: var(--border-radius-md);
             box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            margin-bottom: 6.4rem;
+        }
+        & .work-header-image {
             overflow: hidden;
             aspect-ratio: 16 / 9;
-            margin-bottom: 6.4rem;
             /* border: 1px solid var(--color-border-accent); */
             position: relative;
 
@@ -396,6 +398,14 @@
                 width: 100%;
                 min-height: 100%;
             }
+        }
+        & .work-header-mobile-video {
+            background-color: var(--color-bg-hover-2);
+            border: 1px solid var(--color-border-accent);
+            padding: 3.6rem .8rem 4.8rem;
+            margin-inline: auto;
+            max-width: 24rem;
+            cursor: pointer;
         }
 
         & ul {
@@ -459,9 +469,56 @@
             }
 
             & .detail-image-wrapper {
-                padding-block: 1.2rem;
-                margin-bottom: 1.2rem;
+                margin-block: 2.4rem;
                 gap: 2.4rem;
+
+                & img {
+                    margin: 0 auto;
+                }
+            }
+
+            & .detail-image-wrapper[data-scrollable="true"] {
+                aspect-ratio: 16 / 9;
+                border-radius: 0.6rem;
+                background-color: var(--color-bg-button);
+                padding: 0;
+                margin-block: 2.4rem;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: end;    
+                cursor: ns-resize;
+                
+                & .scroll-container {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top:0;
+                    left:0;
+                    overflow-y: scroll;
+                }
+
+                & img {
+                    border-radius: 0;
+                }
+
+                & .scroll-indicator {
+                    height: 2.4rem;
+                    padding-inline: 1.2rem;
+                    color: var(--color-text-tertiary);
+                    background-color: #fff;
+                    border-radius: var(--border-radius-md);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    /* border: 1px solid #eee; */
+                    margin: .8rem;
+                    font-size: var(--font-size-xs);
+                    font-weight: 700;
+                    box-shadow: 0 2px 6px rgba(40, 40, 40, 0.6);
+                    z-index: 10;
+                }
             }
 
             & img {
@@ -509,10 +566,16 @@
     }
 
     pre {
-        padding: 0;
         background: black;
         border-radius: 1.2rem;
         margin-block: 2.4rem;
+        display: block;
+        white-space: pre;
+        overflow-x: scroll;
+        max-width: 100%;
+        min-width: 100px;
+        padding: 0;
+        -webkit-overflow-scrolling: touch;
     }
 
     ul.tags {
@@ -946,7 +1009,7 @@
     .work-grid {
         display: grid;
         margin-top: 2.4rem;
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(1, 1fr); 
         gap: 3.2rem; /* Adjust spacing between items */
         row-gap: 3.2rem;
         column-gap: 4.8rem;
@@ -1004,13 +1067,23 @@
             left: -1rem;
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
-
+            
             /* Small Screens */
             @media (width < 640px){
                 width: calc(100% + 3.2rem);
                 left: -1.6rem;
             }
         }
+
+        & .expand-icon {
+            color: var(--color-bg-button);
+            position: absolute;
+            right: 0rem;
+            top: 1.2rem;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+
         & .work-item button:focus-visible {
             outline: 0;
         }
@@ -1020,8 +1093,15 @@
         }
 
         & .work-item button:focus-visible + .work-hover-state,
-        & .work-item button:hover + .work-hover-state {
+        & .work-item button:hover + .work-hover-state,
+        & .work-item button:hover  .expand-icon {
             opacity: 1;
+        }
+        @media (width > 520px){
+            grid-template-columns: repeat(2, 1fr); 
+        }
+        @media (width > 1024px){
+            grid-template-columns: repeat(3, 1fr); 
         }
     }
 

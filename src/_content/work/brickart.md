@@ -8,7 +8,7 @@ start: Jan 2024
 end: Oct 2024
 thumb: /img/cv/cv-brickart.svg
 header_image: /img/work/brickart/brickart-conversion.png
-tech: [HTML Canvas, Web Components, Hugo, Tailwind]
+tech: [HTML Canvas, Web Components, Hugo, Tailwind, UI/UX]
 description: Web app to convert images to mosaic art. Inspired by Lego's Art series.
 summary: |
   This was a personal project I built inspired by Lego's Art series. The app creates a grid mosaic based on the 
@@ -65,7 +65,7 @@ accomplishments:
     </div>
 </details>
 <details>
-    <summary>Create Mosaic</summary>
+    <summary>Building "Create"</summary>
     <div class="details-content">
         <!-- <div class="detail-image-wrapper">
             <img src="/img/work/brickart/brickart-step-one.png" alt="Musora UI Colors" loading="lazy">
@@ -136,7 +136,7 @@ accomplishments:
     </div>
 </details>
 <details>
-    <summary>Buy Parts</summary>
+    <summary>Building "Buy Parts"</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
             <img src="/img/work/brickart/brickart-buy-parts.png" alt="Brick Art Creator Buy Parts page" loading="lazy">
@@ -166,45 +166,83 @@ accomplishments:
     </div>
 </details>
 <details>
-    <summary>View Instructions</summary>
-<div class="details-content">
-    <div class="detail-image-wrapper">
-        <img src="/img/work/brickart/brickart-instructions.png" alt="Brick Art Creator Instructions page" loading="lazy">
+    <summary>Building "Instructions"</summary>
+    <div class="details-content">
+        <div class="detail-image-wrapper">
+            <img src="/img/work/brickart/brickart-instructions.png" alt="Brick Art Creator Instructions page" loading="lazy">
+        </div>
+        <p>
+            The final step, <strong>Instructions</strong>, closely follows LEGO's instruction format. The process begins with an introduction page comparing the finished artwork to the original image, followed by step-by-step assembly instructions.
+        </p>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/brickart/brickart-instructions-section.png" alt="Brick Art Creator Instructions section example" loading="lazy">
+        </div>
+        <p>
+            To achieve this, I divided the mosaic into smaller <strong>16x16 grids</strong>, numbering each item and providing a legend of unique colors. This ensures users don’t have to distinguish between similar shades. The legend assigns a number to each color, while the right-hand grid displays the corresponding mosaic section.
+        </p>
+        <p>
+            This required multiple HTML <code>&lt;canvas&gt;</code> elements. I processed the full parts data to create a structured dataset representing the 16x16 grids. The <code>initializeBrickData</code> function calculates the number of subgrids needed along the X and Y axes, storing the results in a <code>gridArray</code>. Then, two functions handle rendering:
+        </p>
+        <ul role="list">
+            <li>
+                <strong>printPages</strong>: Generates the necessary HTML for each instruction page. A 48x48 grid, for example, results in 9 instruction pages.
+            </li>
+            <li>
+                <strong>printBoards</strong>: Draws each subgrid onto its corresponding canvas, targeting the elements using the <code>art-board="{i + 1}"</code> attribute.
+            </li>
+        </ul>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/brickart/brickart-instructions-grid.png" alt="Brick Art Creator Instructions first page example" loading="lazy">
+        </div> 
+        <p>
+            Each section follows an overview page showing the mosaic portion being worked on. Users progress through each subsection until the entire mosaic is complete. The final step renders the finished mosaic, simulating artwork hanging on a wall.
+        </p>
+        <p>
+            This project came with many challenges, and there are aspects I’d like to revisit and improve. However, I'm pleased with the core experience and look forward to refining it further.
+        </p>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/brickart/brickart-instructions-finished.png" alt="Brick Art Creator Instructions finished section example" loading="lazy">
+        </div>
     </div>
-    <p>
-        The final step, <strong>Instructions</strong>, closely follows LEGO's instruction format. The process begins with an introduction page comparing the finished artwork to the original image, followed by step-by-step assembly instructions.
-    </p>
-    <div class="detail-image-wrapper">
-        <img src="/img/work/brickart/brickart-instructions-section.png" alt="Brick Art Creator Instructions section example" loading="lazy">
+</details>
+<details>
+    <summary>Lessons Learned</summary>
+    <div class="details-content">
+        <p>
+            Wow, while the experiment of building a complex front-end application with JavaScript Custom Elements was ultimately a success, I definitely learned a lot about how they work <em>under the hood</em>.
+        </p>
+        <h3>Lesson One - It's possible.</h3>
+        <p>
+            Let's start with the positive: It's possible. You can build an application with Custom Elements. You can use them to break your site’s structure into modules—headers, navs, footers, etc. You can pass data to them using internal properties or attributes. They do <em>almost</em> everything that Vue and React components can do, but with less tooling. Vanilla JS Custom Elements are more performant than using a virtual DOM to re-render the front end, especially when you don't need to update multiple components at a time.
+        </p>
+        <h3>Lesson Two - It's simpler, in some ways.</h3>
+        <p>
+            This one is a bit more subjective, but I wanted to include it regardless. There's something about building Custom Elements that feels <em>closer to the bone</em> than using a third-party framework or library. You know exactly what you're building, and you're only building what's necessary. While it may be simpler to spin up a new Vue or React project, especially if you're experienced with these tools, it comes at a cost—vendor lock-in is one. Major version updates can introduce breaking changes. And let's not forget the endless <code>node_modules</code> dependencies.
+        </p>
+        <h3>Lesson Three - You'll miss reactivity.</h3>
+        <p>
+            You’ll miss reactivity. The ability to update a value and have multiple components re-render is kind of a beautiful thing. Everyone has had that experience of "Oh... it just works!" that a virtual DOM and partial re-renders provide. If you want multiple elements in your application to update at once, you only have so many options. I used a pub/sub pattern and created an event dispatcher, but you have to manually tell components to listen for specific events and update accordingly. I also experimented with a state machine and even considered using a web worker to manage application state. But no matter what, you still have to worry about manually re-rendering components when the state changes. Granted, this could be considered a "feature, not a bug" of working with Custom Elements. And the fact that you're only building what you need is still a plus.
+        </p>
+        <h3>Lesson Four - You can't have your CSS cake and eat it too.</h3>
+        <p>
+            If you use the Shadow DOM in your Custom Elements, they won't inherit your global CSS. So say goodbye to using your favorite CSS framework globally. The Shadow DOM provides encapsulation, which is great for sharing components between projects without worrying about restyling them or dealing with unintended side effects from global styles. However, this also breaks the convention of separating concerns. If you have similar styles shared between multiple components, you’ll have to rewrite them repeatedly.  
+        </p>
+        <p>
+            There is one exception: <strong>CSS Custom Properties</strong> (aka CSS variables) <em>do</em> inherit through the Shadow DOM. Additionally, there's a somewhat hacky workaround where you can import an external CSS stylesheet into your component. That said, you can always create your component without using the Shadow DOM, but that comes with its own trade-offs: lack of encapsulation, leaky CSS, and possible conflicts when using <code>document.querySelector</code>. Like everything in software engineering, there are always trade-offs.
+        </p>        
+        <h3>Lesson Five - I wish we had back-end rendering.</h3>
+        <p>
+            A lot of what I was rendering didn’t need to be dynamically updated. How much of this would have been solved with native HTML partials (if they existed)? If we had built-in HTML partials, I’d argue that many static site generators (SSGs) would be unnecessary. Yes, there are many tools that attempt to solve this problem (including 11ty), but there is no native, out-of-the-box solution. You're still creating multiple JS files and either bundling them or importing them into an <code>index.js</code> and including it in your page. If the user disables JavaScript... there goes your application.
+        </p>
+        <p>
+            For interactive components that manage their own state, yes, we need JavaScript, and we always will. But for presentational components that exist just to structure layout, I wish we could somehow render them as native HTML. Of course, this goes against the unfortunate norm of the web: "build everything in JavaScript <del>React</del>."
+        </p>
+        <h3>Lesson Six - Would I do it again? YES.</h3>
+        <p>
+            I believe the benefits outweigh the costs. My JavaScript Custom Element will outlive your Svelte, Vue, React, Ember, Angular, etc., component. When I'm building a new component, I know what I'm writing. I know how it works. It’s part of the core language. Also, no compilation time—Custom Elements work out of the box. If you want to use a module bundler and tree-shaker, go right ahead... but it's not required.  
+        </p>
+        <p>
+            They can be used with any framework. And I have a feeling that the language will evolve and browsers will start supporting new features that mimic some of the best parts of modern frameworks—without the headaches. I've seen it happen time and time again.
+        </p>
     </div>
-    <p>
-        To achieve this, I divided the mosaic into smaller <strong>16x16 grids</strong>, numbering each item and providing a legend of unique colors. This ensures users don’t have to distinguish between similar shades. The legend assigns a number to each color, while the right-hand grid displays the corresponding mosaic section.
-    </p>
-    <p>
-        This required multiple HTML <code>&lt;canvas&gt;</code> elements. I processed the full parts data to create a structured dataset representing the 16x16 grids. The <code>initializeBrickData</code> function calculates the number of subgrids needed along the X and Y axes, storing the results in a <code>gridArray</code>. Then, two functions handle rendering:
-    </p>
-    <ul role="list">
-        <li>
-            <strong>printPages</strong>: Generates the necessary HTML for each instruction page. A 48x48 grid, for example, results in 9 instruction pages.
-        </li>
-        <li>
-            <strong>printBoards</strong>: Draws each subgrid onto its corresponding canvas, targeting the elements using the <code>art-board="{i + 1}"</code> attribute.
-        </li>
-    </ul>
-    <div class="detail-image-wrapper">
-        <img src="/img/work/brickart/brickart-instructions-grid.png" alt="Brick Art Creator Instructions first page example" loading="lazy">
-    </div> 
-    <p>
-        Each section follows an overview page showing the mosaic portion being worked on. Users progress through each subsection until the entire mosaic is complete. The final step renders the finished mosaic, simulating artwork hanging on a wall.
-    </p>
-    <p>
-        This project came with many challenges, and there are aspects I’d like to revisit and improve. However, I'm pleased with the core experience and look forward to refining it further.
-    </p>
-    <div class="detail-image-wrapper">
-        <img src="/img/work/brickart/brickart-instructions-finished.png" alt="Brick Art Creator Instructions finished section example" loading="lazy">
-    </div>
-    <p>
-        I may explore some of these challenges in a future blog post—such as JavaScript custom elements not inheriting CSS and the complexity of programmatically generating connection instructions between subsections. Stay tuned!
-    </p>
-</div>
 </details>

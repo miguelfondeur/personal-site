@@ -4,11 +4,9 @@ layout: layout.html
 ---
 <section class="hero-section">
    <div class="container" data-width="small">
-       <h1>Things I’ve made trying to put my dent in the universe.</h1>
+       <h1>Pixels, Code, and Strategy: A Glimpse Into My Work.</h1>
        <p>
-         I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. 
-         Many of them are open-source, so if you see something that piques your interest, check out the code 
-         and contribute if you have ideas for how it can be improved.
+         I’ve worked on a wide range of projects over the years, from building custom CMS solutions to developing scalable frontend architectures. These are the ones I’m most proud of—each one shaped by lessons in design, development, and product thinking. Some are open-source, others were built for clients or companies, but all reflect the work I love doing. If something catches your eye, feel free to explore, learn from it, or even contribute.
        </p>
    </div>
 </section>
@@ -17,7 +15,10 @@ layout: layout.html
       
       {% for item in collections.work %}
          <li class="work-item">
-            <button popovertarget="{{ item.data.id }}" aria-label="View details for {{ item.data.name }}">
+            <button popovertarget="{{ item.data.id }}" aria-label="Click to view details for {{ item.data.name }}">
+               <div class="expand-icon">
+                  <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
+               </div>
                <div class="work-thumb">
                   <img loading="lazy" src="{{ item.data.thumb }}" alt="{{ item.data.name }} thumbnail">
                </div>
@@ -52,9 +53,17 @@ layout: layout.html
                   </div>
                </header>
                <main id="{{ item.data.id }}-content">
-                  <div class="work-header-image">
-                     <img src="{{ item.data.header_image }}" alt="Example image of {{ item.data.name }}">
-                  </div>
+                  {% if item.data.id == "knozen" %}
+                     <div class="work-header-mobile-video">
+                        <video controls="" muted="" width="100%" alt="Knozen Mobile Video Demo" loading="lazy">
+                           <source src="/img/work/knozen/knozen-video.mp4" type="video/mp4">
+                        </video>
+                     </div>
+                  {% else %}
+                     <div class="work-header-image">
+                        <img src="{{ item.data.header_image }}" alt="Example image of {{ item.data.name }}">
+                     </div>
+                  {% endif %}
                   <!-- Description -->
                   <h2>Description</h2>
                   <p>{{ item.data.summary }}</p>

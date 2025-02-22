@@ -23,8 +23,24 @@
    <meta name="twitter:image" content="https://miguelfondeur.com/your-preview-image.jpg">
    <meta name="twitter:creator" content="@yourtwitterhandle">
 
-   <!-- Favicon -->
-   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+   <link rel="manifest" href="/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
 
    <!-- Canonical URL (to prevent duplicate content issues) -->
    <link rel="canonical" href="https://miguelfondeur.com">
@@ -84,11 +100,9 @@
          <div class="container">
             <section class="hero-section">
    <div class="container" data-width="small">
-       <h1>Things I’ve made trying to put my dent in the universe.</h1>
+       <h1>Pixels, Code, and Strategy: A Glimpse Into My Work.</h1>
        <p>
-         I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. 
-         Many of them are open-source, so if you see something that piques your interest, check out the code 
-         and contribute if you have ideas for how it can be improved.
+         I’ve worked on a wide range of projects over the years, from building custom CMS solutions to developing scalable frontend architectures. These are the ones I’m most proud of—each one shaped by lessons in design, development, and product thinking. Some are open-source, others were built for clients or companies, but all reflect the work I love doing. If something catches your eye, feel free to explore, learn from it, or even contribute.
        </p>
    </div>
 </section>
@@ -97,7 +111,10 @@
       
       
          <li class="work-item">
-            <button popovertarget="musora" aria-label="View details for Musora">
+            <button popovertarget="musora" aria-label="Click to view details for Musora">
+               <div class="expand-icon">
+                  <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
+               </div>
                <div class="work-thumb">
                   <img loading="lazy" src="/img/cv/cv-musora.svg" alt="Musora thumbnail">
                </div>
@@ -132,12 +149,14 @@
                   </div>
                </header>
                <main id="musora-content">
-                  <div class="work-header-image">
-                     <img src="/img/work/musora/platform-workouts.png" alt="Example image of Musora">
-                  </div>
+                  
+                     <div class="work-header-image">
+                        <img src="/img/work/musora/platform-workouts.png" alt="Example image of Musora">
+                     </div>
+                  
                   <!-- Description -->
                   <h2>Description</h2>
-                  <p>Musora is an online platform that provides comprehensive music education for piano, guitar, drums, and singing. It combines world-class teaching with interactive practice tools like speed control, looping, and progress tracking. Students can engage with a supportive community, receive live feedback, and refine their skills at their own pace in an immersive learning environment.
+                  <p>Musora is an online platform that provides comprehensive music education for piano, guitar, drums, and singing. It combines world-class teaching with interactive practice tools like speed control, looping, and progress tracking. Students can engage with a supportive community, receive live feedback, and refine their skills at their own pace in an immersive learning environment. As a musician myself, I took great joy in building features that provided value for other musicians and music lovers.
 </p>
                   <!-- Accomplishments -->
                   <section class="content-section">
@@ -342,16 +361,102 @@
             I led the front-end team in refactoring our Blade templates, replacing multiple HTML partials with single-page Vue components. Each page component now retrieves its own data and passes it to child components, enabling a more modular and scalable architecture. To improve the user experience, we introduced skeleton loaders across the site, which are triggered <code>onBeforeMount</code> while awaiting data from Sanity.
         </p>
         <p>
-            Another key challenge was ensuring both mobile and web front-end teams stayed aligned during this large-scale migration. Since <a href="https://www.sanity.io/docs/groq" title="Go to Sanity GROQ documentation" target="_blank"><abbr title="Graph-Relational Object Queries">GROQ</abbr> queries</a> can be complex, and not all developers were experienced in writing them, I created an <a href="https://www.npmjs.com/" title="Go to NPM website" target="_blank">NPM</a> package called <strong>Musora Content Services</strong> (<abbr title="Musora Content Services">MCS</abbr>). This package provided 
-            standardized functions for both mobile and web teams to retrieve content data from Sanity. 
+            Another key challenge was ensuring both mobile and web front-end teams stayed aligned during this large-scale migration. Since <a href="https://www.sanity.io/docs/groq" title="Go to Sanity GROQ documentation" target="_blank"><abbr title="Graph-Relational Object Queries">GROQ</abbr> queries</a> can be complex, and not all developers were experienced in writing them, I created an <a href="https://www.npmjs.com/" title="Go to NPM website" target="_blank">NPM</a> package called <strong>Musora Content Services</strong> (<abbr title="Musora Content Services">MCS</abbr>). This package provided standardized functions for both mobile and web teams to retrieve content data from Sanity. 
         </p>
         <p>
             To maintain reliability, we implemented <a href="https://jestjs.io/" title="Go to Jest website" target="_blank">Jest</a> tests for all GROQ queries, ensuring they worked correctly with every update. These tests were integrated into <strong>GitHub Actions</strong> to run automatically on every push to <i>main</i>. We also expanded the package to include user-specific endpoints from our own <abbr title="Application Programming Interface">API</abbr>, making it the central gateway for all data requests in our web and mobile applications.
         </p>
         <p>
+            To improve the developer experience, I created documentation using JSDoc, a tool that generates API documentation from properly formatted JavaScript comments. By simply ensuring that all new functions and classes were commented, developers could run a build command to generate updated documentation automatically. I documented the process in the <strong>README</strong> file and published the docs to the web using GitHub Pages. 
+        </p>
+        <p>
+            Additionally, I set up a symlink from the Musora Content Services repository to our Musora Web Platform repository. This allowed developers to test changes to the MCS package directly within the web platform—without needing to push, publish, and reinstall every iteration. This significantly reduced friction in development and sped up the feedback loop.
+        </p>
+        <p>
             This migration not only improved development efficiency but also laid the groundwork for decoupling the web application from the back-end. By shifting toward a fully front-end-driven architecture, we enabled the possibility of deploying static files instead of relying on Laravel to generate HTML, ultimately reducing infrastructure costs and improving performance.
         </p>
     </div>
+</details>
+<details>
+    <summary>Lessons Learned</summary>
+    <div class="details-content">
+        <p>
+            I spent four action-packed years at Musora and held three different titles. I did everything from managing staff to creating workflows in Jira to building experiences from the ground up. Here are some of my takeaways, both technical and personal.
+        </p>
+        <h3>Lesson One: The Necessary Evil of Frameworks in Large Teams.</h3>  
+        <p>  
+            I enjoy writing my own code. I don't like relying on third-party libraries and frameworks—for many reasons.  
+        </p>  
+        <p>  
+            That said, they have their advantages (whether I like it or not). Libraries and frameworks set conventions. When I'm creating a library or package, I want it to be well-structured, readable, and documented with human-friendly naming conventions. But very rarely do we get the time to do this.  
+        </p>  
+        <p>  
+            When you use a library like Vue.js or Tailwind CSS, these conventions are already established, tested, and backed by a community. I can tell my devs, "Read the documentation," and trust that they'll find what they need. That’s far more efficient than teaching them the "Miguel way" of doing things.  
+        </p>  
+        <p>  
+            It also helps with onboarding. If a new developer already knows these technologies, they can start contributing right away instead of learning our custom-built solutions.  
+        </p>  
+        <h3>Lesson Two: Working with iFrames is a pain.</h3>  
+        <p>  
+            Most of my work at Musora followed a familiar pattern—create components, fetch data, build new routes, repeat. But every so often, I had to work with a third-party package rendered as an iFrame.  
+        </p>  
+        <p>  
+            Out of consideration, I won’t name the package, but it was a core feature of the Musora platform. Because of that, marketers and project managers frequently requested updates and customizations.  
+        </p>  
+        <p>  
+            Here’s the problem: iFrames, like web workers, are completely encapsulated. You can’t manipulate them from the outside unless they expose a way to send and receive messages. Events won’t work because they bubble (or propagate) to the parent, and the iFrame can’t capture events from the parent.  
+        </p>  
+        <p>  
+            And don’t even think about targeting elements inside an iFrame from the outside—that violates the browser’s Same-Origin Policy.  
+        </p>  
+        <p>  
+            In a perfect world, iFrame-based packages would expose all the necessary options to update the UI and listen for changes. But we don’t live in a perfect world. If the iFrame’s owner doesn’t add your domain to the CORS headers, you have no way to modify it. You have to work with what you're given.  
+        </p>  
+        <p>  
+            When all else fails, build it yourself.  
+        </p>  
+        <h3>Lesson Three: Take Initiative—Don’t Wait for Things to Happen.</h3>  
+        <p>  
+            It’s easy to say, "It’s not my job," or "That person is out sick," or "Someone else was supposed to do it." But waiting for the ideal situation will only slow you down.  
+        </p>  
+        <p>  
+            Instead, take ownership. Offer solutions.  
+        </p>  
+        <p>  
+            If the UX manager is juggling multiple projects and the Figma designs lack error states—add them yourself. Even if they’re not perfect, at least they’ll exist.  
+        </p>  
+        <p>  
+            If you're waiting on a back-end engineer for a solution, but you can offer a workaround—make that Plan A. Pitch it, implement it. Chances are, you’ll be making their life easier.  
+        </p>  
+        <p>  
+            If a Jira ticket requires engineers from different teams, but you can do both jobs, don’t let others’ availability block progress.  
+        </p>  
+        <p>  
+            My father always said, "Perfect is the enemy of good," and "A job worth doing is worth doing well enough." Essentially—get it done.  
+        </p>  
+        <p>  
+            Of course, this mindset can lead to burnout—something I know all too well. Leadership often means doing more, taking responsibility, and stepping up when things stall. The upside? You’ll learn more and have more to show for your time at a company.  
+        </p>  
+        <h3>Lesson Four: Put People First.</h3>  
+        <p>  
+            If I can be blunt—don’t be an asshole. You won’t get the best performance, collaboration, or respect by treating people poorly.  
+        </p>  
+        <p>  
+            Do the opposite. Go out of your way to acknowledge that nothing on the <em>Project Roadmap</em> gets done without people.  
+        </p>  
+        <p>  
+            I won’t open the can of worms that is <strong>Generative AI</strong>, but even AI still needs humans—because people understand context. Even the lowest-performing team members can provide valuable insights into why something isn’t working. Listen to them. Make them feel appreciated.  
+        </p>  
+        <p>  
+            Technology exists for people, not the other way around.  
+        </p>  
+        <p>  
+            And this applies to yourself too. Your job, with all its arbitrary deadlines, is not more important than your health. You can’t do good work if you completely neglect yourself.  
+        </p>  
+        <p>  
+            Ultimately, that’s what companies should want for their employees, even if they don’t say it enough. Maybe it’s worth reminding them once in a while.  
+        </p>  
+    </div>  
 </details>
 
                      </section>
@@ -361,7 +466,10 @@
          </dialog>
       
          <li class="work-item">
-            <button popovertarget="brickArt" aria-label="View details for Brick Art Creator">
+            <button popovertarget="brickArt" aria-label="Click to view details for Brick Art Creator">
+               <div class="expand-icon">
+                  <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
+               </div>
                <div class="work-thumb">
                   <img loading="lazy" src="/img/cv/cv-brickart.svg" alt="Brick Art Creator thumbnail">
                </div>
@@ -396,9 +504,11 @@
                   </div>
                </header>
                <main id="brickArt-content">
-                  <div class="work-header-image">
-                     <img src="/img/work/brickart/brickart-conversion.png" alt="Example image of Brick Art Creator">
-                  </div>
+                  
+                     <div class="work-header-image">
+                        <img src="/img/work/brickart/brickart-conversion.png" alt="Example image of Brick Art Creator">
+                     </div>
+                  
                   <!-- Description -->
                   <h2>Description</h2>
                   <p>This was a personal project I built inspired by Lego's Art series. The app creates a grid mosaic based on the 
@@ -437,6 +547,8 @@ parts data to their platform.
                            <li>Hugo</li>
                         
                            <li>Tailwind</li>
+                        
+                           <li>UI/UX</li>
                         
                      </ul>
                   </section>
@@ -506,7 +618,7 @@ parts data to their platform.
     </div>
 </details>
 <details>
-    <summary>Create Mosaic</summary>
+    <summary>Building "Create"</summary>
     <div class="details-content">
         <!-- <div class="detail-image-wrapper">
             <img src="/img/work/brickart/brickart-step-one.png" alt="Musora UI Colors" loading="lazy">
@@ -577,7 +689,7 @@ parts data to their platform.
     </div>
 </details>
 <details>
-    <summary>Buy Parts</summary>
+    <summary>Building "Buy Parts"</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
             <img src="/img/work/brickart/brickart-buy-parts.png" alt="Brick Art Creator Buy Parts page" loading="lazy">
@@ -607,47 +719,85 @@ parts data to their platform.
     </div>
 </details>
 <details>
-    <summary>View Instructions</summary>
-<div class="details-content">
-    <div class="detail-image-wrapper">
-        <img src="/img/work/brickart/brickart-instructions.png" alt="Brick Art Creator Instructions page" loading="lazy">
+    <summary>Building "Instructions"</summary>
+    <div class="details-content">
+        <div class="detail-image-wrapper">
+            <img src="/img/work/brickart/brickart-instructions.png" alt="Brick Art Creator Instructions page" loading="lazy">
+        </div>
+        <p>
+            The final step, <strong>Instructions</strong>, closely follows LEGO's instruction format. The process begins with an introduction page comparing the finished artwork to the original image, followed by step-by-step assembly instructions.
+        </p>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/brickart/brickart-instructions-section.png" alt="Brick Art Creator Instructions section example" loading="lazy">
+        </div>
+        <p>
+            To achieve this, I divided the mosaic into smaller <strong>16x16 grids</strong>, numbering each item and providing a legend of unique colors. This ensures users don’t have to distinguish between similar shades. The legend assigns a number to each color, while the right-hand grid displays the corresponding mosaic section.
+        </p>
+        <p>
+            This required multiple HTML <code>&lt;canvas&gt;</code> elements. I processed the full parts data to create a structured dataset representing the 16x16 grids. The <code>initializeBrickData</code> function calculates the number of subgrids needed along the X and Y axes, storing the results in a <code>gridArray</code>. Then, two functions handle rendering:
+        </p>
+        <ul role="list">
+            <li>
+                <strong>printPages</strong>: Generates the necessary HTML for each instruction page. A 48x48 grid, for example, results in 9 instruction pages.
+            </li>
+            <li>
+                <strong>printBoards</strong>: Draws each subgrid onto its corresponding canvas, targeting the elements using the <code>art-board="{i + 1}"</code> attribute.
+            </li>
+        </ul>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/brickart/brickart-instructions-grid.png" alt="Brick Art Creator Instructions first page example" loading="lazy">
+        </div> 
+        <p>
+            Each section follows an overview page showing the mosaic portion being worked on. Users progress through each subsection until the entire mosaic is complete. The final step renders the finished mosaic, simulating artwork hanging on a wall.
+        </p>
+        <p>
+            This project came with many challenges, and there are aspects I’d like to revisit and improve. However, I'm pleased with the core experience and look forward to refining it further.
+        </p>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/brickart/brickart-instructions-finished.png" alt="Brick Art Creator Instructions finished section example" loading="lazy">
+        </div>
     </div>
-    <p>
-        The final step, <strong>Instructions</strong>, closely follows LEGO's instruction format. The process begins with an introduction page comparing the finished artwork to the original image, followed by step-by-step assembly instructions.
-    </p>
-    <div class="detail-image-wrapper">
-        <img src="/img/work/brickart/brickart-instructions-section.png" alt="Brick Art Creator Instructions section example" loading="lazy">
+</details>
+<details>
+    <summary>Lessons Learned</summary>
+    <div class="details-content">
+        <p>
+            Wow, while the experiment of building a complex front-end application with JavaScript Custom Elements was ultimately a success, I definitely learned a lot about how they work <em>under the hood</em>.
+        </p>
+        <h3>Lesson One - It's possible.</h3>
+        <p>
+            Let's start with the positive: It's possible. You can build an application with Custom Elements. You can use them to break your site’s structure into modules—headers, navs, footers, etc. You can pass data to them using internal properties or attributes. They do <em>almost</em> everything that Vue and React components can do, but with less tooling. Vanilla JS Custom Elements are more performant than using a virtual DOM to re-render the front end, especially when you don't need to update multiple components at a time.
+        </p>
+        <h3>Lesson Two - It's simpler, in some ways.</h3>
+        <p>
+            This one is a bit more subjective, but I wanted to include it regardless. There's something about building Custom Elements that feels <em>closer to the bone</em> than using a third-party framework or library. You know exactly what you're building, and you're only building what's necessary. While it may be simpler to spin up a new Vue or React project, especially if you're experienced with these tools, it comes at a cost—vendor lock-in is one. Major version updates can introduce breaking changes. And let's not forget the endless <code>node_modules</code> dependencies.
+        </p>
+        <h3>Lesson Three - You'll miss reactivity.</h3>
+        <p>
+            You’ll miss reactivity. The ability to update a value and have multiple components re-render is kind of a beautiful thing. Everyone has had that experience of "Oh... it just works!" that a virtual DOM and partial re-renders provide. If you want multiple elements in your application to update at once, you only have so many options. I used a pub/sub pattern and created an event dispatcher, but you have to manually tell components to listen for specific events and update accordingly. I also experimented with a state machine and even considered using a web worker to manage application state. But no matter what, you still have to worry about manually re-rendering components when the state changes. Granted, this could be considered a "feature, not a bug" of working with Custom Elements. And the fact that you're only building what you need is still a plus.
+        </p>
+        <h3>Lesson Four - You can't have your CSS cake and eat it too.</h3>
+        <p>
+            If you use the Shadow DOM in your Custom Elements, they won't inherit your global CSS. So say goodbye to using your favorite CSS framework globally. The Shadow DOM provides encapsulation, which is great for sharing components between projects without worrying about restyling them or dealing with unintended side effects from global styles. However, this also breaks the convention of separating concerns. If you have similar styles shared between multiple components, you’ll have to rewrite them repeatedly.  
+        </p>
+        <p>
+            There is one exception: <strong>CSS Custom Properties</strong> (aka CSS variables) <em>do</em> inherit through the Shadow DOM. Additionally, there's a somewhat hacky workaround where you can import an external CSS stylesheet into your component. That said, you can always create your component without using the Shadow DOM, but that comes with its own trade-offs: lack of encapsulation, leaky CSS, and possible conflicts when using <code>document.querySelector</code>. Like everything in software engineering, there are always trade-offs.
+        </p>        
+        <h3>Lesson Five - I wish we had back-end rendering.</h3>
+        <p>
+            A lot of what I was rendering didn’t need to be dynamically updated. How much of this would have been solved with native HTML partials (if they existed)? If we had built-in HTML partials, I’d argue that many static site generators (SSGs) would be unnecessary. Yes, there are many tools that attempt to solve this problem (including 11ty), but there is no native, out-of-the-box solution. You're still creating multiple JS files and either bundling them or importing them into an <code>index.js</code> and including it in your page. If the user disables JavaScript... there goes your application.
+        </p>
+        <p>
+            For interactive components that manage their own state, yes, we need JavaScript, and we always will. But for presentational components that exist just to structure layout, I wish we could somehow render them as native HTML. Of course, this goes against the unfortunate norm of the web: "build everything in JavaScript <del>React</del>."
+        </p>
+        <h3>Lesson Six - Would I do it again? YES.</h3>
+        <p>
+            I believe the benefits outweigh the costs. My JavaScript Custom Element will outlive your Svelte, Vue, React, Ember, Angular, etc., component. When I'm building a new component, I know what I'm writing. I know how it works. It’s part of the core language. Also, no compilation time—Custom Elements work out of the box. If you want to use a module bundler and tree-shaker, go right ahead... but it's not required.  
+        </p>
+        <p>
+            They can be used with any framework. And I have a feeling that the language will evolve and browsers will start supporting new features that mimic some of the best parts of modern frameworks—without the headaches. I've seen it happen time and time again.
+        </p>
     </div>
-    <p>
-        To achieve this, I divided the mosaic into smaller <strong>16x16 grids</strong>, numbering each item and providing a legend of unique colors. This ensures users don’t have to distinguish between similar shades. The legend assigns a number to each color, while the right-hand grid displays the corresponding mosaic section.
-    </p>
-    <p>
-        This required multiple HTML <code>&lt;canvas&gt;</code> elements. I processed the full parts data to create a structured dataset representing the 16x16 grids. The <code>initializeBrickData</code> function calculates the number of subgrids needed along the X and Y axes, storing the results in a <code>gridArray</code>. Then, two functions handle rendering:
-    </p>
-    <ul role="list">
-        <li>
-            <strong>printPages</strong>: Generates the necessary HTML for each instruction page. A 48x48 grid, for example, results in 9 instruction pages.
-        </li>
-        <li>
-            <strong>printBoards</strong>: Draws each subgrid onto its corresponding canvas, targeting the elements using the <code>art-board="{i + 1}"</code> attribute.
-        </li>
-    </ul>
-    <div class="detail-image-wrapper">
-        <img src="/img/work/brickart/brickart-instructions-grid.png" alt="Brick Art Creator Instructions first page example" loading="lazy">
-    </div> 
-    <p>
-        Each section follows an overview page showing the mosaic portion being worked on. Users progress through each subsection until the entire mosaic is complete. The final step renders the finished mosaic, simulating artwork hanging on a wall.
-    </p>
-    <p>
-        This project came with many challenges, and there are aspects I’d like to revisit and improve. However, I'm pleased with the core experience and look forward to refining it further.
-    </p>
-    <div class="detail-image-wrapper">
-        <img src="/img/work/brickart/brickart-instructions-finished.png" alt="Brick Art Creator Instructions finished section example" loading="lazy">
-    </div>
-    <p>
-        I may explore some of these challenges in a future blog post—such as JavaScript custom elements not inheriting CSS and the complexity of programmatically generating connection instructions between subsections. Stay tuned!
-    </p>
-</div>
 </details>
 
                      </section>
@@ -657,7 +807,10 @@ parts data to their platform.
          </dialog>
       
          <li class="work-item">
-            <button popovertarget="blockDigital" aria-label="View details for Block Digital">
+            <button popovertarget="blockDigital" aria-label="Click to view details for Block Digital">
+               <div class="expand-icon">
+                  <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
+               </div>
                <div class="work-thumb">
                   <img loading="lazy" src="/img/cv/cv-block.svg" alt="Block Digital thumbnail">
                </div>
@@ -682,7 +835,7 @@ parts data to their platform.
                   <div class="work-header">
                      <h1>Block Digital</h1>
                      <div class="work-subtitle">
-                        <h3>Solutions Architect</h3>
+                        <h3>Business Owner / Solutions Architect</h3>
                         <p>
                            <time datetime="Sep 2017">Sep 2017</time> 
                            <span aria-hidden="true">—</span> 
@@ -692,9 +845,11 @@ parts data to their platform.
                   </div>
                </header>
                <main id="blockDigital-content">
-                  <div class="work-header-image">
-                     <img src="/img/work/block/blockHomepage.png" alt="Example image of Block Digital">
-                  </div>
+                  
+                     <div class="work-header-image">
+                        <img src="/img/work/block/blockHomepage.png" alt="Example image of Block Digital">
+                     </div>
+                  
                   <!-- Description -->
                   <h2>Description</h2>
                   <p>"Sites Made Simple." BLOCK Digital was built to deliver modern, high-performance, and lightweight websites using JAMstack technologies. At its core, BLOCK leveraged the Hugo Static Site Generator, where I developed reusable components—or “blocks”—that could be referenced in Markdown files to generate pages dynamically. The sites were deployed via Netlify, with a fully editable CMS powered by Netlify CMS and React.js.<br>
@@ -705,21 +860,19 @@ Each site also included a custom Style Guide, serving as both a UI reference for
                      <h2>Accomplishments</h2>
                      <ul class="work-accomplishments">
                         
-                           <li>Built Custom CMS using Netlify CMS.</li>
+                           <li>Developed a custom CMS using Netlify CMS for streamlined content management.</li>
                         
-                           <li>Created Live Preview windows using React Components.</li>
+                           <li>Built live preview functionality using React components for real-time content editing.</li>
                         
-                           <li>Deployed directly to Netlify from Github Repositories.</li>
+                           <li>Automated deployments directly to Netlify from GitHub repositories.</li>
                         
-                           <li>Created 6 Unique website templates for various organization types.</li>
+                           <li>Designed and Developed six unique website templates tailored for different business needs.</li>
                         
-                           <li>Built all websites including the business site using Hugo.</li>
+                           <li>Built all websites, including the Block Digital, site using Hugo for speed and flexibility.</li>
                         
-                           <li>Used Gulp for asset optimization</li>
+                           <li>Optimized assets using Gulp to enhance performance and load times.</li>
                         
-                           <li>minification.</li>
-                        
-                           <li>Connected third party API's depending on business needs.</li>
+                           <li>Integrated third-party APIs for custom functionality based on business requirements.</li>
                         
                      </ul>
                   </section>
@@ -749,14 +902,60 @@ Each site also included a custom Style Guide, serving as both a UI reference for
                         <h2>Details</h2>
                         <!-- Details -->
 <details>
-    <summary>Choosing the JAMstack</summary>
+    <summary>Building Block Digital</summary>
     <div class="details-content">
+        <div class="detail-image-wrapper" data-scrollable="true">
+            <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+                <img src="/img/work/block/block-homepage.png" alt="Block Digital website" loading="lazy">
+            </div>
+            <div class="scroll-indicator">
+                <em><span class="sr-only">This Section is</span> Scrollable</em>
+            </div>
+        </div>
+        <h3>Forming the Idea</h3>
+        <p>
+            I wanted to create a faster, simpler, and cheaper way to develop and deploy sites for small businesses. I wanted to avoid the headache of developing and maintaining Wordpress sites. Scaling this into a viable business was my first goal, but my second goal was to experiment with <strong>JAMstack</strong> technologies and see exactly what was possible. I wanted to "productize" web services. The main product being website development. Other services I wanted to offer were:
+        </p>
+        <ul role="list">
+            <li>Web Design</li>
+            <li>Brand Strategy</li>
+            <li>Digital Marketing</li>
+            <li>Site Audits</li>
+        </ul>
+        <p>
+            Web Design would be provided by the <a href="https://www.manypixels.co/" title="Go to ManyPixels website" target="_blank">ManyPixels</a> design agency. I leaned on my own professional experience to provide Brand Strategy and Site Audits. The idea was to work with clients to identify the goal of their existing site or brand and provide advice on how to best communicate that to their customers. For all design updates to their existing brand or site, I would lean on <strong>ManyPixels</strong>. 
+        </p>
+        <p>
+            Digital Marketing involved providing a social media content strategy and a paid ad strategy, with the help of my better half, <strong>Celeste Fondeur</strong>, who has professional experience as a content writer and social media strategist.
+        </p>
+        <div class="detail-image-wrapper" data-scrollable="true">
+            <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+                <img src="/img/work/block/blockPlans.png" alt="Block Digital website" loading="lazy">
+            </div>
+            <div class="scroll-indicator">
+                <em><span class="sr-only">This Section is</span> Scrollable</em>
+            </div>
+        </div>
+        <h3>How Tech Informed Pricing</h3>
+        <p>
+            The goal of the pricing strategy was to market for volume. With a lower price point, I would be able to gain more clients. The turnaround time would be much faster given the simpler tech stack. I would utilize <strong>ManyPixels</strong> to create templates that would fit most small business needs.
+        </p>
+        <p>
+            I would upsell based on the number of revisions, which I priced as "Site Monitoring." If the customer wanted something completely custom-built, the price was determined after a conversation with them. This could include, and in fact did, working with customers who had completely different tech stacks and tech needs.
+        </p>
+        <h3>Choosing the JAMStack</h3>
         <p>
             The <strong>JAMstack</strong> (JavaScript, APIs, and Markdown) is a modern web architecture commonly used with <strong>static site generators</strong> like <a href="https://gohugo.io/" title="Go To Hugo Website" target="_blank">Hugo</a> and <a href="https://www.11ty.dev/" title="Go To 11ty Website" target="_blank">11ty</a>. These tools convert Markdown files into HTML at build time, eliminating the need for a server-side language like <abbr title="Personal Home Page Hypertext Preprocessor">PHP</abbr>. This approach allows for reusable templates and a highly efficient deployment process.
         </p>
         <p>
-            To deploy these sites, I simply pushed each project to a dedicated <strong>GitHub repository</strong> and connected it to <strong>Netlify</strong>. With minimal setup, any updates pushed to GitHub would trigger an automatic build and deployment. Netlify also provided a <strong>Git-based CMS</strong>, originally called <strong>Netlify CMS</strong> (now <a href="https://decapcms.org/docs/intro/" target="_blank" title="Go to Decap CMS website">Decap CMS</a>). Unlike traditional databases, Decap CMS stores content directly in a Git repository, making it a lightweight solution perfect for small business marketing sites.
+            To deploy these sites, I simply pushed each project to a dedicated <strong>GitHub repository</strong> and connected it to <strong>Netlify</strong>. With minimal setup, any updates pushed to GitHub would trigger an automatic build and deployment.
         </p>
+        <p>
+            Netlify also provided a <strong>Git-based CMS</strong>, originally called <strong>Netlify CMS</strong> (now <a href="https://decapcms.org/docs/intro/" target="_blank" title="Go to Decap CMS website">Decap CMS</a>). Unlike traditional databases, Decap CMS stores content directly in a Git repository, making it a lightweight solution perfect for small business marketing sites.
+        </p>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/block/block-jamstack-diagram.png" alt="A rough diagram of How the Hugo Static Site Generator, Netlify, and Netlify CMS technologies work together" loading="lazy">
+        </div>
         <p>
             To enhance the CMS experience, I built <strong>custom <a href="https://react.dev/" title="Go to React.js website" target="_blank">React</a> components</strong> for the preview window, ensuring a 1:1 representation of the final website. This approach eliminated the need for paid hosting, as there was no PHP backend to maintain. Any additional functionality—such as social media feeds or event calendars—was handled through <strong>third-party APIs</strong>.
         </p>
@@ -765,14 +964,18 @@ Each site also included a custom Style Guide, serving as both a UI reference for
             a highly adaptable system that provided small businesses with cost-effective, low-maintenance websites requiring 
             minimal configuration.
         </p>
+        <p>
+            Next, I'll dive into the <strong>technical details</strong> behind the CMS and custom templates, followed by key <strong>lessons learned</strong> from building Block Digital.
+        </p>
     </div>
 </details>
 <details>
     <summary>Building The CMS</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/musora/musora-ui-colors.png" alt="Musora UI Colors" loading="lazy">
+            <img src="/img/work/block/block-config-columns.png" alt="Config File for Netlify CMS" loading="lazy">
         </div>
+        <h3>The CMS Config</h3>
         <p>
             Netlify CMS relies on a <code>config.yml</code> file to define its behavior, specifying where content is stored, how collections are structured, and how the editing interface is configured. The core of this setup revolves around <code>collections</code> and <code>fields</code>, which determine what content can be edited and the specific fields available for each type of content.
         </p>
@@ -798,13 +1001,16 @@ Each site also included a custom Style Guide, serving as both a UI reference for
         </p>
         <ul role="list">
             <li>Buttons</li>
-            <li>Text (Markdown content)</li>
+            <li>Content (Rich Text / Markdown)</li>
             <li>Images</li>
             <li>Forms</li>
         </ul>
         <p>
             For more complex layouts, I introduced "nested columns," which allowed additional components inside them. This created a flexible system where users could build intricate layouts directly from the CMS.
         </p>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/block/block-cms-column.png" alt="Config File for Netlify CMS" loading="lazy">
+        </div>
         <h3>Custom Attributes and Styling</h3>
         <p>
             To allow users to customize styles and attributes, I added a <code>list</code> widget called <code>attributes</code> to most elements. This let users define custom attributes and values as needed. 
@@ -816,13 +1022,15 @@ Each site also included a custom Style Guide, serving as both a UI reference for
         <p>
             The CMS interface itself required a dedicated HTML file at <code>/static/admin/index.html</code>, which acted as a <strong>single-page application (SPA)</strong>. Netlify CMS provided an option to extend the interface with custom React components, making it possible to preview content inside the CMS.
         </p>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/block/block-cms-blog.png" alt="Config File for Netlify CMS" loading="lazy">
+        </div>
         <p>
             Inside the <code>static/admin/previews/</code> directory, I created preview components for the blog and general page layouts. Then, in a <code>preview.js</code> file, I registered them with the CMS:
         </p>
-        <pre>
-        <code>
+    <pre><code>
     CMS.registerPreviewTemplate("site", SitePagePreview);
-        </code></pre>
+    </code></pre>
         <p>
             This approach ensured that the preview inside the CMS closely matched the live website. The site's assets, including JavaScript bundles and minified CSS, were handled with Gulp.js for optimization. (Today, alternative tools like Vite or esbuild provide more modern asset bundling solutions.)
         </p>
@@ -832,25 +1040,90 @@ Each site also included a custom Style Guide, serving as both a UI reference for
     </div>
 </details>
 <details>
-    <summary>Building Custom Hugo Templates</summary>
+    <summary>Building Custom Templates</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/musora/musora-ui-colors.png" alt="Musora UI Colors" loading="lazy">
+            <img src="/img/work/block/block-markdown-code.png" alt="Screenshot of Block Digital’s Markdown code configuration for Netlify CMS" loading="lazy">
+        </div>
+        <h3>Configuring Markdown Files</h3>
+        <!-- <p>
+            In the previous section, <strong>"Building the CMS,"</strong> I discussed how Netlify CMS reads a configuration file to generate editable fields for users. Now, I'll explain how Netlify interacts with Hugo's markdown files to build pages.
+        </p> -->
+        <p>
+            Like many static site generators (SSGs), Hugo uses markdown files in combination with layout templates to generate pages. The markdown files store content and metadata, while layout files determine how the content is displayed. The front matter in a markdown file specifies which layout should be used. 
+        </p>
+        <p>
+            Typically, there is a <code>list</code> layout for blogs and a <code>single</code> layout for individual pages. Sections, columns, components, and attributes are defined in the markdown content in the same way they are structured in the CMS configuration. At build time, Hugo parses the markdown metadata, selects the appropriate template, and renders the final page. 
+        </p>
+        <h3>Converting Markdown to HTML</h3>
+        <p>
+            Inside these templates, you can include logic to iterate through the markdown data. Since Hugo’s front matter supports structured data formats like <abbr title="Yet Another Markup Language">YAML</abbr>, you can define arrays and objects, making them accessible within the template.
+        </p>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/block/block-component-code.png" alt="Example of Hugo template rendering components from markdown data" loading="lazy">
         </div>
         <p>
-            I built a Tailwind utility class library called <strong>Stylesora</strong> to centralize Musora's custom styles. 
-            Working closely with the UX team, I ensured all <a href="https://www.figma.com/" title="Go to Figma's website" target="_blank">Figma</a> designs were accurately reflected in the front-end implementation. By using CSS as JSON, I seamlessly integrated Stylesora into our Tailwind config, making it easy to maintain and scale our design system.
+            Once I ensured that the markdown structure in my content file matched the Netlify CMS <code>config.yml</code> file, it was just a matter of rendering the appropriate HTML. For both the <code>single.html</code> and the <code>list.html</code> files within <code>layouts/_default/</code>, I iterated through the markdown data structure specified in each content file. The template itself checks to see if a section or component exists, then builds the HTML accordingly.
+        </p>
+        <p>
+            This ensured that any updates made in the CMS editor were reflected in the generated site. In essence, the entire site structure existed as data—so all we were doing was manipulating data to render HTML. 
+        </p>
+        <h3>Building The Templates</h3>
+        <p>
+            Building the templates themselves was straightforward. Once the structure was in place, I could create almost any layout. Since I was working solo, I didn't have a dedicated <abbr title="User Experience">UX</abbr> designer, so I partnered with an external agency, <strong>ManyPixels</strong>.
+        </p>
+        <div class="detail-image-wrapper" data-scrollable="true">
+            <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+                <img src="/img/work/block/blockTemplate.png" alt="Screenshot of Block Digital’s template selection page, displaying available website layouts" loading="lazy">
+            </div>
+            <div class="scroll-indicator">
+                <em><span class="sr-only">This Section is</span> Scrollable</em>
+            </div>
+        </div>
+        <p>
+            They designed six flexible layouts that could be adapted to fit various businesses—including the design for the Block Digital website. Once the designs were complete, I handled the development, ensuring that all websites were fully responsive and accessible on all devices. The image above showcases the 'StoreFront' layout, designed to be suitable for most small businesses.
+        <h3>Adding a Style Guide</h3>
+        <p>
+            Lastly, I wanted to include a style guide with each website. Why? If a client ever wanted to modify the layout of their site—not just the content—I wanted them to have a reference.
+        </p>
+        <div class="detail-image-wrapper" data-scrollable="true">
+            <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+                <img src="/img/work/block/blockDLS2.png" alt="Example of Block Digital’s storefront template, showing a preview of an e-commerce layout" loading="lazy">
+            </div>
+            <div class="scroll-indicator">
+                <em><span class="sr-only">This Section is</span> Scrollable</em>
+            </div>
+        </div>
+        <p>
+            The style guide showcased all available components, such as form elements and buttons, along with guidelines on typography, colors, and accessibility best practices (including ADA compliance).
+        </p>
+        <p>
+            By incorporating these guidelines, I ensured that clients had full control over their site's visual identity while maintaining consistency and usability. Best case scenario.
         </p>
     </div>
 </details>
 <details>
     <summary>Lessons Learned</summary>
     <div class="details-content">
-        Block Digital was a fun and ambitious project, but ultimately it was not sustainable. It served as a tech demo of what was possible with this Stack. I learned that you could mimic a traditionaly CMS including a live preview with the Netlify and the JAMstack. I learned that it saves time and money when choosing these technologies. Unfortunately, good technology does not a successful business make... 
-        First Lesson - As far as User Experience was concerned, the Netlify CMS nested field structure was not optimal.. While it was possible to build out the entire page UI using nested fields, the user would have to spulunk through these nested dropdowns until they found the actual field they were looking for. This was less the fault of Netlify and more a personal design choice, but I wish there was a better way of visualizing nested fields. Perhaps Decap will/has solved this problem. 
-        Second Lesson - Time Management. My original goal as a business owner was to make the tech stack so simple, that I could easily customize and deploy within 3 days. Add Company Name, add image assets and copy, done! In the real world, clients want multiple revisions. During my time as a Senior Frontend Developer at <a href="https://union.co/" title="Go To Union.co website">Union.co</a>, I learned the concept of being an <strong>AOR</strong> "Agency of Record" and having clients on retainer. It alows your clients a certain amount of revisions (billed monthly) while not wasting your personal time and money. 
-        Lesson Three - what is simple to a developer, nested columns, attributes, and components, may not be simple to your client. They might have already been trained in the ubiquitous technology that is Wordpress, or even new CMS's like Squarespace. Introducing an alternative may be introducing added complexity for them. 
-        Lesson Four - cost benefit of technology choices. Similar to the last point, but with a slightly different emphasis. Just because you <i>can</i> do something, does not mean you <i>should</i>. If the business goal is to create websites quickly, research all of the technology available before you reinvent the wheel. In the end, ironically, my hightest paying client (who I can't disclose due to an NDA), payed my small agency to build and update custom Wordpress templates. <strong>Union.co</strong> also used wordpress tempaltes, along with other PHP based CMSs such as Craft. At the end of the day you should do what's best for you business goals, and your clients. And be very very careful to not overengineer your solution. 
+        <p>
+            Block Digital was a fun and ambitious project, but ultimately, it was not sustainable. It served as a tech demo showcasing what was possible with this stack. I learned that you could mimic a traditional CMS—including live previews—using Netlify and the JAMstack. These technologies saved time and money, but as I quickly realized, good technology alone does not make a successful business.
+        </p>
+        <h3>Lesson One: Good Tech <span style="font-size: var(--font-size-h2)">≠</span> Good User Experience.</h3>
+        <p>
+            While Netlify CMS provided a powerful way to structure content using nested fields, the user experience was far from ideal. Users had to navigate deeply nested dropdowns to find the fields they needed, making content management cumbersome. This was less a limitation of Netlify itself and more a result of my design choices. In hindsight, I wish there had been a more intuitive way to visualize nested fields—perhaps something Decap CMS has improved upon.
+        </p>
+        <h3>Lesson Two: The Difference Between a Service and a Product is TIME.</h3>
+        <p>
+            My original goal as a business owner was to create a tech stack so simple that I could customize and deploy a website within three days—just add the company name, upload assets, update copy, and launch. In reality, clients often require multiple revisions. During my time as a Sr. Frontend Developer at <a href="https://union.co/" title="Go To Union.co website">Union.co</a>, a high-end digital marketing agency in Charlotte, NC, I learned about the <strong>AOR</strong> ("Agency of Record") model, where agencies keep clients on retainer. This approach allows clients a set number of revisions while ensuring the agency's time and resources are used efficiently. If I had adopted a similar model, it could have helped balance client needs with sustainable business practices.
+        </p>
+        <h3>Lesson Three: Simplicity is Subjective.</h3>
+        <p>
+            What seems simple to a developer—nested columns, attributes, and components—may not be simple to a client. Many clients were already familiar with widely used platforms like WordPress or newer solutions like Squarespace. Introducing an alternative CMS, even if technically superior or more cost-effective, often added complexity rather than solving a problem for them. One client asked if I built Squarespace templates, another asked if I used WordPress, and one required WordPress due to their business needs. This experience led me to my next realization...
+        </p>
+        <h3>Lesson Four: Maybe You Shouldn't Reinvent the Wheel.</h3>
+        <p>
+            Just because you <i>can</i> build something doesn’t mean you <em>should</em>. If the business goal is to create websites quickly, it's essential to research all available technologies before reinventing the wheel. Ironically, my highest-paying client <em>required</em> me to build and update WordPress templates instead of using a custom solution. It spoke volumes that a larger agency like <strong>Union.co</strong> also relied on WordPress, alongside other PHP-based CMSs like Craft. Ultimately, the best choice is the one that aligns with both your business goals and your clients' needs. Overengineering can be a costly mistake.
+        </p>
     </div>
 </details>
 
@@ -861,7 +1134,10 @@ Each site also included a custom Style Guide, serving as both a UI reference for
          </dialog>
       
          <li class="work-item">
-            <button popovertarget="knozen" aria-label="View details for Knozen">
+            <button popovertarget="knozen" aria-label="Click to view details for Knozen">
+               <div class="expand-icon">
+                  <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
+               </div>
                <div class="work-thumb">
                   <img loading="lazy" src="/img/cv/cv-knozen.svg" alt="Knozen thumbnail">
                </div>
@@ -896,13 +1172,21 @@ Each site also included a custom Style Guide, serving as both a UI reference for
                   </div>
                </header>
                <main id="knozen-content">
-                  <div class="work-header-image">
-                     <img src="/img/work/knozen/knozen-desktop.png" alt="Example image of Knozen">
-                  </div>
+                  
+                     <div class="work-header-mobile-video">
+                        <video controls="" muted="" width="100%" alt="Knozen Mobile Video Demo" loading="lazy">
+                           <source src="/img/work/knozen/knozen-video.mp4" type="video/mp4">
+                        </video>
+                     </div>
+                  
                   <!-- Description -->
                   <h2>Description</h2>
-                  <p>Knozens goal was to bring personality to the web. My team and I built a personality quiz that rewarded players with a fun and accurate personality profile.
-Knozen retired in 2016 but we had a great run. 1,000,000+ people completed the Knozen quiz and 50,000,000+ questions were answered. We were also featured in various media channels such as Techcrunch, Business Insider, and Product Hunt.
+                  <p>Knozen was a fun, engaging, fast way to get a beautiful personality profile.
+Over three years,
+1,000,000
+people completed our quiz, answered over
+50,000,000
+questions, and shared thousands of their profiles on Instagram We were also featured in various media channels such as Techcrunch, Business Insider, and Product Hunt.
 </p>
                   <!-- Accomplishments -->
                   <section class="content-section">
@@ -943,61 +1227,190 @@ Knozen retired in 2016 but we had a great run. 1,000,000+ people completed the K
                      </ul>
                   </section>
                   
+                     <section class="content-section">
+                        <h2>Links</h2>
+                           <ul role="list" class="links">
+                              
+                                 
+                                    <li>
+                                       <a href="https://medium.com/@cenedella/knozen-for-business-get-a-free-personality-profile-of-your-users-for-marketing-product-or-sales-76e0551912c6" target="_blank" title="Go to Knozen for business">
+                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                          Knozen for business
+                                       </a>
+                                    </li>
+                                 
+                              
+                                 
+                                    <li>
+                                       <a href="https://byrslf.co/why-don-t-introverts-break-laws-43701c141af0" target="_blank" title="Go to Why don’t introverts break laws?">
+                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                          Why don’t introverts break laws?
+                                       </a>
+                                    </li>
+                                 
+                              
+                                 
+                                    <li>
+                                       <a href="https://medium.com/@cenedella/knozen-launches-feelings-7016c4833fa8" target="_blank" title="Go to Knozen launches Feelings">
+                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                          Knozen launches Feelings
+                                       </a>
+                                    </li>
+                                 
+                              
+                                 
+                                    <li>
+                                       <a href="https://medium.com/@cenedella/customize-knozen-with-your-headline-and-story-33caac97541d" target="_blank" title="Go to Customize Knozen with your headline and story">
+                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                          Customize Knozen with your headline and story
+                                       </a>
+                                    </li>
+                                 
+                              
+                                 
+                                    <li>
+                                       <a href="https://medium.com/rooting-for-you/is-it-crush-or-clash-be0ec78cd219" target="_blank" title="Go to Is it crush or crash?">
+                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                          Is it crush or crash?
+                                       </a>
+                                    </li>
+                                 
+                              
+                           </ul>
+                     </section>
+                  
                   <!-- Details -->
                   
                      <section class="content-section">
                         <h2>Details</h2>
                         <!-- Details -->
 <details>
-    <summary>Developed New Features</summary>
+    <summary>Joining The Team</summary>
     <div class="details-content">
         <p>
-            As the team's frontend UI engineer I was responsible for translating our lead designers Zeplin specs to the web. I built every feature of the site using CSS3, JQuery and Django Templates. The site called for a large variety of colors, animations and fixed elements. I used GPU-friendly CSS to avoid repainting issues in the browser which greatly affect the mobile user experience. I've included a video of our mobile experience that highlights the best features of Knozen.
+            As the team's Frontend UI Engineer, I was responsible for translating our lead designer’s <a href="https://zeplin.io/" title="Go to Zeplin Website" target="_blank">Zeplin</a> specs into a functional web experience. I built every feature of the site using <strong>CSS3</strong>, <a href="https://jquery.com/" title="Go To jQuery website" target="_blank">jQuery</a>, and <a href="https://docs.djangoproject.com/en/5.1/topics/templates/" title="Go To Django Documentation" target="_blank">Django</a> templates.
+        </p>
+        <!-- <div class="detail-image-wrapper">
+            <img src="/img/work/knozen/kz_email_chart_anim.gif" alt="Musora UI Colors" loading="lazy">
+        </div> -->
+        <p>
+            I joined during what they considered Knozen 4.0. The Team had gone through 3 major rereleases up until that point, with the original being to use personality charts to find the right job applicants and vice versa. When I joined, the team had just finished porting the Knozen native mobile app to the web. The app used Facebook authentication for logging in and was primarily marketed to Facebook users—a strategy that proved highly effective. Once the web app launched, engagement grew exponentially.
+        </p>
+        <p>
+            To capitalize on this momentum, the team worked rapidly to develop new features that would add value and keep users engaged beyond completing the Knozen quiz and generating their personality chart. However, transitioning to the web also introduced unique challenges, as web applications have limitations that native apps do not. 
+        </p>
+        <p>
+            In the next section, I'll discuss these challenges and the solutions I implemented to overcome them.
         </p>
     </div>
+</details>
 <details>
     <summary>Mobile Performance Optimizations</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/musora/musora-ui-colors.png" alt="Musora UI Colors" loading="lazy">
+            <img src="/img/work/knozen/knozen-performance.png" alt="Musora UI Colors" loading="lazy">
         </div>
         <p>
-            Gif Rewards.
+            The site featured a wide range of colors, animations, and fixed elements—more than I had ever seen rendered on a single web page. The Knozen quiz itself had an infinitely scrolling background with dynamic feedback animations that indicated which traits increased or decreased based on user responses. Additionally, the background color changed with each question, and the user's personality chart updated in real time.
+        </p>
+        <p>
+            The personality chart alone featured at least 24 different colors, along with numerous other color variations throughout the site. All of this put a significant strain on performance, especially on mobile devices—where most of our traffic came from. In my mind, a mobile web app should function just as smoothly as a native app, so I set out to optimize performance.
+        </p>
+        <p>
+            To minimize browser repainting issues, I used GPU-friendly CSS and ensured all animations were hardware-accelerated. Where appropriate, I applied <code>transform: translateZ(0);</code> to trigger GPU acceleration instead of relying on the browser’s default rendering. Additionally, the combination of animations, a fixed navigation bar, and <code>overflow-scroll</code> on the wrapper caused noticeable stuttering during scrolling on mobile devices. I resolved this by applying <code>-webkit-overflow-scrolling: touch;</code>.
+        </p>
+        <p>
+            To debug the mobile experience without relying on tools like <strong>BrowserStack</strong> (I hate BrowserStack), I connected my <strong>iPhone</strong> directly to my <strong>MacBook</strong>. Using <a href="developer.apple.com/safari/technology-preview/" title="Go to Safari Technology Preview website" target="_blank">Safari Technology Preview</a>, I was able to open an inspector window on my Mac that pointed to a webpage running in my mobile Safari browser.
+        </p>
+        <p>
+            The end result was a much smoother, more performant mobile web app that closely mimicked the responsiveness of a native application.
         </p>
     </div>
 </details>
 <details>
-    <summary>Compatibility Feature</summary>
+   <summary>Feelings Feature</summary>
+   <div class="details-content">
+      <div class="detail-image-wrapper">
+         <img src="/img/work/knozen/knozen-feelings-feature.png" alt="Musora UI Colors" loading="lazy">
+      </div>
+      <p>
+         As I mentioned earlier, I was brought in to help add new features that would increase engagement while building on the success of the core feature, the Knozen Quiz. One of these new features was <strong>"Feelings."</strong>
+      </p>
+      <p>
+         We noticed that users frequently revisited their profiles and reshared their personality charts with friends. To build on this behavior, we introduced a way for users to share how they were feeling at any given time.
+      </p>
+      <p>
+         The feature allowed users to select an emoji from a modal within their profile. Once chosen, the emoji would appear on their public profile for friends to see. The UI consisted of:
+      </p>
+      <ul>
+         <li>A <strong>large emoji</strong> representing the user's current mood.</li>
+         <li>An <strong>infinite scrolling background</strong> of other emojis, reinforcing the idea that it was one of many options.</li>
+         <li>A <strong>subtle fade-in/out animation</strong> on profile images to display the emoji dynamically.</li>
+      </ul>
+      <p>
+         The infinite scrolling effect was achieved using <strong>CSS keyframes</strong>, while the emoji fade-in/out was handled with <strong>CSS animations</strong>. The end result was a lightweight, engaging feature that seamlessly fit into the existing Knozen experience.
+      </p>
+   </div>
+</details>
+<details>
+    <summary>Themed Quizzes</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/musora/musora-ui-colors.png" alt="Musora UI Colors" loading="lazy">
+            <img src="/img/work/knozen/knozen-themed-quizzes.png" alt="Musora UI Colors" loading="lazy">
         </div>
         <p>
-            I built a Tailwind utility class library called <strong>Stylesora</strong> to centralize Musora's custom styles. 
-            Working closely with the UX team, I ensured all <a href="https://www.figma.com/" title="Go to Figma's website" target="_blank">Figma</a> designs were accurately reflected in the front-end implementation. By using CSS as JSON, I seamlessly integrated Stylesora into our Tailwind config, making it easy to maintain and scale our design system.
+            The last feature we launched was <strong>Themed Quizzes</strong>. Building on the popularity of the Knozen Quiz, we made a bet that the most engaging part of the app was taking quizzes. 
+        </p>
+        <p>
+            We developed multiple themed quizzes, such as:
+        </p>
+        <ul role="list">
+            <li><em>Are You a Cat?</em></li>
+            <li><em>Are You a Rebel?</em></li>
+            <li><em>Are You Wild at Heart?</em></li>
+        </ul>
+        <p>
+            The quiz UI featured a <strong>carousel</strong> positioned beneath the user's Knozen chart. Users could scroll or click through the carousel to browse available quizzes. Selecting a quiz card would initialize a new quiz session.
+        </p>
+        <p>
+            Upon completion, players were rewarded with a fun <strong>GIF animation</strong> or meme. Towards the end of the project, I also took on the responsibility of creating and editing these images in Photoshop.
+        </p>
+        <p>
+            Quiz results were displayed on both the user's profile and their friends' profiles, allowing them to see how compatible they were.
         </p>
     </div>
 </details>
 <details>
-    <summary>Faces Feature</summary>
+    <summary>Lessons Learned</summary>
     <div class="details-content">
-        <div class="detail-image-wrapper">
-            <img src="/img/work/musora/musora-ui-colors.png" alt="Musora UI Colors" loading="lazy">
-        </div>
         <p>
-            I built a Tailwind utility class library called <strong>Stylesora</strong> to centralize Musora's custom styles. 
-            Working closely with the UX team, I ensured all <a href="https://www.figma.com/" title="Go to Figma's website" target="_blank">Figma</a> designs were accurately reflected in the front-end implementation. By using CSS as JSON, I seamlessly integrated Stylesora into our Tailwind config, making it easy to maintain and scale our design system.
+            I enjoyed my time at Knozen and I'm grateful to the team for the opportunity. I also learned valuable lessons on both the technical and business sides.
         </p>
-    </div>
-</details>
-<details>
-    <summary>Themed Quizes</summary>
-    <div class="details-content">
-        <div class="detail-image-wrapper">
-            <img src="/img/work/musora/musora-ui-colors.png" alt="Musora UI Colors" loading="lazy">
-        </div>
+        <h3>Lesson One - Optimize for Mobile.</h3>
         <p>
-            Gif Rewards.
+            Today, the term <strong>"Mobile First"</strong> is ubiquitous among designers and developers. Back in 2016, however, many web developers still prioritized desktop, with mobile as an afterthought.  
+        </p>
+        <p>
+            The problem? Desktop computers are far more powerful than mobile phones. A smooth experience on your desktop might be completely broken on mobile.  
+            <strong>Test on mobile early and often!</strong>
+        </p>
+        <h3>Lesson Two - Analytics Matter.</h3>
+        <p>
+            With Facebook and Google Analytics, we could see where our traffic was coming from, user demographics, and which devices were most popular.  
+        </p>
+        <p>
+            This data directly influenced our feature prioritization and played a crucial role in optimizing for mobile users.
+        </p>
+        <h3>Lesson Three - New Features <span style="font-size: var(--font-size-h2)">≠</span> Success.</h3>
+        <p>
+            We worked hard, and after launching Knozen 4.0, traffic spiked—only to drop soon after. In marketing terms, it wasn’t <strong>“sticky.”</strong>
+        </p>
+        <p>
+            I once heard, <em>"You have to throw things at a wall and see what sticks."</em> At the time, I resented that approach—it felt thoughtless. But in hindsight, there was wisdom in it.  
+        </p>
+        <p>
+            You can’t predict which features will succeed. Even if you pour your heart and soul into an idea, <strong>your users determine its success or failure.</strong>  
+            In our case, I believe our audience was primarily younger individuals who enjoyed quick, fun iPhone games.
         </p>
     </div>
 </details>
@@ -1009,7 +1422,10 @@ Knozen retired in 2016 but we had a great run. 1,000,000+ people completed the K
          </dialog>
       
          <li class="work-item">
-            <button popovertarget="s360" aria-label="View details for Simply360">
+            <button popovertarget="s360" aria-label="Click to view details for Simply360">
+               <div class="expand-icon">
+                  <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
+               </div>
                <div class="work-thumb">
                   <img loading="lazy" src="/img/cv/cv-s360.svg" alt="Simply360 thumbnail">
                </div>
@@ -1044,9 +1460,11 @@ Knozen retired in 2016 but we had a great run. 1,000,000+ people completed the K
                   </div>
                </header>
                <main id="s360-content">
-                  <div class="work-header-image">
-                     <img src="/img/work/s360/s360-people.png" alt="Example image of Simply360">
-                  </div>
+                  
+                     <div class="work-header-image">
+                        <img src="/img/work/s360/s360-people.png" alt="Example image of Simply360">
+                     </div>
+                  
                   <!-- Description -->
                   <h2>Description</h2>
                   <p>"Nonprofit software made easy". Simply360 was created by SolveItSimply to aid nonprofits with all of their administrative needs. It's simple and user-friendly interface will allow them to manage staff, create reports, and even handle event check-ins. It is the first nonprofit software to be built as a single page responsive application using the latest industry tools.
@@ -1076,33 +1494,124 @@ Knozen retired in 2016 but we had a great run. 1,000,000+ people completed the K
                      </ul>
                   </section>
                   
+                     <section class="content-section">
+                        <h2>Links</h2>
+                           <ul role="list" class="links">
+                              
+                                 
+                                    <li>
+                                       <a href="https://www.simply360.com/" target="_blank" title="Go to simply360">
+                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                          simply360
+                                       </a>
+                                    </li>
+                                 
+                              
+                           </ul>
+                     </section>
+                  
                   <!-- Details -->
                   
                      <section class="content-section">
                         <h2>Details</h2>
                         <!-- Details -->
 <details>
-    <summary>Simply360 Application</summary>
+    <summary>Building the Simply360 Application</summary>
     <div class="details-content">
-        <div class="detail-image-wrapper">
-          <img src="/img/work/musora/musora-ui-colors.png" alt="Musora UI Colors" loading="lazy">
+        <div class="detail-image-wrapper" data-scrollable="true">
+            <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+                <img src="/img/work/s360/s360-people.png" alt="An example image of the Simply360 application" loading="lazy">
+            </div>
+            <div class="scroll-indicator">
+                <em><span class="sr-only">This Section is</span> Scrollable</em>
+            </div>
         </div>
         <p>
-          As the team's UX Developer I was responsible for translating the Photoshop design documents to the web using HTML/Handlebars, CSS/Sass, and Javascript/Ember.js. This included all UI elements, interaction, and responsive grid implementation.
-          Milkshake PSD to Web with Ember.js and Sass. 
+            As the team's <abbr title="User Experience">UX</abbr> Developer, I was responsible for translating Photoshop design documents into a fully functional web application using HTML/Handlebars, CSS/Sass, and JavaScript/Ember.js. This included implementing all UI elements, interactions, and the responsive grid system.
+        </p>
+        <p>
+            We collaborated with a talented Brooklyn-based design agency, 
+            <a href="https://milkshake.studio/" title="Go to Milkshake's website" target="_blank">Milkshake</a>, who designed the UI for Simply360. We held regular review meetings to discuss new features, requirements, and any design or development constraints. Once the initial designs were complete, they were handed over to us for implementation.
+        </p>
+        <h3>Using Ember.js</h3>
+        <p>
+            We built the application using <a href="https://emberjs.com/" title="Go to Ember.js website" target="_blank">Ember.js</a>, an MVC JavaScript framework developed by the team behind Ruby on Rails. Ember.js had its own ecosystem and CLI tools for creating and managing components:
+        </p>
+        <pre><code>
+    ember generate component my-component-name
+        </code></pre>
+        <p>
+            For our asset pipeline, we used 
+            <a href="https://github.com/broccolijs/broccoli?tab=readme-ov-file" title="Go to Broccoli's Github page" target="_blank">Broccoli</a>, which is comparable to Grunt or Gulp but optimized for fast incremental rebuilds.
+        </p>
+        <h3>Styling with Sass & SMACSS</h3>
+        <p>
+            For styling, I used <a href="https://sass-lang.com/" title="Go to Sass website" target="_blank">Sass</a> due to its ability to define variables, nest styles, and easily import other files. I followed the 
+            <a href="https://smacss.com/" title="Go to SMACSS website" target="_blank">SMACSS</a> methodology, ensuring that my "modules" aligned 1:1 with Ember components. 
+            This made it simple to organize and locate styles while maintaining a clear CSS hierarchy:
+        </p>
+        <ul role="list">
+            <li>Base Styles</li>
+            <li>Layout Styles</li>
+            <li>Component (Module) Styles</li>
+            <li>State Styles</li>
+        </ul>
+        <h3>Templating with Handlebars</h3>
+        <p>
+            Ember components consisted of a JavaScript file for interactions and a <code>.hbs</code> (Handlebars) file for HTML structure. Ember used 
+            <a href="https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/" title="Go to Ember's Handlebars documentation" target="_blank">Handlebars</a> 
+            as a templating language, making it easy to inject dynamic content into the UI.
+        </p>
+        <h3>Creating a Native App Feel</h3>
+        <p>
+            The biggest motivation for using modern frameworks like Ember was to mimic the smooth experience of native applications while maintaining the accessibility of a web app. Unlike traditional multi-page applications that require <strong>hard reloads</strong>, Ember allowed for seamless page updates with client-side routing.
+        </p>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/s360/simply360-mobile.png" alt="Musora UI Colors" loading="lazy">
+        </div>
+        <p>
+            Beyond responsive design, I focused on interactions to make the app feel native, such as sidebar navigation animations. I achieved this using CSS transitions and transforms to create smooth motion effects.
+        </p>
+        <h3>Final Thoughts</h3>
+        <p>
+            Simply360 was an ambitious project, and we successfully launched an MVP for clients. I'm proud of the work we accomplished.  
+        </p>
+        <p>
+            In the next section, I’ll share some of the lessons I learned.
         </p>
     </div>
 </details>
 <details>
-    <summary>Responsive Design</summary>
-    <div class="details-content">
-        <div class="detail-image-wrapper">
-          <img src="/img/work/musora/musora-ui-colors.png" alt="Musora UI Colors" loading="lazy">
-        </div>
-        <p>
-            Gif Rewards.
-        </p>
-    </div>
+  <summary>Lessons Learned</summary>
+  <div class="details-content">
+      <p>
+          Simply360 was my first opportunity after my time at the <strong>Startup Institute</strong> of NY. I learned a lot about working for a startup, building applications with modern tools, and collaborating within a small team. Here are some of my main takeaways.
+      </p>
+      <h3>Lesson One: Choose Your Technology Wisely.</h3>
+      <p>
+          At the time, we opted to use bleeding-edge technology, including Ember.js as our front-end framework, along with its CLI tool, Ember CLI, for creating new components. We also used Broccoli for asset management, along with other very new tools. 
+      </p>
+      <p>
+          When adopting new technologies, there are inevitable challenges. One major issue we encountered was Ember injecting multiple <code>&lt;div&gt;</code> elements into the 
+          <abbr title="Document Object Model">DOM</abbr> after compilation. Not knowing exactly what would be rendered to the DOM made styling difficult, as CSS that relied on nested elements became unpredictable. To work around this, I had to add excessive class names, which polluted the template.
+      </p>
+      <p>
+          Another challenge of using new technology is the lack of developer support. Many times, we faced issues unique to our application that we couldn’t find answers for. At one point, our CTO even had to rewrite parts of the source code to accommodate our needs.
+      </p>
+      <h3>Lesson Two: Startups Are Not Regular Jobs.</h3>
+      <p>
+          As someone fresh into my web development career, I was excited for my first official job. During my time at the Startup Institute, I had gained experience by volunteering at several startups in New York, but this was different—this was my first time working in a non-linear environment.
+      </p>
+      <p>
+          Unlike a traditional 9-to-5 job, working at a startup often means racing toward deadlines. Working 50–60 hours a week was common, and while early-stage employees typically receive some equity, a startup’s survival is never guaranteed. 
+      </p>
+      <p>
+          That being said, your efforts directly impact the health and success of the company. The high-pressure environment is demanding but also incredibly rewarding—not just financially, but in terms of experience. I learned to take pride in my work, knowing that my code and contributions were directly affecting users. 
+      </p>
+      <p>
+          If you're early in your career, working at a startup—or even starting your own—is one of the fastest ways to grow.
+      </p>
+  </div>
 </details>
 
                      </section>

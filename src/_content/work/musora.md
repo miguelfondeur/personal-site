@@ -13,7 +13,7 @@ tech:
   [Vue.js, Alpine, AWS, Laravel, Tailwind, Sanity, NPM, Jest, Github, Docker]
 description: Music Education Platform. Home of Drumeo, Pianote, Guitareo, and Singeo.
 summary: |
-  Musora is an online platform that provides comprehensive music education for piano, guitar, drums, and singing. It combines world-class teaching with interactive practice tools like speed control, looping, and progress tracking. Students can engage with a supportive community, receive live feedback, and refine their skills at their own pace in an immersive learning environment.
+  Musora is an online platform that provides comprehensive music education for piano, guitar, drums, and singing. It combines world-class teaching with interactive practice tools like speed control, looping, and progress tracking. Students can engage with a supportive community, receive live feedback, and refine their skills at their own pace in an immersive learning environment. As a musician myself, I took great joy in building features that provided value for other musicians and music lovers.
 accomplishments:
   [
     "Guitar Quest: Developed the marketing page and gamified learning experience, featuring an interactive map for learning guitar.",
@@ -181,14 +181,100 @@ accomplishments:
             I led the front-end team in refactoring our Blade templates, replacing multiple HTML partials with single-page Vue components. Each page component now retrieves its own data and passes it to child components, enabling a more modular and scalable architecture. To improve the user experience, we introduced skeleton loaders across the site, which are triggered <code>onBeforeMount</code> while awaiting data from Sanity.
         </p>
         <p>
-            Another key challenge was ensuring both mobile and web front-end teams stayed aligned during this large-scale migration. Since <a href="https://www.sanity.io/docs/groq" title="Go to Sanity GROQ documentation" target="_blank"><abbr title="Graph-Relational Object Queries">GROQ</abbr> queries</a> can be complex, and not all developers were experienced in writing them, I created an <a href="https://www.npmjs.com/" title="Go to NPM website" target="_blank">NPM</a> package called <strong>Musora Content Services</strong> (<abbr title="Musora Content Services">MCS</abbr>). This package provided 
-            standardized functions for both mobile and web teams to retrieve content data from Sanity. 
+            Another key challenge was ensuring both mobile and web front-end teams stayed aligned during this large-scale migration. Since <a href="https://www.sanity.io/docs/groq" title="Go to Sanity GROQ documentation" target="_blank"><abbr title="Graph-Relational Object Queries">GROQ</abbr> queries</a> can be complex, and not all developers were experienced in writing them, I created an <a href="https://www.npmjs.com/" title="Go to NPM website" target="_blank">NPM</a> package called <strong>Musora Content Services</strong> (<abbr title="Musora Content Services">MCS</abbr>). This package provided standardized functions for both mobile and web teams to retrieve content data from Sanity. 
         </p>
         <p>
             To maintain reliability, we implemented <a href="https://jestjs.io/" title="Go to Jest website" target="_blank">Jest</a> tests for all GROQ queries, ensuring they worked correctly with every update. These tests were integrated into <strong>GitHub Actions</strong> to run automatically on every push to <i>main</i>. We also expanded the package to include user-specific endpoints from our own <abbr title="Application Programming Interface">API</abbr>, making it the central gateway for all data requests in our web and mobile applications.
         </p>
         <p>
+            To improve the developer experience, I created documentation using JSDoc, a tool that generates API documentation from properly formatted JavaScript comments. By simply ensuring that all new functions and classes were commented, developers could run a build command to generate updated documentation automatically. I documented the process in the <strong>README</strong> file and published the docs to the web using GitHub Pages. 
+        </p>
+        <p>
+            Additionally, I set up a symlink from the Musora Content Services repository to our Musora Web Platform repository. This allowed developers to test changes to the MCS package directly within the web platform—without needing to push, publish, and reinstall every iteration. This significantly reduced friction in development and sped up the feedback loop.
+        </p>
+        <p>
             This migration not only improved development efficiency but also laid the groundwork for decoupling the web application from the back-end. By shifting toward a fully front-end-driven architecture, we enabled the possibility of deploying static files instead of relying on Laravel to generate HTML, ultimately reducing infrastructure costs and improving performance.
         </p>
     </div>
+</details>
+<details>
+    <summary>Lessons Learned</summary>
+    <div class="details-content">
+        <p>
+            I spent four action-packed years at Musora and held three different titles. I did everything from managing staff to creating workflows in Jira to building experiences from the ground up. Here are some of my takeaways, both technical and personal.
+        </p>
+        <h3>Lesson One: The Necessary Evil of Frameworks in Large Teams.</h3>  
+        <p>  
+            I enjoy writing my own code. I don't like relying on third-party libraries and frameworks—for many reasons.  
+        </p>  
+        <p>  
+            That said, they have their advantages (whether I like it or not). Libraries and frameworks set conventions. When I'm creating a library or package, I want it to be well-structured, readable, and documented with human-friendly naming conventions. But very rarely do we get the time to do this.  
+        </p>  
+        <p>  
+            When you use a library like Vue.js or Tailwind CSS, these conventions are already established, tested, and backed by a community. I can tell my devs, "Read the documentation," and trust that they'll find what they need. That’s far more efficient than teaching them the "Miguel way" of doing things.  
+        </p>  
+        <p>  
+            It also helps with onboarding. If a new developer already knows these technologies, they can start contributing right away instead of learning our custom-built solutions.  
+        </p>  
+        <h3>Lesson Two: Working with iFrames is a pain.</h3>  
+        <p>  
+            Most of my work at Musora followed a familiar pattern—create components, fetch data, build new routes, repeat. But every so often, I had to work with a third-party package rendered as an iFrame.  
+        </p>  
+        <p>  
+            Out of consideration, I won’t name the package, but it was a core feature of the Musora platform. Because of that, marketers and project managers frequently requested updates and customizations.  
+        </p>  
+        <p>  
+            Here’s the problem: iFrames, like web workers, are completely encapsulated. You can’t manipulate them from the outside unless they expose a way to send and receive messages. Events won’t work because they bubble (or propagate) to the parent, and the iFrame can’t capture events from the parent.  
+        </p>  
+        <p>  
+            And don’t even think about targeting elements inside an iFrame from the outside—that violates the browser’s Same-Origin Policy.  
+        </p>  
+        <p>  
+            In a perfect world, iFrame-based packages would expose all the necessary options to update the UI and listen for changes. But we don’t live in a perfect world. If the iFrame’s owner doesn’t add your domain to the CORS headers, you have no way to modify it. You have to work with what you're given.  
+        </p>  
+        <p>  
+            When all else fails, build it yourself.  
+        </p>  
+        <h3>Lesson Three: Take Initiative—Don’t Wait for Things to Happen.</h3>  
+        <p>  
+            It’s easy to say, "It’s not my job," or "That person is out sick," or "Someone else was supposed to do it." But waiting for the ideal situation will only slow you down.  
+        </p>  
+        <p>  
+            Instead, take ownership. Offer solutions.  
+        </p>  
+        <p>  
+            If the UX manager is juggling multiple projects and the Figma designs lack error states—add them yourself. Even if they’re not perfect, at least they’ll exist.  
+        </p>  
+        <p>  
+            If you're waiting on a back-end engineer for a solution, but you can offer a workaround—make that Plan A. Pitch it, implement it. Chances are, you’ll be making their life easier.  
+        </p>  
+        <p>  
+            If a Jira ticket requires engineers from different teams, but you can do both jobs, don’t let others’ availability block progress.  
+        </p>  
+        <p>  
+            My father always said, "Perfect is the enemy of good," and "A job worth doing is worth doing well enough." Essentially—get it done.  
+        </p>  
+        <p>  
+            Of course, this mindset can lead to burnout—something I know all too well. Leadership often means doing more, taking responsibility, and stepping up when things stall. The upside? You’ll learn more and have more to show for your time at a company.  
+        </p>  
+        <h3>Lesson Four: Put People First.</h3>  
+        <p>  
+            If I can be blunt—don’t be an asshole. You won’t get the best performance, collaboration, or respect by treating people poorly.  
+        </p>  
+        <p>  
+            Do the opposite. Go out of your way to acknowledge that nothing on the <em>Project Roadmap</em> gets done without people.  
+        </p>  
+        <p>  
+            I won’t open the can of worms that is <strong>Generative AI</strong>, but even AI still needs humans—because people understand context. Even the lowest-performing team members can provide valuable insights into why something isn’t working. Listen to them. Make them feel appreciated.  
+        </p>  
+        <p>  
+            Technology exists for people, not the other way around.  
+        </p>  
+        <p>  
+            And this applies to yourself too. Your job, with all its arbitrary deadlines, is not more important than your health. You can’t do good work if you completely neglect yourself.  
+        </p>  
+        <p>  
+            Ultimately, that’s what companies should want for their employees, even if they don’t say it enough. Maybe it’s worth reminding them once in a while.  
+        </p>  
+    </div>  
 </details>
