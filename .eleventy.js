@@ -1,5 +1,4 @@
 const fs = require("fs");
-const CleanCSS = require("clean-css");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function(eleventyConfig) {
@@ -29,11 +28,6 @@ module.exports = function(eleventyConfig) {
     // CSS
     eleventyConfig.addPassthroughCopy("src/css");
     eleventyConfig.addWatchTarget("src/css");
-
-    // CSS Minification Filter
-    eleventyConfig.addFilter("cssmin", function (code) {
-        return new CleanCSS({}).minify(code).styles;
-    });
 
     // Read file filter
     eleventyConfig.addFilter("readFile", function (filepath) {
