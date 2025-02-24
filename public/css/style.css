@@ -1247,6 +1247,12 @@
             margin-right: 2.4rem;
             color: var(--color-text-secondary);
         }
+
+        & li:last-child {
+            margin-top: 1.6rem;
+            padding-top: 3.2rem;
+            border-top: 1px solid var(--color-border-accent)
+        }
     }
 }
 
