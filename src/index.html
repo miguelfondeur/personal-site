@@ -57,17 +57,17 @@ layout: layout.html
    <div class="column-section"><!-- Grid -->
       
       <div class="article-wrapper"><!-- Sub Grid for Articles -->
-         {% for journal in collections.journal limit:5 %}
-            {% unless journal.data.draft %}
+         {% for article in collections.articles limit:5 %}
+            {% unless article.data.draft %}
                <article class="article-card">
-                  <a href="{{ journal.url }}" title="Open Blog Post - {{ journal.data.title }}">
-                     <time class="" datetime="{{ journal.date | date: '%Y-%m-%d' }}">
-                        {{ journal.date | date: "%B %d, %Y" }}
+                  <a href="{{ article.url }}" title="Open Blog Post - {{ article.data.title }}">
+                     <time class="" datetime="{{ article.date | date: '%Y-%m-%d' }}">
+                        {{ article.date | date: "%B %d, %Y" }}
                      </time>
                      <h3 class="">
-                        {{ journal.data.title }}
+                        {{ article.data.title }}
                      </h3>
-                     <p class="">{{ journal.data.summary }}</p>
+                     <p class="">{{ article.data.summary }}</p>
                      <div aria-hidden="true" class="article-cta">
                         Read article
                         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
@@ -107,7 +107,7 @@ layout: layout.html
             <ol class="cv-list" role="list">
                {% for entry in cv %}
                   <li class="">
-                     <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                     <div class="">
                         <img alt="{{ entry.company }} thumbnail" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style="color:transparent" src="{{ entry.thumbnail }}">
                      </div>
                      <dl class="flex flex-auto flex-wrap gap-x-2">

@@ -5,27 +5,55 @@
 @import "./reset.css";
 @import "./prism.css";
 
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('/fonts/NotoSerif-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
 @layer base {
     :root {
         /* Allows animation from units to intrisic values like 'auto' */
         interpolate-size: allow-keywords; 
 
         /* Colors */
-        --color-bg-site: #fafafa;
-        --color-bg-content: #ffffff;
-        --color-bg-hover: #fafafa;
-        --color-bg-hover-2: #f5f4f4;
-        --color-bg-button: #3f3f46;
-        --color-bg-button-hover: #51525c;
-        --color-text-primary: #27272a;
-        --color-text-secondary: #52525c;
-        --color-text-tertiary: #9f9fa9;
-        --color-text-button: #1e1e22;
-        --color-text-accent: #3B8C66;
-        --color-text-accent-2: #CE9178;
-        --color-text-error: #AB3428;
-        --color-border-accent: #f5f4f4;
-        --color-bg-dialog: #FFF;
+        --color-white: #ffffff;
+        --color-gray-1: #fafafa;
+        --color-gray-2: #f5f4f4;
+        --color-gray-3: #d8d3d4;
+        --color-gray-4: #9f9fa9;
+        --color-gray-5: #71717b;
+        --color-gray-6: #52525c;
+        --color-gray-7: #51525c;
+        --color-gray-8: #3f3f46;
+        --color-dark-gray-1: #2e2e30;
+        --color-dark-gray-2: #27272A;
+        --color-dark-gray-3: #1e1e22;
+        --color-dark-gray-4: #1b1718;
+        --color-dark-gray-5: #18181b;
+        --color-black: #000000;
+        --color-sea-green: #3B8C66;
+        --color-persian-orange: #CE9178;
+        --color-fire-brick: #AB3428;
+
+        /* Colors Usage */
+        --color-bg-site: var(--color-gray-1);
+        --color-bg-content: var(--color-white);
+        --color-bg-hover: var(--color-gray-1);
+        --color-bg-hover-2: var(--color-gray-2);
+        --color-bg-button: var(--color-gray-8);
+        --color-bg-button-hover: var(--color-gray-7);
+        --color-text-primary: var(--color-dark-gray-2);
+        --color-text-secondary: var(--color-gray-6);
+        --color-text-tertiary: var(--color-gray-4);
+        --color-text-button: var(--color-dark-gray-3);
+        --color-text-accent: var(--color-sea-green);
+        --color-text-accent-2: var(--color-persian-orange);
+        --color-text-error: var(--color-fire-brick);
+        --color-border-accent: var(--color-gray-2);
+        --color-bg-dialog: var(--color-white);
+
         /* Font Family */
         --font-family-heading: "Noto Serif", serif;
         --font-family-body: "Noto Serif", serif;
@@ -99,6 +127,12 @@
         margin-top: 2.4rem;
     }
 
+    h2 {
+        font-size: var(--font-size-h2);
+        line-height: var(--line-height-h2);
+        margin-top: 8rem;
+    }
+
     h3 {
         font-size: var(--font-size-h3);
         line-height: var(--line-height-h3);
@@ -121,6 +155,18 @@
 }
 
 @layer layout {
+    body.js-enabled {
+        
+        button#theme-toggle {
+            display: inline-flex !important;
+        }
+    }
+
+    #theme-toggle {
+        & #light-mode-icon { display: block; }
+        & #dark-mode-icon { display: none; }
+    }
+
     *:focus-visible {
         outline: 1px solid transparent;
     }
@@ -211,14 +257,14 @@
             }
         }
 
-        nav button:not(.menu-trigger) {
+        nav button#theme-toggle {
             background-color: var(--color-bg-hover);
             border: 1px solid var(--color-border-accent);
             color: var(--color-text-primary);
             width: 30px;
             height: 30px;
             border-radius: 100%;
-            display: inline-flex;
+            display: none;
             align-items: center;
             justify-content: center;
             cursor: pointer;
@@ -1213,30 +1259,59 @@
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-bg-site: #000;
-        --color-bg-content: #18181b;
-        --color-bg-hover: #1e1e22;
-        --color-bg-hover-2: #27272F;
-        --color-text-primary: #f5f4f4;
-        --color-text-secondary: #9f9fa9;
-        --color-text-tertiary: #71717b;
-        --color-text-button: #d8d3d4;
-        --color-border-accent: #2e2e30;
-        --color-bg-dialog: #1b1718;
+        --color-bg-site: var(--color-black);
+        --color-bg-content: var(--color-dark-gray-5);
+        --color-bg-hover: var(--color-dark-gray-3);
+        --color-bg-hover-2: var(--color-dark-gray-2);
+        --color-text-primary: var(--color-gray-2);
+        --color-text-secondary: var(--color-gray-4);
+        --color-text-tertiary: var(--color-gray-5);
+        --color-text-button: var(--color-gray-3);
+        --color-border-accent: var( --color-dark-gray-1);
+        --color-bg-dialog: var(--color-dark-gray-4);
+    }
+
+    #theme-toggle {
+        & #light-mode-icon { display: none; }
+        & #dark-mode-icon { display: block; }
     }
 }
-.dark {
-    --color-bg-site: #000;
-    --color-bg-content: #18181b;
-    --color-bg-hover: #1e1e22;
-    --color-bg-hover-2: #27272F;
-    --color-text-primary: #f5f4f4;
-    --color-text-secondary: #9f9fa9;
-    --color-text-tertiary: #71717b;
-    --color-text-button: #d8d3d4;
-    --color-border-accent: #2e2e30;
-    --color-bg-dialog: #1b1718;
+
+body[data-theme="dark"] {
+    --color-bg-site: var(--color-black);
+    --color-bg-content: var(--color-dark-gray-5);
+    --color-bg-hover: var(--color-dark-gray-3);
+    --color-bg-hover-2: var(--color-dark-gray-2);
+    --color-text-primary: var(--color-gray-2);
+    --color-text-secondary: var(--color-gray-4);
+    --color-text-tertiary: var(--color-gray-5);
+    --color-text-button: var(--color-gray-3);
+    --color-border-accent: var( --color-dark-gray-1);
+    --color-bg-dialog: var(--color-dark-gray-4);
+
+    #theme-toggle {
+        & #light-mode-icon { display: none; }
+        & #dark-mode-icon { display: block; }
+    }
 }
+body[data-theme="light"] {
+    --color-bg-site: var(--color-gray-1);
+    --color-bg-content: var(--color-white);
+    --color-bg-hover: var(--color-gray-1);
+    --color-bg-hover-2: var(--color-gray-2);
+    --color-text-primary: var(--color-dark-gray-2);
+    --color-text-secondary: var(--color-gray-6);
+    --color-text-tertiary: var(--color-gray-4);
+    --color-text-button: var(--color-dark-gray-3);
+    --color-border-accent: var(--color-gray-2);
+    --color-bg-dialog: var(--color-white);
+
+    #theme-toggle {
+        & #light-mode-icon { display: block; }
+        & #dark-mode-icon { display: none; }
+    }
+}
+
 
 @layer components {
     .card {
@@ -1346,7 +1421,7 @@
                 background-color: var(--color-bg-button);
                 border-radius: var(--border-radius-sm);
                 border-width: 0;
-                color: var(--color-text-primary);
+                color: var(--color-gray-2);
                 cursor: pointer;
                 font-size: var(--font-size-sm);
                 font-weight: 600;

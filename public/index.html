@@ -45,14 +45,16 @@
    <!-- Canonical URL (to prevent duplicate content issues) -->
    <link rel="canonical" href="https://miguelfondeur.com">
 
-   <!-- TEMPORARY FONTS -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <!-- PRELOAD FONTS -->
+   <link rel="preload" href="/fonts/NotoSerif-VariableFont_wdth,wght.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
+   <!-- CSS -->
    <link href="/css/style.css" rel="stylesheet">
+
+   <!-- JS -->
+   <script src="/js/index.js" defer></script>
 </head>
-<body>
+<body data-theme="">
    <div class="site-wrapper">
 
       <header class="site-header">
@@ -70,12 +72,18 @@
                   <li><a href="/"  aria-current="page" >Home</a></li>
                   <li><a href="/about/" >About</a></li>
                   <li><a href="/work/" >Work</a></li>
-                  <li><a href="/journal/" >Journal</a></li>
+                  <li><a href="/articles/" >Articles</a></li>
                </menu>
-               <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+               <button id="theme-toggle">
+                  <span class="sr-only">Toggle Dark/Light Theme</span>
+                  <!-- Dark Mode Icon -->
+                  <svg id="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
                      <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
                    </svg>
+                   <!-- Light Mode Icon -->
+                   <svg id="light-mode-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                   </svg>                   
                </button>
             </div>
          </nav>
@@ -93,7 +101,7 @@
                <li><a href="/"  aria-current="page" >Home</a></li>
                <li><a href="/about/" >About</a></li>
                <li><a href="/work/" >Work</a></li>
-               <li><a href="/journal/" >Journal</a></li>
+               <li><a href="/articles/" >Articles</a></li>
             </menu>
          </dialog>
       </header>
@@ -157,17 +165,15 @@
       <div class="article-wrapper"><!-- Sub Grid for Articles -->
          
             
-         
-            
                <article class="article-card">
-                  <a href="/_content/journal/css/dark-light-mode-with-custom-properties/" title="Open Blog Post - Dark and Light Mode with Custom Properties">
-                     <time class="" datetime="2024-09-04">
-                        September 04, 2024
+                  <a href="/_content/article/css/dark-light-mode-with-custom-properties/" title="Open Blog Post - Dark and Light Mode with Custom Properties">
+                     <time class="" datetime="2024-02-23">
+                        February 23, 2024
                      </time>
                      <h3 class="">
                         Dark and Light Mode with Custom Properties
                      </h3>
-                     <p class="">The typical way of adding dark and light mode themes to a website is to add a class on the body that all of your styles can inherit. Using JavaScript, you toggle this class and even use localStorage to save the user's preferences. But with custom properties and a new media query, this is much easier.</p>
+                     <p class="">The typical way of adding dark and light mode themes to a website is to add a class on the body that all of your styles can inherit. Using JavaScript, you toggle this class and even use localStorage to save the user's preferences. But with CSS custom properties and media queries, this process becomes much easier.</p>
                      <div aria-hidden="true" class="article-cta">
                         Read article
                         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
@@ -181,9 +187,9 @@
          
             
                <article class="article-card">
-                  <a href="/_content/journal/javascript/js-as-a-progressive-enhancement/" title="Open Blog Post - JS As a Progressive Enhancement">
-                     <time class="" datetime="2024-09-04">
-                        September 04, 2024
+                  <a href="/_content/article/javascript/js-as-a-progressive-enhancement/" title="Open Blog Post - JS As a Progressive Enhancement">
+                     <time class="" datetime="2024-02-23">
+                        February 23, 2024
                      </time>
                      <h3 class="">
                         JS As a Progressive Enhancement
@@ -202,9 +208,9 @@
          
             
                <article class="article-card">
-                  <a href="/_content/journal/javascript/props-vs-attributes/" title="Open Blog Post - Properties Vs Attributes in JS">
-                     <time class="" datetime="2024-09-04">
-                        September 04, 2024
+                  <a href="/_content/article/javascript/props-vs-attributes/" title="Open Blog Post - Properties Vs Attributes in JS">
+                     <time class="" datetime="2024-02-23">
+                        February 23, 2024
                      </time>
                      <h3 class="">
                         Properties Vs Attributes in JS
@@ -219,6 +225,8 @@
                   </a>
                   <div class="article-hover-state"></div>
                </article>
+            
+         
             
          
             
@@ -251,7 +259,7 @@
             <ol class="cv-list" role="list">
                
                   <li class="">
-                     <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                     <div class="">
                         <img alt="Musora Media thumbnail" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style="color:transparent" src="/img/cv/cv-musora.svg">
                      </div>
                      <dl class="flex flex-auto flex-wrap gap-x-2">
@@ -269,7 +277,7 @@
                   </li>
                
                   <li class="">
-                     <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                     <div class="">
                         <img alt="Belk thumbnail" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style="color:transparent" src="/img/cv/cv-belk.svg">
                      </div>
                      <dl class="flex flex-auto flex-wrap gap-x-2">
@@ -287,7 +295,7 @@
                   </li>
                
                   <li class="">
-                     <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                     <div class="">
                         <img alt="Block Digital thumbnail" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style="color:transparent" src="/img/cv/cv-block.svg">
                      </div>
                      <dl class="flex flex-auto flex-wrap gap-x-2">
@@ -305,7 +313,7 @@
                   </li>
                
                   <li class="">
-                     <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                     <div class="">
                         <img alt="Union thumbnail" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style="color:transparent" src="/img/cv/cv-union.webp">
                      </div>
                      <dl class="flex flex-auto flex-wrap gap-x-2">
@@ -344,7 +352,7 @@
                <li><a href="/"  aria-current="page" >Home</a></li>
                <li><a href="/about/" >About</a></li>
                <li><a href="/work/" >Work</a></li>
-               <li><a href="/journal/" >Journal</a></li>
+               <li><a href="/articles/" >Articles</a></li>
             </menu>
             <p class="copyright">
                <small>© 2025 Miguel Fondeur. All rights reserved.</small>
@@ -353,5 +361,9 @@
       </footer>
 
    </div>
+   <!-- inline scripts -->
+   <script>
+      document.body.classList.add("js-enabled");
+   </script>
 </body>
 </html>

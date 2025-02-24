@@ -45,14 +45,16 @@
    <!-- Canonical URL (to prevent duplicate content issues) -->
    <link rel="canonical" href="https://miguelfondeur.com">
 
-   <!-- TEMPORARY FONTS -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <!-- PRELOAD FONTS -->
+   <link rel="preload" href="/fonts/NotoSerif-VariableFont_wdth,wght.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
+   <!-- CSS -->
    <link href="/css/style.css" rel="stylesheet">
+
+   <!-- JS -->
+   <script src="/js/index.js" defer></script>
 </head>
-<body>
+<body data-theme="">
    <div class="site-wrapper">
 
       <header class="site-header">
@@ -70,12 +72,18 @@
                   <li><a href="/" >Home</a></li>
                   <li><a href="/about/" >About</a></li>
                   <li><a href="/work/"  aria-current="page" >Work</a></li>
-                  <li><a href="/journal/" >Journal</a></li>
+                  <li><a href="/articles/" >Articles</a></li>
                </menu>
-               <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+               <button id="theme-toggle">
+                  <span class="sr-only">Toggle Dark/Light Theme</span>
+                  <!-- Dark Mode Icon -->
+                  <svg id="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
                      <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
                    </svg>
+                   <!-- Light Mode Icon -->
+                   <svg id="light-mode-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                   </svg>                   
                </button>
             </div>
          </nav>
@@ -93,7 +101,7 @@
                <li><a href="/" >Home</a></li>
                <li><a href="/about/" >About</a></li>
                <li><a href="/work/"  aria-current="page" >Work</a></li>
-               <li><a href="/journal/" >Journal</a></li>
+               <li><a href="/articles/" >Articles</a></li>
             </menu>
          </dialog>
       </header>
@@ -113,7 +121,7 @@
       
       
          <li class="work-item">
-            <button popovertarget="musora" aria-label="Click to view details for Musora">
+            <button class="work-item-button" popovertarget="musora" aria-label="Click to view details for Musora">
                <div class="expand-icon">
                   <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
                </div>
@@ -473,7 +481,7 @@
          </dialog>
       
          <li class="work-item">
-            <button popovertarget="brickArt" aria-label="Click to view details for Brick Art Creator">
+            <button class="work-item-button" popovertarget="brickArt" aria-label="Click to view details for Brick Art Creator">
                <div class="expand-icon">
                   <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
                </div>
@@ -808,7 +816,7 @@ Users can also download the parts data as an <abbr title="eXtensible Markup Lang
          </dialog>
       
          <li class="work-item">
-            <button popovertarget="blockDigital" aria-label="Click to view details for Block Digital">
+            <button class="work-item-button" popovertarget="blockDigital" aria-label="Click to view details for Block Digital">
                <div class="expand-icon">
                   <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
                </div>
@@ -1150,7 +1158,7 @@ While this CMS setup successfully met my goals, it also introduced some challeng
          </dialog>
       
          <li class="work-item">
-            <button popovertarget="knozen" aria-label="Click to view details for Knozen">
+            <button class="work-item-button" popovertarget="knozen" aria-label="Click to view details for Knozen">
                <div class="expand-icon">
                   <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
                </div>
@@ -1435,7 +1443,7 @@ questions, and shared thousands of their profiles on Instagram We were also feat
          </dialog>
       
          <li class="work-item">
-            <button popovertarget="s360" aria-label="Click to view details for Simply360">
+            <button class="work-item-button" popovertarget="s360" aria-label="Click to view details for Simply360">
                <div class="expand-icon">
                   <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
                </div>
@@ -1643,7 +1651,7 @@ In the next section, I’ll share some of the lessons I learned.
                <li><a href="/" >Home</a></li>
                <li><a href="/about/" >About</a></li>
                <li><a href="/work/"  aria-current="page" >Work</a></li>
-               <li><a href="/journal/" >Journal</a></li>
+               <li><a href="/articles/" >Articles</a></li>
             </menu>
             <p class="copyright">
                <small>© 2025 Miguel Fondeur. All rights reserved.</small>
@@ -1652,5 +1660,9 @@ In the next section, I’ll share some of the lessons I learned.
       </footer>
 
    </div>
+   <!-- inline scripts -->
+   <script>
+      document.body.classList.add("js-enabled");
+   </script>
 </body>
 </html>
