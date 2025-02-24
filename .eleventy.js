@@ -12,6 +12,9 @@ module.exports = function(eleventyConfig) {
     });
 
     // Copy Manifest File
+    eleventyConfig.addPassthroughCopy({ "src/netlify": "netlify" });
+
+    // Copy Manifest File
     eleventyConfig.addPassthroughCopy({ "src/manifest.json": "" });
 
     // Copy all images from 'src/assets/img' to 'public/img'
