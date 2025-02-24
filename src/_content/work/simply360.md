@@ -44,17 +44,19 @@ links:
         <p>
             We built the application using <a href="https://emberjs.com/" title="Go to Ember.js website" target="_blank">Ember.js</a>, an MVC JavaScript framework developed by the team behind Ruby on Rails. Ember.js had its own ecosystem and CLI tools for creating and managing components:
         </p>
-        <pre><code>
-    ember generate component my-component-name
-        </code></pre>
+
+```bash
+ember generate component my-component-name
+```
+
         <p>
-            For our asset pipeline, we used 
+            For our asset pipeline, we used
             <a href="https://github.com/broccolijs/broccoli?tab=readme-ov-file" title="Go to Broccoli's Github page" target="_blank">Broccoli</a>, which is comparable to Grunt or Gulp but optimized for fast incremental rebuilds.
         </p>
         <h3>Styling with Sass & SMACSS</h3>
         <p>
-            For styling, I used <a href="https://sass-lang.com/" title="Go to Sass website" target="_blank">Sass</a> due to its ability to define variables, nest styles, and easily import other files. I followed the 
-            <a href="https://smacss.com/" title="Go to SMACSS website" target="_blank">SMACSS</a> methodology, ensuring that my "modules" aligned 1:1 with Ember components. 
+            For styling, I used <a href="https://sass-lang.com/" title="Go to Sass website" target="_blank">Sass</a> due to its ability to define variables, nest styles, and easily import other files. I followed the
+            <a href="https://smacss.com/" title="Go to SMACSS website" target="_blank">SMACSS</a> methodology, ensuring that my "modules" aligned 1:1 with Ember components.
             This made it simple to organize and locate styles while maintaining a clear CSS hierarchy:
         </p>
         <ul role="list">
@@ -65,8 +67,8 @@ links:
         </ul>
         <h3>Templating with Handlebars</h3>
         <p>
-            Ember components consisted of a JavaScript file for interactions and a <code>.hbs</code> (Handlebars) file for HTML structure. Ember used 
-            <a href="https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/" title="Go to Ember's Handlebars documentation" target="_blank">Handlebars</a> 
+            Ember components consisted of a JavaScript file for interactions and a <code>.hbs</code> (Handlebars) file for HTML structure. Ember used
+            <a href="https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/" title="Go to Ember's Handlebars documentation" target="_blank">Handlebars</a>
             as a templating language, making it easy to inject dynamic content into the UI.
         </p>
         <h3>Creating a Native App Feel</h3>
@@ -81,12 +83,13 @@ links:
         </p>
         <h3>Final Thoughts</h3>
         <p>
-            Simply360 was an ambitious project, and we successfully launched an MVP for clients. I'm proud of the work we accomplished.  
+            Simply360 was an ambitious project, and we successfully launched an MVP for clients. I'm proud of the work we accomplished.
         </p>
         <p>
             In the next section, I’ll share some of the lessons I learned.
         </p>
     </div>
+
 </details>
 <details>
   <summary>Lessons Learned</summary>

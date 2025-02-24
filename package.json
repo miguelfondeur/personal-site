@@ -8,6 +8,7 @@
   "version": "1.0.0",
   "main": ".eleventy.js",
   "dependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "a-sync-waterfall": "^1.0.1",
     "acorn": "^8.14.0",
     "acorn-walk": "^8.3.4",

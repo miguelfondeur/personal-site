@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="/css/style.css" rel="stylesheet">
+
    <title>Miguel Fondeur - Software Engineer | Work</title>
    <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
    <meta name="author" content="Miguel Fondeur">
@@ -49,11 +49,13 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+   <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
    <div class="site-wrapper">
 
-      <header>
+      <header class="site-header">
          <nav class="container">
             <a class="logo" href="/" title="Go To Homepage of MiguelFondeur.com">
                <svg height="40" viewBox="0 0 1510 1103" xmlns="http://www.w3.org/2000/svg">
@@ -702,23 +704,20 @@ parts data to their platform.
         <p>
             In <code>index.js</code>, I iterate through the saved parts data, cross-matching it with the stored JSON file. If a color code matches, I merge additional part details into the existing dataset. This enriched data is then used to generate the UI, including a sidebar that calculates total costs for purchasing parts individually from both Webrick and LEGO. To do this, I extract unique color codes, count their occurrences, and multiply them by their respective prices, storing the results in a structured object.
         </p>
-        <pre>
-        <code>
-    &lt;INVENTORY&gt;
-        ${ this.parts.map(item => `
-        &lt;ITEM&gt;
-            &lt;ITEMTYPE&gt;P&lt;/ITEMTYPE&gt;
-            &lt;ITEMID&gt;${item.id.bricklink}&lt;/ITEMID&gt;
-            &lt;COLOR&gt;${item.id.color_id}&lt;/COLOR&gt;
-            &lt;MINQTY&gt;${item.quantity}&lt;/MINQTY&gt;
-        &lt;/ITEM&gt;`).join('')}
-    &lt;/INVENTORY&gt;</code>
-        </pre>
-        <p>
-            Users can also download the parts data as an <abbr title="eXtensible Markup Language">XML</abbr> file, which Webrick supports for direct cart uploads. To achieve this, I use JavaScript template literals to map the parts data into XML format. The XML file is then generated as a Blob URL, allowing users to download and upload it to the 
-            <a href="https://www.webrick.com/toolkit" title="Go to Webrick Parts Tool page" target="_blank">Webrick Parts Tool</a> for easy purchasing.
-        </p>
-    </div>
+<pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token constant">INVENTORY</span><span class="token operator">></span>
+    $<span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>parts<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=></span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    &lt;ITEM>
+        &lt;ITEMTYPE>P&lt;/ITEMTYPE>
+        &lt;ITEMID></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>item<span class="token punctuation">.</span>id<span class="token punctuation">.</span>bricklink<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/ITEMID>
+        &lt;COLOR></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>item<span class="token punctuation">.</span>id<span class="token punctuation">.</span>color_id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/COLOR>
+        &lt;MINQTY></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>item<span class="token punctuation">.</span>quantity<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/MINQTY>
+    &lt;/ITEM></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span><span class="token constant">INVENTORY</span><span class="token operator">></span></code></pre>
+<p><p>
+Users can also download the parts data as an <abbr title="eXtensible Markup Language">XML</abbr> file, which Webrick supports for direct cart uploads. To achieve this, I use JavaScript template literals to map the parts data into XML format. The XML file is then generated as a Blob URL, allowing users to download and upload it to the
+<a href="https://www.webrick.com/toolkit" title="Go to Webrick Parts Tool page" target="_blank">Webrick Parts Tool</a> for easy purchasing.
+</p>
+</div></p>
 </details>
 <details>
     <summary>Building "Instructions"</summary>
@@ -1030,16 +1029,31 @@ Each site also included a custom Style Guide, serving as both a UI reference for
         <p>
             Inside the <code>static/admin/previews/</code> directory, I created preview components for the blog and general page layouts. Then, in a <code>preview.js</code> file, I registered them with the CMS:
         </p>
-    <pre><code>
-    CMS.registerPreviewTemplate("site", SitePagePreview);
-    </code></pre>
-        <p>
-            This approach ensured that the preview inside the CMS closely matched the live website. The site's assets, including JavaScript bundles and minified CSS, were handled with Gulp.js for optimization. (Today, alternative tools like Vite or esbuild provide more modern asset bundling solutions.)
-        </p>
-        <p>
-            While this CMS setup successfully met my goals, it also introduced some challenges—such as styling limitations and CMS-specific quirks—which I'll discuss in the <strong>Lessons Learned</strong> section.
-        </p>
-    </div>
+<pre class="language-js"><code class="language-js"><span class="token comment">//Import Previews</span>
+<span class="token keyword">import</span> SitePagePreview <span class="token keyword">from</span> <span class="token string">"./SitePagePreview.js"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> BlogPagePreview <span class="token keyword">from</span> <span class="token string">"./BlogPagePreview.js"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> HeaderPreview <span class="token keyword">from</span> <span class="token string">"./HeaderPreview.js"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> NavigationPreview <span class="token keyword">from</span> <span class="token string">"./NavigationPreview.js"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> FooterPreview <span class="token keyword">from</span> <span class="token string">"./FooterPreview.js"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SettingsPreview <span class="token keyword">from</span> <span class="token string">"./SettingsPreview.js"</span><span class="token punctuation">;</span>
+
+<span class="token comment">//Preview Style</span>
+<span class="token constant">CMS</span><span class="token punctuation">.</span><span class="token function">registerPreviewStyle</span><span class="token punctuation">(</span><span class="token string">"../../css/style.css"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//Preview Pages</span>
+<span class="token constant">CMS</span><span class="token punctuation">.</span><span class="token function">registerPreviewTemplate</span><span class="token punctuation">(</span><span class="token string">"site"</span><span class="token punctuation">,</span> SitePagePreview<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token constant">CMS</span><span class="token punctuation">.</span><span class="token function">registerPreviewTemplate</span><span class="token punctuation">(</span><span class="token string">"blog"</span><span class="token punctuation">,</span> BlogPagePreview<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token constant">CMS</span><span class="token punctuation">.</span><span class="token function">registerPreviewTemplate</span><span class="token punctuation">(</span><span class="token string">"footer"</span><span class="token punctuation">,</span> HeaderPreview<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token constant">CMS</span><span class="token punctuation">.</span><span class="token function">registerPreviewTemplate</span><span class="token punctuation">(</span><span class="token string">"navigation"</span><span class="token punctuation">,</span> NavigationPreview<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token constant">CMS</span><span class="token punctuation">.</span><span class="token function">registerPreviewTemplate</span><span class="token punctuation">(</span><span class="token string">"footer"</span><span class="token punctuation">,</span> FooterPreview<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token constant">CMS</span><span class="token punctuation">.</span><span class="token function">registerPreviewTemplate</span><span class="token punctuation">(</span><span class="token string">"settings"</span><span class="token punctuation">,</span> SettingsPreview<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p><p>
+This approach ensured that the preview inside the CMS closely matched the live website. The site's assets, including JavaScript bundles and minified CSS, were handled with Gulp.js for optimization. (Today, alternative tools like Vite or esbuild provide more modern asset bundling solutions.)
+</p>
+<p>
+While this CMS setup successfully met my goals, it also introduced some challenges—such as styling limitations and CMS-specific quirks—which I'll discuss in the <strong>Lessons Learned</strong> section.
+</p>
+</div></p>
 </details>
 <details>
     <summary>Building Custom Templates</summary>
@@ -1536,49 +1550,47 @@ questions, and shared thousands of their profiles on Instagram We were also feat
         <p>
             We built the application using <a href="https://emberjs.com/" title="Go to Ember.js website" target="_blank">Ember.js</a>, an MVC JavaScript framework developed by the team behind Ruby on Rails. Ember.js had its own ecosystem and CLI tools for creating and managing components:
         </p>
-        <pre><code>
-    ember generate component my-component-name
-        </code></pre>
-        <p>
-            For our asset pipeline, we used 
-            <a href="https://github.com/broccolijs/broccoli?tab=readme-ov-file" title="Go to Broccoli's Github page" target="_blank">Broccoli</a>, which is comparable to Grunt or Gulp but optimized for fast incremental rebuilds.
-        </p>
-        <h3>Styling with Sass & SMACSS</h3>
-        <p>
-            For styling, I used <a href="https://sass-lang.com/" title="Go to Sass website" target="_blank">Sass</a> due to its ability to define variables, nest styles, and easily import other files. I followed the 
-            <a href="https://smacss.com/" title="Go to SMACSS website" target="_blank">SMACSS</a> methodology, ensuring that my "modules" aligned 1:1 with Ember components. 
-            This made it simple to organize and locate styles while maintaining a clear CSS hierarchy:
-        </p>
-        <ul role="list">
-            <li>Base Styles</li>
-            <li>Layout Styles</li>
-            <li>Component (Module) Styles</li>
-            <li>State Styles</li>
-        </ul>
-        <h3>Templating with Handlebars</h3>
-        <p>
-            Ember components consisted of a JavaScript file for interactions and a <code>.hbs</code> (Handlebars) file for HTML structure. Ember used 
-            <a href="https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/" title="Go to Ember's Handlebars documentation" target="_blank">Handlebars</a> 
-            as a templating language, making it easy to inject dynamic content into the UI.
-        </p>
-        <h3>Creating a Native App Feel</h3>
-        <p>
-            The biggest motivation for using modern frameworks like Ember was to mimic the smooth experience of native applications while maintaining the accessibility of a web app. Unlike traditional multi-page applications that require <strong>hard reloads</strong>, Ember allowed for seamless page updates with client-side routing.
-        </p>
-        <div class="detail-image-wrapper">
-            <img src="/img/work/s360/simply360-mobile.webp" alt="Musora UI Colors" loading="lazy">
-        </div>
-        <p>
-            Beyond responsive design, I focused on interactions to make the app feel native, such as sidebar navigation animations. I achieved this using CSS transitions and transforms to create smooth motion effects.
-        </p>
-        <h3>Final Thoughts</h3>
-        <p>
-            Simply360 was an ambitious project, and we successfully launched an MVP for clients. I'm proud of the work we accomplished.  
-        </p>
-        <p>
-            In the next section, I’ll share some of the lessons I learned.
-        </p>
-    </div>
+<pre class="language-bash"><code class="language-bash">ember generate component my-component-name</code></pre>
+<p><p>
+For our asset pipeline, we used
+<a href="https://github.com/broccolijs/broccoli?tab=readme-ov-file" title="Go to Broccoli's Github page" target="_blank">Broccoli</a>, which is comparable to Grunt or Gulp but optimized for fast incremental rebuilds.
+</p>
+<h3>Styling with Sass &amp; SMACSS</h3>
+<p>
+For styling, I used <a href="https://sass-lang.com/" title="Go to Sass website" target="_blank">Sass</a> due to its ability to define variables, nest styles, and easily import other files. I followed the
+<a href="https://smacss.com/" title="Go to SMACSS website" target="_blank">SMACSS</a> methodology, ensuring that my &quot;modules&quot; aligned 1:1 with Ember components.
+This made it simple to organize and locate styles while maintaining a clear CSS hierarchy:
+</p>
+<ul role="list">
+<li>Base Styles</li>
+<li>Layout Styles</li>
+<li>Component (Module) Styles</li>
+<li>State Styles</li>
+</ul>
+<h3>Templating with Handlebars</h3>
+<p>
+Ember components consisted of a JavaScript file for interactions and a <code>.hbs</code> (Handlebars) file for HTML structure. Ember used
+<a href="https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/" title="Go to Ember's Handlebars documentation" target="_blank">Handlebars</a>
+as a templating language, making it easy to inject dynamic content into the UI.
+</p>
+<h3>Creating a Native App Feel</h3>
+<p>
+The biggest motivation for using modern frameworks like Ember was to mimic the smooth experience of native applications while maintaining the accessibility of a web app. Unlike traditional multi-page applications that require <strong>hard reloads</strong>, Ember allowed for seamless page updates with client-side routing.
+</p>
+<div class="detail-image-wrapper">
+<img src="/img/work/s360/simply360-mobile.webp" alt="Musora UI Colors" loading="lazy">
+</div>
+<p>
+Beyond responsive design, I focused on interactions to make the app feel native, such as sidebar navigation animations. I achieved this using CSS transitions and transforms to create smooth motion effects.
+</p>
+<h3>Final Thoughts</h3>
+<p>
+Simply360 was an ambitious project, and we successfully launched an MVP for clients. I'm proud of the work we accomplished.
+</p>
+<p>
+In the next section, I’ll share some of the lessons I learned.
+</p>
+</div></p>
 </details>
 <details>
   <summary>Lessons Learned</summary>

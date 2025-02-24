@@ -153,9 +153,28 @@ accomplishments:
         <p>
             Inside the <code>static/admin/previews/</code> directory, I created preview components for the blog and general page layouts. Then, in a <code>preview.js</code> file, I registered them with the CMS:
         </p>
-    <pre><code>
-    CMS.registerPreviewTemplate("site", SitePagePreview);
-    </code></pre>
+
+```js
+//Import Previews
+import SitePagePreview from "./SitePagePreview.js";
+import BlogPagePreview from "./BlogPagePreview.js";
+import HeaderPreview from "./HeaderPreview.js";
+import NavigationPreview from "./NavigationPreview.js";
+import FooterPreview from "./FooterPreview.js";
+import SettingsPreview from "./SettingsPreview.js";
+
+//Preview Style
+CMS.registerPreviewStyle("../../css/style.css");
+
+//Preview Pages
+CMS.registerPreviewTemplate("site", SitePagePreview);
+CMS.registerPreviewTemplate("blog", BlogPagePreview);
+CMS.registerPreviewTemplate("footer", HeaderPreview);
+CMS.registerPreviewTemplate("navigation", NavigationPreview);
+CMS.registerPreviewTemplate("footer", FooterPreview);
+CMS.registerPreviewTemplate("settings", SettingsPreview);
+```
+
         <p>
             This approach ensured that the preview inside the CMS closely matched the live website. The site's assets, including JavaScript bundles and minified CSS, were handled with Gulp.js for optimization. (Today, alternative tools like Vite or esbuild provide more modern asset bundling solutions.)
         </p>
@@ -163,6 +182,7 @@ accomplishments:
             While this CMS setup successfully met my goals, it also introduced some challenges—such as styling limitations and CMS-specific quirks—which I'll discuss in the <strong>Lessons Learned</strong> section.
         </p>
     </div>
+
 </details>
 <details>
     <summary>Building Custom Templates</summary>

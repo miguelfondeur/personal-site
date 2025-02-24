@@ -144,23 +144,25 @@ accomplishments:
         <p>
             In <code>index.js</code>, I iterate through the saved parts data, cross-matching it with the stored JSON file. If a color code matches, I merge additional part details into the existing dataset. This enriched data is then used to generate the UI, including a sidebar that calculates total costs for purchasing parts individually from both Webrick and LEGO. To do this, I extract unique color codes, count their occurrences, and multiply them by their respective prices, storing the results in a structured object.
         </p>
-        <pre>
-        <code>
-    &lt;INVENTORY&gt;
-        ${ this.parts.map(item => `
-        &lt;ITEM&gt;
-            &lt;ITEMTYPE&gt;P&lt;/ITEMTYPE&gt;
-            &lt;ITEMID&gt;${item.id.bricklink}&lt;/ITEMID&gt;
-            &lt;COLOR&gt;${item.id.color_id}&lt;/COLOR&gt;
-            &lt;MINQTY&gt;${item.quantity}&lt;/MINQTY&gt;
-        &lt;/ITEM&gt;`).join('')}
-    &lt;/INVENTORY&gt;</code>
-        </pre>
+        
+```js
+<INVENTORY>
+    ${ this.parts.map(item => `
+    <ITEM>
+        <ITEMTYPE>P</ITEMTYPE>
+        <ITEMID>${item.id.bricklink}</ITEMID>
+        <COLOR>${item.id.color_id}</COLOR>
+        <MINQTY>${item.quantity}</MINQTY>
+    </ITEM>`).join('')}
+</INVENTORY>
+```
+
         <p>
-            Users can also download the parts data as an <abbr title="eXtensible Markup Language">XML</abbr> file, which Webrick supports for direct cart uploads. To achieve this, I use JavaScript template literals to map the parts data into XML format. The XML file is then generated as a Blob URL, allowing users to download and upload it to the 
+            Users can also download the parts data as an <abbr title="eXtensible Markup Language">XML</abbr> file, which Webrick supports for direct cart uploads. To achieve this, I use JavaScript template literals to map the parts data into XML format. The XML file is then generated as a Blob URL, allowing users to download and upload it to the
             <a href="https://www.webrick.com/toolkit" title="Go to Webrick Parts Tool page" target="_blank">Webrick Parts Tool</a> for easy purchasing.
         </p>
     </div>
+
 </details>
 <details>
     <summary>Building "Instructions"</summary>

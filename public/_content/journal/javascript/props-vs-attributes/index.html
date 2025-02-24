@@ -3,8 +3,8 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="/css/style.css" rel="stylesheet">
-   <title>Miguel Fondeur - Software Engineer | Properties Vs Attributes in JS</title>
+
+   <title>Miguel Fondeur - Software Engineer | Articles - Properties Vs Attributes in JS</title>
    <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
    <meta name="author" content="Miguel Fondeur">
    <meta name="robots" content="index, follow">
@@ -23,8 +23,24 @@
    <meta name="twitter:image" content="https://miguelfondeur.com/your-preview-image.jpg">
    <meta name="twitter:creator" content="@yourtwitterhandle">
 
-   <!-- Favicon -->
-   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+   <link rel="manifest" href="/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
 
    <!-- Canonical URL (to prevent duplicate content issues) -->
    <link rel="canonical" href="https://miguelfondeur.com">
@@ -33,11 +49,13 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+   <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
    <div class="site-wrapper">
 
-      <header>
+      <header class="site-header">
          <nav class="container">
             <a class="logo" href="/" title="Go To Homepage of MiguelFondeur.com">
                <svg height="40" viewBox="0 0 1510 1103" xmlns="http://www.w3.org/2000/svg">
@@ -88,23 +106,89 @@
                </svg>
             </a>
             <article>
-               <div class="hero-section">
+               <header class="hero-section">
                   <time class="" datetime="2024-09-04">
                      September 04, 2024
                   </time>
                   <h1>Properties Vs Attributes in JS</h1>
-                  <p>We've all used properties and attributes in our code. But, for a long time, I really didn't understand the difference. In short, attributes set initial values, while properties reflect an elements dynamic value, after interaction or manipulation. Simple enough, but how does that relate to data-attributes? What about custom elements? Let's take a deep dive and figure out the key differences.</p>
-               </div>
+                  <p>We've all used properties and attributes in our code. But for a long time, I really didn’t understand the difference. In short, <strong>attributes set initial values</strong>, while properties reflect an element’s dynamic state after interaction or manipulation. Simple enough, but how does that relate to data-attributes? What about custom elements? Let’s take a deep dive and figure out the key differences.</p>
+               </header>
                <main>
-                  <p>The HTML attribute (value=&quot;...&quot;) is static and sets the initial value.
-The JavaScript property (input.value) is dynamic and reflects the current value.
-Changing the property does not update the attribute, but resetting the form or using setAttribute() affects the attribute.</p>
-<p>Custom elements opt-in to attribute observation using observedAttributes().
-Built-in elements do not have this feature. For example, changing input.value does not trigger an attribute change.</p>
-<p>The attribute is stored in the DOM (setAttribute()).
-The property is stored in JavaScript memory (el.title = &quot;...&quot;).
-Updating a property does not update the attribute, unless you manually sync them.</p>
-<p>If you want attributes and properties to stay in sync, you must explicitly update them.</p>
+                  <h2>Attributes vs. Properties</h2>
+<h3>1. Attributes are static, properties are dynamic</h3>
+<p>Attributes are <strong>defined in the HTML</strong> and serve as the initial state. However, once the page loads, JavaScript properties take over and can change independently.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myInput<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Hello<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">const</span> input <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myInput"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>input<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"value"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "Hello" (Attribute)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>input<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "Hello" (Property)</span>
+
+  input<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">"Goodbye"</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>input<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"value"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Still "Hello" (Attribute)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>input<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "Goodbye" (Property)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>Changing <code>input.value</code> updates the displayed text but <strong>does not</strong> update the <code>value</code> attribute in the DOM. However, if you manually reset the form or use <code>setAttribute()</code>, the attribute will be restored.</p>
+<h3>2. Custom elements & observed attributes</h3>
+<p>Built-in elements, like <code>&lt;input&gt;</code>, do <strong>not</strong> automatically sync properties with attributes. However, <strong>custom elements</strong> can listen for attribute changes using <code>observedAttributes()</code>.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">class</span> <span class="token class-name">MyElement</span> <span class="token keyword">extends</span> <span class="token class-name">HTMLElement</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">get</span> <span class="token function">observedAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">"title"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">attributeChangedCallback</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> oldValue<span class="token punctuation">,</span> newValue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Attribute </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> changed from </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>oldValue<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> to </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>newValue<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  customElements<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">"my-element"</span><span class="token punctuation">,</span> MyElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>my-element</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Hello<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>my-element</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">const</span> el <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"my-element"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  el<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"title"</span><span class="token punctuation">,</span> <span class="token string">"Updated Title"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// Logs: "Attribute title changed from Hello to Updated Title"</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>This behavior is <strong>opt-in</strong> for custom elements, but <strong>not available</strong> for built-in ones. For example, changing <code>input.value = "New"</code> will not trigger an attribute change.</p>
+<h3>3. Attributes live in the DOM, properties live in memory</h3>
+<p><strong>Attributes</strong> are stored in the DOM itself (<code>setAttribute()</code> modifies them).<br>
+<strong>Properties</strong> are stored in JavaScript memory and <strong>may or may not sync</strong> with attributes.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>logo<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>logo.png<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">const</span> img <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"logo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>img<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"src"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "logo.png"</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>img<span class="token punctuation">.</span>src<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Full URL (e.g., "http://example.com/logo.png")</span>
+
+  img<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token string">"new-logo.png"</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>img<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"src"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Still "logo.png"</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>This happens because properties often represent <strong>computed values</strong> (like <code>img.src</code> expanding to an absolute URL).</p>
+<h2>Keeping Attributes & Properties in Sync</h2>
+<p>If you want to <strong>keep attributes and properties in sync</strong>, you need to <strong>explicitly update them</strong>.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>syncInput<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Initial<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">const</span> input <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"syncInput"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Keep value attribute in sync with property</span>
+  input<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"input"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    input<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"value"</span><span class="token punctuation">,</span> input<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>This ensures that when a user types, both the <strong>property</strong> (<code>input.value</code>) and <strong>attribute</strong> (<code>value="..."</code>) remain updated.</p>
+<h2>Summary</h2>
+<ul>
+    <li><strong>Attributes</strong> (set in HTML) provide the <strong>initial</strong> values.</li>
+    <li><strong>Properties</strong> (set in JavaScript) represent the <strong>current state</strong>.</li>
+    <li><strong>Changing a property does not update the attribute</strong> (unless manually synced).</li>
+    <li><strong>Custom elements</strong> can observe attribute changes with <code>observedAttributes()</code>.</li>
+    <li><strong>Attributes live in the DOM</strong>, while <strong>properties live in JavaScript memory</strong>.</li>
+</ul>
+<p>Understanding this distinction helps when working with forms, custom elements, and even React props vs. attributes. 
+Next time you're debugging, check <strong>both</strong> to see if you're dealing with an attribute or a property! 🚀
+</p>
 
                </main>
             </article>

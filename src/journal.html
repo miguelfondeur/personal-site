@@ -12,26 +12,28 @@ layout: layout.html
 </section>
 <section class="content-section">
     <div class="container" data-width="medium">
-        <div class="article-wrapper"><!-- Sub Grid for Articles -->
+        <div class="article-wrapper split-wrapper"><!-- Sub Grid for Articles -->
             {% for journal in collections.journal %}
                 {% unless journal.data.draft %}
-                    <article>
+                    <article class="article-card card-split">
+                        <time class="" datetime="{{ journal.date | date: '%Y-%m-%d' }}">
+                            {{ journal.date | date: "%B %d, %Y" }}
+                        </time>
                         <a href="{{ journal.url }}" title="Open Blog Post - {{ journal.data.title }}">
-                            <time class="" datetime="{{ journal.date | date: '%Y-%m-%d' }}">
-                                {{ journal.date | date: "%B %d, %Y" }}
-                            </time>
-                            <h3 class="">
-                                {{ journal.data.title }}
-                            </h3>
-                            <p class="">{{ journal.data.summary }}</p>
-                            <div aria-hidden="true" class="article-cta">
-                                Read article
-                                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                        <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
+                            <div class="card-content">
+                                <h3 class="">
+                                    {{ journal.data.title }}
+                                </h3>
+                                <p class="">{{ journal.data.summary }}</p>
+                                <div aria-hidden="true" class="article-cta">
+                                    Read article
+                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
+                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
                             </div>
+                            <div class="article-hover-state"></div>
                         </a>
-                        <div class="article-hover-state"></div>
                     </article>
                 {% endunless %}
             {% endfor %}

@@ -59,7 +59,7 @@ layout: layout.html
       <div class="article-wrapper"><!-- Sub Grid for Articles -->
          {% for journal in collections.journal limit:5 %}
             {% unless journal.data.draft %}
-               <article>
+               <article class="article-card">
                   <a href="{{ journal.url }}" title="Open Blog Post - {{ journal.data.title }}">
                      <time class="" datetime="{{ journal.date | date: '%Y-%m-%d' }}">
                         {{ journal.date | date: "%B %d, %Y" }}
