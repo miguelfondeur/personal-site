@@ -10,6 +10,7 @@
     src: url('/fonts/NotoSerif-VariableFont_wdth,wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
+    font-display: swap;
 }
 
 @layer base {
