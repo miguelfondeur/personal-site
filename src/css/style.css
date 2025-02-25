@@ -906,14 +906,17 @@
         }
 
         & .about-image {
-            padding-inline: 1rem;
+            margin-inline: 1rem;
             max-width: none;
+            aspect-ratio: 1;
+            background-color: var(--color-bg-site);
+            rotate: 3deg;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
 
             & img {
-                border-radius: var(--border-radius-lg);
                 background-color: var(--color-bg-site);
                 aspect-ratio: 1;
-                rotate: 3deg;
                 object-fit: cover;
             }
     
