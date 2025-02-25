@@ -377,8 +377,8 @@
             border-color: transparent;
             color: var(--color-text-secondary);
             position: fixed;
-            top: 1.6rem;
-            left: 1.6rem;
+            top: 0rem;
+            left: 0rem;
             height: 5.2rem;
             width: 5.2rem;
             border: 0;
@@ -390,6 +390,16 @@
 
             &:hover {
                 color: var(--color-text-primary);
+            }
+
+            @media (width > 640px) {
+                top: 0.8rem;
+                left: 0.8rem;
+            }
+
+            @media (width > 767px) {
+                top: 1.6rem;
+                left: 1.6rem;
             }
         }
 
