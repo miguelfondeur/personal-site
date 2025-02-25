@@ -5,7 +5,7 @@ date: 2024-02-24
 draft: false
 ---
 
-<h3>How We Got Here</h3>
+<h2>How We Got Here</h2>
 <p>
     Most of us know the history, but just in case, here's a brief recap. Tim Berners-Lee developed HTML and built the first website in 1991 to share documents over a distributed network. CSS followed soon after in 1996, adding a <em>suggested</em> style to those documents. Then, Brendan Eich created JavaScript in 1995 to introduce interactivity to web pages.
 </p>
@@ -16,7 +16,7 @@ draft: false
     Smaller screens, lower bandwidth, and slower connections forced us to rethink web development. Responsive design became essential, as did reducing full-page reloads. Meanwhile, native apps took advantage of device capabilities and often worked offline. Product managers turned to web developers and asked, "Can you make it work like that app?" The answer was... Yes? Enter modern JavaScript.
 </p>
 
-<h3>The Problem</h3>
+<h2>The Problem</h2>
 <p>
     Websites were never intended to function as native applications. The web was designed for shareable documents—a digital extension of print media. Browsers are built to search and display these documents, prioritizing accessibility and user preferences. Users can adjust font sizes, disable JavaScript, or rely on screen readers to consume content.
 </p>
@@ -24,7 +24,7 @@ draft: false
     As web development shifted toward JavaScript-first applications, we introduced new challenges. JavaScript had to replicate built-in browser behaviors like SEO handling, page history, and auto-scrolling. Frameworks emerged to solve these issues—<abbr title="Server Side Rendering">SSR</abbr> being a prime example. But think about it: we're now using JavaScript to generate HTML on the server, only to serve it as plain HTML. Have we lost the plot? Yes... Yes, we have.
 </p>
 
-<h3>What Are We Using JavaScript For Again?</h3>
+<h2>What Are We Using JavaScript For Again?</h2>
 <p>
     Most of us aren't building complex HTML Canvas games. Instead, we typically use JavaScript for:
 </p>
@@ -52,7 +52,7 @@ draft: false
     </li>
 </ul>
 
-<h3>When You <em>Do</em> Need JavaScript</h3>
+<h2>When You <em>Do</em> Need JavaScript</h2>
 <p>
     While many features can now be handled natively, JavaScript remains necessary in some cases:
 </p>
@@ -66,7 +66,7 @@ draft: false
     The last point is particularly complex. No matter how well you mimic a native experience with Service Workers, device APIs, and front-end routing, you can’t prevent users from disabling JavaScript. The web prioritizes documents above all else—everything else is an enhancement.
 </p>
 
-<h3>So...</h3>
+<h2>So...</h2>
 <p>
     If the web is fundamentally about documents, we should build with that priority in mind:
 </p>

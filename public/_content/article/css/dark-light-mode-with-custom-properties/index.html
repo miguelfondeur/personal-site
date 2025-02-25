@@ -122,7 +122,7 @@
                   <p>The typical way of adding dark and light mode themes to a website is to add a class on the body that all of your styles can inherit. Using JavaScript, you toggle this class and even use localStorage to save the user's preferences. But with CSS custom properties and media queries, this process becomes much easier.</p>
                </header>
                <main>
-                  <h3>Custom Properties</h3>
+                  <h2>Custom Properties</h2>
 <p>If you're not familiar with custom properties (CSS variables), they allow us to store and reuse values in CSS dynamically. Unlike preprocessor variables (like Sass), CSS custom properties can be modified in real time and accessed via JavaScript.</p>
 <p>Here’s a basic example:</p>
 <pre class="language-css"><code class="language-css"><span class="token selector">:root</span> <span class="token punctuation">{</span>
@@ -139,7 +139,7 @@
   <span class="token property">--text-color</span><span class="token punctuation">:</span> lightblue<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>This means you can change the theme in a structured, maintainable way without rewriting large portions of your styles.</p>
-<h3>The prefers-color-scheme Media Query</h3>
+<h2>The prefers-color-scheme Media Query</h2>
 <p>Now that we understand custom properties, we can take advantage of the <code>prefers-color-scheme</code> media query. This query detects whether a user has set their system preference to light or dark mode and applies styles accordingly.</p>
 <pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">prefers-color-scheme</span><span class="token punctuation">:</span> dark<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
   <span class="token selector">:root</span> <span class="token punctuation">{</span>
@@ -148,10 +148,10 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
 <p> With this approach, users automatically get a dark theme if their system is set to dark mode—no JavaScript required.</p>
-<h3>Adding JavaScript for User Control</h3> 
+<h2>Adding JavaScript for User Control</h2> 
 <p>While the browser respects user preferences, we might still want to let users manually toggle themes and save their preference using <code>localStorage</code>.</p>
 <p>Here's how we can do it:</p>
-<h3>1. Setting the Default Theme</h3>
+<h2>1. Setting the Default Theme</h2>
 <p>Before applying the stored preference, we first check if the user has already chosen a theme. If not, we fall back to the system preference using <code>window.matchMedia</code>.</p>
 <pre class="language-js"><code class="language-js"><span class="token comment">// Selectors</span>
 <span class="token keyword">const</span> button <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"theme-toggle"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -169,7 +169,7 @@
     window<span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span><span class="token string">"(prefers-color-scheme: dark)"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>matches<span class="token punctuation">;</span>
   body<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"data-theme"</span><span class="token punctuation">,</span> prefersDark <span class="token operator">?</span> <span class="token string">"dark"</span> <span class="token operator">:</span> <span class="token string">"light"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<h3>2. Theme Toggle Button</h3>
+<h2>2. Theme Toggle Button</h2>
 <p>Now, we allow users to manually toggle between dark and light mode.</p>
 <pre class="language-js"><code class="language-js">button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> currentTheme <span class="token operator">=</span> body<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"data-theme"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -178,7 +178,7 @@
   body<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"data-theme"</span><span class="token punctuation">,</span> newTheme<span class="token punctuation">)</span><span class="token punctuation">;</span>
   localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">"theme"</span><span class="token punctuation">,</span> newTheme<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h3>Applying the Theme in CSS</h3>
+<h2>Applying the Theme in CSS</h2>
 <p>Now, we update our styles to reflect the JavaScript-controlled <code>data-theme</code> attribute:</p>
 <pre class="language-css"><code class="language-css"><span class="token selector">[data-theme="dark"]</span> <span class="token punctuation">{</span>
   <span class="token property">--background-color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
@@ -194,7 +194,7 @@
   <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--background-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--text-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<h3>No JavaScript? No Problem</h3>
+<h2>No JavaScript? No Problem</h2>
 <p>
   Even if JavaScript is disabled, the prefers-color-scheme media query still applies the correct theme. The JavaScript layer only enhances the experience by giving users manual control.
 </p>
