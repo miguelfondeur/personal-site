@@ -1,7 +1,7 @@
 ---
 title: Dark and Light Mode with Custom Properties
 summary: The typical way of adding dark and light mode themes to a website is to add a class on the body that all of your styles can inherit. Using JavaScript, you toggle this class and even use localStorage to save the user's preferences. But with CSS custom properties and media queries, this process becomes much easier.
-date: 2024-02-24
+date: 2025-02-24
 draft: false
 ---
 

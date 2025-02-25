@@ -1,7 +1,7 @@
 ---
 title: JS As a Progressive Enhancement
 summary: Many of us have grown accustomed to the current JavaScript landscape. We've worked with various component libraries and frameworks, learned front-end routing and state management, and, at times, experienced 'JavaScript fatigue.' But have we stretched the language too far beyond its original purpose?
-date: 2024-02-24
+date: 2025-02-24
 draft: false
 ---
 
