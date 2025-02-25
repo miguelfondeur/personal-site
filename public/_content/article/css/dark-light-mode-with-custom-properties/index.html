@@ -162,21 +162,21 @@
 <span class="token keyword">const</span> storedTheme <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">"theme"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">if</span> <span class="token punctuation">(</span>storedTheme<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  body<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"data-theme"</span><span class="token punctuation">,</span> storedTheme<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  body<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>theme <span class="token operator">=</span> storedTheme<span class="token punctuation">;</span>
 <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
   <span class="token comment">// If No Stored Theme, Use System Preference</span>
   <span class="token keyword">const</span> prefersDark <span class="token operator">=</span>
     window<span class="token punctuation">.</span>matchMedia <span class="token operator">&amp;&amp;</span>
     window<span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span><span class="token string">"(prefers-color-scheme: dark)"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>matches<span class="token punctuation">;</span>
-  body<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"data-theme"</span><span class="token punctuation">,</span> prefersDark <span class="token operator">?</span> <span class="token string">"dark"</span> <span class="token operator">:</span> <span class="token string">"light"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  body<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>theme <span class="token operator">=</span> prefersDark <span class="token operator">?</span> <span class="token string">"dark"</span> <span class="token operator">:</span> <span class="token string">"light"</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <h2>2. Theme Toggle Button</h2>
 <p>Now, we allow users to manually toggle between dark and light mode.</p>
 <pre class="language-js"><code class="language-js">button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> currentTheme <span class="token operator">=</span> body<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"data-theme"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> currentTheme <span class="token operator">=</span> body<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>theme<span class="token punctuation">;</span>
   <span class="token keyword">const</span> newTheme <span class="token operator">=</span> currentTheme <span class="token operator">===</span> <span class="token string">"dark"</span> <span class="token operator">?</span> <span class="token string">"light"</span> <span class="token operator">:</span> <span class="token string">"dark"</span><span class="token punctuation">;</span>
 
-  body<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"data-theme"</span><span class="token punctuation">,</span> newTheme<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  body<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>theme <span class="token operator">=</span> newTheme<span class="token punctuation">;</span>
   localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">"theme"</span><span class="token punctuation">,</span> newTheme<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h2>Applying the Theme in CSS</h2>
@@ -197,7 +197,7 @@
 <span class="token punctuation">}</span></code></pre>
 <h2>No JavaScript? No Problem</h2>
 <p>
-  Even if JavaScript is disabled, the prefers-color-scheme media query still applies the correct theme. The JavaScript layer only enhances the experience by giving users manual control.
+  Even if JavaScript is disabled, the <code>prefers-color-scheme</code> media query still applies the correct theme. The JavaScript layer only enhances the experience by giving users manual control.
 </p>
 <p>
   This method is scalable and allows you to extend support for multiple themes beyond just dark and light. You could even introduce dynamic themes that change based on time of day!

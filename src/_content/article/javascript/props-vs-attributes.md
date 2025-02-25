@@ -1,6 +1,6 @@
 ---
 title: Properties Vs Attributes in JS
-summary: We've all used properties and attributes in our code. But for a long time, I really didn’t understand the difference. In short, <strong>attributes set initial values</strong>, while properties reflect an element’s dynamic state after interaction or manipulation. Simple enough, but how does that relate to data-attributes? What about custom elements? Let’s take a deep dive and figure out the key differences.
+summary: We've all used properties and attributes in our code. But for a long time, I really didn’t understand the difference. In short, attributes set initial values, while properties reflect an element’s dynamic state after interaction or manipulation. Simple enough, but how does that relate to data-attributes? What about custom elements? Let’s take a deep dive and figure out the key differences.
 date: 2025-02-24
 draft: false
 ---
@@ -90,15 +90,52 @@ draft: false
 
 <p>This ensures that when a user types, both the <strong>property</strong> (<code>input.value</code>) and <strong>attribute</strong> (<code>value="..."</code>) remain updated.</p>
 
-<h2>Summary</h2>
+<h2>How do Data Attributes Work?</h2>
+<p>
+  Native elements provide specific attributes by default, such as the <code>src</code> attribute on an <code>img</code> or the <code>type</code> attribute on an <code>input</code>. However, you can also define your own custom attributes using the <code>data-</code> prefix, which is commonly referred to as "data attributes." These custom data attributes are accessible in both your CSS and JavaScript, providing a flexible way to store extra information.
+</p>
+
+<p>
+  Unlike the standard attributes like <code>src</code> or <code>value</code>, data attributes allow you to store custom data directly on HTML elements without affecting the rendering of the page. They’re especially useful for adding extra metadata or managing state within your app. Let’s see how they work in practice:
+</p>
+
+<h3>Example: Setting a Custom Data Attribute for Theming</h3>
+<p>
+  Imagine you want to store the theme preference in your HTML element. Here's how you'd do it with a data attribute:
+</p>
+
+```html
+<body data-theme="dark">
+  <!-- Content -->
+</body>
+
+<script>
+  // Get Data
+  const theme = document.body.dataset.theme; // Note the use of dataset
+  console.log(theme); // "dark"
+
+  // Set Data
+  document.body.dataset.theme = "light";
+  console.log(document.body.dataset.theme); // "light"
+</script>
+```
+
+<p>
+  In the example above, we added a <code>data-theme</code> attribute to the <code>&lt;body&gt;</code> tag. This attribute can be accessed in JavaScript via <code>dataset.theme</code>. Notice that when you access or set data attributes in JavaScript, you use the <code>dataset</code> object, which automatically converts <code>data-*</code> attributes into camelCase.
+</p> 
+<p>
+  While data attributes are easy to use and versatile, it’s important to note that they should primarily be used for storing extra data that isn't critical to your page's layout or style. They help keep your HTML clean and provide a way to pass information around without cluttering the DOM or your CSS. I'll go into a deeper discussion on data attributes in a future article.
+</p>
+
+<h2>TL;DR</h2>
 <ul>
     <li><strong>Attributes</strong> (set in HTML) provide the <strong>initial</strong> values.</li>
     <li><strong>Properties</strong> (set in JavaScript) represent the <strong>current state</strong>.</li>
     <li><strong>Changing a property does not update the attribute</strong> (unless manually synced).</li>
     <li><strong>Custom elements</strong> can observe attribute changes with <code>observedAttributes()</code>.</li>
     <li><strong>Attributes live in the DOM</strong>, while <strong>properties live in JavaScript memory</strong>.</li>
+    <li><strong>Data attributes</strong> (<code>data-*</code>) allow you to store custom data in HTML elements that are accessible in both CSS and JavaScript.</li>
 </ul>
-
-<p>Understanding this distinction helps when working with forms, custom elements, and even React props vs. attributes. 
-Next time you're debugging, check <strong>both</strong> to see if you're dealing with an attribute or a property! 🚀
+<p>
+  Understanding this distinction is key when working with forms, custom elements, or even React props vs. attributes. So next time you're debugging, be sure to check <strong>both</strong>—is it an attribute or a property?
 </p>

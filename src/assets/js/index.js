@@ -13,22 +13,22 @@ console.log('%cWelcome to MiguelFondeur.com', 'color: #b6a572; font-size: 18px; 
     
     //Stored Theme
     if (storedTheme) {
-        body.setAttribute("data-theme", storedTheme);
+        body.dataset.theme = storedTheme;
     } else {
         //User Agent Theme
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            body.setAttribute("data-theme", "dark");
+            body.dataset.theme = "dark";
         } else {
-            body.setAttribute("data-theme", "light");
+            body.dataset.theme = "light";
         }
     }
     
     //Update Theme On Click
     themeToggleButton.addEventListener("click", () => {
-      const currentTheme = body.getAttribute("data-theme");
+      const currentTheme = body.dataset.theme;
       const newTheme = currentTheme === "dark" ? "light" : "dark";
-    
-      body.setAttribute("data-theme", newTheme);
+
+      body.dataset.theme = newTheme;
       localStorage.setItem("theme", newTheme);
     });    
 })();

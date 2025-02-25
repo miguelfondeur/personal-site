@@ -63,13 +63,13 @@ const body = document.body;
 const storedTheme = localStorage.getItem("theme");
 
 if (storedTheme) {
-  body.setAttribute("data-theme", storedTheme);
+  body.dataset.theme = storedTheme;
 } else {
   // If No Stored Theme, Use System Preference
   const prefersDark =
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches;
-  body.setAttribute("data-theme", prefersDark ? "dark" : "light");
+  body.dataset.theme = prefersDark ? "dark" : "light";
 }
 ```
 
@@ -78,10 +78,10 @@ if (storedTheme) {
 
 ```js
 button.addEventListener("click", () => {
-  const currentTheme = body.getAttribute("data-theme");
+  const currentTheme = body.dataset.theme;
   const newTheme = currentTheme === "dark" ? "light" : "dark";
 
-  body.setAttribute("data-theme", newTheme);
+  body.dataset.theme = newTheme;
   localStorage.setItem("theme", newTheme);
 });
 ```
@@ -108,7 +108,7 @@ body {
 
 <h2>No JavaScript? No Problem</h2>
 <p>
-  Even if JavaScript is disabled, the prefers-color-scheme media query still applies the correct theme. The JavaScript layer only enhances the experience by giving users manual control.
+  Even if JavaScript is disabled, the <code>prefers-color-scheme</code> media query still applies the correct theme. The JavaScript layer only enhances the experience by giving users manual control.
 </p>
 <p>
   This method is scalable and allows you to extend support for multiple themes beyond just dark and light. You could even introduce dynamic themes that change based on time of day!
