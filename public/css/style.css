@@ -47,7 +47,7 @@
         --color-bg-button-hover: var(--color-gray-7);
         --color-text-primary: var(--color-dark-gray-2);
         --color-text-secondary: var(--color-gray-6);
-        --color-text-tertiary: var(--color-gray-4);
+        --color-text-tertiary: var(--color-gray-5);
         --color-text-button: var(--color-dark-gray-3);
         --color-text-accent: var(--color-sea-green);
         --color-text-accent-2: var(--color-persian-orange);
@@ -134,7 +134,7 @@
         margin-top: 8rem;
     }
 
-    h3 {
+    h3, .h3 {
         font-size: var(--font-size-h3);
         line-height: var(--line-height-h3);
     }
@@ -1330,7 +1330,7 @@ body[data-theme="light"] {
     --color-bg-hover-2: var(--color-gray-2);
     --color-text-primary: var(--color-dark-gray-2);
     --color-text-secondary: var(--color-gray-6);
-    --color-text-tertiary: var(--color-gray-4);
+    --color-text-tertiary: var(--color-gray-5);
     --color-text-button: var(--color-dark-gray-3);
     --color-border-accent: var(--color-gray-2);
     --color-bg-dialog: var(--color-white);
