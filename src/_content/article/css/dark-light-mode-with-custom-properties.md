@@ -5,7 +5,7 @@ date: 2024-02-24
 draft: false
 ---
 
-<h2>Custom Properties</h2>
+<h3>Custom Properties</h3>
 <p>If you're not familiar with custom properties (CSS variables), they allow us to store and reuse values in CSS dynamically. Unlike preprocessor variables (like Sass), CSS custom properties can be modified in real time and accessed via JavaScript.</p>
 
 <p>Here’s a basic example:</p>
@@ -32,7 +32,7 @@ article {
 
 <p>This means you can change the theme in a structured, maintainable way without rewriting large portions of your styles.</p>
 
-<h2>The prefers-color-scheme Media Query</h2>
+<h3>The prefers-color-scheme Media Query</h3>
 <p>Now that we understand custom properties, we can take advantage of the <code>prefers-color-scheme</code> media query. This query detects whether a user has set their system preference to light or dark mode and applies styles accordingly.</p>
 
 ```css
@@ -46,12 +46,12 @@ article {
 
 <p> With this approach, users automatically get a dark theme if their system is set to dark mode—no JavaScript required.</p>
 
-<h2>Adding JavaScript for User Control</h2> 
+<h3>Adding JavaScript for User Control</h3> 
 <p>While the browser respects user preferences, we might still want to let users manually toggle themes and save their preference using <code>localStorage</code>.</p>
 
 <p>Here's how we can do it:</p>
   
-<h2>1. Setting the Default Theme</h2>
+<h3>1. Setting the Default Theme</h3>
 <p>Before applying the stored preference, we first check if the user has already chosen a theme. If not, we fall back to the system preference using <code>window.matchMedia</code>.</p>
 
 ```js
@@ -73,7 +73,7 @@ if (storedTheme) {
 }
 ```
 
-<h2>2. Theme Toggle Button</h2>
+<h3>2. Theme Toggle Button</h3>
 <p>Now, we allow users to manually toggle between dark and light mode.</p>
 
 ```js
@@ -86,7 +86,7 @@ button.addEventListener("click", () => {
 });
 ```
 
-<h2>Applying the Theme in CSS</h2>
+<h3>Applying the Theme in CSS</h3>
 <p>Now, we update our styles to reflect the JavaScript-controlled <code>data-theme</code> attribute:</p>
 
 ```css
@@ -106,7 +106,7 @@ body {
 }
 ```
 
-<h2>No JavaScript? No Problem</h2>
+<h3>No JavaScript? No Problem</h3>
 <p>
   Even if JavaScript is disabled, the prefers-color-scheme media query still applies the correct theme. The JavaScript layer only enhances the experience by giving users manual control.
 </p>
