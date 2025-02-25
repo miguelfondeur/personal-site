@@ -789,12 +789,16 @@
             max-width: 104rem;
         }
 
+        &[data-width="tight"],
         &[data-width="small"],
         &[data-width="medium"] {
             margin: 0;
             padding: 0;
         }
 
+        &[data-width="tight"] {
+            max-width: 60rem;
+        }
         &[data-width="small"],
         &[data-width="small-center"] {
             max-width: 67.2rem;
@@ -802,6 +806,11 @@
         &[data-width="medium"] {
             max-width: 76.8rem;
         }
+    }
+
+    .owl-icon {
+        margin-bottom: 1.6rem;
+        color: var(--color-text-primary);
     }
     
     .content-section {
