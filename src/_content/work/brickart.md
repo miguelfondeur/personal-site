@@ -4,6 +4,7 @@ permalink: false
 name: Brick Art Creator
 id: brickArt
 role: Creator
+order: 2
 start: Jan 2024
 end: Oct 2024
 thumb: /img/cv/cv-brickart.svg

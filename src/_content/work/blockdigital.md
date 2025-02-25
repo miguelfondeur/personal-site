@@ -6,6 +6,7 @@ id: blockDigital
 role: Business Owner / Solutions Architect
 start: Sep 2017
 end: Mar 2020
+order: 3
 thumb: /img/cv/cv-block.svg
 header_image: /img/work/block/block-homepage.webp
 tech: [Hugo, React, Sass, Gulp, Netlify, Github]

@@ -13,7 +13,8 @@ layout: layout.html
 <section class="content-section">
    <ul class="work-grid" role="list">
       
-      {% for item in collections.work %}
+      {% assign sortedCollection = collections.work | sort: "data.order" %}
+      {% for item in sortedCollection %}
          <li class="work-item">
             <button class="work-item-button" popovertarget="{{ item.data.id }}" aria-label="Click to view details for {{ item.data.name }}">
                <div class="expand-icon">

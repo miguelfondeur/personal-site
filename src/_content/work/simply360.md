@@ -6,6 +6,7 @@ id: s360
 role: UX Developer
 start: Jun 2014
 end: Jun 2015
+order: 5
 thumb: /img/cv/cv-s360.svg
 header_image: /img/work/s360/s360-people.webp
 tech: [Ember.js, Sass, PSD to HTML]

@@ -6,6 +6,7 @@ id: knozen
 role: Lead Frontend Engineer
 start: Jan 2016
 end: Aug 2016
+order: 4
 thumb: /img/cv/cv-knozen.svg
 header_image: /img/work/knozen/knozen-desktop.webp
 tech: [Django, JQuery, Sass, Photoshop, Mobile Web]

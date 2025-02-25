@@ -6,6 +6,7 @@ id: musora
 role: Lead Frontend Engineer
 start: Oct 2020
 end: Jan 2025
+order: 1
 thumb: /img/cv/cv-musora.svg
 logo: /img/work/musora/musora-logo.svg
 header_image: /img/work/musora/platform-workouts.webp
