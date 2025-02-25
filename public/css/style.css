@@ -113,7 +113,7 @@
         }
     }
 
-    h1,h2,h3,h4 {
+    h1,h2,h3,.h3,h4 {
         font-family: var(--font-family-heading);
         color: var(--color-text-primary);
     }
@@ -137,6 +137,7 @@
     h3, .h3 {
         font-size: var(--font-size-h3);
         line-height: var(--line-height-h3);
+        font-weight: 600;
     }
     
     p {
