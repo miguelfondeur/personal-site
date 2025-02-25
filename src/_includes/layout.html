@@ -11,18 +11,18 @@
 
    <!-- Open Graph (for social media sharing) -->
    <meta property="og:title" content="Miguel Fondeur - Software Engineer">
-   <meta property="og:description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web.">
-   <meta property="og:image" content="https://miguelfondeur.com/img/owl-og-image.jpg">
+   <meta property="og:description" content="{{ summary }}">
+   <meta property="og:image" content="{{ og_image | default: "https://miguelfondeur.com/img/owl-og-image.jpg" }}">
    <meta property="og:url" content="https://miguelfondeur.com">
    <meta property="og:type" content="website">
-   <meta property="og:logo" content="https://miguelfondeur.com/img/owl-og-image.jpg" />
+   <meta property="og:logo" content="{{ og_image | default: "https://miguelfondeur.com/img/owl-og-image.jpg" }}" />
 
    <!-- Twitter Card -->
    <meta name="twitter:card" content="summary_large_image">
    <meta name="twitter:title" content="Miguel Fondeur - Software Engineer">
-   <meta name="twitter:description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web.">
-   <meta name="twitter:image" content="https://miguelfondeur.com/img/owl-og-image.jpg">
-   <meta name="twitter:creator" content="@yourtwitterhandle">
+   <meta name="twitter:description" content="{{ summary }}">
+   <meta name="twitter:image" content="{{ og_image | default: "https://miguelfondeur.com/img/owl-og-image.jpg" }}">
+   <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
 
    <!-- Favicons -->
    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">

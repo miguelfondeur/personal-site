@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Miguel Fondeur - Software Engineer | Articles - {{ title }}</title>
+   <title>Miguel Fondeur - Software Engineer | Articles | {{ title }}</title>
    <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
    <meta name="author" content="Miguel Fondeur">
    <meta name="robots" content="index, follow">
@@ -12,17 +12,17 @@
    <!-- Open Graph (for social media sharing) -->
    <meta property="og:title" content="Miguel Fondeur - Software Engineer">
    <meta property="og:description" content="{{ summary }}">
-   <meta property="og:image" content="https://miguelfondeur.com/img/owl-og-image.jpg">
+   <meta property="og:image" content="{{ og_image | default: "https://miguelfondeur.com/img/owl-og-image.jpg" }}">
    <meta property="og:url" content="https://miguelfondeur.com">
    <meta property="og:type" content="website">
-   <meta property="og:logo" content="https://miguelfondeur.com/img/owl-og-image.jpg" />
+   <meta property="og:logo" content="{{ og_image | default: "https://miguelfondeur.com/img/owl-og-image.jpg" }}" />
 
    <!-- Twitter Card -->
    <meta name="twitter:card" content="summary_large_image">
    <meta name="twitter:title" content="Miguel Fondeur - Software Engineer">
    <meta name="twitter:description" content="{{ summary }}">
-   <meta name="twitter:image" content="https://miguelfondeur.com/img/owl-og-image.jpg">
-   <meta name="twitter:creator" content="@yourtwitterhandle">
+   <meta name="twitter:image" content="{{ og_image | default: "https://miguelfondeur.com/img/owl-og-image.jpg" }}">
+   <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
 
    <!-- Favicons -->
    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
