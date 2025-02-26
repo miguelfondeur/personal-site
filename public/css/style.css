@@ -276,7 +276,9 @@
                 background-color: var(--color-bg-hover-2);
             }
         }
-
+        #nav-popover {
+            padding: 3.2rem;
+        }
         .nav-menu-wrapper {
             display: flex;
             align-items: center;
@@ -318,7 +320,7 @@
         width: calc(100% - 3.2rem);
         margin: 2.4rem 1.6rem;
         border-radius: var(--border-radius-md);
-        padding: 3.2rem;
+        padding: 0;
         background-color: var(--color-bg-dialog);
         border: 1px solid var(--color-border-accent);
         opacity: 0;
@@ -370,34 +372,47 @@
             padding-top: 0;
         }
 
+        @media (width > 640px) {
+            padding: 3.2rem;
+        }
+
         & .close-dialog-button {
-            background-color: transparent;
+            background-color: color-mix(in srgb, var(--color-bg-dialog) 80%, transparent);
+            border: 1px solid var(--color-border-accent);
             cursor: pointer;
             border-radius: 100%;
-            border-color: transparent;
             color: var(--color-text-secondary);
             position: fixed;
-            top: 0rem;
-            left: 0rem;
+            top: .4rem;
+            right: .4rem;
             height: 5.2rem;
             width: 5.2rem;
-            border: 0;
             padding:0;  
             display: inline-flex;
             align-items: center;
             justify-content: center;
             z-index: 5;
 
+            & svg {
+                width: 4rem;
+            }
+
             &:hover {
                 color: var(--color-text-primary);
             }
 
             @media (width > 640px) {
+                background-color: transparent;
+                border: 0;
                 top: 0.8rem;
                 left: 0.8rem;
+
+                & svg {
+                    width: initial;
+                }
             }
 
-            @media (width > 767px) {
+            @media (width > 820px) {
                 top: 1.6rem;
                 left: 1.6rem;
             }
@@ -524,7 +539,11 @@
             }
 
             & .details-content {
-                padding-inline: 1.2rem;
+                padding-inline: 0;
+
+                @media (width > 640px) {
+                    padding-inline: 1.2rem; 
+                }
             }
 
             & .detail-image-wrapper {
