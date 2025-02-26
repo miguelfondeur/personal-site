@@ -7,7 +7,7 @@ role: Lead Frontend Engineer
 start: Jan 2016
 end: Aug 2016
 order: 4
-thumb: /img/cv/cv-knozen.svg
+thumb: /img/cv/cv-knozen.webp
 header_image: /img/work/knozen/knozen-desktop.webp
 tech: [Django, JQuery, Sass, Photoshop, Mobile Web]
 description: Personality quiz that gave users a personality chart with 12 traits.

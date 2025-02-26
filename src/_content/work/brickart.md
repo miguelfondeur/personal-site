@@ -7,7 +7,7 @@ role: Creator
 order: 2
 start: Jan 2024
 end: Oct 2024
-thumb: /img/cv/cv-brickart.svg
+thumb: /img/cv/cv-brickart.webp
 header_image: /img/work/brickart/brickart-conversion.webp
 tech: [HTML Canvas, Web Components, Hugo, Tailwind, UI/UX]
 description: Web app to convert images to mosaic art. Inspired by Lego's Art series.
