@@ -78,10 +78,10 @@ layout: layout.html
             <ol class="cv-list" role="list">
                {% for entry in cv %}
                   <li class="">
-                     <div class="">
+                     <div class="cv-thumb">
                         <img alt="{{ entry.company }} thumbnail" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style="color:transparent" src="{{ entry.thumbnail }}">
                      </div>
-                     <dl class="flex flex-auto flex-wrap gap-x-2">
+                     <dl class="">
                         <dt class="sr-only">Company</dt>
                         <dd class="cv-company">{{ entry.company }}</dd>
                         <dt class="sr-only">Role</dt>
