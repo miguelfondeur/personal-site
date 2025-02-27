@@ -311,6 +311,7 @@
             padding: 0.8rem 1.2rem;
             font-size: var(--font-size-sm);
             line-height: 1;
+            letter-spacing: .03rem;
         }
     }
 

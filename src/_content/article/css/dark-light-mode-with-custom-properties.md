@@ -49,40 +49,37 @@ article {
 <h2>Adding JavaScript for User Control</h2> 
 <p>While the browser respects user preferences, we might still want to let users manually toggle themes and save their preference using <code>localStorage</code>.</p>
 
-<p>Here's how we can do it:</p>
-  
 <h2>1. Setting the Default Theme</h2>
-<p>Before applying the stored preference, we first check if the user has already chosen a theme. If not, we fall back to the system preference using <code>window.matchMedia</code>.</p>
+<p>To prevent a "flash" when switching themes, we move the theme-setting logic to the <code>&lt;head&gt;</code> so it executes before the page renders.</p>
 
-```js
-// Selectors
-const button = document.getElementById("theme-toggle");
-const body = document.body;
-
-// Check Local Storage for a Saved Theme
-const storedTheme = localStorage.getItem("theme");
-
-if (storedTheme) {
-  body.dataset.theme = storedTheme;
-} else {
-  // If No Stored Theme, Use System Preference
-  const prefersDark =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
-  body.dataset.theme = prefersDark ? "dark" : "light";
-}
+```html
+<script>
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      document.documentElement.dataset.theme = storedTheme;
+    } else {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+    }
+  })();
+</script>
 ```
 
-<h2>2. Theme Toggle Button</h2>
-<p>Now, we allow users to manually toggle between dark and light mode.</p>
+<h2>2. Theme Toggle with Event Delegation</h2>
+<p>Instead of adding an event listener directly to the button, we use event delegation to improve performance and scalability.</p>
 
 ```js
-button.addEventListener("click", () => {
-  const currentTheme = body.dataset.theme;
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-  body.dataset.theme = newTheme;
-  localStorage.setItem("theme", newTheme);
+document.addEventListener("click", (event) => {
+  if (event.target.closest("#theme-toggle")) {
+    const html = document.documentElement;
+    const newTheme =
+      document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    html.dataset.theme = newTheme;
+    localStorage.setItem("theme", newTheme);
+  }
 });
 ```
 
@@ -114,5 +111,5 @@ body {
   This method is scalable and allows you to extend support for multiple themes beyond just dark and light. You could even introduce dynamic themes that change based on time of day!
 </p>
 <p>
-  By combining CSS variables, media queries, and JavaScript, we get a clean and maintainable way to implement theme switching—without unnecessary complexity.
+  By combining CSS variables, media queries, and JavaScript with event delegation and optimized loading, we get a clean and maintainable way to implement theme switching—without unnecessary complexity.
 </p>
