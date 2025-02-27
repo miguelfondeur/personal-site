@@ -63,6 +63,20 @@
          }
       })();
    </script>
+   <!-- Does not work in all browser -->
+   <script type="speculationrules">
+      {
+        "prerender": [{
+            "source": "list",
+            "urls": [
+               "/work/index.html", 
+               "/about/index.html",
+               "/articles/index.html",
+               "/index.html"
+            ]
+         }]
+      }
+   </script>
    <script src="/js/index.js" defer></script>
 </head>
 <body data-theme="">
@@ -171,20 +185,6 @@ Pub/Sub
    <!-- inline scripts -->
    <script>
       document.body.classList.add("js-enabled");
-   </script>
-   <!-- Does not work in all browser -->
-   <script type="speculationrules">
-      {
-        "prerender": [{
-            "source": "list",
-            "urls": [
-               "/work/index.html", 
-               "/about/index.html",
-               "/articles/index.html",
-               "index.html"
-            ]
-         }]
-      }
    </script>
 </body>
 </html>
