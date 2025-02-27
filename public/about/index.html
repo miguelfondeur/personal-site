@@ -348,17 +348,15 @@
    <script>
       document.body.classList.add("js-enabled");
    </script>
+   <!-- Not Supported in All Browsers -->
    <script type="speculationrules">
       {
         "prerender": [{
-            "source": "list",
-            "urls": [
-               "/work/index.html", 
-               "/about/index.html",
-               "articles/index.html",
-               "index.html"
-            ]
-         }]
+          "where": {
+            "href_matches": "/*"
+          },
+          "eagerness": "moderate"
+        }]
       }
    </script>
 </body>
