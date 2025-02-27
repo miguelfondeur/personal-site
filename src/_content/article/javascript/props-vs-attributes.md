@@ -1,5 +1,5 @@
 ---
-title: Properties Vs Attributes in JS
+title: Properties Vs Attributes in Javascript
 summary: We've all used properties and attributes in our code. But for a long time, I really didn’t understand the difference. In short, attributes set initial values, while properties reflect an element’s dynamic state after interaction or manipulation. Simple enough, but how does that relate to data-attributes? What about custom elements? Let’s take a deep dive and figure out the key differences.
 date: 2025-02-24
 draft: false
