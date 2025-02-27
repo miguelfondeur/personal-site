@@ -1676,6 +1676,7 @@ In the next section, I’ll share some of the lessons I learned.
    <script>
       document.body.classList.add("js-enabled");
    </script>
+   <!-- Does not work in all browser -->
    <script type="speculationrules">
       {
         "prerender": [{
@@ -1683,7 +1684,8 @@ In the next section, I’ll share some of the lessons I learned.
             "urls": [
                "/work/index.html", 
                "/about/index.html",
-               "articles/index.html",
+               "/articles/index.html",
+               "/thank-you/index.html",
                "index.html"
             ]
          }]

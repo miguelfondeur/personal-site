@@ -162,5 +162,19 @@ The idea is, something isn't special when it's abundant. Mass produced or commer
    <script>
       document.body.classList.add("js-enabled");
    </script>
+   <!-- Does not work in all browser -->
+   <script type="speculationrules">
+      {
+        "prerender": [{
+            "source": "list",
+            "urls": [
+               "/work/index.html", 
+               "/about/index.html",
+               "/articles/index.html",
+               "index.html"
+            ]
+         }]
+      }
+   </script>
 </body>
 </html>

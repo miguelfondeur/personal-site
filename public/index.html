@@ -408,6 +408,7 @@
    <script>
       document.body.classList.add("js-enabled");
    </script>
+   <!-- Does not work in all browser -->
    <script type="speculationrules">
       {
         "prerender": [{
@@ -415,7 +416,8 @@
             "urls": [
                "/work/index.html", 
                "/about/index.html",
-               "articles/index.html",
+               "/articles/index.html",
+               "/thank-you/index.html",
                "index.html"
             ]
          }]
