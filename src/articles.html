@@ -13,7 +13,8 @@ layout: layout.html
 <section class="content-section">
     <div class="container" data-width="medium">
         <div class="article-wrapper split-wrapper"><!-- Sub Grid for Articles -->
-            {% for article in collections.articles %}
+            {% assign sortedArticles = collections.articles | sort: "data.date" | reverse %}
+            {% for article in sortedArticles %}
                 {% unless article.data.draft %}
                     <article class="article-card card-split">
                         <time class="" datetime="{{ article.date | date: '%Y-%m-%d' }}">

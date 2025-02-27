@@ -1,21 +1,21 @@
 [
     {
       "company": "Musora Media",
-      "thumbnail": "/img/cv/cv-musora.svg",
+      "thumbnail": "/img/cv/cv-musora.webp",
       "role": "Lead Frontend Engineer",
       "start": "2020",
       "end": "2025"
     },
     {
         "company": "Belk",
-        "thumbnail": "/img/cv/cv-belk.svg",
+        "thumbnail": "/img/cv/cv-belk.webp",
         "role": "Software Engineer",
         "start": "2019",
         "end": "2020"
     },
     {
         "company": "Block Digital",
-        "thumbnail": "/img/cv/cv-block.svg",
+        "thumbnail": "/img/cv/cv-block.webp",
         "role": "Solutions Architect",
         "start": "2017",
         "end": "2020"
