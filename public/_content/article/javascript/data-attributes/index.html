@@ -4,14 +4,14 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Miguel Fondeur - Software Engineer | </title>
+   <title>Miguel Fondeur - Software Engineer | Articles | A deeper dive into data attributes.</title>
    <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
    <meta name="author" content="Miguel Fondeur">
    <meta name="robots" content="index, follow">
 
    <!-- Open Graph (for social media sharing) -->
    <meta property="og:title" content="Miguel Fondeur - Software Engineer">
-   <meta property="og:description" content="">
+   <meta property="og:description" content="Learn how to leverage the JavaScript dataset API for dynamic data management in the DOM. Explore performance benefits, event delegation, MutationObserver, and best practices for using data attributes efficiently.">
    <meta property="og:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <meta property="og:url" content="https://miguelfondeur.com">
    <meta property="og:type" content="website">
@@ -20,7 +20,7 @@
    <!-- Twitter Card -->
    <meta name="twitter:card" content="summary_large_image">
    <meta name="twitter:title" content="Miguel Fondeur - Software Engineer">
-   <meta name="twitter:description" content="">
+   <meta name="twitter:description" content="Learn how to leverage the JavaScript dataset API for dynamic data management in the DOM. Explore performance benefits, event delegation, MutationObserver, and best practices for using data attributes efficiently.">
    <meta name="twitter:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
 
@@ -84,7 +84,7 @@
                    <!-- Light Mode Icon -->
                    <svg id="light-mode-icon" xmlns="http://www.w3.org/2000/svg" width="20px" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-                   </svg>                   
+                   </svg> 
                </button>
             </div>
          </nav>
@@ -108,166 +108,113 @@
       </header>
    
       <main>
-         <div class="container">
-            
-<section class="hero-section">
-    <div class="container" data-width="small">
-        <h1>Writing on software engineering, design, and creating digital products.</h1>
-        <p>
-            A collection of my thoughts on programming, team leadership, product development, and the creative intersections of music and technology—organized chronologically.
-        </p>
-    </div>
-</section>
-<section class="content-section">
-    <div class="container" data-width="medium">
-        <div class="article-wrapper split-wrapper"><!-- Sub Grid for Articles -->
-            
-                
-            
-                
-                    <article class="article-card card-split">
-                        <time class="" datetime="2025-02-23">
-                            February 23, 2025
-                        </time>
-                        <a href="/_content/article/css/dark-light-mode-with-custom-properties/" title="Open Blog Post - Dark and Light Mode with Custom Properties">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Dark and Light Mode with Custom Properties
-                                </div>
-                                <p class="">The typical way of adding dark and light mode themes to a website is to add a class on the body that all of your styles can inherit. Using JavaScript, you toggle this class and even use localStorage to save the user's preferences. But with CSS custom properties and media queries, this process becomes much easier.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    <article class="article-card card-split">
-                        <time class="" datetime="2025-02-23">
-                            February 23, 2025
-                        </time>
-                        <a href="/_content/article/javascript/js-as-a-progressive-enhancement/" title="Open Blog Post - JS As a Progressive Enhancement">
-                            <div class="card-content">
-                                <div class="h3">
-                                    JS As a Progressive Enhancement
-                                </div>
-                                <p class="">Many of us have grown accustomed to the current JavaScript landscape. We've worked with various component libraries and frameworks, learned front-end routing and state management, and, at times, experienced 'JavaScript fatigue.' But have we stretched the language too far beyond its original purpose?</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    <article class="article-card card-split">
-                        <time class="" datetime="2025-02-23">
-                            February 23, 2025
-                        </time>
-                        <a href="/_content/article/javascript/props-vs-attributes/" title="Open Blog Post - Properties Vs Attributes in JS">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Properties Vs Attributes in JS
-                                </div>
-                                <p class="">We've all used properties and attributes in our code. But for a long time, I really didn’t understand the difference. In short, attributes set initial values, while properties reflect an element’s dynamic state after interaction or manipulation. Simple enough, but how does that relate to data-attributes? What about custom elements? Let’s take a deep dive and figure out the key differences.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <article class="article-card card-split">
-                        <time class="" datetime="2025-02-25">
-                            February 25, 2025
-                        </time>
-                        <a href="/_content/article/javascript/data-attributes/" title="Open Blog Post - A deeper dive into data attributes.">
-                            <div class="card-content">
-                                <div class="h3">
-                                    A deeper dive into data attributes.
-                                </div>
-                                <p class="">Learn how to leverage the JavaScript dataset API for dynamic data management in the DOM. Explore performance benefits, event delegation, MutationObserver, and best practices for using data attributes efficiently.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-        </div>
-    </div>
-</section>
+         <div class="container" data-width="small-center">
+            <a class="back-button" href="/articles/" title="Go back to articles Page">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+               </svg>
+            </a>
+            <article>
+               <header class="hero-section">
+                  <time class="" datetime="2025-02-25">
+                     February 25, 2025
+                  </time>
+                  <h1>A deeper dive into data attributes.</h1>
+                  <p>Learn how to leverage the JavaScript dataset API for dynamic data management in the DOM. Explore performance benefits, event delegation, MutationObserver, and best practices for using data attributes efficiently.</p>
+               </header>
+               <main>
+                  <h2>Leveraging <code>dataset</code> for Dynamic Data Management</h2>
+<br>
+<h3>1. Why Use <code>dataset</code> Instead of Attributes?</h3>
+<p>
+  Attributes (<code>getAttribute()</code> / <code>setAttribute()</code>) modify the <strong>HTML representation</strong> in the DOM,
+  while <code>dataset</code> provides a <strong>direct way</strong> to handle custom metadata in JavaScript without modifying the actual HTML.
+</p>
+<p><strong>Key Benefits of <code>dataset</code>:</strong></p>
+<ul>
+  <li><strong>Faster Access:</strong> <code>element.dataset.key</code> is <strong>more efficient</strong> than <code>getAttribute("data-key")</code>.</li>
+  <li><strong>Cleaner Code:</strong> Allows easy interaction with custom data without cluttering the HTML.</li>
+  <li><strong>Avoids Unnecessary Reflows:</strong> If <code>data-*</code> is <strong>not used in CSS</strong>, updating <code>dataset</code> does not trigger a <strong>style recalculation</strong>.</li>
+</ul>
+<h3>2. Optimizing Performance: <code>dataset</code> vs. <code>classList</code></h3>
+<p>
+  If <code>data-*</code> attributes are used <strong>in CSS</strong>, dynamically changing them in JavaScript <strong>may cause reflows</strong>:
+</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">[data-theme="dark"]</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token attr-name">data-theme</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>light<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>theme <span class="token operator">=</span> <span class="token string">"dark"</span><span class="token punctuation">;</span> <span class="token comment">// ⚠️ Triggers a repaint &amp; possible reflow</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p><strong>Best practice:</strong> If <code>data-*</code> is used for <strong>state</strong> but it <strong>affects styling</strong>, consider using <code>classList.toggle()</code>:</p>
+<pre class="language-js"><code class="language-js">document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">toggle</span><span class="token punctuation">(</span><span class="token string">"dark-theme"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// More efficient</span></code></pre>
+<h3>3. Practical Use Cases for <code>dataset</code></h3>
+<h4>a) Storing Stateful Data in UI Elements</h4> 
+<p>Instead of managing a separate JavaScript object, you can store state <strong>directly</strong> in HTML:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>likeBtn<span class="token punctuation">"</span></span> <span class="token attr-name">data-liked</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Like<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">const</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"likeBtn"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  btn<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> isLiked <span class="token operator">=</span> btn<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>liked <span class="token operator">===</span> <span class="token string">"true"</span><span class="token punctuation">;</span>
+    btn<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>liked <span class="token operator">=</span> <span class="token operator">!</span>isLiked<span class="token punctuation">;</span>
+    btn<span class="token punctuation">.</span>textContent <span class="token operator">=</span> isLiked <span class="token operator">?</span> <span class="token string">"Like"</span> <span class="token operator">:</span> <span class="token string">"Unlike"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<h4>b) Using <code>dataset</code> for Event Delegation</h4> 
+<p>Instead of attaching separate event listeners to each button, we can <strong>delegate</strong> events using <code>dataset</code>:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>taskList<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">data-task-id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Task 1 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">data-action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>delete<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>X<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">data-task-id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Task 2 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">data-action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>delete<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>X<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"taskList"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>action <span class="token operator">===</span> <span class="token string">"delete"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> taskId <span class="token operator">=</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span><span class="token function">closest</span><span class="token punctuation">(</span><span class="token string">"li"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>taskId<span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Deleting Task </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>taskId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      e<span class="token punctuation">.</span>target<span class="token punctuation">.</span><span class="token function">closest</span><span class="token punctuation">(</span><span class="token string">"li"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>✅ This avoids multiple event listeners and makes the <strong>code more efficient</strong>.</p> <h3>4. Working with <code>dataset</code> in Event Handling</h3> <p>You can <strong>modify dataset values dynamically</strong> based on interactions:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span> <span class="token attr-name">data-size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>small<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Click to Resize<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">const</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"box"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  box<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    box<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>size <span class="token operator">=</span> box<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>size <span class="token operator">===</span> <span class="token string">"small"</span> <span class="token operator">?</span> <span class="token string">"large"</span> <span class="token operator">:</span> <span class="token string">"small"</span><span class="token punctuation">;</span>
+    box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width <span class="token operator">=</span> box<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>size <span class="token operator">===</span> <span class="token string">"small"</span> <span class="token operator">?</span> <span class="token string">"100px"</span> <span class="token operator">:</span> <span class="token string">"200px"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<h3>5. Beyond the Basics: Watching <code>dataset</code> Changes with <code>MutationObserver</code></h3> <p> If multiple scripts modify <code>dataset</code>, you can <strong>observe changes dynamically</strong> using <code>MutationObserver</code>: </p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span> <span class="token attr-name">data-status</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>offline<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>User Status<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">const</span> userDiv <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> observer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MutationObserver</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">User status changed to: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>userDiv<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>status<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  observer<span class="token punctuation">.</span><span class="token function">observe</span><span class="token punctuation">(</span>userDiv<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">attributes</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">attributeFilter</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"data-status"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Simulating a status change</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    userDiv<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token string">"online"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>✅ This is useful for <strong>real-time applications</strong> where dataset changes need to trigger updates.</p> <h2>TL;DR</h2> <ul> <li><strong>Use <code>dataset</code> for JavaScript state</strong> instead of modifying attributes.</li> <li><strong>Avoid using <code>data-*</code> for styling</strong> to prevent unnecessary reflows.</li> <li><strong>Use <code>classList.toggle()</code></strong> when styling changes are required.</li> <li><strong>Event delegation</strong> is more efficient with <code>dataset</code>.</li> <li><strong><code>MutationObserver</code> helps watch for <code>data-*</code> changes dynamically.</strong></li> </ul> <p> By understanding how <code>dataset</code> works, you can efficiently manage dynamic metadata and improve performance while keeping your JavaScript code clean. </p>
+
+               </main>
+            </article>
          </div>
       </main>
    
@@ -286,6 +233,7 @@
       </footer>
 
    </div>
+
    <!-- inline scripts -->
    <script>
       document.body.classList.add("js-enabled");

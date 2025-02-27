@@ -695,7 +695,7 @@
         padding: 2px; */
         color: var(--color-text-accent-2);
         border-radius: var(--border-radius-xs);
-        font-size: 1.4rem;
+        /* font-size: 1.4rem; */
     }
 
     hr {
