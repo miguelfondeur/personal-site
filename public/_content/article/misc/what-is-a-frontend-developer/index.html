@@ -67,13 +67,8 @@
    <script type="speculationrules">
       {
         "prerender": [{
-            "source": "list",
-            "urls": [
-               "/work/index.html", 
-               "/about/index.html",
-               "/articles/index.html",
-               "/index.html"
-            ]
+               "where": { "href_matches": "/*" },
+               "eagerness": "moderate"
          }]
       }
    </script>
