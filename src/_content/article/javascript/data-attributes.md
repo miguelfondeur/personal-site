@@ -2,7 +2,7 @@
 title: A deeper dive into data attributes.
 summary: Learn how to leverage the JavaScript dataset API for dynamic data management in the DOM. Explore performance benefits, event delegation, MutationObserver, and best practices for using data attributes efficiently.
 date: 2025-02-26
-draft: false
+draft: true
 ---
 
 <h2>Leveraging <code>dataset</code> for Dynamic Data Management</h2>
