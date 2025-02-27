@@ -4,20 +4,13 @@ console.log('%cWelcome to MiguelFondeur.com', 'color: #b6a572; font-size: 18px; 
 
 // Dark/Light Mode with Event Delegation
 (function() {
-    const storedTheme = localStorage.getItem("theme");
-    const body = document.body;
-
-    // Apply stored or preferred theme
-    body.dataset.theme = storedTheme || 
-        (window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light");
-
     // Toggle theme using event delegation
     document.addEventListener("click", (event) => {
         const themeToggleButton = event.target.closest("#theme-toggle");
         if (!themeToggleButton) return;
 
-        const newTheme = body.dataset.theme === "dark" ? "light" : "dark";
-        body.dataset.theme = newTheme;
+        const newTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = newTheme;
         localStorage.setItem("theme", newTheme);
     });
 })();

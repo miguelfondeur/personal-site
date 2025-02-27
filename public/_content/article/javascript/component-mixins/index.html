@@ -53,6 +53,19 @@
    <link href="/css/style.css" rel="stylesheet">
 
    <!-- JS -->
+   <script>
+      // immediately store theme
+      (function() {
+         const storedTheme = localStorage.getItem("theme");
+         if (storedTheme) {
+            document.documentElement.dataset.theme = storedTheme;
+         } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            document.documentElement.dataset.theme = "dark";
+         } else {
+            document.documentElement.dataset.theme = "light";
+         }
+      })();
+   </script>
    <script src="/js/index.js" defer></script>
 </head>
 <body data-theme="">

@@ -1345,7 +1345,7 @@
     }
 }
 
-body[data-theme="dark"] {
+html[data-theme="dark"] {
     --color-bg-site: var(--color-black);
     --color-bg-content: var(--color-dark-gray-5);
     --color-bg-hover: var(--color-dark-gray-3);
@@ -1362,7 +1362,7 @@ body[data-theme="dark"] {
         & #dark-mode-icon { display: block; }
     }
 }
-body[data-theme="light"] {
+html[data-theme="light"] {
     --color-bg-site: var(--color-gray-1);
     --color-bg-content: var(--color-white);
     --color-bg-hover: var(--color-gray-1);
