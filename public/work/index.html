@@ -1676,5 +1676,18 @@ In the next section, I’ll share some of the lessons I learned.
    <script>
       document.body.classList.add("js-enabled");
    </script>
+   <script type="speculationrules">
+      {
+        "prerender": [{
+            "source": "list",
+            "urls": [
+               "/work/index.html", 
+               "/about/index.html",
+               "articles/index.html",
+               "index.html"
+            ]
+         }]
+      }
+   </script>
 </body>
 </html>
