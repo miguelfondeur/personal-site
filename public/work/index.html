@@ -1679,12 +1679,20 @@ In the next section, I’ll share some of the lessons I learned.
    <!-- Not Supported in All Browsers -->
    <script type="speculationrules">
       {
-        "prerender": [{
-          "where": {
-            "href_matches": "/*"
-          },
-          "eagerness": "moderate"
-        }]
+         "prerender": [
+           {
+             "where": {
+               "href_matches": "^/about/|^/work/|^/articles$|^/$"
+             },
+             "eagerness": "moderate"
+           },
+           {
+             "where": {
+               "href_not_matches": "^/articles/.*"
+             },
+             "eagerness": "moderate"
+           }
+         ]
       }
    </script>
 </body>
