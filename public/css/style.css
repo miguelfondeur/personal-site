@@ -1401,6 +1401,7 @@ html[data-theme="light"] {
         padding: 1.2rem;
         z-index: 10;
         font-size: var(--font-size-sm);
+        font-weight: bold;
 
         &:not(:focus) {
             clip: rect(0 0 0 0);
