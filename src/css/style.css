@@ -58,6 +58,7 @@
         /* Font Family */
         --font-family-heading: "Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif";
         --font-family-body: Georgia, serif;
+
         /* Font Size */
         --font-size-xs: 1.2rem;
         --font-size-sm: 1.4rem;
@@ -65,17 +66,23 @@
         --font-size-h1: 4.4rem;
         --font-size-h2: 2rem;
         --font-size-h3: var(--font-size-base);
+
         /* line-height */
         --line-height-base: 2.8rem;
         --line-height-h1: 5.6rem;
         --line-height-h2: 2.8rem;
         --line-height-h3: 2.8rem;
+
         /* border radius */
         --border-radius-full: 100%;
         --border-radius-lg: 2.4rem;
         --border-radius-md: 1.6rem;
         --border-radius-sm: .6rem;
         --border-radius-xs: .4rem;
+
+        /* UI Spacing - vertical and horizontal rhythm */
+        --ui-spacing-0: 0;
+        --ui-spacing-1: 1.4rem;
     
         /* Small Screens */
         @media (width < 640px){
@@ -90,12 +97,16 @@
         font-size: 62.5%;
         width: 100vw;
         height: 100vh;
-        scroll-behavior: smooth;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         /* Set on html for consistency  */
         font-family: var(--font-family-body);
         line-height: 1.5;
+        /* scroll-padding: 4rem; */
+
+        @media (prefers-reduced-motion: no-preference) {
+            scroll-behavior: smooth;
+        }
     }
 
     body {
