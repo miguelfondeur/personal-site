@@ -78,11 +78,21 @@
         --border-radius-lg: 2.4rem;
         --border-radius-md: 1.6rem;
         --border-radius-sm: .6rem;
-        --border-radius-xs: .4rem;
+        --border-radius-xs: .4rem
 
-        /* UI Spacing - vertical and horizontal rhythm */
+        /* UI Spacing - vertical and horizontal rhythm - divisible by 4 */
         --ui-spacing-0: 0;
-        --ui-spacing-1: 1.4rem;
+        --ui-spacing-1: .4rem;
+        --ui-spacing-2: .8rem;
+        --ui-spacing-3: 1.2rem;
+        --ui-spacing-4: 1.6rem;
+        --ui-spacing-5: 2rem;
+        --ui-spacing-6: 2.4rem;
+        --ui-spacing-7: 2.8rem;
+        --ui-spacing-8: 3.2rem;
+        --ui-spacing-9: 3.6rem;
+        --ui-spacing-10: 4rem;
+        --ui-spacing-xl: 6.4rem;
     
         /* Small Screens */
         @media (width < 640px){
@@ -1552,6 +1562,10 @@ html[data-theme="light"] {
 }
 
 @layer utilities {
+    [hidden] {
+        display: none !important;
+    }
+
     .sr-only {
         clip: rect(0 0 0 0);
         clip-path: inset(50%);
