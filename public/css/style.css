@@ -1412,7 +1412,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        background-color: var(--color-text-accent);
+        background-color: var(--color-bg-button);
         border-radius: var(--border-radius-md);
         color: var(--color-white);
         padding: var(--ui-spacing-3);
