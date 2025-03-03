@@ -29,7 +29,7 @@ draft: false
     They gave me a simple instruction: “Draw an owl.”
 </p>
 <p>
-    Now, I’ve always been pretty good at drawing, but for some reason, I totally blanked on what an owl actually looked like. My mind went into overdrive. "What does this have to do with startups?" "What if I mess up?" "Is this a trick?" I was overthinking it, hard.
+    Now, I’ve always been pretty good at drawing, but for some reason, I blanked on what an owl actually looked like. My mind went into overdrive. "What does this have to do with startups?" "What if I mess up?" "Is this a trick?" I was overthinking it, hard.
 </p>
 <p>
     But I took a breath and just started drawing. I heard people whispering, “Do owls have ears?” “Oh wait, no, those are just feathers.” Eventually, I ended up with something that at least looked like an owl. Much to my surprise, the organizer was actually impressed—apparently, it was better than most of the owls she’d seen before. But what was the point of all this?
