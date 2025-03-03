@@ -836,7 +836,19 @@
     }
 
     article main {
-        padding-top: 0;
+        padding-block: 0;
+    }
+
+    .article-image-wrapper {
+        border-radius: var(--border-radius-lg);
+        margin-block: var(--ui-spacing-10);
+        overflow: clip;
+        background-color: light-dark(var(--color-gray-3), var(--color-black));
+        aspect-ratio: 16 / 9;
+
+        & img {
+            background-size: cover; 
+        }
     }
     
     footer {
