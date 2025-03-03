@@ -29,7 +29,7 @@ layout: layout.html
       
       <div class="article-wrapper"><!-- Sub Grid for Articles -->
          {% assign sortedArticles = collections.articles | sort: "data.date" | reverse %}
-         {% for article in sortedArticles %}
+         {% for article in sortedArticles | slice: 0, 3 %}
             {% unless article.data.draft %}
                <article class="article-card">
                   <a href="{{ article.url }}" title="Open Blog Post - {{ article.data.title }}">
