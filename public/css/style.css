@@ -851,7 +851,7 @@
         }
     }
     
-    footer {
+    footer#site-footer {
         padding: var(--ui-spacing-10) 0 var(--ui-spacing-xl);
         border-top: 1px solid;
         border-color: light-dark(var(--color-gray-2), var(--color-dark-gray-1));
@@ -870,6 +870,8 @@
             gap: var(--ui-spacing-5);
             list-style: none;
             padding: 0px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         & menu *:focus-visible {
@@ -881,9 +883,15 @@
             border-radius: var(--border-radius-sm);
             text-decoration: none;
             color: light-dark(var(--color-dark-gray-2), var(--color-gray-2));
+            display: inline-flex;
+            align-items: center;
 
             &:hover {
                 color: var(--color-text-accent);
+            }
+
+            & svg {
+                margin-right: var(--ui-spacing-1);
             }
         }
 
