@@ -29,8 +29,11 @@ layout: layout.html
       
       <div class="article-wrapper"><!-- Sub Grid for Articles -->
          {% assign sortedArticles = collections.articles | sort: "data.date" | reverse %}
-         {% for article in sortedArticles | slice: 0, 3 %}
-            {% unless article.data.draft %}
+         {% assign nonDraftArticles = sortedArticles | where: "data.draft", false %}
+         {% assign filteredArticles = nonDraftArticles | slice: 0, 3 %}
+         {% assign count = 0 %}
+         {% for article in filteredArticles %}
+               {% assign count = count | plus: 1 %}
                <article class="article-card">
                   <a href="{{ article.url }}" title="Open Blog Post - {{ article.data.title }}">
                      <time class="" datetime="{{ article.date | date: '%Y-%m-%d' }}">
@@ -49,8 +52,8 @@ layout: layout.html
                   </a>
                   <div class="article-hover-state"></div>
                </article>
-            {% endunless %}
          {% endfor %}
+         <!-- Debug: Number of articles shown: {{ count }} -->
       </div>
 
       <aside class="aside-section">
