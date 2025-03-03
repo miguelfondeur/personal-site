@@ -2,6 +2,7 @@
 title: Draw The Owl
 summary: The owl—besides being my site's unofficial mascot and my dad’s favorite animal—has had a pretty big impact on my life. During my time at the Startup Institute of New York, we were given the exercise to "Draw an Owl." What seemed like a random task at the time ended up teaching me something that stuck with me for the rest of my life. Let’s talk about it.
 date: 2025-03-02
+og_image: /img/owl-og-image.jpg
 draft: false
 ---
 
