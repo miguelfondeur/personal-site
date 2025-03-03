@@ -37,6 +37,11 @@ draft: false
 <p>
     No matter how good you are at drawing, no matter what people might think of you for failing, and no matter whether you even remember what an owl looks like when the pressure is on—you have to commit. 
 </p>
+<!-- 
+<div class="detail-image-wrapper">
+    <img src="/img/articles/draw-the-owl.webp" alt="An image of the Draw The Owl exercise.">
+</div> -->
+
 <p>
     If you search for "Draw the Owl," you'll likely find an image showing a two-step process: Step One, draw some circles. Step Two, draw the rest of the f@#$ing owl. It's a bit aggressive, but it serves the point. It's essentially Nike's "Just Do It," but I like this version better. With Nike, you generally have an idea of what you're doing. When presented with something abstract like "Draw an Owl," there's no training—you just have to suck it up and commit, even if you fail.
 </p>
