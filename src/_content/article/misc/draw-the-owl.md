@@ -1,57 +1,61 @@
 ---
 title: Draw The Owl
-summary: The Owl, other than being my site's mascot, has had a pretty significant meaning in my life. During my time at the Startup Institute of New York, we were given the exercise to "Draw an Owl." What seemed like a random exercise had a profound meaning that stayed with me. Let's talk about it.
+summary: The owl—besides being my site's unofficial mascot and my dad’s favorite animal—has had a pretty big impact on my life. During my time at the Startup Institute of New York, we were given the exercise to "Draw an Owl." What seemed like a random task at the time ended up teaching me something that stuck with me. Let’s talk about it.
 date: 2025-03-02
 draft: false
 ---
 
-<h2>Brief Background</h2>
+<h2>Before Tech, There Was Music</h2>
 <p>
-    Before getting into the tech industry, I was a struggling musician. I worked at a music store while trying to find gigs that would pay me enough to buy more gear. I played live and did some recording. Looking back, a part of me feels like I didn't "make it" because I didn't commit hard enough. I was always the type to measure three times and think about cutting once—in other words, I was timid.
+    Before I got into tech, I was a struggling musician. I worked at a music store while trying to land gigs that would pay enough to get better gear. I played live, did some recording, and gave it my best shot. Looking back, part of me wonders if I didn’t “make it” because I didn’t commit hard enough. I was always the guy who measured three times and then thought about cutting once. In other words, I hesitated a lot.
 </p>
 <p>
-    Eventually, after seeing musicians struggle (like myself) to find gigs, I thought it would be cool if there were an online platform to help musicians book shows. I felt so convicted about this idea that I quit my job, sold my gear, and started learning web development. Eventually, I built an MVP, which took me to New York to network, where I found the Startup Institute. 
+    Eventually, after seeing how hard it was for musicians (myself included) to find gigs, I had an idea—what if there was an online platform that helped connect musicians with venues? I believed in it so much that I quit my job, sold my gear, and started learning web development. That led me to building my first MVP, which eventually took me to New York, where I found the Startup Institute.
 </p>
 <p>
-    The Startup Institute was an eight-week career accelerator originally founded in Boston, designed to train people on how to land jobs at startups and connect them with potential employers.
+    The Startup Institute was an eight-week career accelerator that helped people break into the startup world. It was part training, part networking, and a crash course in what working at a startup was really like.
 </p>
 
 <h2>The Exercise</h2>
 <p>
-    The Startup Institute separated the cohort into different disciplines: Product Design, Marketing, Software, and (I believe) Business Development. I was in the Product Design track. Each of these tracks offered courses taught by working professionals in the industry. But every once in a while, there was a group exercise.
+    The program split us into different tracks—Product Design, Marketing, Software, and (I think) Business Development. I was in the Product Design track. Most of our time was spent learning from people working in the industry, but sometimes we had group exercises.
 </p>
 <p>
-    One of those exercises was "Draw The Owl." If I remember correctly, this was the first exercise we did as a group. One of the organizers placed a whiteboard in front of us and said, "Who wants to come up?" For some reason, I either volunteered or was voluntold.
+    One of those was “Draw The Owl.” If I remember right, it was the first exercise we did as a group. One of the organizers stood in front of us, put a marker on the whiteboard, and asked, “Who wants to come up?” For some reason, I either volunteered or got voluntold.
 </p>
 <p>
-    They gave me a simple request: "Draw an Owl." I've always been decent at drawing, but for some reason, I couldn't remember what an owl looked like. A million thoughts ran through my head: "What does this have to do with startups?" "If I fail, will this ruin my reputation?" I was overthinking it.
+    They gave me a simple instruction: “Draw an owl.”
 </p>
 <p>
-    But I took a breath and started drawing the owl's head in front of a room full of strangers. I heard people murmur, "Do owls have ears?" "Oh, no, those are feathers on their heads..." Eventually, I finished something that resembled an owl. Much to my surprise, the organizer was impressed—apparently, it was better than many of the owls she'd seen before. But what was the point?
+    Now, I’ve always been okay at drawing, but for some reason, I totally blanked on what an owl actually looked like. My mind went into overdrive. "What does this have to do with startups?" "What if I mess up?" "Is this a trick?" I was overthinking it, hard.
+</p>
+<p>
+    But I took a breath and just started drawing. I heard people whispering, “Do owls have ears?” “Oh wait, no, those are just feathers.” Eventually, I ended up with something that at least looked like an owl. Much to my surprise, the organizer was actually impressed—apparently, it was better than most of the owls she’d seen before. But what was the point of all this?
 </p>
 
-<h2>The Purpose</h2>
+<h2>The Lesson</h2>
 <p>
-    She then explained the purpose of the exercise. My overthinking was exactly the lesson.
+    Turns out, the whole point was the overthinking.
 </p>
 <p>
-    No matter how good you are at drawing, no matter what people might think of you for failing, and no matter whether you even remember what an owl looks like when the pressure is on—you have to commit. 
+    It didn’t matter if I was good at drawing, if I remembered exactly what an owl looked like, or if I was worried about what people thought. The lesson was simple: commit.  
 </p>
-<!-- 
+
+<!--
 <div class="detail-image-wrapper">
     <img src="/img/articles/draw-the-owl.webp" alt="An image of the Draw The Owl exercise.">
 </div> -->
 
 <p>
-    If you search for "Draw the Owl," you'll likely find an image showing a two-step process: Step One, draw some circles. Step Two, draw the rest of the f@#$ing owl. It's a bit aggressive, but it serves the point. It's essentially Nike's "Just Do It," but I like this version better. With Nike, you generally have an idea of what you're doing. When presented with something abstract like "Draw an Owl," there's no training—you just have to suck it up and commit, even if you fail.
+    If you Google "Draw the Owl," you’ll probably see an image showing a two-step process: Step One, draw some circles. Step Two, draw the rest of the f@#$ing owl. It’s a bit blunt, but it makes the point. It’s kind of like Nike’s "Just Do It," but I like this version better. With Nike, you usually have at least some idea of what you’re doing. With "Draw the Owl," there’s no roadmap—you just have to dive in and figure it out.
 </p>
 
-<h2>The Takeaway</h2>
+<h2>Why This Stuck With Me</h2>
 <p>
-    This lesson has stuck with me throughout my career and personal life. Since then, I've been thrown into complex situations more times than I can count. You don't always have time to look things up. You don't always know how your efforts will turn out. You don't always know how you'll be perceived if you succeed or fail.
+    This lesson has followed me throughout my career and life. I’ve lost count of how many times I’ve been thrown into complex situations with no clear plan. Sometimes you don’t have time to look things up. Sometimes you have no idea how things will turn out. Sometimes you’re not even sure if you’ll succeed or fail.
 </p>
 <p>
-    But you do have to say yes. Commit. Follow through. Finish what you started.
+    But you do it anyway. You commit. You follow through. You finish what you started.
 </p>
 <p>
     Good or bad. Prepared or not.
