@@ -19,6 +19,9 @@ module.exports = function(eleventyConfig) {
     // Copy all images from 'src/assets/img' to 'public/img'
     eleventyConfig.addPassthroughCopy({ "src/assets/img": "img" });
 
+    // Copy all pdfs from 'src/assets/img' to 'public/img'
+    eleventyConfig.addPassthroughCopy({ "src/assets/pdfs": "pdfs" });
+
     //Fonts
     eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "fonts" });
 
