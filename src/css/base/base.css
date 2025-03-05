@@ -7,14 +7,6 @@ html {
     /* Set on html for consistency  */
     font-family: var(--font-family-body);
     line-height: 1.5;
-    /* scroll-padding: var(--ui-spacing-10); */
-    scroll-behavior: smooth;
-
-}
-
-/* Preferences  */
-@view-transition {
-    navigation: auto;
 }
 
 /* Dark Mode */
@@ -54,6 +46,18 @@ html[data-theme="light"] {
     #theme-toggle {
         & #light-mode-icon { display: block; }
         & #dark-mode-icon { display: none; }
+    }
+}
+
+/* Preferences  */
+@view-transition {
+    navigation: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        /* scroll-padding: var(--ui-spacing-10); */
+        scroll-behavior: smooth;
     }
 }
 
