@@ -61,6 +61,7 @@
         --ui-spacing-11: 4.4rem;
         --ui-spacing-12: 4.8rem;
         --ui-spacing-xl: 6.4rem;
+        --ui-spacing-2xl: 8rem;
 
         /* Font Size */
         --font-size-xs: 1.2rem;
@@ -69,6 +70,7 @@
         --font-size-h1: 4.4rem;
         --font-size-h2: 2rem;
         --font-size-h3: var(--font-size-base);
+        --font-size-h4: var(--font-size-base);
 
         /* line-height */
         --line-height-base: 2.8rem;
@@ -183,20 +185,28 @@
     }
     h1 + p, 
     h2 + p,
+    h4 + p,
+    h2 + h3,
+    h4,
     p + p {
-        margin-top: 2.4rem;
+        margin-top: var(--ui-spacing-6);
     }
 
     h2 {
         font-size: var(--font-size-h2);
         line-height: var(--line-height-h2);
-        margin-top: 8rem;
     }
 
     h3, .h3 {
         font-size: var(--font-size-h3);
         line-height: var(--line-height-h3);
         font-weight: 500;
+    }
+
+    h4, .h4 {
+        font-size: var(--font-size-h4);
+        line-height: var(--line-height-base);
+        font-weight: 400;
     }
     
     p {
@@ -254,7 +264,7 @@
     header.site-header {
         flex: none;
         position: sticky;
-        padding-block: 2.4rem;
+        padding-block: var(--ui-spacing-6);
         top: 0;
         z-index: 2;
 
@@ -382,7 +392,7 @@
         height: fit-content;
         overflow: auto;
         width: calc(100% - var(--ui-spacing-8));
-        margin: 2.4rem var(--ui-spacing-4);
+        margin: var(--ui-spacing-6) var(--ui-spacing-4);
         border-radius: var(--border-radius-md);
         padding: 0;
         background-color: light-dark(var(--color-white), var(--color-dark-gray-4));
@@ -490,8 +500,8 @@
             flex: 1;
         }
         & .work-thumb {
-            height: 8rem;
-            width: 8rem;
+            height: var(--ui-spacing-2xl);
+            width: var(--ui-spacing-2xl);
             margin-right: var(--ui-spacing-4);
             flex-shrink: 0;
         }
@@ -570,7 +580,7 @@
 
 
         h2 {
-            margin-bottom: 2.4rem;
+            margin-bottom: var(--ui-spacing-6);
         }
 
         .content-section {
@@ -615,8 +625,8 @@
             }
 
             & .detail-image-wrapper {
-                margin-block: 2.4rem;
-                gap: 2.4rem;
+                margin-block: var(--ui-spacing-6);
+                gap: var(--ui-spacing-6);
 
                 & img {
                     margin: 0 auto;
@@ -628,7 +638,7 @@
                 border-radius: 0.6rem;
                 background-color: var(--color-gray-8);
                 padding: 0;
-                margin-block: 2.4rem;
+                margin-block: var(--ui-spacing-6);
                 position: relative;
                 overflow: hidden;
                 display: flex;
@@ -650,7 +660,7 @@
                 }
 
                 & .scroll-indicator {
-                    height: 2.4rem;
+                    height: var(--ui-spacing-6);
                     padding-inline: var(--ui-spacing-3);
                     color: var(--color-gray-5);
                     background-color: #fff;
@@ -715,7 +725,7 @@
     pre {
         background: black;
         border-radius: var(--ui-spacing-3);
-        margin-block: 2.4rem;
+        margin-block: var(--ui-spacing-6);
         display: block;
         white-space: pre;
         overflow-x: scroll;
@@ -809,7 +819,7 @@
         color: light-dark(var(--color-gray-6), var(--color-gray-4));
         font-weight: 600;
         font-size: var(--font-size-sm);
-        margin-bottom: 2.4rem;
+        margin-bottom: var(--ui-spacing-6);
 
         & button {
             padding: 0;
@@ -862,7 +872,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 0 2.4rem;
+            gap: 0 var(--ui-spacing-6);
         }
         
         & menu {
@@ -963,7 +973,7 @@
         padding-left: 9.6rem;
         display: flex;
         flex-direction: column;
-        gap: 2.4rem 0;
+        gap: var(--ui-spacing-6) 0;
 
         @media (width < 1280px) {
             padding-left: var(--ui-spacing-xl);
@@ -1005,13 +1015,13 @@
         grid-template-columns: repeat(1, minmax(0, 1fr));
         
         @media (width >= 1024px) {
-            row-gap: 4.8rem;
+            row-gap: var(--ui-spacing-12);
             grid-template-rows: auto 1fr;
             grid-template-columns: repeat(2, minmax(0, 1fr));
 
             .item-1,
             .item-3 {
-                padding-left: 8rem;
+                padding-left: var(--ui-spacing-2xl);
             }
 
             .item-2 {
@@ -1049,7 +1059,7 @@
     }
     
     .hero-section ul svg {
-        width: 2.4rem;
+        width: var(--ui-spacing-6);
         fill: currentColor;
     }
 
@@ -1069,7 +1079,7 @@
     .article-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 2.4rem 0;
+        gap: var(--ui-spacing-6) 0;
 
         @media (width > 767px) {
             &.split-wrapper {
@@ -1090,16 +1100,54 @@
     }
 
     article:not(.article-card) {
-        p, h3 { 
-            margin-bottom: 2.4rem;
+        time {
+            margin-bottom: var(--ui-spacing-6);
+        }
+
+        code {
+            font-weight: 400;
+        }
+
+        h2 {
+            margin-top: var(--ui-spacing-2xl);
+            margin-bottom: var(--ui-spacing-4);
+        }
+
+        h3 {
+            margin-block: var(--ui-spacing-xl) var(--ui-spacing-4);
+            font-weight: bold;
+        }
+
+        h4 {
+            margin-block: var(--ui-spacing-10);
+            color: light-dark(var(--color-gray-6), var(--color-gray-4));
+        }
+
+        p { 
+            margin-block: var(--ui-spacing-7);
+        }
+
+        ul {
+            margin-block: var(--ui-spacing-10);
+            padding-left: var(--ui-spacing-4);
+
+            li {
+                margin-block: var(--ui-spacing-6);
+                padding-left: var(--ui-spacing-2);
+
+                &::marker {
+                    color: light-dark(var(--color-black), var(--color-white));
+
+                }
+            }
         }
 
         pre[class*="language-"] { 
-            margin: 2.4rem 0 !important;
+            margin: var(--ui-spacing-10) 0 !important;
         }
 
         main {
-            margin-top: 4.8rem;
+            margin-top: var(--ui-spacing-12);
         }
     }
 
@@ -1205,8 +1253,8 @@
 
             time {
                 border-left: none;
-                padding-left: 2.4rem;
-                padding-right: 4.8rem;
+                padding-left: var(--ui-spacing-6);
+                padding-right: var(--ui-spacing-12);
                 line-height: var(--line-height-h3);
                 min-width: 204px;
             }
@@ -1224,7 +1272,7 @@
         color: light-dark(var(--color-gray-6), var(--color-gray-4));
         border: 1px solid;
         border-color: light-dark(var(--color-gray-2), var(--color-dark-gray-1));
-        margin-bottom: 2.4rem;
+        margin-bottom: var(--ui-spacing-6);
 
         &:hover, &:focus-visible { 
             color: light-dark(var(--color-dark-gray-2), var(--color-gray-2));
@@ -1242,13 +1290,13 @@
 
     .brand-grid {
         display: grid;
-        margin-top: 2.4rem;
+        margin-top: var(--ui-spacing-6);
         grid-template-columns: repeat(4, 1fr); 
         gap: var(--ui-spacing-4); /* Adjust spacing between items */
 
         & a.grid-item {
             /* aspect-ratio: 1 / 1; */
-            padding: 2.4rem;
+            padding: var(--ui-spacing-6);
             align-items: center;
             justify-content: center;
             display: flex;
@@ -1292,11 +1340,11 @@
 
     .work-grid {
         display: grid;
-        margin-top: 2.4rem;
+        margin-top: var(--ui-spacing-6);
         grid-template-columns: repeat(1, 1fr); 
         gap: var(--ui-spacing-8); /* Adjust spacing between items */
         row-gap: var(--ui-spacing-8);
-        column-gap: 4.8rem;
+        column-gap: var(--ui-spacing-12);
 
         & .work-item {
             cursor: pointer;
@@ -1316,15 +1364,15 @@
         }
 
         & .work-thumb {
-            height: 4.8rem;
-            width: 4.8rem;
+            height: var(--ui-spacing-12);
+            width: var(--ui-spacing-12);
             border-radius: 100%;
             overflow: hidden;
             background-color: light-dark(var(--color-gray-2), var(--color-dark-gray-2));
             border: 1px solid;
             border-color: light-dark(var(--color-gray-2), var(--color-dark-gray-1));
             padding: .5rem;
-            margin-bottom: 2.4rem;
+            margin-bottom: var(--ui-spacing-6);
         }
         & .work-thumb img {
             border-radius: 100%;
@@ -1339,7 +1387,7 @@
             font-size: var(--font-size-sm);
             margin-top: var(--ui-spacing-2);
             color: light-dark(var(--color-gray-6), var(--color-gray-4));
-            line-height: 2.4rem;
+            line-height: var(--ui-spacing-6);
         }
 
         .work-hover-state {
@@ -1405,7 +1453,7 @@
         }
 
         & li svg {
-            margin-right: 2.4rem;
+            margin-right: var(--ui-spacing-6);
             color: light-dark(var(--color-gray-6), var(--color-gray-4));
         }
 
@@ -1449,7 +1497,7 @@
     .card {
         border: 1px solid;
         border-color: light-dark(var(--color-gray-2), var(--color-dark-gray-1));
-        padding: 2.4rem;
+        padding: var(--ui-spacing-6);
         border-radius: var(--border-radius-md);
 
         & p {
@@ -1502,7 +1550,7 @@
         }
 
         & .cv-cta {
-            margin-top: 2.4rem;
+            margin-top: var(--ui-spacing-6);
             background-color: light-dark( var(--color-gray-1), var(--color-dark-gray-3) );
             border-radius: var(--border-radius-sm);
             display: flex;
@@ -1531,7 +1579,7 @@
         .fieldset {
             display: flex;
             align-items: center;
-            margin-top: 2.4rem;
+            margin-top: var(--ui-spacing-6);
             gap: 0 var(--ui-spacing-4);
 
             & input {
