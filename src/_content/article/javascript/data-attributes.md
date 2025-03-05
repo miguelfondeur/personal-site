@@ -1,5 +1,5 @@
 ---
-title: A deeper dive into data attributes
+title: A Deeper Dive Into Data Attributes
 summary: In my first post on attributes, we looked at the difference between attributes and props. This time we'll dive deeper into data attributes. Learn how to leverage the JavaScript dataset API for dynamic data management in the DOM. Explore performance benefits, event delegation, MutationObserver, and best practices for using data attributes efficiently.
 date: 2025-03-04
 draft: false
