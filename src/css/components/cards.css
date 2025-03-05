@@ -12,6 +12,8 @@
         display: flex;
         align-items: center;
         margin-bottom: var(--ui-spacing-4);
+        color: light-dark(var(--color-black), var(--color-white));
+        font-weight: bold;
 
         & svg {
             margin-right: 1rem;
