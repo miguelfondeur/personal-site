@@ -1159,6 +1159,10 @@
         position: relative;
         padding-block: var(--ui-spacing-4);
 
+        .h4 {
+            font-weight: bold;
+        }
+
         & a {
             z-index: 1;
             position: relative;
