@@ -351,10 +351,6 @@
         }
         #nav-popover {
             padding: var(--ui-spacing-8);
-
-            @media (width > 521px) {
-                display: none;
-            }
         }
         .nav-menu-wrapper {
             display: flex;
