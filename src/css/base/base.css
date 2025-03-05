@@ -8,10 +8,8 @@ html {
     font-family: var(--font-family-body);
     line-height: 1.5;
     /* scroll-padding: var(--ui-spacing-10); */
+    scroll-behavior: smooth;
 
-    @media (prefers-reduced-motion: no-preference) {
-        scroll-behavior: smooth;
-    }
 }
 
 /* Preferences  */
