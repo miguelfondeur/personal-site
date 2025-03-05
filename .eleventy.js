@@ -1,5 +1,21 @@
 const fs = require("fs");
+const path = require("path");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const esbuild = require("esbuild");
+
+// CSS bundling function
+async function bundleCss() {
+    const result = await esbuild.build({
+        entryPoints: ["src/css/main.css"],
+        bundle: true,
+        minify: true,
+        outfile: "public/css/main.min.css",
+        loader: {
+            ".css": "css"
+        }
+    });
+    return result;
+}
 
 module.exports = function(eleventyConfig) {
     //Syntax Highlighting
@@ -28,9 +44,13 @@ module.exports = function(eleventyConfig) {
     // Copy JS
     eleventyConfig.addPassthroughCopy({ "src/assets/js": "js" });
 
-    // CSS
-    eleventyConfig.addPassthroughCopy("src/css");
-    eleventyConfig.addWatchTarget("src/css");
+    // CSS Processing
+    eleventyConfig.on("eleventy.before", async () => {
+        await bundleCss();
+    });
+
+    // Watch CSS files and trigger rebuild
+    eleventyConfig.addWatchTarget("src/css/**/*.css");
 
     // Read file filter
     eleventyConfig.addFilter("readFile", function (filepath) {
