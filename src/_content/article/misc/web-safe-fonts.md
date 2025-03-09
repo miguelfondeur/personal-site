@@ -21,7 +21,7 @@ draft: false
 
 <h2>Using Web Fonts</h2>
 <p>
-    Now, that we're all on the same page. Let's talk about web fonts, or web safe fonts. Web fonts are the fonts that are pre-packaged in your operating system and web browser. If you create a web page and you <em>don't</em> declare a font-family in your CSS, your browser will set it to the default serif font like <strong>'Times'</strong>. If you search for a font-family in your inspector you'll get a short list of available fonts. But, the list is typically longer than what the inspector shows you. There's a collection of Serif, and Sans-serif fonts that are readily available along with some odd typefaces like, fantasy, monospace, and symbol. Many of these have style variants like font-weight and italic styles. Hopefully you're seeing the potential here. 
+    Now, that we're all on the same page. Let's talk about web fonts, or web safe fonts. Web fonts are the fonts that are pre-packaged in your operating system and web browser. If you create a web page and you <em>don't</em> declare a font-family in your CSS, your browser will set it to the default serif font like <strong>'Times'</strong>. If you search for a font-family in your inspector you'll get a short list of available fonts. But, the list is typically longer than what the inspector shows you. There's a collection of Serif, and Sans-serif fonts that are readily available along with some odd typefaces like, fantasy, monospace, and symbol. Many of these have style variants like font-weight and italic styles.
 </p>
 
 <h2>Caveat: Font Availability</h2>
