@@ -78,6 +78,10 @@ article:not(.article-card) {
 
     pre[class*="language-"] { 
         margin: var(--ui-spacing-10) 0 !important;
+        
+        code {
+            font-size: var(--font-size-base) !important;
+        }
     }
 
     main {

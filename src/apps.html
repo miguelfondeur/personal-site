@@ -1,0 +1,35 @@
+---
+title: Apps
+layout: layout.html 
+debug: true
+---
+<section class="hero-section">
+   <div class="container" data-width="small">
+       <h1>Useful tools and apps I've built.</h1>
+       <p>
+         I've built a few tools and apps over the years. Some are open-source, others were built for clients or companies, but all reflect the work I love doing. If something catches your eye, feel free to explore, learn from it, or even contribute.
+       </p>
+   </div>
+</section>
+
+<section class="content-section">
+      <ul class="work-grid" role="list">
+         {% assign sortedApps = collections.apps | sort: "data.title" %}
+         {% for app in sortedApps %}
+            {% unless app.fileSlug == "knowledge" %}
+            <li class="work-item">
+               <a href="{{ app.url }}" class="work-item-button" >
+                  <div class="work-thumb">
+                     <img loading="lazy" src="{{ app.data.thumb }}" alt="Musora thumbnail">
+                  </div>
+                  <h3>{{ app.data.appName }}</h3>
+                  {% if app.data.summary %}
+                     <p>{{ app.data.summary }}</p>
+                  {% endif %}
+               </a>
+               <div class="work-hover-state"></div>
+            </li>
+            {% endunless %}
+         {% endfor %}
+      </ul>
+</section>

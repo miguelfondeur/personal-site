@@ -192,7 +192,7 @@ aside.aside-section {
         position: relative;
     }
 
-    & .work-item button {
+    & .work-item .work-item-button {
         background-color: transparent;
         border-color: transparent;
         margin: 0;
@@ -225,7 +225,7 @@ aside.aside-section {
     & p {
         color: light-dark(var(--color-gray-6), var(--color-gray-4));
     }
-    & .work-item button p {
+    & .work-item .work-item-button p {
         font-size: var(--font-size-sm);
         margin-top: var(--ui-spacing-2);
         color: light-dark(var(--color-gray-6), var(--color-gray-4));
@@ -259,17 +259,17 @@ aside.aside-section {
         transition: opacity 0.2s ease-in-out;
     }
 
-    & .work-item button:focus-visible {
+    & .work-item .work-item-button:focus-visible {
         outline: 0;
     }
 
-    & .work-item button:focus-visible + .work-hover-state {
+    & .work-item .work-item-button:focus-visible + .work-hover-state {
         outline: 1px solid var(--color-text-accent);
     }
 
-    & .work-item button:focus-visible + .work-hover-state,
-    & .work-item button:hover + .work-hover-state,
-    & .work-item button:hover  .expand-icon {
+    & .work-item .work-item-button:focus-visible + .work-hover-state,
+    & .work-item .work-item-button:hover + .work-hover-state,
+    & .work-item .work-item-button:hover  .expand-icon {
         opacity: 1;
     }
     @media (width > 520px){

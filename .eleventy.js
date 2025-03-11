@@ -44,13 +44,20 @@ module.exports = function(eleventyConfig) {
     // Copy JS
     eleventyConfig.addPassthroughCopy({ "src/assets/js": "js" });
 
+    // CSS
+    eleventyConfig.addPassthroughCopy("src/css");
+    eleventyConfig.addWatchTarget("src/css");
+
+    // Apps assets
+    eleventyConfig.addPassthroughCopy({
+        "src/_content/apps/web-fonts/_assets": "apps/web-fonts/_assets"
+    });
+    eleventyConfig.addWatchTarget("src/_content/apps/**/_assets");
+
     // CSS Processing
     eleventyConfig.on("eleventy.before", async () => {
         await bundleCss();
     });
-
-    // Watch CSS files and trigger rebuild
-    eleventyConfig.addWatchTarget("src/css/**/*.css");
 
     // Read file filter
     eleventyConfig.addFilter("readFile", function (filepath) {
@@ -60,7 +67,9 @@ module.exports = function(eleventyConfig) {
     return {
         dir: {
             input: "src",
-            output: "public"
+            output: "public",
+            includes: "_includes",
+            layouts: "_includes"
         }
     };
 };
