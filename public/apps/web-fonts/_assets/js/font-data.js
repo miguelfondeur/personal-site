@@ -136,6 +136,14 @@ export const fonts = [
         supportedOS: ["macos", "ios"]
     },
     {
+        name: "Monospace", 
+        declaration: "monospace",
+        fallbacks: "monospace",
+        weights: [400, 600],
+        type: "monospace",
+        supportedOS: ["windows", "macos", "ios"]
+    },
+    {
         name: "Optima", 
         declaration: "Optima",
         fallbacks: "'Arial', sans-serif",
