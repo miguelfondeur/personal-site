@@ -476,7 +476,7 @@ dialog {
         }
     }
 
-    details {
+    details:not(.character-dropdown) {
         margin-bottom: 16px;
         
         summary {
@@ -532,7 +532,7 @@ dialog {
         display: flex;
         align-items: center;
         width: 100%;
-        background-color: rgb(40, 42, 44);
+        background-color: #282a2c;
         color: rgb(227, 227, 227);
         padding-inline: 24px;
 
@@ -647,4 +647,37 @@ dialog {
         scroll-margin-top: 152px;
     }
 
+}
+
+/* Characters */
+.character-wrapper {
+    padding: 0 24px 24px;
+    border-radius: 16px;
+    background-color: #1b1b1b;
+    width: 100%;
+    max-width: 520px;
+
+    details:not([open]) {
+       border-bottom: 1px solid #454746;
+    }
+    summary {
+        font-weight: 600;
+        padding-block: 20px;
+    }
+}
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 1px;
+    padding: 0 1px 1px;
+    
+    span {
+        font-family: var(--active-font);
+        font-size: 26px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: 1px solid #454746;
+    }
 }

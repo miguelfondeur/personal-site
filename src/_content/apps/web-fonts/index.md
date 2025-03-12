@@ -94,7 +94,6 @@ sidebarContent: |
             <div class="content">
                 <p><strong>CSS Declaration</strong></p>
                 <div id="css-declaration"></div>
-        
                 <p><strong>Using Styles</strong></p>
                 <pre><code>
 font-weight: bold; 
@@ -103,11 +102,9 @@ font-style: italic;
 font-variant: small-caps;
 color: #C0FFEE;
                 </code></pre>
-        
                 <p><strong>Considerations</strong></p>
                 <p>Use fallbacks. Not all browsers and operating systems support all fonts. If you're using a font with multiple font-weights, consider a fallback that also includes a similar quantity.</p>
                 <div id="css-fallbacks"></div>
-        
                 <p>Consider adding your font as a CSS custom property. This is especially useful when using more than one font.</p>
                 <pre><code>
 :root {
@@ -138,13 +135,134 @@ font-size-adjust: 0.5;
     <!-- Characters -->
     <section id="character-section">
         <h2>Characters</h2>
-        <!-- Letters -->
-        <div class="character-grid">
-            <span></span>
-        </div>
         <!-- Numbers -->
-        <div class="character-grid">
-            <span></span>
+        <div class="character-wrapper">
+            <!-- Uppercase -->
+            <details class="character-dropdown" open>
+                <summary>Uppercase</summary>
+                <div class="dropdown-body">
+                    <div class="character-grid">
+                        <span>A</span>
+                        <span>B</span>
+                        <span>C</span>
+                        <span>D</span>
+                        <span>E</span>
+                        <span>F</span>
+                        <span>G</span>
+                        <span>H</span>
+                        <span>I</span>
+                        <span>J</span>
+                        <span>K</span>
+                        <span>L</span>
+                        <span>M</span>
+                        <span>N</span>
+                        <span>O</span>
+                        <span>P</span>
+                        <span>Q</span>
+                        <span>R</span>
+                        <span>S</span>
+                        <span>T</span>
+                        <span>U</span>
+                        <span>V</span>
+                        <span>W</span>
+                        <span>X</span>
+                        <span>Y</span>
+                        <span>Z</span>
+                    </div>
+                </div>
+            </details>
+            <!-- Lowercase -->
+            <details class="character-dropdown">
+                <summary>Lowercase</summary>
+                <div class="dropdown-body">
+                    <div class="character-grid">
+                        <span>a</span>
+                        <span>b</span>
+                        <span>c</span>
+                        <span>d</span>
+                        <span>e</span>
+                        <span>f</span>
+                        <span>g</span>
+                        <span>h</span>
+                        <span>i</span>
+                        <span>j</span>
+                        <span>k</span>
+                        <span>l</span>
+                        <span>m</span>
+                        <span>n</span>
+                        <span>o</span>
+                        <span>p</span>
+                        <span>q</span>
+                        <span>r</span>
+                        <span>s</span>
+                        <span>t</span>
+                        <span>u</span>
+                        <span>v</span>
+                        <span>w</span>
+                        <span>x</span>
+                        <span>y</span>
+                        <span>z</span>
+                    </div>
+                </div>
+            </details>
+            <!-- Numbers -->
+            <details class="character-dropdown">
+                <summary>Numbers</summary>
+                <div class="dropdown-body">
+                    <div class="character-grid">
+                        <span>0</span>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span>½</span>
+                        <span>¼</span>
+                        <span>⅛</span>
+                        <span>¾</span>
+                        <span>⅜</span>
+                        <span>⅝</span>
+                        <span>⅞</span>
+                    </div>
+                </div>
+            </details>
+            <!-- Symbols and Punctuation -->
+            <details class="character-dropdown">
+                <summary>Symbols and Punctuation</summary>
+                <div class="dropdown-body">
+                    <div class="character-grid">
+                        <span>⁄</span>
+                        <span>,</span>
+                        <span>;</span>
+                        <span>:</span>
+                        <span>!</span>
+                        <span>‼</span>
+                        <span>?</span>
+                        <span>¿</span>
+                        <span>“</span>
+                        <span>”</span>
+                        <span>@</span>
+                        <span>*</span>
+                        <span>/</span>
+                        <span>\</span>
+                        <span>|</span>
+                        <span>(</span>
+                        <span>)</span>
+                        <span>&</span>
+                        <span>#</span>
+                        <span>%</span>
+                        <span>©</span>
+                        <span>®</span>
+                        <span>~</span>
+                        <span>$</span>
+                        <span>¢</span>
+                    </div>
+                </div>
+            </details>
         </div>
     </section>
     <!-- Playground -->
