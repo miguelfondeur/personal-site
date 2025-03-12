@@ -39,6 +39,23 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/web-fonts/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/web-fonts/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/web-fonts/favicon-16x16.png">
+
+        <style>
+            .js-warning {
+                padding: 16px;
+                text-align: center;
+                font-weight: 600;
+                font-size: 20px;
+                background-color: #ffc0c0;
+                color: #ce3431;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+            }
+            body.js-enabled .js-warning {
+                display: none;
+            }
+        </style>
     </head>
     <body data-sidebar-open="true">
         <!-- Sidebars -->
@@ -125,6 +142,8 @@
         </aside>
         <!-- Main Page -->
         <main>
+            <div class="js-warning">This site requires Javascript</div>
+
             <header id="page-header">
     <section class="header-top">
         <h1 id="logo">
@@ -245,5 +264,9 @@ of their digital presence.
 </dialog>
 
         </main>
+        <!-- inline scripts -->
+        <script>
+            document.body.classList.add("js-enabled");
+        </script>
     </body>
 </html>

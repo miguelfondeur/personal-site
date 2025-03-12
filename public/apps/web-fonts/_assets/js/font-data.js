@@ -40,6 +40,22 @@ export const fonts = [
         supportedOS: ["windows", "macos", "ios"]
     },
     {
+        name: "Calibri",
+        declaration: "calibri",
+        fallbacks: "'Calibri', 'Gill Sans', 'Gill Sans MT', sans-serif",
+        weights: [400, 600, 700],
+        type: "sans-serif",
+        supportedOS: ["windows", "macos"]
+    },
+    {
+        name: "Cambria",
+        declaration: "cambria",
+        fallbacks: "'Cambria', Georgia, serif",
+        weights: [400, 600],
+        type: "serif",
+        supportedOS: ["windows"]
+    },
+    {
         name: "Cambria Math", 
         declaration: "math",
         fallbacks: "'Cambria', serif",
@@ -167,6 +183,22 @@ export const fonts = [
         type: "serif",
         supportedOS: ["windows", "macos", "linux", "ios", "android"]
     },  
+    {
+        name: "Segoe UI",
+        declaration: "segoe-ui",
+        fallbacks: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        weights: [400, 600, 700],
+        type: "sans-serif",
+        supportedOS: ["windows", "macos"]
+    },
+    {
+        name: "System UI",
+        declaration: "system-ui",
+        fallbacks: "sans-serif",
+        weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        type: "sans-serif",
+        supportedOS: ["windows", "macos", "linux", "ios", "android"]
+    },
     {
         name: "Tahoma", 
         declaration: "Tahoma",

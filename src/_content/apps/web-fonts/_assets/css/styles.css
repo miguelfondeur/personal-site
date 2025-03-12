@@ -41,6 +41,29 @@ body {
     font-size-adjust: 0.5;
 }
 
+/* Account for no Javascript */
+body:not(.js-enabled) {
+    main {
+        margin-left: 96px !important;
+    }
+    aside {
+        width: 96px;
+
+        #sidebar {
+            display: none;
+        }
+    }
+    input[type="search"],
+    #cta-wrapper {
+        display: none !important;
+    }
+
+    #page-header {
+        top: 64px;
+        min-height: 0;
+    }
+}
+
 p, h3 { 
     margin: 0;
 }
