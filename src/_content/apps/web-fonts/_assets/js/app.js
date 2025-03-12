@@ -2,7 +2,6 @@
 
 // Imports
 import { fonts } from './font-data.js';
-import { initSidebar } from './sidebar.js';
 
 // Elements
 const cardWrapper = document.getElementById('card-wrapper');
