@@ -78,23 +78,9 @@ body[data-sidebar-open="true"] {
     }
     aside {
         width: 416px;
+        
         #sidebar {
             width: 320px;
-        }
-
-        #mobile-sidebar-trigger {
-            display: none;
-            position: absolute;
-            font-family: webdings;
-            right: 20px;
-            top: 20px;
-            color: white;
-            background: transparent;
-            border: 0;
-            font-size: 20px;
-            border-radius: 100%;
-            padding: 6px;
-            cursor: pointer;
         }
 
         form {
@@ -107,15 +93,6 @@ body[data-sidebar-open="true"] {
         main {
             margin-left: 96px;
         }
-        aside {
-            #mobile-sidebar-trigger {
-                display: block;
-
-                &:hover {
-                    background-color: rgb(40 42 44);
-                }
-            }
-        }
         .mobile-overlay {
             display: block;
         }
@@ -126,7 +103,7 @@ body[data-sidebar-open="true"] {
 aside {
     display: flex;
     position: fixed;
-    width: 96px;
+    min-width: 96px;
     height: 100vh;
     z-index: 10;
 
@@ -204,9 +181,32 @@ aside {
         overflow: hidden;
         /* transition: width .2s ease-in-out; */
         position: relative;
+        transition: width .15s ease-in-out;
 
         form {
             padding: 24px;
+        }
+    }
+
+    .sidebar-top {
+        padding-inline: 24px;
+        padding-top: 24px;
+        display: none;
+    }
+    
+    #mobile-sidebar-trigger {
+        margin-left: auto;
+        font-family: webdings;
+        color: white;
+        background: transparent;
+        border: 0;
+        font-size: 20px;
+        border-radius: 100%;
+        padding: 6px;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: rgb(40 42 44);
         }
     }
 
@@ -231,6 +231,16 @@ aside {
             &::placeholder {
                 color: rgb(196, 199, 197);
             }
+        }
+    }
+
+    @media (width < 960px) {
+        .sidebar-top {
+            display: flex;
+        }
+        
+        #sidebar form {
+            padding-top: 0;
         }
     }
 }
@@ -275,6 +285,7 @@ main {
     margin-left: 96px;
     height: 100%;
     padding-bottom: 48px;
+    transition: margin .15s ease-in-out;
 
     .mobile-overlay {
         position: fixed;
@@ -686,7 +697,7 @@ dialog {
     }
 
     @media (width < 960px) {
-        margin-top: 56px;
+        margin-top: 24px;
     }
 }
 
