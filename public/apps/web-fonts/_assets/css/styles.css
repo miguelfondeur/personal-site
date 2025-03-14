@@ -82,9 +82,39 @@ body[data-sidebar-open="true"] {
             width: 320px;
         }
 
+        #mobile-sidebar-trigger {
+            display: none;
+            position: absolute;
+            font-family: webdings;
+            right: 20px;
+            top: 20px;
+            color: white;
+            background: transparent;
+            border: 0;
+            font-size: 20px;
+            border-radius: 100%;
+            padding: 6px;
+            cursor: pointer;
+        }
+
         form {
             overflow: scroll;
             height: 100%;
+        }
+    }
+
+    @media (width < 960px) {
+        main {
+            margin-left: 96px;
+        }
+        aside {
+            #mobile-sidebar-trigger {
+                display: block;
+
+                &:hover {
+                    background-color: rgb(40 42 44);
+                }
+            }
         }
     }
 }
