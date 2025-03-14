@@ -116,6 +116,9 @@ body[data-sidebar-open="true"] {
                 }
             }
         }
+        .mobile-overlay {
+            display: block;
+        }
     }
 }
 
@@ -272,6 +275,17 @@ main {
     margin-left: 96px;
     height: 100%;
     padding-bottom: 48px;
+
+    .mobile-overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: rgba(100, 100, 100, .3);
+        z-index: 9;
+        display: none;
+    }
 }
 
 main header#page-header {
@@ -361,6 +375,10 @@ main header#page-header {
             }
         }
     }
+
+    @media (width < 560px) {
+        padding-inline: 16px;
+    }
 }
 
 #card-wrapper,
@@ -417,6 +435,9 @@ main header#page-header {
         }
     }
     
+    @media (width < 560px) {
+        padding-inline: 16px;
+    }
 }
 
 .text-example {
@@ -550,6 +571,10 @@ dialog {
             }
         }
     }
+
+    @media (width < 560px) {
+        padding-inline: 16px;
+    }
 }
 
 .text-playground {
@@ -658,6 +683,10 @@ dialog {
         &:hover {
             background-color: #303030;
         }
+    }
+
+    @media (width < 960px) {
+        margin-top: 56px;
     }
 }
 
