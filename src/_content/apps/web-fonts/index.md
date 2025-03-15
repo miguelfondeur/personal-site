@@ -201,30 +201,10 @@ font-size-adjust: 0.5;
                 <summary>Symbols and Punctuation</summary>
                 <div class="dropdown-body">
                     <div class="character-grid">
-                        <span>⁄</span>
-                        <span>,</span>
-                        <span>;</span>
-                        <span>:</span>
-                        <span>!</span>
-                        <span>‼</span>
-                        <span>?</span>
-                        <span>¿</span>
-                        <span>“</span>
-                        <span>”</span>
-                        <span>@</span>
-                        <span>*</span>
-                        <span>/</span>
-                        <span>|</span>
-                        <span>(</span>
-                        <span>)</span>
-                        <span>&</span>
-                        <span>#</span>
-                        <span>%</span>
-                        <span>©</span>
-                        <span>®</span>
-                        <span>~</span>
-                        <span>$</span>
-                        <span>¢</span>
+                        {% assign lowercase = "/,;:!‼?¿“”@*/|()&#%©®~$¢" | split: "" %}
+                        {% for letter in lowercase %}
+                            <span>{{ letter }}</span>
+                        {% endfor %}
                     </div>
                 </div>
             </details>
