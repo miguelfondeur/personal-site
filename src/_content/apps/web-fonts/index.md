@@ -84,30 +84,28 @@ sidebarContent: |
 </header>
 <!-- Cards -->
 <section id="card-wrapper" data-layout="grid">
-    {% capture font_cards %}
-        {% for font in fonts %}
-            <button 
-                class="card" 
-                data-name="{{ font.name }}" 
-                data-declaration="{{ font.declaration }}" 
-                data-type="{{ font.type }}"
-                data-weights="{{ font.weights }}"
-                data-supported="{{ font.supportedOS }}"
-                popovertarget="details" 
-            >
-                <div class="card-top">
-                    <h3>{{ font.name }} </h3>
-                    <p>{{ font.weights.size }} Styles</p>
-                </div>
-                <p class="text-example" style="font-family: {{ font.declaration }};">
-                    The quick brown fox jumps over a lazy dog
-                </p>
-                <div class="supported-by">
-                    {{ iconsHTML }}
-                </div>
-            </button>
-        {% endfor %}
-    {% endcapture %}
+    {% for font in fonts %}
+        <button 
+            class="card" 
+            data-name="{{ font.name }}" 
+            data-declaration="{{ font.declaration }}" 
+            data-type="{{ font.type }}"
+            data-weights="{{ font.weights }}"
+            data-supported="{{ font.supportedOS }}"
+            popovertarget="details" 
+        >
+            <div class="card-top">
+                <h3>{{ font.name }} </h3>
+                <p>{{ font.weights.size }} Styles</p>
+            </div>
+            <p class="text-example" style="font-family: {{ font.declaration }};">
+                The quick brown fox jumps over a lazy dog
+            </p>
+            <div class="supported-by">
+                {{ iconsHTML }}
+            </div>
+        </button>
+    {% endfor %}
 </section>
 <!-- Card Details -->
 <dialog id="details" popover>
