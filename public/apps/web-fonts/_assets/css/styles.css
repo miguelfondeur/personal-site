@@ -451,6 +451,11 @@ main header#page-header {
     }
 }
 
+#card-wrapper > p > button{
+    width: 100%;
+    pointer-events: none;
+}
+
 .text-example {
     font-size: var(--font-size-example);
     font-weight: 400;
@@ -741,6 +746,14 @@ dialog {
     gap: 1px;
     padding: 0 1px 1px;
     
+    p {
+        margin-bottom: 0; 
+
+        &:empty {
+            display: none;
+        }
+    }
+
     span {
         font-family: var(--active-font);
         font-size: 26px;

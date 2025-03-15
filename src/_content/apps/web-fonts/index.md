@@ -83,7 +83,32 @@ sidebarContent: |
     </section>
 </header>
 <!-- Cards -->
-<section id="card-wrapper" data-layout="grid"></section>
+<section id="card-wrapper" data-layout="grid">
+    {% capture font_cards %}
+        {% for font in fonts %}
+            <button 
+                class="card" 
+                data-name="{{ font.name }}" 
+                data-declaration="{{ font.declaration }}" 
+                data-type="{{ font.type }}"
+                data-weights="{{ font.weights }}"
+                data-supported="{{ font.supportedOS }}"
+                popovertarget="details" 
+            >
+                <div class="card-top">
+                    <h3>{{ font.name }} </h3>
+                    <p>{{ font.weights.size }} Styles</p>
+                </div>
+                <p class="text-example" style="font-family: {{ font.declaration }};">
+                    The quick brown fox jumps over a lazy dog
+                </p>
+                <div class="supported-by">
+                    {{ iconsHTML }}
+                </div>
+            </button>
+        {% endfor %}
+    {% endcapture %}
+</section>
 <!-- Card Details -->
 <dialog id="details" popover>
     <header>
@@ -142,32 +167,10 @@ font-size-adjust: 0.5;
                 <summary>Uppercase</summary>
                 <div class="dropdown-body">
                     <div class="character-grid">
-                        <span>A</span>
-                        <span>B</span>
-                        <span>C</span>
-                        <span>D</span>
-                        <span>E</span>
-                        <span>F</span>
-                        <span>G</span>
-                        <span>H</span>
-                        <span>I</span>
-                        <span>J</span>
-                        <span>K</span>
-                        <span>L</span>
-                        <span>M</span>
-                        <span>N</span>
-                        <span>O</span>
-                        <span>P</span>
-                        <span>Q</span>
-                        <span>R</span>
-                        <span>S</span>
-                        <span>T</span>
-                        <span>U</span>
-                        <span>V</span>
-                        <span>W</span>
-                        <span>X</span>
-                        <span>Y</span>
-                        <span>Z</span>
+                        {% assign alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | split: "" %}
+                        {% for letter in alphabet %}
+                            <span>{{ letter }}</span>
+                        {% endfor %}
                     </div>
                 </div>
             </details>
@@ -176,32 +179,10 @@ font-size-adjust: 0.5;
                 <summary>Lowercase</summary>
                 <div class="dropdown-body">
                     <div class="character-grid">
-                        <span>a</span>
-                        <span>b</span>
-                        <span>c</span>
-                        <span>d</span>
-                        <span>e</span>
-                        <span>f</span>
-                        <span>g</span>
-                        <span>h</span>
-                        <span>i</span>
-                        <span>j</span>
-                        <span>k</span>
-                        <span>l</span>
-                        <span>m</span>
-                        <span>n</span>
-                        <span>o</span>
-                        <span>p</span>
-                        <span>q</span>
-                        <span>r</span>
-                        <span>s</span>
-                        <span>t</span>
-                        <span>u</span>
-                        <span>v</span>
-                        <span>w</span>
-                        <span>x</span>
-                        <span>y</span>
-                        <span>z</span>
+                        {% assign lowercase = "abcdefghijklmnopqrstuvwxyz" | split: "" %}
+                        {% for letter in lowercase %}
+                            <span>{{ letter }}</span>
+                        {% endfor %}
                     </div>
                 </div>
             </details>
@@ -210,23 +191,10 @@ font-size-adjust: 0.5;
                 <summary>Numbers</summary>
                 <div class="dropdown-body">
                     <div class="character-grid">
-                        <span>0</span>
-                        <span>1</span>
-                        <span>2</span>
-                        <span>3</span>
-                        <span>4</span>
-                        <span>5</span>
-                        <span>6</span>
-                        <span>7</span>
-                        <span>8</span>
-                        <span>9</span>
-                        <span>½</span>
-                        <span>¼</span>
-                        <span>⅛</span>
-                        <span>¾</span>
-                        <span>⅜</span>
-                        <span>⅝</span>
-                        <span>⅞</span>
+                        {% assign numbers = "0123456789½¼⅛¾⅜⅝⅞" | split: "" %}
+                        {% for letter in numbers %}
+                            <span>{{ letter }}</span>
+                        {% endfor %}
                     </div>
                 </div>
             </details>
@@ -248,7 +216,6 @@ font-size-adjust: 0.5;
                         <span>@</span>
                         <span>*</span>
                         <span>/</span>
-                        <span>\</span>
                         <span>|</span>
                         <span>(</span>
                         <span>)</span>
