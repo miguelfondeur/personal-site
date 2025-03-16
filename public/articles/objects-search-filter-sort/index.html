@@ -4,14 +4,14 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Miguel Fondeur - Software Engineer | Articles | </title>
+   <title>Miguel Fondeur - Software Engineer | Articles | Working with Objects in JavaScript: Filtering, Searching & Sorting</title>
    <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
    <meta name="author" content="Miguel Fondeur">
    <meta name="robots" content="index, follow">
 
    <!-- Open Graph (for social media sharing) -->
-   <meta property="og:title" content="Miguel Fondeur | Articles | ">
-   <meta property="og:description" content="">
+   <meta property="og:title" content="Miguel Fondeur | Articles | Working with Objects in JavaScript: Filtering, Searching & Sorting">
+   <meta property="og:description" content="In my first post on attributes, we looked at the difference between attributes and props. This time we'll dive deeper into data attributes. Learn how to leverage the JavaScript dataset API for dynamic data management in the DOM. Explore performance benefits, event delegation, MutationObserver, and best practices for using data attributes efficiently.">
    <meta property="og:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <meta property="og:url" content="https://miguelfondeur.com">
    <meta property="og:type" content="website">
@@ -19,8 +19,8 @@
 
    <!-- Twitter Card -->
    <meta name="twitter:card" content="https://miguelfondeur.com/img/og-image-2.jpg">
-   <meta name="twitter:title" content="Miguel Fondeur | Articles | ">
-   <meta name="twitter:description" content="">
+   <meta name="twitter:title" content="Miguel Fondeur | Articles | Working with Objects in JavaScript: Filtering, Searching & Sorting">
+   <meta name="twitter:description" content="In my first post on attributes, we looked at the difference between attributes and props. This time we'll dive deeper into data attributes. Learn how to leverage the JavaScript dataset API for dynamic data management in the DOM. Explore performance benefits, event delegation, MutationObserver, and best practices for using data attributes efficiently.">
    <meta name="twitter:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
 
@@ -144,14 +144,64 @@
             </a>
             <article>
                <header class="hero-section">
-                  <time class="" datetime="">
-                     
+                  <time class="" datetime="2025-03-03">
+                     March 03, 2025
                   </time>
-                  <h1></h1>
-                  <p></p>
+                  <h1>Working with Objects in JavaScript: Filtering, Searching & Sorting</h1>
+                  <p>In my first post on attributes, we looked at the difference between attributes and props. This time we'll dive deeper into data attributes. Learn how to leverage the JavaScript dataset API for dynamic data management in the DOM. Explore performance benefits, event delegation, MutationObserver, and best practices for using data attributes efficiently.</p>
                </header>
                <main>
-                  
+                  <p>
+    JavaScript is a versatile language, widely used for handling and manipulating data. Among the most common data structures you'll work with are objects. Objects are incredibly powerful in JavaScript because they allow you to store key-value pairs, making them ideal for representing structured data. From user profiles to product listings, objects are often the go-to choice for organizing information in JavaScript.
+</p>
+<p>
+    In this post, we’ll explore some common operations you can perform on objects in JavaScript—filtering, searching, and sorting—which are essential for working with collections of data. We’ll use a sample array of user profile cards and demonstrate how to apply these operations in a real-world scenario.
+</p>
+<h2>Filtering Objects</h2>
+<p>
+    Filtering is one of the most common operations when working with collections of objects. It allows you to narrow down a set of data based on specific criteria.
+</p>
+<p>
+    Let's say we have an array of cards, each representing a user. We might want to filter the cards based on a category, such as whether the user has a premium account.
+</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Data</span>
+<span class="token keyword">const</span> cards <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Miguel Fondeur"</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Michael Denny"</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Celeste Fondeur"</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">filterCards</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> filtered <span class="token operator">=</span> cards<span class="token punctuation">;</span>
+
+  <span class="token comment">// Filter by Premium/Basic</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>select<span class="token punctuation">.</span>value <span class="token operator">===</span> <span class="token string">"premium"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    filtered <span class="token operator">=</span> filtered<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">card</span><span class="token punctuation">)</span> <span class="token operator">=></span> card<span class="token punctuation">.</span>premium<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>select<span class="token punctuation">.</span>value <span class="token operator">===</span> <span class="token string">"basic"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    filtered <span class="token operator">=</span> filtered<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">card</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token operator">!</span>card<span class="token punctuation">.</span>premium<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">renderCards</span><span class="token punctuation">(</span>filtered<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>
+    In this example, we check the value of the dropdown (select.value) to determine whether we want to filter for premium or basic users. The filter() method creates a new array containing only the cards that meet the criteria.
+</p>
+<h2>Searching Objects</h2>
+<p>Another common task is searching through objects. Often, you want to find items that match a specific term or keyword.</p>
+<p>Here’s how we can filter our array of cards based on a search term:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> searchTerm <span class="token operator">=</span> search<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>searchTerm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  filtered <span class="token operator">=</span> filtered<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">card</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+    card<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>searchTerm<span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>
+    In this case, we’re filtering the cards by the name of the user, making the search case-insensitive. The <code>includes()</code> method is used to check if the name contains the search term.
+</p>
+<h2>Sorting Objects</h2>
+<p>
+    Sorting allows you to rearrange objects in a collection according to specific criteria, such as alphabetically by name or numerically by ID.
+</p>
+
                </main>
             </article>
          </div>
