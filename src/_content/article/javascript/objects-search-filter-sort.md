@@ -69,3 +69,103 @@ if (searchTerm) {
 <p>
     Sorting allows you to rearrange objects in a collection according to specific criteria, such as alphabetically by name or numerically by ID.
 </p>
+
+```js
+if (sort.value === "alphabetical") {
+  filtered = filtered.toSorted((a, b) => a.name.localeCompare(b.name));
+}
+```
+
+<p>
+    In this example, if the user selects "alphabetical" from the dropdown, we sort the cards alphabetically by the <code>name</code> property using <code>localeCompare()</code>. This is a modern way to handle string comparisons, which ensures the sorting is done properly regardless of the character set.
+</p>
+
+<h2>Bringing It All Together</h2>
+<p>
+    Now let’s see how all of this works together in one cohesive example. Below is the complete JavaScript code for managing a list of cards with search, filter, and sort functionality:
+</p>
+
+```html
+<div class="flex">
+  <input class="mr-2" type="search" id="search" placeholder="Search by Name" />
+  <select class="mr-2">
+    <option>All Members</option>
+    <option value="premium">Premium</option>
+    <option value="basic">Basic</option>
+  </select>
+
+  <select id="sort" class="">
+    <option>Sort:</option>
+    <option value="alphabetical">Alpabetical</option>
+  </select>
+</div>
+<div id="cards"></div>
+```
+
+```js
+<script>
+  const container = document.querySelector("#cards");
+  const search = document.querySelector("#search");
+  const btn = document.querySelector("#btn");
+  const select = document.querySelector("select");
+  const sort = document.querySelector("#sort");
+
+  const cards = [
+    { name: "Miguel Fondeur", id: 1, premium: false, profileURL: "#" },
+    { name: "Michael Denny", id: 2, premium: true, profileURL: "#" },
+    { name: "Celeste Fondeur", id: 3, premium: true, profileURL: "#" },
+  ];
+
+  function renderCards(filteredCards = cards) {
+    container.innerHTML = filteredCards
+      .map(
+        (card) => `
+        <a href="${card.profileURL}" class="card ${card.premium ? "premium" : "basic"}">
+          ${card.name}<br>id: ${card.id}
+        </a>`
+      )
+      .join("");
+  }
+
+  function filterCards() {
+    let filtered = cards;
+
+    const searchTerm = search.value.trim().toLowerCase();
+    if (searchTerm) {
+      filtered = filtered.filter((card) => card.name.toLowerCase().includes(searchTerm));
+    }
+
+    if (select.value === "premium") {
+      filtered = filtered.filter((card) => card.premium);
+    } else if (select.value === "basic") {
+      filtered = filtered.filter((card) => !card.premium);
+    }
+
+    if (sort.value === "alphabetical") {
+      filtered = filtered.toSorted((a, b) => a.name.localeCompare(b.name));
+    }
+
+    renderCards(filtered);
+  }
+
+  search.addEventListener("input", filterCards);
+  select.addEventListener("change", filterCards);
+  sort.addEventListener("change", filterCards);
+
+  btn.addEventListener("click", () => {
+    cards.push({ name: "New Card", id: cards.length + 1, premium: false, profileURL: "#" });
+    filterCards();
+  });
+
+  renderCards();
+</script>
+```
+
+<h2>The Fundamentals You Can Build On</h2>
+<p>
+    Filtering, searching, and sorting are fundamental operations you’ll use in many applications, whether you’re working with user data, products, or other types of objects. These techniques form the foundation for more advanced operations that involve creating, updating, and deleting objects, known as CRUD operations.
+</p>
+
+<p>
+    Stay tuned for our next post where we dive into CRUD operations with objects and how to manage data effectively in JavaScript!
+</p>
