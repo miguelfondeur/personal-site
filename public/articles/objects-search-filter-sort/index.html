@@ -4,14 +4,14 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Miguel Fondeur - Software Engineer | Articles | Working with Objects in JavaScript: Filtering, Searching & Sorting</title>
+   <title>Miguel Fondeur - Software Engineer | Articles | Working with Objects: Filtering, Searching & Sorting</title>
    <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
    <meta name="author" content="Miguel Fondeur">
    <meta name="robots" content="index, follow">
 
    <!-- Open Graph (for social media sharing) -->
-   <meta property="og:title" content="Miguel Fondeur | Articles | Working with Objects in JavaScript: Filtering, Searching & Sorting">
-   <meta property="og:description" content="In my first post on attributes, we looked at the difference between attributes and props. This time we'll dive deeper into data attributes. Learn how to leverage the JavaScript dataset API for dynamic data management in the DOM. Explore performance benefits, event delegation, MutationObserver, and best practices for using data attributes efficiently.">
+   <meta property="og:title" content="Miguel Fondeur | Articles | Working with Objects: Filtering, Searching & Sorting">
+   <meta property="og:description" content="There are certain tasks so common that you're almost guaranteed to encounter them in any professional environment. One of those is working with objects. In this series, I'm exploring some of the most common ways we work with objects. For this entry, we're starting with filtering, searching, and sorting. Let's dig in.">
    <meta property="og:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <meta property="og:url" content="https://miguelfondeur.com">
    <meta property="og:type" content="website">
@@ -19,8 +19,8 @@
 
    <!-- Twitter Card -->
    <meta name="twitter:card" content="https://miguelfondeur.com/img/og-image-2.jpg">
-   <meta name="twitter:title" content="Miguel Fondeur | Articles | Working with Objects in JavaScript: Filtering, Searching & Sorting">
-   <meta name="twitter:description" content="In my first post on attributes, we looked at the difference between attributes and props. This time we'll dive deeper into data attributes. Learn how to leverage the JavaScript dataset API for dynamic data management in the DOM. Explore performance benefits, event delegation, MutationObserver, and best practices for using data attributes efficiently.">
+   <meta name="twitter:title" content="Miguel Fondeur | Articles | Working with Objects: Filtering, Searching & Sorting">
+   <meta name="twitter:description" content="There are certain tasks so common that you're almost guaranteed to encounter them in any professional environment. One of those is working with objects. In this series, I'm exploring some of the most common ways we work with objects. For this entry, we're starting with filtering, searching, and sorting. Let's dig in.">
    <meta name="twitter:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
 
@@ -144,31 +144,51 @@
             </a>
             <article>
                <header class="hero-section">
-                  <time class="" datetime="2025-03-03">
-                     March 03, 2025
+                  <time class="" datetime="2025-03-16">
+                     March 16, 2025
                   </time>
-                  <h1>Working with Objects in JavaScript: Filtering, Searching & Sorting</h1>
-                  <p>In my first post on attributes, we looked at the difference between attributes and props. This time we'll dive deeper into data attributes. Learn how to leverage the JavaScript dataset API for dynamic data management in the DOM. Explore performance benefits, event delegation, MutationObserver, and best practices for using data attributes efficiently.</p>
+                  <h1>Working with Objects: Filtering, Searching & Sorting</h1>
+                  <p>There are certain tasks so common that you're almost guaranteed to encounter them in any professional environment. One of those is working with objects. In this series, I'm exploring some of the most common ways we work with objects. For this entry, we're starting with filtering, searching, and sorting. Let's dig in.</p>
                </header>
                <main>
-                  <p>
-    JavaScript is a versatile language, widely used for handling and manipulating data. Among the most common data structures you'll work with are objects. Objects are incredibly powerful in JavaScript because they allow you to store key-value pairs, making them ideal for representing structured data. From user profiles to product listings, objects are often the go-to choice for organizing information in JavaScript.
+                  <h2>Expectations vs. Reality</h2>
+<p>
+    As a front-end developer, I’ve had many interviews that required a fairly high level of understanding of data structures and algorithms. I've also faced coding challenges that made me question whether they reflected the actual work being done at the company. 
 </p>
 <p>
-    In this post, we’ll explore some common operations you can perform on objects in JavaScript—filtering, searching, and sorting—which are essential for working with collections of data. We’ll use a sample array of user profile cards and demonstrate how to apply these operations in a real-world scenario.
+    Behind the curtain, however, most companies and applications are surprisingly similar. You’ll often find yourself doing the same tasks—just in different ways. This can be good or bad, depending on your perspective. Personally, I believe the more you do something, the better you get. I’d rather not reinvent the wheel every time I need to solve a common problem. Consistency and conventions make development smoother.
 </p>
+<p>
+    Working with object data is one of those common tasks. Once you recognize the patterns, they become second nature, making you more efficient each time you encounter them. That said, this breakdown of JavaScript objects isn’t exactly how things will function in the "real world." In a professional environment, you'll usually fetch data from an API, work with JSON that needs to be parsed, and update query string parameters to persist state on the front end. Consider this the meat and potatoes of working with objects—before we dive deeper into more advanced operations.
+</p>
+<p>Here's the HTML we'll be working with:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mr-2<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Search by Name<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mr-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">></span></span>All Members<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>premium<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Premium<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>basic<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Basic<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sort<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">></span></span>Sort:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alphabetical<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Alphabetical<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cards<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <h2>Filtering Objects</h2>
-<p>
-    Filtering is one of the most common operations when working with collections of objects. It allows you to narrow down a set of data based on specific criteria.
-</p>
-<p>
-    Let's say we have an array of cards, each representing a user. We might want to filter the cards based on a category, such as whether the user has a premium account.
+<p> 
+    Before we dive into the code, let’s briefly define these terms. Filtering narrows down a list based on specific criteria, sorting changes the order of a list, and searching is essentially filtering based on a specific string of characters. Filtering is one of the most common operations when working with lists (or arrays) of objects.
+</p> 
+<p> 
+    Let's say we have an array of cards, each representing a user. We might want to filter the cards based on a category, such as whether the user has a premium account. 
 </p>
 <pre class="language-js"><code class="language-js"><span class="token comment">// Data</span>
 <span class="token keyword">const</span> cards <span class="token operator">=</span> <span class="token punctuation">[</span>
   <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Miguel Fondeur"</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Michael Denny"</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Celeste Fondeur"</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Michael Denny"</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Scott Endicott"</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Bogdan Chayka"</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
 <pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">filterCards</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> filtered <span class="token operator">=</span> cards<span class="token punctuation">;</span>
@@ -182,11 +202,13 @@
 
   <span class="token function">renderCards</span><span class="token punctuation">(</span>filtered<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
+<p> 
+    In this example, we check the value of the dropdown (<code>select.value</code>) to determine whether we want to filter for premium or basic users. The <code>filter()</code> method creates a new array containing only the cards that meet the criteria. 
+</p> 
+<h2>Searching Objects</h2> 
 <p>
-    In this example, we check the value of the dropdown (select.value) to determine whether we want to filter for premium or basic users. The filter() method creates a new array containing only the cards that meet the criteria.
-</p>
-<h2>Searching Objects</h2>
-<p>Another common task is searching through objects. Often, you want to find items that match a specific term or keyword.</p>
+    Another common task is searching through objects. Often, you want to find items that match a specific term or keyword.
+</p> 
 <p>Here’s how we can filter our array of cards based on a search term:</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> searchTerm <span class="token operator">=</span> search<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">if</span> <span class="token punctuation">(</span>searchTerm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -194,100 +216,33 @@
     card<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>searchTerm<span class="token punctuation">)</span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>
-    In this case, we’re filtering the cards by the name of the user, making the search case-insensitive. The <code>includes()</code> method is used to check if the name contains the search term.
+<p> 
+    In this case, we’re filtering the cards by the name of the user, making the search case-insensitive. The <code>includes()</code> method is used to check if the name contains the search term. 
 </p>
-<h2>Sorting Objects</h2>
-<p>
-    Sorting allows you to rearrange objects in a collection according to specific criteria, such as alphabetically by name or numerically by ID.
+<h2>Sorting Objects</h2> 
+<p> 
+    Sorting allows you to rearrange objects in a collection according to specific criteria, such as alphabetically by name or numerically by ID. 
 </p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>sort<span class="token punctuation">.</span>value <span class="token operator">===</span> <span class="token string">"alphabetical"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   filtered <span class="token operator">=</span> filtered<span class="token punctuation">.</span><span class="token function">toSorted</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> a<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">localeCompare</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>
-    In this example, if the user selects "alphabetical" from the dropdown, we sort the cards alphabetically by the <code>name</code> property using <code>localeCompare()</code>. This is a modern way to handle string comparisons, which ensures the sorting is done properly regardless of the character set.
+<p> 
+    In this example, if the user selects "alphabetical" from the dropdown, we sort the cards alphabetically by the <code>name</code> property using <code>localeCompare()</code>. This is a modern way to handle string comparisons, ensuring sorting works properly regardless of character set or locale. 
 </p>
-<h2>Bringing It All Together</h2>
-<p>
-    Now let’s see how all of this works together in one cohesive example. Below is the complete JavaScript code for managing a list of cards with search, filter, and sort functionality:
+<h2>Bringing It All Together</h2> 
+<p> 
+    Now let’s see how all of this works together. Here's the full working example of managing a list of cards with search, filter, and sort functionality: 
 </p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mr-2<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Search by Name<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mr-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">></span></span>All Members<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>premium<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Premium<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>basic<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Basic<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
-
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sort<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">></span></span>Sort:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alphabetical<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Alpabetical<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cards<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-<pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span>script<span class="token operator">></span>
-  <span class="token keyword">const</span> container <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#cards"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">const</span> search <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#search"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">const</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#btn"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">const</span> select <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"select"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">const</span> sort <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#sort"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">const</span> cards <span class="token operator">=</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Miguel Fondeur"</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Michael Denny"</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Celeste Fondeur"</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">function</span> <span class="token function">renderCards</span><span class="token punctuation">(</span><span class="token parameter">filteredCards <span class="token operator">=</span> cards</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    container<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> filteredCards
-      <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>
-        <span class="token punctuation">(</span><span class="token parameter">card</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
-        &lt;a href="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>card<span class="token punctuation">.</span>profileURL<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" class="card </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>card<span class="token punctuation">.</span>premium <span class="token operator">?</span> <span class="token string">"premium"</span> <span class="token operator">:</span> <span class="token string">"basic"</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">">
-          </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>card<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;br>id: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>card<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">
-        &lt;/a></span><span class="token template-punctuation string">`</span></span>
-      <span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token keyword">function</span> <span class="token function">filterCards</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> filtered <span class="token operator">=</span> cards<span class="token punctuation">;</span>
-
-    <span class="token keyword">const</span> searchTerm <span class="token operator">=</span> search<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>searchTerm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      filtered <span class="token operator">=</span> filtered<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">card</span><span class="token punctuation">)</span> <span class="token operator">=></span> card<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>searchTerm<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>select<span class="token punctuation">.</span>value <span class="token operator">===</span> <span class="token string">"premium"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      filtered <span class="token operator">=</span> filtered<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">card</span><span class="token punctuation">)</span> <span class="token operator">=></span> card<span class="token punctuation">.</span>premium<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>select<span class="token punctuation">.</span>value <span class="token operator">===</span> <span class="token string">"basic"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      filtered <span class="token operator">=</span> filtered<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">card</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token operator">!</span>card<span class="token punctuation">.</span>premium<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>sort<span class="token punctuation">.</span>value <span class="token operator">===</span> <span class="token string">"alphabetical"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      filtered <span class="token operator">=</span> filtered<span class="token punctuation">.</span><span class="token function">toSorted</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> a<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">localeCompare</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token function">renderCards</span><span class="token punctuation">(</span>filtered<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  search<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"input"</span><span class="token punctuation">,</span> filterCards<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  select<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"change"</span><span class="token punctuation">,</span> filterCards<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  sort<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"change"</span><span class="token punctuation">,</span> filterCards<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  btn<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-    cards<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"New Card"</span><span class="token punctuation">,</span> <span class="token literal-property property">id</span><span class="token operator">:</span> cards<span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">filterCards</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token function">renderCards</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
-<h2>The Fundamentals You Can Build On</h2>
-<p>
-    Filtering, searching, and sorting are fundamental operations you’ll use in many applications, whether you’re working with user data, products, or other types of objects. These techniques form the foundation for more advanced operations that involve creating, updating, and deleting objects, known as CRUD operations.
-</p>
-<p>
-    Stay tuned for our next post where we dive into CRUD operations with objects and how to manage data effectively in JavaScript!
-</p>
+<iframe height="400" style="width: 100%;" scrolling="no" title="Website Example Code: Searching, Filtering, Sorting" src="https://codepen.io/miguelfondeur/embed/KKroEQx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/miguelfondeur/pen/KKroEQx">
+  Website Example Code: Searching, Filtering, Sorting</a> by Miguel Fondeur (<a href="https://codepen.io/miguelfondeur">@miguelfondeur</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+<h2>The Fundamentals You Can Build On</h2> 
+<p> 
+    Filtering, searching, and sorting are fundamental operations you’ll use in many applications, whether you’re working with user data, products, or other types of objects. These techniques form the foundation for more advanced operations that involve creating, updating, and deleting objects—also known as CRUD operations. 
+</p> 
+<p> Stay tuned for our next post, where we dive into CRUD operations with objects and how to manage data effectively in JavaScript.</p>
 
                </main>
             </article>

@@ -75,7 +75,11 @@ article:not(.article-card) {
             }
         }
     }
-
+    
+    iframe {
+        margin: var(--ui-spacing-10) 0 !important;
+    }
+    
     pre[class*="language-"] { 
         margin: var(--ui-spacing-10) 0 !important;
         
