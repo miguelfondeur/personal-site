@@ -43,7 +43,7 @@ article:not(.article-card) {
     }
 
     h2 {
-        margin-top: var(--ui-spacing-2xl);
+        margin-top: var(--ui-spacing-xl);
         margin-bottom: var(--ui-spacing-4);
     }
 

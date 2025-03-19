@@ -40,6 +40,7 @@ h4, .h4 {
 
 p {
     line-height: var(--line-height-base);
+
 }
 
 a { 
@@ -74,4 +75,18 @@ code {
 hr {
     margin-top: var(--ui-spacing-xl);
     border-color: light-dark(var(--color-gray-2), var(--color-dark-gray-1));
+}
+
+/* Drop Cap */
+.long-copy {
+    p:first-of-type:first-letter {
+        font-size: 4.8rem;
+        color: var(--color-white);
+        float: left;
+        line-height: 1;
+        margin: 6px 6px 0 0;
+        font-family: var(--font-family-heading);
+        font-weight: 400;
+        font-variant: historical-ligatures;
+    }
 }
