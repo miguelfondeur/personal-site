@@ -5,31 +5,28 @@ debug: true
 ---
 <section class="hero-section">
    <div class="container" data-width="small">
-       <h1>Useful tools and apps I've built.</h1>
+       <h1>Tools, Passion Projects, and Experiments.</h1>
        <p>
-         I've built a few tools and apps over the years. Some are open-source, others were built for clients or companies, but all reflect the work I love doing. If something catches your eye, feel free to explore, learn from it, or even contribute.
+         Over the years, I've built a few small apps. They're not all "production ready", but they reflect the kind of work I love doing. If something catches your eye, feel free to explore, learn from it, or even contribute. All projects are public on GitHub.
        </p>
    </div>
 </section>
 
 <section class="content-section">
       <ul class="work-grid" role="list">
-         {% assign sortedApps = collections.apps | sort: "data.title" %}
-         {% for app in sortedApps %}
-            {% unless app.fileSlug == "knowledge" %}
+         {% for app in apps %}
             <li class="work-item">
                <a href="{{ app.url }}" class="work-item-button" >
                   <div class="work-thumb">
-                     <img loading="lazy" src="{{ app.data.thumb }}" alt="Musora thumbnail">
+                     <img loading="lazy" src="{{ app.thumb }}" alt="{{ app.name }} thumbnail">
                   </div>
-                  <h3>{{ app.data.appName }}</h3>
-                  {% if app.data.summary %}
-                     <p>{{ app.data.summary }}</p>
+                  <h3>{{ app.name }}</h3>
+                  {% if app.summary %}
+                     <p>{{ app.summary }}</p>
                   {% endif %}
                </a>
                <div class="work-hover-state"></div>
             </li>
-            {% endunless %}
          {% endfor %}
       </ul>
 </section>

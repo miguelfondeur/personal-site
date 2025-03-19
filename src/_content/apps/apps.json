@@ -1,7 +1,0 @@
-{
-    "permalink": "/apps/{{ page.filePathStem | split: 'apps/' | last | replace: '/index', '' }}/",
-    "tags": "apps",
-    "layout": "app-layout.html",
-    "css": true,
-    "js": true
-} 
