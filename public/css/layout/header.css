@@ -116,7 +116,7 @@ header.site-header {
         padding: var(--ui-spacing-2) var(--ui-spacing-3);
         font-size: var(--font-size-sm);
         line-height: 1;
-        letter-spacing: .03rem;
+        letter-spacing: .04rem;
     }
 }
 
