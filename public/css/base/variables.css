@@ -6,24 +6,24 @@
     color-scheme: light dark;
 
     /* Colors */
-    --color-white: #fefefe;
-    --color-gray-1: #f9f9f9;
-    --color-gray-2: #f5f4f4;
-    --color-gray-3: #d8d3d4;
-    --color-gray-4: #9f9fa9;
-    --color-gray-5: #71717b;
-    --color-gray-6: #52525c;
-    --color-gray-7: #51525c;
-    --color-gray-8: #3f3f46;
-    --color-dark-gray-1: #2e2e30;
-    --color-dark-gray-2: #27272A;
-    --color-dark-gray-3: #1e1e22;
-    --color-dark-gray-4: #1b1718;
-    --color-dark-gray-5: #18181b;
-    --color-black: #000000;
-    --color-sea-green: #3B8C66;
-    --color-persian-orange: #CE9178;
-    --color-fire-brick: #AB3428;
+    --color-white: hsl(0, 0%, 100%);
+    --color-gray-1: hsl(0, 0%, 98%);
+    --color-gray-2: hsl(0, 5%, 96%);
+    --color-gray-3: hsl(348, 6%, 84%);
+    --color-gray-4: hsl(240, 5%, 64%);
+    --color-gray-5: hsl(240, 4%, 46%);
+    --color-gray-6: hsl(240, 6%, 34%);
+    --color-gray-7: hsl(235, 6%, 34%);
+    --color-gray-8: hsl(240, 5%, 26%);
+    --color-dark-gray-1: hsl(240, 2%, 18%);
+    --color-dark-gray-2: hsl(240, 4%, 16%);
+    --color-dark-gray-3: hsl(240, 6%, 13%);
+    --color-dark-gray-4: hsl(345, 8%, 10%);
+    --color-dark-gray-5: hsl(240, 6%, 10%);
+    --color-black: hsl(0, 0%, 0%);
+    --color-sea-green: hsl(152, 41%, 39%);
+    --color-persian-orange: hsl(17, 47%, 64%);
+    --color-fire-brick: hsl(5, 62%, 41%);
 
     /* Colors Usage */
     --color-bg-site: var(--color-gray-1);
@@ -80,9 +80,9 @@
     /* Small Screens */
     @media (width < 640px){
         /* Font sizes */
-        --font-size-h1: var(--ui-spacing-8);
+        --font-size-h1: var(--ui-spacing-6);
         /* line heights */
-        --line-height-h1: var(--ui-spacing-10);
+        --line-height-h1: var(--ui-spacing-9);
     }
 }
 

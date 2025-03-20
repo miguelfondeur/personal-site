@@ -6,8 +6,8 @@ draft: false
 ---
 
 <h2>Attributes vs. Properties</h2>
-<br>
-<h3>1. Attributes are static, properties are dynamic</h3>
+
+<h3>Attributes are Static, Properties are Dynamic</h3>
 <p>Attributes are <strong>defined in the HTML</strong> and serve as the initial state. However, once the page loads, JavaScript properties take over and can change independently.</p>
 
 ```html
@@ -26,7 +26,7 @@ draft: false
 
 <p>Changing <code>input.value</code> updates the displayed text but <strong>does not</strong> update the <code>value</code> attribute in the DOM. However, if you manually reset the form or use <code>setAttribute()</code>, the attribute will be restored.</p>
 
-<h3>2. Custom elements & observed attributes</h3>
+<h3>Custom Elements & Observed Attributes</h3>
 <p>Built-in elements, like <code>&lt;input&gt;</code>, do <strong>not</strong> automatically sync properties with attributes. However, <strong>custom elements</strong> can listen for attribute changes using <code>observedAttributes()</code>.</p>
 
 ```html
@@ -55,8 +55,8 @@ draft: false
 
 <p>This behavior is <strong>opt-in</strong> for custom elements, but <strong>not available</strong> for built-in ones. For example, changing <code>input.value = "New"</code> will not trigger an attribute change.</p>
 
-<h3>3. Attributes live in the DOM, properties live in memory</h3>
-<p><strong>Attributes</strong> are stored in the DOM itself (<code>setAttribute()</code> modifies them).<br>
+<h3>Attributes Live in the DOM, Properties Live in Memory</h3>
+<p><strong>Attributes</strong> are stored in the DOM itself (<code>setAttribute()</code> modifies them).
 <strong>Properties</strong> are stored in JavaScript memory and <strong>may or may not sync</strong> with attributes.</p>
 
 ```html

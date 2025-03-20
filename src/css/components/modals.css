@@ -92,7 +92,10 @@ dialog.work-modal {
         row-gap: var(--ui-spacing-4); 
         padding-bottom: var(--ui-spacing-9);
 
-        & h1 { line-height: 1; }
+        & h1 { 
+            line-height: 1; 
+            margin-bottom: 0;
+        }
         & .work-subtitle {
             display: flex;
             justify-content: space-between;
