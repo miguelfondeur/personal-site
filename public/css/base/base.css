@@ -103,6 +103,10 @@ dialog[popover] {
         display: flex;
         border-bottom: 1px solid;
         border-color: light-dark(var(--color-gray-2), var(--color-dark-gray-1));
+
+        &[aria-current="page"] {
+            border-color: var(--color-text-accent);
+        }
     }
 
     & menu li:last-child a {

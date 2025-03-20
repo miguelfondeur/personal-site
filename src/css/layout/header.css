@@ -3,7 +3,7 @@ header.site-header {
     position: sticky;
     padding-block: var(--ui-spacing-6);
     top: 0;
-    z-index: 2;
+    z-index: 5;
 
     .container {
         justify-content: space-between;
@@ -126,9 +126,11 @@ header.site-header {
     align-items: center;
     justify-content: space-between;
     color: light-dark(var(--color-gray-6), var(--color-gray-4));
-    font-weight: 600;
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-lg);
     margin-bottom: var(--ui-spacing-6);
+    font-family: var(--font-family-heading);
+    font-weight: 400;
+    letter-spacing: .2px;
 
     & button {
         padding: 0;

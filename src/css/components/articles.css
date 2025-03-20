@@ -106,7 +106,7 @@ article:not(.article-card) {
 
 article.article-card {
     position: relative;
-    padding-block: var(--ui-spacing-4);
+    margin-bottom: var(--ui-spacing-4);
 
     .h4 {
         font-weight: bold;
@@ -145,13 +145,13 @@ article.article-card {
     & .article-hover-state {
         position: absolute;
         border-radius: var(--border-radius-md);
-        background-color: light-dark( var(--color-gray-1), var(--color-dark-gray-3) );
+        background-color: light-dark(var(--color-gray-1), var(--color-dark-gray-3));
         width: calc(100% + var(--ui-spacing-10));
-        height: 100%;
-        top: 0;
+        height: calc(100% +  var(--ui-spacing-8));
+        top: -1.6rem;
         left: -2rem;
         opacity: 0;
-        transition: opacity 0.2s ease-in-out;
+        transition: opacity .2s ease-in-out;
 
         /* Small Screens */
         @media (width < 640px){
@@ -177,10 +177,14 @@ article.article-card.card-split {
 
     .article-hover-state { 
         border-radius: 0;
+        height: calc(100% + var(--ui-spacing-xl));
+        top: -4.8rem;
     }
 
     time {
         flex-shrink: 0;
+        z-index: 2;
+
     }
 
     & a .card-content {
