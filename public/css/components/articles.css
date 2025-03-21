@@ -57,7 +57,7 @@ article:not(.article-card) {
     }
 
     p { 
-        line-height: 2;
+        line-height: 1.7;
         text-align: justify;
         hyphens: auto;
     }
