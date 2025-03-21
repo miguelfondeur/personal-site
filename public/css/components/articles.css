@@ -49,7 +49,6 @@ article:not(.article-card) {
 
     h3 {
         margin-block: var(--ui-spacing-12) var(--ui-spacing-4);
-        font-weight: bold;
     }
 
     h4 {
@@ -109,7 +108,6 @@ article.article-card {
     margin-bottom: var(--ui-spacing-4);
 
     .h4 {
-        font-weight: bold;
         color: light-dark(var(--color-dark-gray-2),var(--color-gray-2));
     }
 

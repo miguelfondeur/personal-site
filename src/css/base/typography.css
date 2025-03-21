@@ -1,13 +1,27 @@
+/*
+    TYPOGRAPHY
+    "Words Are Pictures..."
+*/
+
 h1,h2,h3,.h3,h4 {
     color: light-dark(var(--color-dark-gray-2), var(--color-gray-2));
+    font-family: var(--font-family-heading);
+    font-weight: 400;
+}
+
+h1, h2 {
+    font-variant-ligatures: historical-ligatures;
+}
+
+h3, .h3, h4, .h4 {
+    -webkit-font-smoothing: subpixel-antialiased;  /* Fake 500 */
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: .4px;
 }
 
 h1 {
-    font-family: var(--font-family-heading);
-    font-weight: 400;
     font-size: var(--font-size-h1);
-    line-height: var(--line-height-h1);
-    font-variant-ligatures: historical-ligatures;
+    line-height: var(--line-height-h1);  
     margin-bottom: var(--ui-spacing-6);
 }
 
@@ -19,19 +33,16 @@ h2 {
 h3, .h3 {
     font-size: var(--font-size-h3);
     line-height: var(--line-height-h3);
-    font-weight: 500;
 }
 
 h4, .h4 {
     font-size: var(--font-size-h4);
     line-height: var(--line-height-base);
-    font-weight: 400;
 }
 
 p {
     line-height: var(--line-height-base);
     margin-bottom: var(--ui-spacing-6);
-
 }
 
 a { 
@@ -72,7 +83,7 @@ hr {
 .long-copy {
     p:first-of-type:first-letter {
         font-size: 4.8rem;
-        color: var(--color-white);
+        color: light-dark(var(--color-black), var(--color-white));
         float: left;
         line-height: 1;
         margin: 6px 6px 0 0;
