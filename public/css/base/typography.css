@@ -13,9 +13,12 @@ h1, h2 {
     font-variant-ligatures: historical-ligatures;
 }
 
-h3, .h3, h4, .h4 {
+h2, h3, .h3, h4, .h4 {
     -webkit-font-smoothing: subpixel-antialiased;  /* Fake 500 */
     -moz-osx-font-smoothing: grayscale;
+}
+
+h3, .h3, h4, .h4 {
     letter-spacing: .4px;
 }
 

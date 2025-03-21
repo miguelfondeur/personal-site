@@ -95,12 +95,14 @@ dialog.work-modal {
         & h1 { 
             line-height: 1; 
             margin-bottom: 0;
+            -webkit-font-smoothing: subpixel-antialiased;
         }
         & .work-subtitle {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             gap: var(--ui-spacing-3); 
+            font-size: var(--font-size-base);
 
             & h3,
             & p {
@@ -109,6 +111,7 @@ dialog.work-modal {
             }
             & h3 {
                 color: light-dark(var(--color-gray-6), var(--color-gray-4));
+                font-size: inherit;
             }
             & p {
                 color: var(--color-gray-5);

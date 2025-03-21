@@ -220,7 +220,8 @@ aside.aside-section {
     }
     & h3 {
         margin-bottom: var(--ui-spacing-3);
-        font-weight: bold;
+        font-size: var(--font-size-lg);
+        margin-bottom: 0;
     }
     & p {
         color: light-dark(var(--color-gray-6), var(--color-gray-4));
