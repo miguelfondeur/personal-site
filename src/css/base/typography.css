@@ -55,6 +55,13 @@ a {
     transition: color 0.2s ease-in-out;
 }
 
+strong {
+    font-weight: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+
+
 a:hover, 
 a:focus-visible {
     color: var(--color-text-accent);
@@ -87,7 +94,6 @@ hr {
 .long-copy {
     p:first-of-type:first-letter {
         font-size: 4.8rem;
-        color: light-dark(var(--color-black), var(--color-white));
         float: left;
         line-height: 1;
         margin: 6px 6px 0 0;
