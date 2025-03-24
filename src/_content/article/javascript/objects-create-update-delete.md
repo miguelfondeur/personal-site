@@ -2,7 +2,7 @@
 title: "Working with Objects: Creating, Updating & Deleting"
 summary: In my last post on objects, I mention how most of what we do as javascript developers is working with objects. It's foundational to building javascript applications. We spoke about Filtering, Searching, and Sorting. In this post I'll go through three aspects of CRUD. Create, Update and Delete.
 date: 2025-03-21
-draft: true
+draft: false
 ---
 
 <h2>Recap</h2>

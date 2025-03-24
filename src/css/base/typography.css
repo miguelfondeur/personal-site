@@ -100,6 +100,7 @@ hr {
         font-family: var(--font-family-heading);
         font-weight: 400;
         font-variant: historical-ligatures;
+        color: light-dark(var(--color-dark-gray-2), var(--color-gray-2));
     
         @media (width < 640px){ 
             font-size: 4rem;
