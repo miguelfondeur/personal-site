@@ -218,7 +218,7 @@ article.article-card.card-split {
             border-left: none;
             padding-left: var(--ui-spacing-6);
             padding-right: var(--ui-spacing-12);
-            line-height: var(--line-height-h3);
+            line-height: var(--line-height-sm);
             min-width: 204px;
         }
     }

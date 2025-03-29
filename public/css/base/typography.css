@@ -9,7 +9,7 @@ h1,h2,h3,.h3,h4 {
     font-weight: 400;
 }
 
-h1, h2 {
+h1, h2, h3, .h3 {
     font-variant-ligatures: historical-ligatures;
 }
 
@@ -19,7 +19,7 @@ h2, h3, .h3, h4, .h4 {
 }
 
 h3, .h3, h4, .h4 {
-    letter-spacing: .4px;
+    letter-spacing: .2px;
 }
 
 h1 {

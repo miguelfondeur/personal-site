@@ -67,6 +67,7 @@
     --font-size-h4: var(--font-size-base);
 
     /* line-height */
+    --line-height-sm: 2rem;
     --line-height-base: 2.8rem;
     --line-height-h1: 5.8rem;
     --line-height-h2: 2.8rem;

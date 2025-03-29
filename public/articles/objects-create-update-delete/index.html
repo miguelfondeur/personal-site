@@ -11,7 +11,7 @@
 
    <!-- Open Graph (for social media sharing) -->
    <meta property="og:title" content="Miguel Fondeur | Articles | Working with Objects: Creating, Updating & Deleting">
-   <meta property="og:description" content="In my last post on objects, I mention how most of what we do as javascript developers is working with objects. It's foundational to building javascript applications. We spoke about Filtering, Searching, and Sorting. In this post I'll go through three aspects of CRUD. Create, Update and Delete.">
+   <meta property="og:description" content="In my last post on objects, I mentioned how most of what we do as JavaScript developers is working with objects. It's foundational to building JavaScript applications. We spoke about filtering, searching, and sorting. In this post, I'll go through three aspects of CRUD: Create, Update, and Delete.">
    <meta property="og:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <meta property="og:url" content="https://miguelfondeur.com">
    <meta property="og:type" content="website">
@@ -20,7 +20,7 @@
    <!-- Twitter Card -->
    <meta name="twitter:card" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <meta name="twitter:title" content="Miguel Fondeur | Articles | Working with Objects: Creating, Updating & Deleting">
-   <meta name="twitter:description" content="In my last post on objects, I mention how most of what we do as javascript developers is working with objects. It's foundational to building javascript applications. We spoke about Filtering, Searching, and Sorting. In this post I'll go through three aspects of CRUD. Create, Update and Delete.">
+   <meta name="twitter:description" content="In my last post on objects, I mentioned how most of what we do as JavaScript developers is working with objects. It's foundational to building JavaScript applications. We spoke about filtering, searching, and sorting. In this post, I'll go through three aspects of CRUD: Create, Update, and Delete.">
    <meta name="twitter:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
 
@@ -144,23 +144,199 @@
             </a>
             <article>
                <header class="hero-section long-copy">
-                  <time class="" datetime="2025-03-20">
-                     March 20, 2025
+                  <time class="" datetime="2025-03-24">
+                     March 24, 2025
                   </time>
                   <h1>Working with Objects: Creating, Updating & Deleting</h1>
-                  <p>In my last post on objects, I mention how most of what we do as javascript developers is working with objects. It's foundational to building javascript applications. We spoke about Filtering, Searching, and Sorting. In this post I'll go through three aspects of CRUD. Create, Update and Delete.</p>
+                  <p>In my last post on objects, I mentioned how most of what we do as JavaScript developers is working with objects. It's foundational to building JavaScript applications. We spoke about filtering, searching, and sorting. In this post, I'll go through three aspects of CRUD: Create, Update, and Delete.</p>
                </header>
                <main>
-                  <h2>Recap</h2>
-<p>In my last post, I introduced some card data.</p>
-<pre class="language-js"><code class="language-js"><span class="token comment">//Card Data</span></code></pre>
-<p>To expand the functionality with our CRUD operations
-<h2>What is CRUD</h2>
-<p>I've always hated the name, although it is a useful acronymn. It sounds like you're making throwaway applications. CRUD stands for Create, Read, Update, Delete.
-<h2>Creating</h2>
-<h2>Updating</h2>
-<h2>Deleting</h2>
-<h2>Next Steps</h2>
+                  <h2>What is CRUD?</h2>
+<p>Before we get started, let's define CRUD. CRUD stands for <strong>Create, Read, Update, Delete</strong>. The most common example of a CRUD app is a Todo List. But imagine an app where you're creating a cartoon character, saving your character to be viewed later, and clicking edit to update or delete it. Most of your favorite applications can be reduced to these operations.</p>
+<p>For our purposes, we'll stick to the card design from the <a href="/articles/objects-search-filter-sort/">last post</a> on filtering, searching, and sorting.</p>
+<h2>Starting Point</h2>
+<p>We've already introduced some card data and demonstrated how to filter, search, and sort it. Now, using the same structure, let’s take it a step further by adding functionality to create, update, and delete cards.</p>
+<p>We'll use three array methods:</p>
+<ul>
+<li><code>push()</code> to <strong>Create</strong></li>
+<li><code>find()</code> to <strong>Update</strong></li>
+<li><code>splice()</code> to <strong>Delete</strong></li>
+</ul>
+<h2>Creating Cards</h2>
+<p>Let's start with the <strong>Create</strong> operation. We'll need a form to add new cards dynamically. There are many ways you can do this: opening a modal, creating a separate page, or editing the card directly. For this example, we'll use a modal, which is a common UI pattern.</p>
+<p>To keep things simple and modern, I’ll use the native <code>&lt;dialog&gt;</code> element with the <code>popover</code> attribute, which makes it easy to create modals without relying on JavaScript libraries. We won't go over <code>&lt;dialog&gt;</code> here, but MDN has great <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog" title="Open Dialog documentation on MDN" target="_blank">documentation</a> on it.</p>
+<p>Here's the code:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>create<span class="token punctuation">"</span></span> <span class="token attr-name">popovertarget</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>add-popover<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Add Card<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cards<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token comment">&lt;!-- Add Card Modal --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dialog</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>add-popover<span class="token punctuation">"</span></span> <span class="token attr-name">popover</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>Add Card<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>newCard<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      Name:
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">required</span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>premium<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      Is Premium:
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>premium<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button-group<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>success<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Submit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span>
+        <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cancel<span class="token punctuation">"</span></span>
+        <span class="token attr-name">popovertarget</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>add-popover<span class="token punctuation">"</span></span>
+        <span class="token attr-name">popovertargetaction</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>hide<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span>
+        Cancel
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dialog</span><span class="token punctuation">></span></span></code></pre>
+<p>
+    We're adding a simple button at the top to trigger the modal form. The form captures the new card data, which we'll handle with JavaScript.
+</p>
+<p>
+    Here's how you capture and add the card:
+</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> addForm <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#newCard"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> addPopover <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#add-popover"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">addCard</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> name <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>name<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> premium <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>premium<span class="token punctuation">.</span>checked<span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cards<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">id</span><span class="token operator">:</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      name<span class="token punctuation">,</span>
+      premium<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">renderCards</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    addPopover<span class="token punctuation">.</span><span class="token function">hidePopover</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    event<span class="token punctuation">.</span>target<span class="token punctuation">.</span><span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+addForm<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"submit"</span><span class="token punctuation">,</span> addCard<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>
+    This captures the form data, creates a new object, and adds it to the cards array. It then re-renders the cards and hides the modal.
+</p>
+<h2>Updating Cards</h2>
+<p>
+    For the Update operation, we'll add another <code>dialog</code> modal form. We'll follow the same structure as before, but with a 'Delete' button included for convenience. We'll also add an 'Edit' button to each card to trigger the modal.
+</p>
+<h3>HTML for Edit Modal</h3>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dialog</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>edit-popover<span class="token punctuation">"</span></span> <span class="token attr-name">popover</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>Edit Card<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>editCard<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>edit-name<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span>Name:
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>edit-name<span class="token punctuation">"</span></span> <span class="token attr-name">required</span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>edit-premium<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span>Is Premium:
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>edit-premium<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button-group<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>success<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Save<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span>
+        <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cancel<span class="token punctuation">"</span></span>
+        <span class="token attr-name">popovertarget</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>edit-popover<span class="token punctuation">"</span></span>
+        <span class="token attr-name">popovertargetaction</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>hide<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span>
+        Cancel
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>delete-btn<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>delete<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Delete<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dialog</span><span class="token punctuation">></span></span></code></pre>
+<h3>Updating the Render Function</h3>
+<p>
+    We'll add an "Edit" button to each card so it can trigger the edit modal:
+</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">renderCards</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> container <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#cards"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  container<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> cards
+    <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>
+      <span class="token punctuation">(</span><span class="token parameter">card<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+      &lt;div class="card </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>card<span class="token punctuation">.</span>premium <span class="token operator">?</span> <span class="token string">"premium"</span> <span class="token operator">:</span> <span class="token string">""</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">">
+        &lt;h3></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>card<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/h3>
+        &lt;p>ID: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>card<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/p>
+        &lt;button onclick="openEditPopover(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>index<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)">Edit&lt;/button>
+      &lt;/div></span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3>Opening the Edit Modal</h3>
+<p>
+    When you click "Edit," it pre-fills the modal with the card's current data, making it easy to modify and save:
+</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> editPopover <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#edit-popover"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> currentEditIndex <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">openEditPopover</span><span class="token punctuation">(</span><span class="token parameter">index</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  currentEditIndex <span class="token operator">=</span> index<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> card <span class="token operator">=</span> cards<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#edit-name"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value <span class="token operator">=</span> card<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+  document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#edit-premium"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>checked <span class="token operator">=</span> card<span class="token punctuation">.</span>premium<span class="token punctuation">;</span>
+
+  editPopover<span class="token punctuation">.</span><span class="token function">showPopover</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">updateCard</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>currentEditIndex <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> card <span class="token operator">=</span> cards<span class="token punctuation">[</span>currentEditIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    card<span class="token punctuation">.</span>name <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#edit-name"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    card<span class="token punctuation">.</span>premium <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#edit-premium"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>checked<span class="token punctuation">;</span>
+
+    <span class="token function">renderCards</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    editPopover<span class="token punctuation">.</span><span class="token function">hidePopover</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#editCard"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"submit"</span><span class="token punctuation">,</span> updateCard<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2>Deleting Cards</h2>
+<p>
+    To Delete a card, we'll use the same modal. The 'Delete' button will call a function to remove the card from the cards array using splice().
+</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">deleteCard</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>currentEditIndex <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cards<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>currentEditIndex<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">renderCards</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    editPopover<span class="token punctuation">.</span><span class="token function">hidePopover</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#delete-btn"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> deleteCard<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2>Final Result</h2>
+<p>
+    Here's the final implementation. I've removed the previous filtering, searching, and sorting functionality for simplicity. I'll include all features in a future demo of a complete vanilla JavaScript application.
+</p>
+<iframe height="500" style="width: 100%;" scrolling="no" title="CRUD Cards" src="https://codepen.io/miguelfondeur/embed/qEBymPL?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"> See the Pen <a href="https://codepen.io/miguelfondeur/pen/qEBymPL">CRUD Cards</a> by Miguel Fondeur on <a href="https://codepen.io">CodePen</a>. </iframe>
+<h2>CRUD is a Concept</h2>
+<p>
+    We just covered a basic CRUD implementation using JavaScript's array methods: push(), find(), and splice(). This is perfect for prototyping ideas.
+</p>
+<p>
+    In the real world, you'd be sending requests to an API, storing data in a database, and handling validation. Whether you're using Firebase, Supabase, or a traditional backend with SQL or NoSQL, the CRUD concept remains the same.
+</p>
+<p>
+    In future posts, we'll expand this app to include API requests, authentication, and additional features like profiles. Stay tuned!
+</p>
 
                </main>
             </article>
