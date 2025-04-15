@@ -219,9 +219,8 @@ aside.aside-section {
         border-radius: 100%;
     }
     & h3 {
-        margin-bottom: var(--ui-spacing-3);
         font-size: var(--font-size-lg);
-        margin-bottom: 0;
+        margin-block: var(--ui-spacing-3);
     }
     & p {
         color: light-dark(var(--color-gray-6), var(--color-gray-4));

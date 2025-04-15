@@ -4,23 +4,23 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Miguel Fondeur - Software Engineer | Home</title>
+   <title>Miguel Fondeur - Software Engineer | Articles | Working with Objects: Consuming JSON</title>
    <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
    <meta name="author" content="Miguel Fondeur">
    <meta name="robots" content="index, follow">
 
    <!-- Open Graph (for social media sharing) -->
-   <meta property="og:title" content="Miguel Fondeur - Software Engineer">
-   <meta property="og:description" content="">
+   <meta property="og:title" content="Miguel Fondeur | Articles | Working with Objects: Consuming JSON">
+   <meta property="og:description" content="JavaScript Object Notation, or JSON, is a data structure that's hard to avoid if you're working on professional web applications. We've already covered objects in the first three articles. Let's now explore what makes JSON different from vanilla JavaScript objects, how to encode and parse, and how to receive JSON data from an API.">
    <meta property="og:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <meta property="og:url" content="https://miguelfondeur.com">
    <meta property="og:type" content="website">
    <meta property="og:logo" content="https://miguelfondeur.com/img/og-image-2.jpg" />
 
    <!-- Twitter Card -->
-   <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:title" content="Miguel Fondeur - Software Engineer">
-   <meta name="twitter:description" content="">
+   <meta name="twitter:card" content="https://miguelfondeur.com/img/og-image-2.jpg">
+   <meta name="twitter:title" content="Miguel Fondeur | Articles | Working with Objects: Consuming JSON">
+   <meta name="twitter:description" content="JavaScript Object Notation, or JSON, is a data structure that's hard to avoid if you're working on professional web applications. We've already covered objects in the first three articles. Let's now explore what makes JSON different from vanilla JavaScript objects, how to encode and parse, and how to receive JSON data from an API.">
    <meta name="twitter:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
 
@@ -73,7 +73,6 @@
                "/about/index.html",
                "/articles/index.html",
                "/apps/index.html",
-               "/thank-you/index.html",
                "/index.html"
             ]
          }]
@@ -99,9 +98,9 @@
              Menu
           </button>
           <menu role="list">
-             <li><a href="/"  aria-current="page" >Home</a></li>
+             <li><a href="/" >Home</a></li>
              <li><a href="/work/" >Work</a></li>
-             <li><a href="/articles/" >Articles</a></li>
+             <li><a href="/articles/"  aria-current="page" >Articles</a></li>
              <li><a href="/about/" >About</a></li>
           </menu>
           <button id="theme-toggle">
@@ -128,238 +127,126 @@
           </button>
        </div>
        <menu role="list">
-          <li><a href="/"  aria-current="page" >Home</a></li>
+          <li><a href="/" >Home</a></li>
           <li><a href="/work/" >Work</a></li>
-          <li><a href="/articles/" >Articles</a></li>
+          <li><a href="/articles/"  aria-current="page" >Articles</a></li>
           <li><a href="/about/" >About</a></li>
        </menu>
     </dialog>
  </header>
    
       <main id="site-content">
-         <div class="container">
-            
-<section class="hero-section">
-   <div class="container" data-width="small">
-      <h1>Designing <em>&</em> developing web software for <span class="text-accent">human beings</span>.</h1>
-      <p>
-         Hi, I’m Miguel Fondeur, a UX/UI Engineer based in NC. I craft digital experiences that put people first—bridging the gap between thoughtful design and functionality. If you have a web project in mind or just want to chat, feel free to reach out.
-      </p>
-      <ul>
-         
-            <li>
-               <a aria-label="Follow on Codepen" href="https://codepen.io/miguelfondeur" target="_blank">
-                  <svg viewBox="0 0 1000 1000" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M489.201 1.1331C486.285 1.9541 482.91 3.1501 481.701 3.7931C475.928 6.8601 15.1145 313.179 12.4775 315.702C10.8135 317.294 8.01954 320.969 6.26954 323.868C-0.359464 334.85 0.00353684 324.678 0.00353684 499.639C0.00353684 674.6 -0.359464 664.428 6.26954 675.41C8.01954 678.309 10.8135 681.984 12.4775 683.576C17.3585 688.246 480.009 994.813 485.504 997.019C492.531 999.839 507.477 999.839 514.504 997.019C519.999 994.813 982.649 688.246 987.53 683.576C989.194 681.984 991.988 678.309 993.738 675.41C1000.37 664.428 1000 674.6 1000 499.639C1000 324.678 1000.37 334.85 993.738 323.868C991.988 320.969 989.194 317.294 987.53 315.702C982.45 310.842 519.856 4.4011 514.504 2.3511C507.828 -0.206905 495.99 -0.776905 489.201 1.1331ZM459.004 221.017C459.004 309.403 458.814 322.552 457.521 323.625C456.705 324.302 414.367 352.893 363.437 387.16L270.836 449.464L235.17 425.469C215.554 412.272 180.954 389.024 158.281 373.807C135.609 358.589 117.073 345.914 117.091 345.639C117.14 344.905 457.045 119.639 458.105 119.639C458.631 119.639 459.004 161.675 459.004 221.017ZM713.693 232.953C806.747 294.655 882.898 345.364 882.916 345.639C882.935 345.914 864.399 358.589 841.727 373.807C819.054 389.024 784.454 412.272 764.838 425.469L729.172 449.464L636.571 387.16C585.641 352.893 543.303 324.302 542.487 323.625C541.194 322.552 541.004 309.39 541.004 220.91C541.004 124.669 541.094 119.46 542.754 120.096C543.716 120.464 620.639 171.25 713.693 232.953ZM577.377 447.639C619.493 475.964 653.954 499.364 653.955 499.639C653.957 499.914 619.318 523.431 576.981 551.899L500.004 603.659L423.027 551.899C380.69 523.431 346.052 499.914 346.054 499.639C346.059 498.909 499.385 395.751 500.152 395.961C500.509 396.059 535.26 419.314 577.377 447.639ZM194.504 499.639C194.504 500.322 169.417 517.723 138.754 538.306L83.0035 575.731V499.639V423.547L138.754 460.972C169.417 481.555 194.504 498.956 194.504 499.639ZM917.004 499.685V575.731L861.254 538.306C830.591 517.723 805.504 500.323 805.504 499.639C805.504 498.746 914.913 424.051 916.754 423.688C916.892 423.661 917.004 457.86 917.004 499.685ZM362.504 611.462C412.004 644.718 453.966 673.01 455.754 674.334L459.004 676.741V778.297C459.004 874.606 458.914 879.818 457.254 879.182C454.981 878.312 117.134 654.297 117.1 653.639C117.046 652.552 270.569 549.967 271.504 550.465C272.054 550.757 313.004 578.206 362.504 611.462ZM839.732 624.139C863.499 640.089 882.93 653.364 882.913 653.639C882.872 654.3 545.018 878.315 542.754 879.182C541.094 879.818 541.004 874.609 541.004 778.368C541.004 689.888 541.194 676.726 542.487 675.653C543.303 674.976 585.636 646.388 636.56 612.125L729.15 549.829L762.835 572.484C781.361 584.944 815.965 608.189 839.732 624.139Z" fill="currentColor"/></svg>
-               </a>
-            </li>
-         
-            <li>
-               <a aria-label="Follow on GitHub" href="https://github.com/miguelfondeur" target="_blank">
-                  <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.2 1.87.86 2.33.66.07-.52.28-.86.51-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-               </a>
-            </li>
-         
-            <li>
-               <a aria-label="Follow on LinkedIn" href="https://www.linkedin.com/in/miguelfondeur" target="_blank">
-                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.335 18.339H15.67v-4.177c0-.996-.02-2.278-1.39-2.278-1.389 0-1.601 1.084-1.601 2.205v4.25h-2.666V9.75h2.56v1.17h.035c.358-.674 1.228-1.387 2.528-1.387 2.7 0 3.2 1.778 3.2 4.091v4.715zM7.003 8.575a1.546 1.546 0 01-1.548-1.549 1.548 1.548 0 111.547 1.549zm1.336 9.764H5.666V9.75H8.34v8.589zM19.67 3H4.329C3.593 3 3 3.58 3 4.297v15.406C3 20.42 3.594 21 4.328 21h15.338C20.4 21 21 20.42 21 19.703V4.297C21 3.58 20.4 3 19.666 3h.003z"/></svg>
-               </a>
-            </li>
-         
-      </ul>
-   </div>
-</section>
-
-<section class="content-section">
-   <div class="column-section"><!-- Grid -->
-      
-      <div class="article-wrapper"><!-- Sub Grid for Articles -->
-         
-         
-         
-         
-         
-               
-               <article class="article-card">
-                  <a href="/articles/objects-json/" title="Open Blog Post - Working with Objects: Consuming JSON">
-                     <time class="" datetime="2025-04-14">
-                        April 14, 2025
-                     </time>
-                     <div class="h3">
-                        Working with Objects: Consuming JSON
-                     </div>
-                     <p class="">JavaScript Object Notation, or JSON, is a data structure that's hard to avoid if you're working on professional web applications. We've already covered objects in the first three articles. Let's now explore what makes JSON different from vanilla JavaScript objects, how to encode and parse, and how to receive JSON data from an API.</p>
-                     <div aria-hidden="true" class="article-cta">
-                        Read article
-                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                              <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                     </div>
-                  </a>
-                  <div class="article-hover-state"></div>
-               </article>
-         
-               
-               <article class="article-card">
-                  <a href="/articles/objects-nested-data/" title="Open Blog Post - Working with Objects: Traversing Nested Data">
-                     <time class="" datetime="2025-04-13">
-                        April 13, 2025
-                     </time>
-                     <div class="h3">
-                        Working with Objects: Traversing Nested Data
-                     </div>
-                     <p class="">In earlier parts of the *Working with Objects* series, we explored working with object data that's only one level deep. But in real-world applications, JSON data is often deeply nested. Before we continue building our little application, let’s go over how to navigate that structure.</p>
-                     <div aria-hidden="true" class="article-cta">
-                        Read article
-                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                              <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                     </div>
-                  </a>
-                  <div class="article-hover-state"></div>
-               </article>
-         
-               
-               <article class="article-card">
-                  <a href="/articles/objects-create-update-delete/" title="Open Blog Post - Working with Objects: Creating, Updating & Deleting">
-                     <time class="" datetime="2025-03-28">
-                        March 28, 2025
-                     </time>
-                     <div class="h3">
-                        Working with Objects: Creating, Updating & Deleting
-                     </div>
-                     <p class="">In my last post on objects, I mentioned how most of what we do as JavaScript developers is working with objects. It's foundational to building JavaScript applications. We spoke about filtering, searching, and sorting. In this post, I'll go through three aspects of CRUD: Create, Update, and Delete.</p>
-                     <div aria-hidden="true" class="article-cta">
-                        Read article
-                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                              <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                     </div>
-                  </a>
-                  <div class="article-hover-state"></div>
-               </article>
-         
-         <!-- Debug: Number of articles shown: 3 -->
-      </div>
-
-      <aside class="aside-section">
-    
-         <form class="card" method="POST" action="/thank-you" name="newsletter" netlify>
-            <div class="h4 card-title">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-               </svg> 
-               <span>Stay up to date</span>
-            </div>
-            <p class="">Get notified when I publish something new, and unsubscribe at any time.</p>
-            <div class="fieldset">
-               <input type="email" name="email" placeholder="Email address" aria-label="Email address" required="required" class="">
-               <button class="" type="submit">Join</button>
-            </div>
-         </form>
-
-         <div class="card">
-            <div class="h4 card-title">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
-               </svg>
-               <span class="">Work</span>
-            </div>
-            <ol class="cv-list" role="list">
-               
-                  <li class="">
-                     <div class="cv-thumb">
-                        <img alt="Musora Media thumbnail" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style="color:transparent" src="/img/cv/cv-musora.webp">
-                     </div>
-                     <dl class="">
-                        <dt class="sr-only">Company</dt>
-                        <dd class="cv-company">Musora Media</dd>
-                        <dt class="sr-only">Role</dt>
-                        <dd class="cv-role">Lead Frontend Engineer</dd>
-                        <dt class="sr-only">Date</dt>
-                        <dd class="cv-date" aria-label="2020 until 2025">
-                           <time datetime="2020">2020</time> 
-                           <span aria-hidden="true">—</span> 
-                           <time datetime="2025">2025</time>
-                        </dd>
-                     </dl>
-                  </li>
-               
-                  <li class="">
-                     <div class="cv-thumb">
-                        <img alt="Belk thumbnail" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style="color:transparent" src="/img/cv/cv-belk.webp">
-                     </div>
-                     <dl class="">
-                        <dt class="sr-only">Company</dt>
-                        <dd class="cv-company">Belk</dd>
-                        <dt class="sr-only">Role</dt>
-                        <dd class="cv-role">Software Engineer</dd>
-                        <dt class="sr-only">Date</dt>
-                        <dd class="cv-date" aria-label="2019 until 2020">
-                           <time datetime="2019">2019</time> 
-                           <span aria-hidden="true">—</span> 
-                           <time datetime="2020">2020</time>
-                        </dd>
-                     </dl>
-                  </li>
-               
-                  <li class="">
-                     <div class="cv-thumb">
-                        <img alt="Block Digital thumbnail" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style="color:transparent" src="/img/cv/cv-block.webp">
-                     </div>
-                     <dl class="">
-                        <dt class="sr-only">Company</dt>
-                        <dd class="cv-company">Block Digital</dd>
-                        <dt class="sr-only">Role</dt>
-                        <dd class="cv-role">Solutions Architect</dd>
-                        <dt class="sr-only">Date</dt>
-                        <dd class="cv-date" aria-label="2017 until 2020">
-                           <time datetime="2017">2017</time> 
-                           <span aria-hidden="true">—</span> 
-                           <time datetime="2020">2020</time>
-                        </dd>
-                     </dl>
-                  </li>
-               
-                  <li class="">
-                     <div class="cv-thumb">
-                        <img alt="Union thumbnail" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style="color:transparent" src="/img/cv/cv-union.webp">
-                     </div>
-                     <dl class="">
-                        <dt class="sr-only">Company</dt>
-                        <dd class="cv-company">Union</dd>
-                        <dt class="sr-only">Role</dt>
-                        <dd class="cv-role">Senior Frontend Engineer</dd>
-                        <dt class="sr-only">Date</dt>
-                        <dd class="cv-date" aria-label="2018 until 2018">
-                           <time datetime="2018">2018</time> 
-                           <span aria-hidden="true">—</span> 
-                           <time datetime="2018">2018</time>
-                        </dd>
-                     </dl>
-                  </li>
-               
-            </ol>
-            <a class="cv-cta" href="/pdfs/MiguelsResume.pdf" download="MiguelsResume.pdf">
-               Download CV
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="12px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+         <div class="container" data-width="small-center">
+            <a class="back-button" href="/articles/" title="Go back to articles Page">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                </svg>
             </a>
-         </div>
+            <article>
+               <header class="hero-section long-copy">
+                  <time class="" datetime="2025-04-14">
+                     April 14, 2025
+                  </time>
+                  <h1>Working with Objects: Consuming JSON</h1>
+                  <p>JavaScript Object Notation, or JSON, is a data structure that's hard to avoid if you're working on professional web applications. We've already covered objects in the first three articles. Let's now explore what makes JSON different from vanilla JavaScript objects, how to encode and parse, and how to receive JSON data from an API.</p>
+               </header>
+               <main>
+                  <h2>JSON and its Benefits</h2>
+<p>JSON is most commonly used to transfer data from a back-end (server) to the front-end (client). JSON is useful because it acts as a contract between the front and back-end, defining how data should be structured and exchanged. This makes application development much more flexible.</p>
+<p>Before JSON, it was common for the back-end to send raw HTML to the front-end—a valid strategy, and one that's actually making a resurgence thanks to libraries like HTMX. But by removing HTML from the response, the front-end developer gains full control over the template code, and the back-end can focus solely on sending the correct data. It's a clean separation of concerns, allowing each developer to focus on their skill set and strengths.</p>
+<p>Another benefit is the ability to share the same data across multiple front-ends—such as web, iOS, and Android applications. One back-end for multiple front-ends.</p>
+<h2>JSON vs Vanilla JS</h2>
+<p>Let’s get into the syntax. JSON is very similar to a vanilla JavaScript object. What’s the difference? In JSON, property names must be strings, and values must be valid JSON types—strings, numbers, booleans, arrays, objects, or <code>null</code>. JSON itself is always transferred as a string.</p>
+<p>This string-based format is compact and easy to transmit over the network. Transferring strings to the front-end is generally performant, though very large payloads can still impact performance. Here's a quick comparison:</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">// A regular JavaScript object</span>
+<span class="token keyword">const</span> cards <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Miguel Fondeur"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">profileURL</span><span class="token operator">:</span> <span class="token string">"#"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// more cards...</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-      </aside>
-   </div>
-</section>
+<span class="token comment">// A JSON string (notice the quotes and structure)</span>
+<span class="token keyword">const</span> cardJSON <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">[
+  {
+    "name": "Miguel Fondeur",
+    "id": 1,
+    "premium": false,
+    "profileURL": "#"
+  }
+]</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span></code></pre>
+<h2>Parsing JSON Strings</h2>
+<p>When you receive JSON from an API, it's in string format. To work with it as a JavaScript object, you need to parse it.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> cardJSONString <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+[
+  {
+    "name": "Miguel Fondeur",
+    "id": 1,
+    "premium": false,
+    "profileURL": "#"
+  }
+]
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
 
+<span class="token keyword">const</span> parsedData <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>cardJSONString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>parsedData<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Miguel Fondeur</span></code></pre>
+<p>Once parsed, you can access and manipulate the data using regular JavaScript.</p>
+<h2>Fetching JSON</h2>
+<p>Instead of hardcoding JSON in the front-end, let’s learn how to fetch it dynamically. From this point forward, we'll be using MockAPI.io—a tool that lets us mimic a JSON API.</p>
+<p>Here’s how to fetch data from a mock API:</p>
+<pre class="language-js"><code class="language-js"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://64c2cbfeeb7fd5d6ebd056e9.mockapi.io/api/v1/cards"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>This code uses the fetch() API to request resources from a URL endpoint. Since fetch() returns a promise, we wait for it to resolve. Then we call .json() on the response to convert the JSON string into a usable JavaScript object—also a promise. Once it resolves, we can use the data however we want.</p>
+<p>We'll explore how to build full CRUD (Create, Read, Update, Delete) apps using APIs in a future article.</p>
+<h2>Stringifying JSON</h2>
+<p>We just parsed a JSON string into a JavaScript object. To send data back to the server, we do the opposite: we convert the object into a JSON string using JSON.stringify().</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> updatedCard <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Miguel Fondeur"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">premium</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// updated boolean value</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> jsonString <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>updatedCard<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Send a POST request to the API</span>
+<span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://64c2cbfeeb7fd5d6ebd056e9.mockapi.io/api/v1/cards"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span> <span class="token comment">// or 'PUT' if you're updating an existing record</span>
+  <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">"Content-Type"</span><span class="token operator">:</span> <span class="token string">"application/json"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">body</span><span class="token operator">:</span> jsonString<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Success:"</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"Error:"</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>We won’t get into the details of the POST request here for the sake of brevity, but as you can see, we're using the same endpoint to send updated &quot;cards&quot; data back to the server.</p>
+<h2>Knowing JSON</h2>
+<p>All the object operations we’ve covered in earlier articles—filtering, mapping, sorting—can be done with JSON too. You just need to parse the data first, and optionally stringify it when sending it back.</p>
+<p>Knowing JSON is essential whether or not you're building full JavaScript applications. Many static site generators (like 11ty, which powers this site) allow you to create static .json files that can be parsed and rendered on the front-end. This is useful for things like navigation, internationalization, or seeding components with data.</p>
+<p>And if you ever decide to dabble in back-end development, JSON gives you a key tool in your toolbelt for exchanging data between services and clients.</p>
+
+               </main>
+            </article>
          </div>
       </main>
    
       <footer id="site-footer">
     <div class="container">
        <menu>
-          <li><a href="/"  aria-current="page" >Home</a></li>
+          <li><a href="/" >Home</a></li>
           <li><a href="/work/" >Work</a></li>
-          <li><a href="/articles/" >Articles</a></li>
+          <li><a href="/articles/"  aria-current="page" >Articles</a></li>
           <li><a href="/about/" >About</a></li>
           <li><a href="https://donate.stripe.com/28o01a9Gdaz15HOeUU" title="donate via stripe payments">
              <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="currentColor"><path d="M440-240q-117 0-198.5-81.5T160-520v-240q0-33 23.5-56.5T240-840h500q58 0 99 41t41 99q0 58-41 99t-99 41h-20v40q0 117-81.5 198.5T440-240ZM240-640h400v-120H240v120Zm200 320q83 0 141.5-58.5T640-520v-40H240v40q0 83 58.5 141.5T440-320Zm280-320h20q25 0 42.5-17.5T800-700q0-25-17.5-42.5T740-760h-20v120ZM160-120v-80h640v80H160Zm280-440Z"/></svg>
@@ -375,6 +262,7 @@
  </footer>
 
    </div>
+
    <!-- inline scripts -->
    <script>
       document.body.classList.add("js-enabled");

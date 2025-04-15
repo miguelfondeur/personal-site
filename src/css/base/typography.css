@@ -93,7 +93,7 @@ hr {
 /* Drop Cap */
 .long-copy {
     p:first-of-type:first-letter {
-        font-size: 4.8rem;
+        font-size: 4.6rem;
         float: left;
         line-height: 1;
         margin: 6px 6px 0 0;
