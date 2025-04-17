@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Miguel Fondeur - Software Engineer | {{ title }}</title>
+   <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
+   <meta name="author" content="Miguel Fondeur">
+   <meta name="robots" content="index, follow">
+
+   <!-- Open Graph (for social media sharing) -->
+   <meta property="og:title" content="Miguel Fondeur - Software Engineer">
+   <meta property="og:description" content="{{ summary }}">
+   <meta property="og:image" content="{{ og_image | default: "https://miguelfondeur.com/img/og-image-2.jpg" }}">
+   <meta property="og:url" content="https://miguelfondeur.com">
+   <meta property="og:type" content="website">
+   <meta property="og:logo" content="{{ og_image | default: "https://miguelfondeur.com/img/og-image-2.jpg" }}" />
+
+   <!-- Twitter Card -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="Miguel Fondeur - Software Engineer">
+   <meta name="twitter:description" content="{{ summary }}">
+   <meta name="twitter:image" content="{{ og_image | default: "https://miguelfondeur.com/img/og-image-2.jpg" }}">
+   <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
+
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+   <link rel="manifest" href="/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
+
+   <!-- Canonical URL (to prevent duplicate content issues) -->
+   <link rel="canonical" href="https://miguelfondeur.com">
+
+    <!-- CSS -->
+    <link href="/css/main.min.css" rel="stylesheet">
+    {% if "oda-resource" in tags %}
+        <link rel="stylesheet" href="/css/layout/resources.css">
+    {% endif %}
+
+   <!-- JS -->
+   <script>
+      // immediately store theme
+      (function() {
+         const storedTheme = localStorage.getItem("theme");
+         if (storedTheme) {
+            document.documentElement.dataset.theme = storedTheme;
+         } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            document.documentElement.dataset.theme = "dark";
+         } else {
+            document.documentElement.dataset.theme = "light";
+         }
+      })();
+   </script>
+   <!-- Does not work in all browser -->
+   <script type="speculationrules">
+      {
+        "prerender": [{
+            "source": "list",
+            "urls": [
+               "/work/index.html", 
+               "/about/index.html",
+               "/articles/index.html",
+               "/apps/index.html",
+               "/thank-you/index.html",
+               "/index.html"
+            ]
+         }]
+      }
+   </script>
+   <script src="/js/index.js" type="module" defer></script>
+    {% if "oda-resource" in tags %}
+        <script src="/js/modules/resources.js" type="module" defer></script>
+    {% endif %}
+</head>
+<body data-theme="">
+   <div class="site-wrapper resources-page">
+
+      {% include "site/header.html" %}
+   
+      <main id="site-content">
+         <div class="container">
+
+            <div class="with-sidebar">
+                <div class="sidebar-column">
+                    <!-- MENU -->
+                    <menu class="resource-menu">
+                        <h2>Sections</h2>
+                        <ul>
+                            {% for item in menu %}
+                                <li>
+                                    <a href="{{ item.href }}">{{ item.text }}</a>
+                                    {% if item.children %}
+                                    <ul>
+                                        {% for child in item.children %}
+                                            <li><a href="{{ child.href }}">{{ child.text }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>                      
+                    </menu>
+                </div>
+                <div>
+                    <header>
+                        <!-- Breadcrumbs -->
+                        <div class="breadcrumbs">
+                            <a href="/">Home</a> ⋅ <a href="/orthodox-digital-arts/">ODA</a> ⋅ <span>{{ .title }}</span>
+                        </div>
+                        <h1>{{ .title }}</h1>
+                    </header>
+                    
+                    {{ content }}
+                </div>
+            </div>
+            
+         </div>
+      </main>
+   
+      {% include "site/footer.html" %}
+
+   </div>
+   <!-- inline scripts -->
+   <script>
+      document.body.classList.add("js-enabled");
+   </script>
+</body>
+</html>

@@ -21,9 +21,12 @@ module.exports = function(eleventyConfig) {
     //Syntax Highlighting
     eleventyConfig.addPlugin(syntaxHighlight);
 
-    // Work
+    // Collections
     eleventyConfig.addCollection("work", function (collectionApi) {
         return collectionApi.getFilteredByGlob("src/_content/work/*.md");
+    });
+    eleventyConfig.addCollection("odaResources", function (collectionApi) {
+        return collectionApi.getFilteredByTag("oda-resource");
     });
 
     // Copy Manifest File

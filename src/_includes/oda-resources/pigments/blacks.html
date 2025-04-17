@@ -1,0 +1,16 @@
+{% capture black_swatches %}
+<div class="swatch-wrapper sub-section">
+    {% for category in pigments %}
+        {% if category.category == "black" %}
+            {% for pigment in category.pigments %}
+                <label class="swatch-button" data-category="black" data-name="{{ pigment.name }}" data-color="{{ pigment.value }}" data-desc="{{ pigment.desc }}" data-period="{{ pigment.period }}">
+                    <input type="radio" id="{{ pigment.name }}" name="color-black" value="{{ pigment.name }}">
+                    <div class="swatch-color" style="background-color: {{ pigment.value }}"></div>
+                    <p class="font-xs">{{ pigment.name }}</p>
+                </label>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+</div>
+{% endcapture %}
+{{ black_swatches | strip | replace: '  ', '' | replace: '', '' }}

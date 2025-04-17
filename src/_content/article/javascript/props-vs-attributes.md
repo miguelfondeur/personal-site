@@ -8,7 +8,9 @@ draft: false
 <h2>Attributes vs. Properties</h2>
 
 <h3>Attributes are Static, Properties are Dynamic</h3>
-<p>Attributes are <strong>defined in the HTML</strong> and serve as the initial state. However, once the page loads, JavaScript properties take over and can change independently.</p>
+<p>
+  Attributes are <strong>defined in the HTML</strong> and serve as the initial state. However, once the page loads, JavaScript properties take over and can change independently
+</p>
 
 ```html
 <input id="myInput" type="text" value="Hello" />

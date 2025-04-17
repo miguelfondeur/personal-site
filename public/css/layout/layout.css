@@ -32,6 +32,23 @@ button:focus-visible {
     position: relative;
 }
 
+.breadcrumbs {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--ui-spacing-2);
+    
+    a {
+        color: light-dark(var(--color-gray-6), var(--color-gray-4));
+    }
+    a:hover {
+        color: light-dark(var(--color-dark-gray-2), var(--color-gray-2));
+    }
+
+    span {
+        font-style: italic;
+    }
+    
+}
+
 .container {
     max-width: 67.2rem;
     margin-inline: auto;
@@ -47,6 +64,7 @@ button:focus-visible {
         max-width: 104rem;
     }
 
+    &[data-width="micro"],
     &[data-width="tight"],
     &[data-width="small"],
     &[data-width="medium"] {
@@ -54,6 +72,9 @@ button:focus-visible {
         padding: 0;
     }
 
+    &[data-width="micro"] {
+        max-width: 32rem;
+    }
     &[data-width="tight"] {
         max-width: 60rem;
     }

@@ -1,0 +1,16 @@
+{% capture white_swatches %}
+<div class="swatch-wrapper sub-section">
+    {% for category in pigments %}
+        {% if category.category == "white" %}
+            {% for pigment in category.pigments %}
+                <label class="swatch-button" data-category="white" data-name="{{ pigment.name }}" data-color="{{ pigment.value }}" data-desc="{{ pigment.desc }}" data-period="{{ pigment.period }}">
+                    <input type="radio" id="{{ pigment.name }}" name="color-white" value="{{ pigment.name }}">
+                    <div class="swatch-color" style="background-color: {{ pigment.value }}"></div>
+                    <p class="font-xs">{{ pigment.name }}</p>
+                </label>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+</div>
+{% endcapture %}
+{{ white_swatches | strip_newlines }} 

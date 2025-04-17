@@ -121,3 +121,47 @@
         }
     }
 }
+
+.templates-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ui-spacing-4);
+}
+
+.template-card a {
+    display: flex;
+    border: 1px solid;
+    border-color: light-dark(var(--color-gray-2), var(--color-dark-gray-1));
+    padding: var(--ui-spacing-4);
+    padding-right: var(--ui-spacing-6);
+    border-radius: var(--border-radius-md);
+    display: inline-flex;
+    flex-direction: row;
+    gap: var(--ui-spacing-4);
+
+    img {
+        aspect-ratio: 1 / 1;
+        max-height: 15rem;
+        border-radius: var(--border-radius-md);
+        background-color: light-dark(var(--color-gray-2), var(--color-dark-gray-1)) ;
+        flex-shrink: 0;
+    }   
+
+    h3 {
+        font-style: italic;
+        font-size: var(--font-size-lg);
+    }
+    p {
+        margin-bottom: 0;
+        max-width: 60ch;
+        text-align: justify;
+        hyphens: auto;
+        margin-top: var(--ui-spacing-2);
+        color: light-dark(var(--color-gray-6), var(--color-gray-4));
+    }
+
+    &:hover {
+        background-color: light-dark(var(--color-gray-1), var(--color-dark-gray-3));
+        transition: background-color .2s ease-in-out;
+    }
+}

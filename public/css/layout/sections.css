@@ -6,6 +6,16 @@
     }
 }
 
+.content-section-header {
+    margin-bottom: var(--ui-spacing-7);
+    h2 {
+        margin-bottom: var(--ui-spacing-4);
+    }
+    p {
+        font-style: italic;
+    }
+}
+
 .column-section {
     display: grid;
     gap: var(--equal-columns-gap, var(--ui-spacing-8)) 0;

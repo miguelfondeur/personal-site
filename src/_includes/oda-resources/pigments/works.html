@@ -1,0 +1,18 @@
+{% capture works_swatches %}
+    {% for category in pigments %}
+        {% if category.category == "work" %}
+            {% for work in category.works %}
+                <h3>{{ work.name }}</h3>
+                <div class="swatch-wrapper">
+                    {% for pigment in work.pigments %}
+                        <div class="swatch-button">
+                            <div class="swatch-color" style="background-color: {{ pigment.value | default: pigment.values }}"></div>
+                            <p class="font-xs">{{ pigment.name }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endcapture %}
+{{ works_swatches | strip_newlines }} 

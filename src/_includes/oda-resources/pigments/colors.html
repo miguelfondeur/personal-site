@@ -1,0 +1,20 @@
+{% capture color_swatches %}
+    {% for category in pigments %}
+        {% if category.category != "white" and category.category != "black" %}
+            {% for pigment in category.pigments %} 
+                <div class="color-name">{{ pigment.name }}</div>             
+                {% if pigment.values %}
+                    <div class="palette-grid">
+                        {% for color in pigment.values %}
+                            <label class="swatch-button" data-category="color" data-name="{{ pigment.name }}" data-index="{{ forloop.index0 }}" title="{{ color }}" data-desc="{{ pigment.desc }}" data-period="{{ pigment.period }}">
+                                <input type="radio" id="{{ pigment.name }}-{{ forloop.index0 }}" name="color" value="{{ pigment.name }}-{{ forloop.index0 }}">
+                                <div class="swatch-color" style="background-color: {{ color }}"></div>
+                            </label>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endcapture %}
+{{ color_swatches | strip | replace: '  ', '' | replace: '', '' }}

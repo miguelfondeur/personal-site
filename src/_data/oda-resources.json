@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Medieval Color Palette",
+        "thumb": "/img/apps/app-web-fonts.webp",
+        "summary": "Explore and test web fonts with ease. Filter by style, preview font weights, and generate CSS for your project.",
+        "url": "https://web-safe-fonts.netlify.app/"
+    },
+    {
+        "name": "Grandpa Stories App",
+        "thumb": "/img/apps/app-web-fonts.webp",
+        "summary": "A PWA I designed and built to share stories with my kids about their grandpa Fred.",
+        "url": "https://grandpa-stories.netlify.app/"
+    },
+    {
+        "name": "Brick Art Creator",
+        "thumb": "/img/apps/app-web-fonts.webp",
+        "summary": "Convert Images to mosaic art, view parts, and instructions. Inspired by Lego's Art series.",
+        "url": "https://brickartcreator.com/"
+    }
+]

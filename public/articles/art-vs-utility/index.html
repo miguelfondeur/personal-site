@@ -4,14 +4,14 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Miguel Fondeur - Software Engineer | Articles | The Art Vs. Utility of a Website</title>
+   <title>Miguel Fondeur - Software Engineer | Articles | The Art vs. Utility of Web Development</title>
    <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
    <meta name="author" content="Miguel Fondeur">
    <meta name="robots" content="index, follow">
 
    <!-- Open Graph (for social media sharing) -->
-   <meta property="og:title" content="Miguel Fondeur | Articles | The Art Vs. Utility of a Website">
-   <meta property="og:description" content="In my last post on objects, I mentioned how most of what we do as JavaScript developers is working with objects. It's foundational to building JavaScript applications. We spoke about filtering, searching, and sorting. In this post, I'll go through three aspects of CRUD: Create, Update, and Delete.">
+   <meta property="og:title" content="Miguel Fondeur | Articles | The Art vs. Utility of Web Development">
+   <meta property="og:description" content="We’ve all seen websites that stretch the limits of what a website can do—true works of art. But the ugliest websites are often the most performant and have higher conversion. So what is the real purpose of a website? Here's what I learned from a recent project.">
    <meta property="og:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <meta property="og:url" content="https://miguelfondeur.com">
    <meta property="og:type" content="website">
@@ -19,8 +19,8 @@
 
    <!-- Twitter Card -->
    <meta name="twitter:card" content="https://miguelfondeur.com/img/og-image-2.jpg">
-   <meta name="twitter:title" content="Miguel Fondeur | Articles | The Art Vs. Utility of a Website">
-   <meta name="twitter:description" content="In my last post on objects, I mentioned how most of what we do as JavaScript developers is working with objects. It's foundational to building JavaScript applications. We spoke about filtering, searching, and sorting. In this post, I'll go through three aspects of CRUD: Create, Update, and Delete.">
+   <meta name="twitter:title" content="Miguel Fondeur | Articles | The Art vs. Utility of Web Development">
+   <meta name="twitter:description" content="We’ve all seen websites that stretch the limits of what a website can do—true works of art. But the ugliest websites are often the most performant and have higher conversion. So what is the real purpose of a website? Here's what I learned from a recent project.">
    <meta name="twitter:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
 
@@ -144,14 +144,52 @@
             </a>
             <article>
                <header class="hero-section long-copy">
-                  <time class="" datetime="2025-03-28">
-                     March 28, 2025
+                  <time class="" datetime="2025-04-15">
+                     April 15, 2025
                   </time>
-                  <h1>The Art Vs. Utility of a Website</h1>
-                  <p>In my last post on objects, I mentioned how most of what we do as JavaScript developers is working with objects. It's foundational to building JavaScript applications. We spoke about filtering, searching, and sorting. In this post, I'll go through three aspects of CRUD: Create, Update, and Delete.</p>
+                  <h1>The Art vs. Utility of Web Development</h1>
+                  <p>We’ve all seen websites that stretch the limits of what a website can do—true works of art. But the ugliest websites are often the most performant and have higher conversion. So what is the real purpose of a website? Here's what I learned from a recent project.</p>
                </header>
                <main>
-                  
+                  <h2>What Are We Doing Again?</h2>
+<p>A while ago, I wrote an article on <a href="/articles/js-as-a-progressive-enhancement/">JavaScript as a progressive enhancement</a>. In that post, I explained that the primary purpose of the web is to share documents. A webpage, at its core, is just that—a document. That’s also how browsers treat them.</p>
+<p>Of course, a document can take many forms: informative, promotional, entertaining, interactive, or expressive. But the main goal—across all forms of media—is communication.</p>
+<p>Webpages can evolve into full-blown applications, and that's a good thing. Take <a href="https://www.figma.com/" target="_blank">Figma</a>: it’s a browser-based design app that runs cross-platform, unlike desktop software like <strong>Photoshop</strong>, which isn't available for Linux. But there’s still a difference between what we <em>can</em> do on the web and what a site’s <em>purpose</em> should be.</p>
+<h2>My Recent Art Project</h2>
+<p>Recently, I started a project inspired by Medieval Illuminated Manuscripts. I’ve always been drawn to typography and graphic design, and these manuscripts—arguably the highest form of “documents”—felt like a natural inspiration.</p>
+<p>My goal was to bring those principles to the web, particularly in service of the Orthodox Church. My priest was excited by the idea, which gave me confidence. After all, for most of history, art was religious. I wasn’t doing anything radical—I was simply trying to create meaningful work using modern tools.</p>
+<p>I dove into research on medieval typefaces and styles like <em>Textura Insular Majuscule</em> and <em>Carolingian Minuscule</em>. I curated historical color palettes, matching natural pigments to OKLCH color values. I experimented with blending, masking, and layered textures. Eventually, I compiled everything into what I called the <em>Orthodox Digital Arts Project</em>.</p>
+<p>It reminded me that typography is the foundation of any document—especially on the web, which is a document-based medium. I broke my design hierarchy down like this:</p>
+<p><strong>Typography → Color → Texture → Images → Motion</strong></p>
+<h2>The Challenges</h2>
+<p>As much as I was enjoying the process—exploring religious art, studying type, and building something personal—I started running into challenges that now feel obvious in hindsight.</p>
+<p>I was reminded that the web isn’t print. It’s dynamic, fluid, and ever-changing. Visitors bring different devices, screen sizes, preferences, and accessibility needs. They don’t read in fixed columns—they scan in an <a href="https://www.nngroup.com/articles/text-scanning-patterns-eyetracking/">F-pattern</a>, often moving quickly through content.</p>
+<p>I realized I was trying to make a website behave like a manuscript. I was bending the medium to fit my vision, rather than letting the strengths of the web guide the experience. In a way, I was reinventing the wheel—the very thing I’ve often criticized others for doing.</p>
+<h2>A Reality Check</h2>
+<p>Then my priest reviewed the site.</p>
+<blockquote>
+<p>&quot;Oh, this is beautiful... but it’s too wordy. I’m not sure what I’m supposed to do on this page.&quot;</p>
+</blockquote>
+<p>That hit home. His feedback was simple: it needed to be clearer. Simpler. More like a marketing site. Even though I <em>knew</em> this instinctively, I had been avoiding it in favor of artistic experimentation.</p>
+<h2>Painful (but Helpful) Reminder</h2>
+<p>I fell into &quot;shiny new thing&quot; syndrome. I forgot that a website is, more often than not, a utility. It’s not always a blank canvas for expression. People expect certain patterns. There’s solid data showing that visually experimental websites often perform worse. Websites made by services like <strong>ClickFunnels</strong> are ugly—but they convert.</p>
+<p>Sure, there are exceptions. But generally, form should follow function. I’m creative, and I love visual experimentation—but the purpose of a tool should guide its design.</p>
+<p>A mental shortcut I come back to is this: <em>What does a calculator do?</em> You know the answer immediately. Now imagine someone reinvented the calculator UI—would you use it? Or would you stick with the trusty <strong>Texas Instruments</strong> model?</p>
+<h2>There's Still Room for Creativity</h2>
+<p>The web has been around since 1991. We’ve learned a lot. Reuse established patterns. That’s why Bootstrap sites feel similar. It’s not a lack of creativity—it’s a focus on usability.</p>
+<p>Start with the basics:</p>
+<ul>
+<li>What does your site do?</li>
+<li>What do similar sites look like?</li>
+<li>What patterns work?</li>
+<li>Can I use a good design system or template?</li>
+</ul>
+<p>If you want to start from scratch, educate yourself on designing for users. <a href="https://www.refactoringui.com/" target="_blank"><em>Refactoring UI</em></a> (by the Tailwind team) and <a href="https://every-layout.dev/layouts/" target="_blank"><em>Every Layout</em></a> are both excellent resources.</p>
+<p>Once the fundamentals are in place, <strong>then</strong> you can layer in creativity—carefully. Color, images, and texture are tools, not crutches. Remember, it’s all about communication.</p>
+<hr>
+<p>I’ve moved on from that initial art-heavy design, but I took the best ideas from it. I created a modern template for Orthodox churches that borrows from Medieval styles while honoring today's web standards.</p>
+<p>If you'd like to see what I built during my Medieval manuscript exploration, you can check it out <a href="/orthodox-digital-arts/">here</a>.</p>
+
                </main>
             </article>
          </div>

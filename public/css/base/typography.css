@@ -86,7 +86,7 @@ code {
 }
 
 hr {
-    margin-top: var(--ui-spacing-xl);
+    margin-block: var(--ui-spacing-xl) var(--ui-spacing-7);
     border-color: light-dark(var(--color-gray-2), var(--color-dark-gray-1));
 }
 

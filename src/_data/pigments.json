@@ -1,0 +1,493 @@
+[
+    {
+        "category": "white",
+        "pigments": [
+            {
+                "name": "Gypsum",
+                "value": "oklch(0.94 0.01 101.27)",
+                "desc": "A mineral made of hydrated calcium sulphide. Used as plaster by Egyptians.",
+                "period": "Ancient Egypt – Middle Ages"
+            },
+            {
+                "name": "Chalk",
+                "value": "oklch(0.98 0.01 0)",
+                "desc": "A soft limestone made of calcium carbonate.",
+                "period": "Medieval period"
+            },
+            {
+                "name": "Lead White",
+                "value": "oklch(0.99 0 0)",
+                "desc": "Can occur naturally as a mineral, but usually made artificially. Medieval period.",
+                "period": "4th century – onward"
+            }
+        ]
+    },
+    {
+        "category": "color",
+        "pigments": [
+            {
+                "name": "Brown Ochre",
+                "desc": "A mineral made of hydrated calcium sulphide. Used as plaster by Egyptians.",
+                "period": "Antiquity – onward",
+                "values": [
+                    "oklch(0.61 0.13 57.8)",
+                    "oklch(0.506 0.131 68.8)",
+                    "oklch(0.48 0.1 45.8)"
+                ]
+            },
+            {
+                "name": "Red Ochre",
+                "desc": "One of the first pigments used by humans, made of iron oxide.",
+                "period": "Antiquity – onward",
+                "values": [
+                    "oklch(0.52 0.14 27.27)",
+                    "oklch(0.50 0.14 40)",
+                    "oklch(0.46 0.12 26.73)",
+                    "oklch(0.43 0.15 35)",
+                    "oklch(0.4 0.11 26.82)"
+                ]
+            },
+            {
+                "name": "Kermes",
+                "desc": "A deep red dye from insects, rarely used in early icons but found in later manuscripts.",
+                "period": "Late Medieval period",
+                "values": [
+                    "oklch(0.60 0.22 35)",
+                    "oklch(0.53 0.24 27)",
+                    "oklch(0.50 0.20 30)",
+                    "oklch(0.45 0.18 25)"
+                ]
+            },
+            {
+                "name": "Madder",
+                "desc": "Red dye from the madder plant. Used from antiquity through the Middle Ages.",
+                "period": "Antiquity – Middle Ages",
+                "values": [
+                    "oklch(0.62 0.25 29.6)",
+                    "oklch(0.59 0.22 23.8)",
+                    "oklch(0.49 0.18 22.43)"
+                ]
+            },
+            {
+                "name": "Vermilion",
+                "desc": "Bright red pigment made from cinnabar or mercury sulfide. Used from the 4th century onward.",
+                "period": "4th century – onward",
+                "values": [
+                    "oklch(0.61 0.2 29.14)",
+                    "oklch(0.63 0.23 33.76)",
+                    "oklch(0.53 0.2 31.77)",
+                    "oklch(0.49 0.2 29)"
+                ]
+            },
+            {
+                "name": "Red Lead",
+                "desc": "Lead tetroxide pigment. Used extensively in manuscripts until vermilion became popular.",
+                "period": "Antiquity – 10th century",
+                "values": [
+                    "oklch(0.69 0.21 41.88)",
+                    "oklch(0.50 0.14 40)",
+                    "oklch(0.57 0.19 31.78)",
+                    "oklch(0.57 0.23 30.17)"
+                ]
+            },
+            {
+                "name": "Minium",
+                "desc": "Orange-red pigment from cerussite. In use since the Roman Empire.",
+                "period": "Roman Empire – onward",
+                "values": [
+                    "oklch(0.66 0.23 34.7)",
+                    "oklch(0.55 0.18 31.98)"
+                ]
+            },
+            {
+                "name": "Yellow Ochre",
+                "desc": "Natural clay earth pigment. One of the earliest pigments used by humans.",
+                "period": "Prehistoric – onward",
+                "values": [
+                    "oklch(0.71 0.13 78.86)",
+                    "oklch(0.63 0.12 77.4)",
+                    "oklch(0.65 0.14 71.22)"
+                ]
+            },
+            {
+                "name": "Orpiment",
+                "desc": "Naturally occurring yellow mineral (arsenic sulfide). Used in illuminated manuscripts, e.g., the Lindisfarne Gospels.",
+                "period": "Antiquity – 19th century",
+                "values": [
+                    "oklch(0.81 0.17 93.36)",
+                    "oklch(0.75 0.15 88.68)",
+                    "oklch(0.68 0.12 81.17)"
+                ]
+            },
+            {
+                "name": "Naples Yellow",
+                "desc": "A mix of antimonite and lead antimonite. Used between the 7th and 8th centuries.",
+                "period": "7th – 8th centuries",
+                "values": [
+                    "oklch(0.95 0.15 104.18)",
+                    "oklch(0.89 0.12 91.53)",
+                    "oklch(0.89 0.15 94.76)"
+                ]
+            },
+            {
+                "name": "Weld",
+                "desc": "Plant native to Europe and Western Asia. Used for yellow dye in manuscript art.",
+                "period": "Medieval period",
+                "values": [
+                    "oklch(0.88 0.13 97.5)",
+                    "oklch(0.83 0.09 91.21)",
+                    "oklch(0.81 0.12 95.98)"
+                ]
+            },
+            {
+                "name": "Lead Tin Yellow",
+                "desc": "Artificially made lead oxide and tin oxide. Popular in 13th century Europe.",
+                "period": "13th century – 18th century",
+                "values": [
+                    "oklch(0.96 0.16 107.88)",
+                    "oklch(0.92 0.17 104.59)"
+                ]
+            },
+            {
+                "name": "Vergaut",
+                "desc": "Mixture of lapis lazuli and orpiment. Used between the 8th and 15th centuries in manuscripts.",
+                "period": "8th – 15th centuries",
+                "values": [
+                    "oklch(0.64 0.1 117.88)",
+                    "oklch(0.55 0.1 115.4)",
+                    "oklch(0.48 0.09 114.03)"
+                ] 
+            }, 
+            {
+                "name": "Verdigris",
+                "desc": "Copper acetate pigment. Used by the Egyptians and the main green in illuminated manuscripts throughout the medieval period.",
+                "period": "Ancient Egypt – Middle Ages",
+                "values": [
+                    "oklch(0.75 0.13 203.27)",
+                    "oklch(0.7 0.1 191.77)",
+                    "oklch(0.55 0.09 201.61)",
+                    "oklch(0.55 0.1 212.74)"
+                ] 
+            },
+            {
+                "name": "Malachite",
+                "desc": "Copper carbonate hydroxide pigment. Used in French manuscripts during the late medieval period.",
+                "period": "Late Medieval period",
+                "values": [
+                    "oklch(0.74 0.09 158.69)",
+                    "oklch(0.68 0.09 174.88)",
+                    "oklch(0.64 0.08 195.42)",
+                    "oklch(0.49 0.09 177.86)"
+                ] 
+            }, 
+            {
+                "name": "Sap Green",
+                "desc": "Plant-based pigment extracted from buckthorn berries. Common in manuscripts during the medieval period.",
+                "period": "Medieval period",
+                "values": [
+                    "oklch(0.39 0.1 126.96)"
+                ] 
+            },             
+            {
+                "name": "Green Earth",
+                "desc": "Naturally occurring ochre from Italy. Widely used in illuminated manuscripts during the medieval period.",
+                "period": "Medieval period",
+                "values": [
+                    "oklch(0.53 0.1 151.28)",
+                    "oklch(0.48 0.07 152.63)",
+                    "oklch(0.41 0.06 151.61)"
+                ] 
+            },
+            {
+                "name": "Azurite",
+                "desc": "Copper-based blue pigment. Used in illuminated manuscripts from the 13th to 15th centuries.",
+                "period": "13th – 15th centuries",
+                "values": [
+                    "oklch(0.51 0.08 242.46)"
+                ]
+            },
+            {
+                "name": "Woad",
+                "desc": "Plant-based blue dye. Used in Early Medieval manuscripts, notably in Britain and France.",
+                "period": "Early Medieval period (5th – 10th centuries)",
+                "values": [
+                    "oklch(0.42 0.04 243.27)",
+                    "oklch(0.33 0.08 249.01)"
+                ]
+            },
+            {
+                "name": "Lapis Lazuli",
+                "desc": "A semi-precious stone ground into a rich blue pigment. Used in manuscripts from the 10th century onward.",
+                "period": "10th century – onward",
+                "values": [
+                    "oklch(0.4 0.25 264.31)",
+                    "oklch(0.39 0.12 257.36)"
+                ]
+            },
+            {
+                "name": "Indigo",
+                "desc": "Plant-based dye used as a blue pigment in manuscripts from the Middle Ages onward.",
+                "period": "Middle Ages – onward",
+                "values": [
+                    "oklch(0.43 0.06 246.21)",
+                    "oklch(0.37 0.09 244.05)"
+                ]
+            },
+            {
+                "name": "Tyrian",
+                "desc": "Purple dye derived from the secretion of Murex sea snails. Used in ancient Mediterranean civilizations, particularly by royalty. Known for its deep, reddish hue.",
+                "period": "Ancient Mediterranean (Phoenician and Roman periods)",
+                "values": [
+                    "oklch(0.44 0.09 339.27)",
+                    "oklch(0.37 0.11 328.22)",
+                    "oklch(0.38 0.09 343.88)"
+                ]
+            },
+            {
+                "name": "Carmine Lake",
+                "desc": "Rich red-purple pigment from cochineal insects. Used widely in the Middle Ages.",
+                "period": "Middle Ages",
+                "values": [
+                    "oklch(0.50 0.20 10)",
+                    "oklch(0.58 0.24 350)"
+                ]
+            },
+            {
+                "name": "Folium",
+                "desc": "Purple plant-based dye from Chrozophora tinctoria. Used in manuscripts from the 8th to 15th centuries.",
+                "period": "8th – 15th centuries",
+                "values": [
+                    "oklch(0.48 0.14 337.96)"
+                ]
+            },
+            {
+                "name": "Orchil",
+                "desc": "Purple dye from lichens, used in illuminated manuscripts from the 7th and 8th centuries onward.",
+                "period": "7th – 8th centuries",
+                "values": [
+                    "oklch(0.53 0.21 341.28)"
+                ]
+            },
+            {
+                "name": "Cochineal",
+                "desc": "Purple dye from crushed female cochineal insects. Used from the Middle Ages onward.",
+                "period": "Middle Ages – onward",
+                "values": [
+                    "oklch(0.46 0.16 21.99)",
+                    "oklch(0.44 0.1 13.91)",
+                    "oklch(0.4 0.11 349.14)"
+                ]
+            }
+            
+        ]
+    },
+    {
+        "category": "black",
+        "pigments": [
+            {
+                "name": "Carbon",
+                "value": "oklch(0.2 0 0)",
+                "desc": "Soot produced by burning organic material. Used by earliest paintings.",
+                "period": "Ancient Egypt – Middle Ages"
+            },
+            {
+                "name": "Iron Gall",
+                "value": "oklch(0.26 0.01 0)",
+                "desc": "Oak galls are produced by oak trees when a gall wasp lays her egg on a branch.",
+                "period": "Ancient Egypt – Middle Ages"
+            },
+            {
+                "name": "Sepia",
+                "value": "oklch(0.19 0.07 27.45)",
+                "desc": "Squid ink. Released when they’re in danger. Used in the Middle Ages.",
+                "period": "Ancient Egypt – Middle Ages"
+            }
+        ]
+    },
+    {
+        "category": "period",
+        "periods": [
+            {
+                "name": "Antiquity (1st-5th Centuries)",
+                "pigments": [
+                    {
+                        "name": "Gypsum",
+                        "value": "oklch(0.94 0.01 101.27)"
+                    },
+                    {
+                        "name": "Chalk",
+                        "value": "oklch(0.98 0.01 0)"
+                    },
+                    {
+                        "name": "Red Lead",
+                        "values": "oklch(0.69 0.21 41.88)"
+                    },
+                    {
+                        "name": "Minium",
+                        "values": "oklch(0.66 0.23 34.7)"
+                    },
+                    {
+                        "name": "Vermilion",
+                        "values": "oklch(0.61 0.2 29.14)"
+                    },
+                    {
+                        "name": "Kermes",
+                        "values": "oklch(0.61 0.2 29.14)"
+                    },
+                    {
+                        "name": "Tyrian",
+                        "values": "oklch(0.44 0.09 339.27)"
+                    },
+                    {
+                        "name": "Azurite",
+                        "values": "oklch(0.51 0.08 242.46)"
+                    },
+                    {
+                        "name": "Orpiment",
+                        "values": "oklch(0.81 0.17 93.36)"
+                    },
+                    {
+                        "name": "Yellow Ochre",
+                        "values": "oklch(0.71 0.13 78.86)"
+                    },
+                    {
+                        "name": "Brown Ochre",
+                        "values": "oklch(0.61 0.13 57.8)"
+                    },
+                    {
+                        "name": "Red Ochre",
+                        "values": "oklch(0.52 0.14 27.27)"
+                    },
+                    {
+                        "name": "Carbon Black",
+                        "values": "oklch(0.2 0 0)"
+                    },
+                    {
+                        "name": "Iron Gall",
+                        "values": "oklch(0.26 0.01 0)"
+                    }
+                ]
+            },
+            {
+                "name": "Early Medieval (5th-10th Centuries)",
+                "pigments": [
+                    {
+                        "name": "Naples Yellow",
+                        "value": "oklch(0.95 0.15 104.18)"
+                    },
+                    {
+                        "name": "Weld",
+                        "value": "oklch(0.88 0.13 97.5)"
+                    },
+                    {
+                        "name": "Madder",
+                        "value": "oklch(0.62 0.25 29.6)"
+                    },
+                    {
+                        "name": "Carmine Lake",
+                        "value": "oklch(0.50 0.20 10)"
+                    },
+                    {
+                        "name": "Folium",
+                        "value": "oklch(0.48 0.14 337.96)"
+                    },
+                    {
+                        "name": "Orchil",
+                        "value": "oklch(0.53 0.21 341.28)"
+                    },
+                    {
+                        "name": "Indigo",
+                        "value": "oklch(0.43 0.06 246.21)"
+                    },
+                    {
+                        "name": "Woad",
+                        "value": "oklch(0.42 0.04 243.27)"
+                    },
+                    {
+                        "name": "Lapis Lazuli",
+                        "value": "oklch(0.4 0.25 264.31)"
+                    },
+                    {
+                        "name": "Verdigris",
+                        "value": "oklch(0.75 0.13 203.27)"
+                    },
+                    {
+                        "name": "Vergaut",
+                        "value": "oklch(0.64 0.1 117.88)"
+                    },
+                    {
+                        "name": "Green Earth",
+                        "value": "oklch(0.53 0.1 151.28)"
+                    },
+                    {
+                        "name": "Sap Green",
+                        "value": "oklch(0.39 0.1 126.96)"
+                    }
+                ]
+            },
+            {
+                "name": "High to Late Medieval (11th-15th Centuries)",
+                "pigments": [
+                    {
+                        "name": "Lead White",
+                        "value": "oklch(0.99 0 0)"
+                    },
+                    {
+                        "name": "Lead Tin Yellow",
+                        "value": "oklch(0.96 0.16 107.88)"
+                    },
+                    {
+                        "name": "Malachite",
+                        "value": "oklch(0.74 0.09 158.69)"
+                    },
+                    {
+                        "name": "Cochineal",
+                        "value": "oklch(0.44 0.1 13.91)"
+                    },
+                    {
+                        "name": "Sepia",
+                        "values": "oklch(0.19 0.07 27.45)"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "work",
+        "works": [
+            {
+                "name": "The Book of Kells (Ireland, 9th Century)",
+                "pigments": [
+                    {
+                        "name": "Lead White",
+                        "value": "oklch(0.99 0 0)"
+                    },               
+                    {
+                        "name": "Azurite",
+                        "values": "oklch(0.51 0.08 242.46)"
+                    },
+                    {
+                        "name": "Carmine Lake",
+                        "value": "oklch(0.50 0.20 10)"
+                    },
+                    {
+                        "name": "Green Earth",
+                        "value": "oklch(0.53 0.1 151.28)"
+                    },
+                    {
+                        "name": "Yellow Ochre",
+                        "values": "oklch(0.71 0.13 78.86)"
+                    },
+                    {
+                        "name": "Carbon Black",
+                        "values": "oklch(0.2 0 0)"
+                    },
+                    {
+                        "name": "Iron Gall",
+                        "values": "oklch(0.26 0.01 0)"
+                    }
+                ]
+            }
+        ]
+    }
+]

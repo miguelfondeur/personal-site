@@ -15,3 +15,7 @@
 .text-accent {
     color: var(--color-text-accent);
 }
+
+.md-strip p:empty{
+    display: none;
+}

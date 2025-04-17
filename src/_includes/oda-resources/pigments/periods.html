@@ -1,0 +1,18 @@
+{% capture period_swatches %}
+    {% for category in pigments %}
+        {% if category.category == "period" %}
+            {% for period in category.periods %}
+                <h3>{{ period.name }}</h3>
+                <div class="swatch-wrapper">
+                    {% for pigment in period.pigments %}
+                        <div class="swatch-button">
+                            <div class="swatch-color" style="background-color: {{ pigment.value | default: pigment.values }}"></div>
+                            <p class="font-xs">{{ pigment.name }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endcapture %}
+{{ period_swatches | strip_newlines }} 
