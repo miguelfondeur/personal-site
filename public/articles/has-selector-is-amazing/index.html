@@ -11,7 +11,7 @@
 
    <!-- Open Graph (for social media sharing) -->
    <meta property="og:title" content="Miguel Fondeur | Articles | The :has Selector is Amazing">
-   <meta property="og:description" content="This new CSS psuedo class selector is amanzing. For years we wanted a 'parent' selector but never thought it would come. We we ended up with was even better than I could imagine. Let's explore this powerful tool and how to use it.">
+   <meta property="og:description" content="This new CSS pseudo-class selector is amazing. For years we wanted a 'parent' selector but never thought it would come. What we ended up with was even better than I could imagine. Let's explore this powerful tool and how to use it.">
    <meta property="og:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <meta property="og:url" content="https://miguelfondeur.com">
    <meta property="og:type" content="website">
@@ -20,7 +20,7 @@
    <!-- Twitter Card -->
    <meta name="twitter:card" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <meta name="twitter:title" content="Miguel Fondeur | Articles | The :has Selector is Amazing">
-   <meta name="twitter:description" content="This new CSS psuedo class selector is amanzing. For years we wanted a 'parent' selector but never thought it would come. We we ended up with was even better than I could imagine. Let's explore this powerful tool and how to use it.">
+   <meta name="twitter:description" content="This new CSS pseudo-class selector is amazing. For years we wanted a 'parent' selector but never thought it would come. What we ended up with was even better than I could imagine. Let's explore this powerful tool and how to use it.">
    <meta name="twitter:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
 
@@ -149,10 +149,78 @@
                      April 23, 2025
                   </time>
                   <h1>The :has Selector is Amazing</h1>
-                  <p>This new CSS psuedo class selector is amanzing. For years we wanted a 'parent' selector but never thought it would come. We we ended up with was even better than I could imagine. Let's explore this powerful tool and how to use it.</p>
+                  <p>This new CSS pseudo-class selector is amazing. For years we wanted a 'parent' selector but never thought it would come. What we ended up with was even better than I could imagine. Let's explore this powerful tool and how to use it.</p>
                </header>
                <main>
-                  
+                  <h2>The Need For a Parent Selector</h2>
+<p>I remember when <a href="https://sass-lang.com/" target="_blank" title="Go To Sass Documenation">Sass</a> was on the rise close to ten years ago. We were all amazed by what it could do. The <code>&amp;</code> selector was one of my favorite features, now part of the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector#browser_compatibility" target="_blank" title="Go To Nesting Documenation">CSS Nesting spec</a>. One of my favorite tricks was to use <code>&amp;</code> to style an element based on where it appeared in relation to another:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">a</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+
+  <span class="token selector">span > &amp;</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Which translated to:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">a</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">span > a</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>It made me wonder if the Sass team might one day add a true parent selector. I imagined something like this:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">span &lt; a</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #c0ffee<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Of course, that never happened — and in raw CSS, we were stuck. For a long time, there was no way to style a parent element based on its children.</p>
+<p>Sibling selectors gave us some flexibility, like styling an element that follows another, but we couldn’t style a parent based on whether it contained something. That kind of logic was reserved for JavaScript.</p>
+<p>Until now.</p>
+<h2>Enter :has()</h2>
+<p>The <code>:has()</code> pseudo-class is a game-changer. It allows us to apply styles to an element if it contains something specific — whether that's a child, a sibling, or even a combination of things.</p>
+<p>What makes <code>:has()</code> even more powerful than the imaginary parent selector we were dreaming of is that it works more like a conditional. It's not just “select the parent of this element” — it's “select this element if it has something else inside or nearby.”</p>
+<p>Here are a few practical ways to use it.</p>
+<h3>Based on Direct Sibling</h3>
+<pre class="language-css"><code class="language-css"><span class="token selector">h1</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 2.4rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">h1:has(+ h2)</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 1.6rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This decreases the bottom margin of an <code>h1</code> if it's immediately followed by an <code>h2</code>. Great for article intros or dynamic headings.</p>
+<h3>Based on Children</h3>
+<pre class="language-css"><code class="language-css"><span class="token selector">.card</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.card:has(img)</span> <span class="token punctuation">{</span>
+  <span class="token property">gap</span><span class="token punctuation">:</span> 1.2rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This adds spacing only if the <code>.card</code> contains an image. No more awkward layouts when an optional image is missing.</p>
+<h3>Based on Descendants</h3>
+<p>You can go even deeper:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">section:has(form input[type="submit"])</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #f5f5f5<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This gives a background to sections that contain a submit button. Great for highlighting areas with actions.</p>
+<h2>Combining with :not()</h2>
+<p>The <code>:not()</code> pseudo-class excludes elements based on a condition. When paired with <code>:has()</code>, the combo is incredibly useful.</p>
+<h3>:has() inside :not()</h3>
+<p>Let’s say you want to style only cards without an image:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">.card:not(:has(img))</span> <span class="token punctuation">{</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This centers the content of <code>.card</code> elements that don’t contain an image. Perfect for fallback states or simplified designs.</p>
+<h3>:not() inside :has()</h3>
+<p>You can also reverse it. For example, style a container if it contains an input that’s not of type checkbox:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">fieldset:has(input:not([type="checkbox"]))</span> <span class="token punctuation">{</span>
+  <span class="token property">border-left</span><span class="token punctuation">:</span> 4px solid #009578<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This lets you apply styles to form groups based on specific input types. Super helpful for form design systems.</p>
+<h2>TL;DR</h2>
+<p>The <code>:has()</code> selector is the closest thing we’ve ever had to a parent selector in CSS — and it's even better. It allows you to style elements based on their children, siblings, or other conditions inside the DOM, all without JavaScript.</p>
+<p>Whether you're cleaning up spacing, styling interactive cards, or conditionally applying layout changes, <code>:has()</code> opens a new door to smarter, more dynamic CSS.</p>
+<p>If you'd like to learn more, check out the excellent documentation on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:has" target="_blank" title="Open up MDN documentation on :has selector">MDN</a>.</p>
+
                </main>
             </article>
          </div>
