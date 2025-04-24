@@ -56,11 +56,11 @@ button:focus-visible {
     position: relative;
     box-sizing: content-box;
 
-    @media (width > 640px) {
+    @media (min-width:  640px) {
         padding-inline: var(--ui-spacing-8);
     }
 
-    @media (width > 1024px) {
+    @media (min-width:  1024px) {
         max-width: 104rem;
     }
 

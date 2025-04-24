@@ -102,7 +102,7 @@ hr {
         font-variant: historical-ligatures;
         color: light-dark(var(--color-dark-gray-2), var(--color-gray-2));
     
-        @media (width < 640px){ 
+        @media (max-width: 640px){ 
             font-size: 4rem;
             margin: 4px 6px 0 0;
         }

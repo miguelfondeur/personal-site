@@ -50,7 +50,7 @@
         width: 1px;
     }
 
-    @media (width > 640px) {
+    @media (min-width:  640px) {
         left: var(--ui-spacing-8);
     }
 }

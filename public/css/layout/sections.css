@@ -1,7 +1,7 @@
 .content-section {
     margin-top: 11.2rem;
 
-    @media (width < 767px) {
+    @media (max-width: 767px) {
         margin-top: 9.6rem;
     }
 }
@@ -20,7 +20,7 @@
     display: grid;
     gap: var(--equal-columns-gap, var(--ui-spacing-8)) 0;
 
-    @media (width > 1024px) {
+    @media (min-width:  1024px) {
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
     }
@@ -37,11 +37,11 @@ aside.aside-section {
     flex-direction: column;
     gap: var(--ui-spacing-6) 0;
 
-    @media (width < 1280px) {
+    @media (max-width: 1280px) {
         padding-left: var(--ui-spacing-xl);
     }
 
-    @media (width < 1024px) {
+    @media (max-width: 1024px) {
         padding-left: 0;
     }
 }
@@ -76,7 +76,7 @@ aside.aside-section {
     row-gap: var(--ui-spacing-xl);
     grid-template-columns: repeat(1, minmax(0, 1fr));
     
-    @media (width >= 1024px) {
+    @media (min-width: 1024px) {
         row-gap: var(--ui-spacing-12);
         grid-template-rows: auto 1fr;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -108,7 +108,7 @@ aside.aside-section {
         }
 
         /* Small Screens */
-        @media (width < 1024px){
+        @media (max-width: 1024px){
             max-width: 32rem;
         }
     }
@@ -174,13 +174,13 @@ aside.aside-section {
         }
     }
 
-    @media (width > 1024px) {
+    @media (min-width:  1024px) {
         grid-template-columns: repeat(6, 1fr); 
         & .brand {
             width: 80%;
         }
     }
-    @media (width < 640px) { 
+    @media (max-width: 640px) { 
         grid-template-columns: repeat(3, 1fr);
 
         & svg {
@@ -254,7 +254,7 @@ aside.aside-section {
         transition: opacity 0.2s ease-in-out;
         
         /* Small Screens */
-        @media (width < 640px){
+        @media (max-width: 640px){
             width: calc(100% + var(--ui-spacing-8));
             left: -1.6rem;
         }
@@ -282,10 +282,10 @@ aside.aside-section {
     & .work-item .work-item-button:hover  .expand-icon {
         opacity: 1;
     }
-    @media (width > 520px){
+    @media (min-width:  520px){
         grid-template-columns: repeat(2, 1fr); 
     }
-    @media (width > 1024px){
+    @media (min-width:  1024px){
         grid-template-columns: repeat(3, 1fr); 
     }
 }

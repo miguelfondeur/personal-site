@@ -42,7 +42,7 @@ footer#site-footer {
         }
     }
 
-    @media (width < 520px) {
+    @media (max-width: 520px) {
         & .container {
             justify-content: center;
         }

@@ -62,7 +62,7 @@ header.site-header {
             background-color: light-dark(var(--color-gray-2), var(--color-dark-gray-2));
         }
 
-        @media (width < 520px) {
+        @media (max-width: 520px) {
             display: inline-flex;
         }
     }
@@ -99,7 +99,7 @@ header.site-header {
         padding-left: var(--ui-spacing-2);
         gap: 0 var(--ui-spacing-3);
 
-        @media (width < 520px) {
+        @media (max-width: 520px) {
             background-color: transparent;
         }
     }
@@ -107,7 +107,7 @@ header.site-header {
     nav menu {
         display: inline-flex;
         
-        @media (width < 520px) {
+        @media (max-width: 520px) {
             display: none;
         }
     }

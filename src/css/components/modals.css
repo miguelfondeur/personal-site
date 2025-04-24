@@ -28,7 +28,7 @@ dialog.work-modal {
         padding-top: 0;
     }
 
-    @media (width > 640px) {
+    @media (min-width:  640px) {
         padding: var(--ui-spacing-8);
     }
 
@@ -58,7 +58,7 @@ dialog.work-modal {
             color: light-dark(var(--color-dark-gray-2), var(--color-gray-2));
         }
 
-        @media (width > 640px) {
+        @media (min-width:  640px) {
             background-color: transparent;
             border: 0;
             top: var(--ui-spacing-2);
@@ -69,7 +69,7 @@ dialog.work-modal {
             }
         }
 
-        @media (width > 820px) {
+        @media (min-width:  820px) {
             top: var(--ui-spacing-4);
             left: var(--ui-spacing-4);
         }
@@ -205,7 +205,7 @@ dialog.work-modal {
         & .details-content {
             padding-inline: 0;
 
-            @media (width > 640px) {
+            @media (min-width:  640px) {
                 padding-inline: var(--ui-spacing-3); 
             }
         }

@@ -165,3 +165,14 @@
         transition: background-color .2s ease-in-out;
     }
 }
+
+@media (max-width: 460px) {
+    .template-card a {
+        flex-direction: column;
+        padding-right: var(--ui-spacing-4);
+        
+        img {
+            max-height: none;
+        }
+    }
+}

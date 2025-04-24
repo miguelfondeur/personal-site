@@ -73,7 +73,7 @@ body {
     background-color: light-dark( var(--color-gray-1), var(--color-black) );
     color: light-dark(var(--color-gray-6), var(--color-gray-4));
 
-    @media (width > 640px) {
+    @media (min-width:  640px) {
         padding-inline: var(--ui-spacing-8);
     }
 }
@@ -123,7 +123,7 @@ main {
     padding-top: 6rem;
     padding-bottom: 12.8rem;
 
-    @media (width > 640px) {
+    @media (min-width:  640px) {
         padding-top: 11.6rem;
     }
 }
