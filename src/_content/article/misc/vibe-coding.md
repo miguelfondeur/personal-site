@@ -95,15 +95,15 @@ Now I thought... *maybe.*
 
 The web is unrecognizable from what it used to be. It started to lose its soul somewhere in the middle of the MySpace era. Back then, it was chaotic and unpolished, but you could still stumble into little corners of community. It felt more human. Less corporate.
 
-Now, we’re all funneled into a handful of massive platforms where you are the product. They harvest your data, monetize your attention, and call it “user engagement.” You're left feeling empty and used. If you try to speak your mind, you're either banned outright or quietly buried by the algorithm.
+Now, we’re all funneled into a handful of massive platforms where *you* are the product. They harvest your data, monetize your attention, and call it “user engagement.” You're left feeling empty and used. If you try to speak your mind, you're either banned outright or quietly buried by the algorithm.
 
 I think we’ve had enough.
 
 **Let’s break shit again.**
 
-I've started a project called [CHAOS BYTE](https://chaos-byte.io) to do just that. I have no idea where it will go or how we'll get there—but I don't care too much. I care more about helping creatives and using the current tools to speak truth to power in a world that is becoming more and more about centralized control than it is about freedom of thought and expression.
+We've started a project called [CHAOS BYTE](https://chaos-byte.io) to do just that. I don’t know exactly where it’ll go or how we’ll get there, and honestly, I don’t care.. What matters is helping creatives use the tools we have to speak truth to power in a world that’s becoming more about centralized control than freedom of thought or expression.
 
-So far we’ll be posting fun and thought-provoking content that we've created. But we're looking for contributors.
+We’re kicking things off with funny, thought-provoking content we’ve made, but we can’t do this alone. We’re actively looking for contributors to help fan the flame and push this movement forward.
 
 If you'd like to get involved, go to:
 
@@ -111,4 +111,5 @@ If you'd like to get involved, go to:
 
 Whoever you are, make something that amplifies your voice.
 
-**Before the Technocracy takes it away.**
+**Before the Technocrats take it away.**
+
