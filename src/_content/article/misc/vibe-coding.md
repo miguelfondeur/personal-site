@@ -1,5 +1,5 @@
 ---
-title: "Why I Changed My Mind on 'Vibe Coding'"
+title: "Why I Changed My Mind on Vibe Coding"
 summary: "I thought using AI to code was cheating. Now I think it might be the future. This is my personal journey from purist to punk, and why I’m rooting for the weird web to make a comeback."
 date: 2025-06-01
 draft: false
