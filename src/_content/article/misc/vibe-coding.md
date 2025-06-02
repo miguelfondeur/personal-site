@@ -101,13 +101,13 @@ I think we’ve had enough.
 
 **Let’s break shit again.**
 
-We've started a project called [CHAOS BYTE](https://chaos-byte.io) to do just that. I don’t know exactly where it’ll go or how we’ll get there, and honestly, I don’t care.. What matters is helping creatives use the tools we have to speak truth to power in a world that’s becoming more about centralized control than freedom of thought or expression.
+We've started a project called [CHAOS BYTE](https://chaosbyte.io) to do just that. I don’t know exactly where it’ll go or how we’ll get there, and honestly, I don’t care.. What matters is helping creatives use the tools we have to speak truth to power in a world that’s becoming more about centralized control than freedom of thought or expression.
 
 We’re kicking things off with funny, thought-provoking content we’ve made, but we can’t do this alone. We’re actively looking for contributors to help fan the flame and push this movement forward.
 
 If you'd like to get involved, go to:
 
-[https://chaos-byte.io/contact](https://chaos-byte.io/contact)
+[https://chaosbyte.io/contact](https://chaosbyte.io/contact)
 
 Whoever you are, make something that amplifies your voice.
 
