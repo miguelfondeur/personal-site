@@ -93,9 +93,9 @@ Now I thought... *maybe.*
 
 ## Fanning the Flame
 
-The web is unrecognizable compared to its early years, even up through the MySpace era. Back then, it was chaotic, but you could still stumble into little corners of community. It felt more human. Less corporate.
+The web is unrecognizable from what it used to be. It started to lose its soul somewhere in the middle of the MySpace era. Back then, it was chaotic and unpolished, but you could still stumble into little corners of community. It felt more human. Less corporate.
 
-Now, we’re all funneled into a handful of massive platforms where you are the product. They harvest your data, monetize your attention, and call it “connection.” You're left feeling empty and used. If you try to speak your mind, you're either banned outright or quietly buried by the algorithm.
+Now, we’re all funneled into a handful of massive platforms where you are the product. They harvest your data, monetize your attention, and call it “user engagement.” You're left feeling empty and used. If you try to speak your mind, you're either banned outright or quietly buried by the algorithm.
 
 I think we’ve had enough.
 
@@ -107,7 +107,7 @@ So far we’ll be posting fun and thought-provoking content that we've created. 
 
 If you'd like to get involved, go to:
 
-👉 [https://chaos-byte.io/contact](https://chaos-byte.io/contact)
+[https://chaos-byte.io/contact](https://chaos-byte.io/contact)
 
 Whoever you are, make something that amplifies your voice.
 
