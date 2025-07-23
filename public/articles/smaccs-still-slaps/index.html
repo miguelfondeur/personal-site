@@ -4,24 +4,24 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Miguel Fondeur - Software Engineer | Articles | Why I Changed My Mind on Vibe Coding</title>
+   <title>Miguel Fondeur - Software Engineer | Articles | Why SMACSS Still Slaps</title>
    <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
    <meta name="author" content="Miguel Fondeur">
    <meta name="robots" content="index, follow">
 
    <!-- Open Graph (for social media sharing) -->
-   <meta property="og:title" content="Miguel Fondeur | Articles | Why I Changed My Mind on Vibe Coding">
-   <meta property="og:description" content="I thought using AI to code was cheating. Now I think it might be the future. This is my personal journey from purist to punk, and why I’m rooting for the weird web to make a comeback.">
-   <meta property="og:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
+   <meta property="og:title" content="Miguel Fondeur | Articles | Why SMACSS Still Slaps">
+   <meta property="og:description" content="The thought that I'm probably too old to be using Gen-Z vernacular is not lost on me. That aside, SMACSS does indeed "slap". In my over a decade of building large front-end applications, I have yet to find a more comprehensive approach towards structuring CSS. Here's my praise of Jonathan Snook's approach as well as my own additions to it.">
+   <meta property="og:image" content="/img/articles/smacss.webp">
    <meta property="og:url" content="https://miguelfondeur.com">
    <meta property="og:type" content="website">
-   <meta property="og:logo" content="https://miguelfondeur.com/img/og-image-2.jpg" />
+   <meta property="og:logo" content="/img/articles/smacss.webp" />
 
    <!-- Twitter Card -->
-   <meta name="twitter:card" content="https://miguelfondeur.com/img/og-image-2.jpg">
-   <meta name="twitter:title" content="Miguel Fondeur | Articles | Why I Changed My Mind on Vibe Coding">
-   <meta name="twitter:description" content="I thought using AI to code was cheating. Now I think it might be the future. This is my personal journey from purist to punk, and why I’m rooting for the weird web to make a comeback.">
-   <meta name="twitter:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
+   <meta name="twitter:card" content="/img/articles/smacss.webp">
+   <meta name="twitter:title" content="Miguel Fondeur | Articles | Why SMACSS Still Slaps">
+   <meta name="twitter:description" content="The thought that I'm probably too old to be using Gen-Z vernacular is not lost on me. That aside, SMACSS does indeed "slap". In my over a decade of building large front-end applications, I have yet to find a more comprehensive approach towards structuring CSS. Here's my praise of Jonathan Snook's approach as well as my own additions to it.">
+   <meta name="twitter:image" content="/img/articles/smacss.webp">
    <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
 
    <!-- Favicons -->
@@ -145,70 +145,76 @@
             </a>
             <article>
                <header class="hero-section long-copy">
-                  <time class="" datetime="2025-05-31">
-                     May 31, 2025
+                  <time class="" datetime="2025-06-22">
+                     June 22, 2025
                   </time>
-                  <h1>Why I Changed My Mind on Vibe Coding</h1>
-                  <p>I thought using AI to code was cheating. Now I think it might be the future. This is my personal journey from purist to punk, and why I’m rooting for the weird web to make a comeback.</p>
+                  <h1>Why SMACSS Still Slaps</h1>
+                  <p>The thought that I'm probably too old to be using Gen-Z vernacular is not lost on me. That aside, SMACSS does indeed "slap". In my over a decade of building large front-end applications, I have yet to find a more comprehensive approach towards structuring CSS. Here's my praise of Jonathan Snook's approach as well as my own additions to it.</p>
                </header>
                <main>
-                  <h2>A Long Time Ago in 2021</h2>
-<p>Developers were still (mostly) writing code manually. Looking up answers on Google, or Stack Overflow (RIP). If you wanted to learn something new, you would go to <a href="https://developer.mozilla.org/">MDN</a>, still a great resource. And all of us developers never admitted when we didn't know something—we just pretended to be experts, while all carrying our own degree of imposter syndrome. Those were the good old days.</p>
-<p>More and more, ChatGPT started to creep into our lives. We kept hearing news of its improvements. Then we tried it. Was it always correct? No. Was it fast? Yes. Did we think it would get better? Not exactly. So we all went about our business, trying to shrug it off as <em>glorified auto-correct</em>. But it left a little imprint.</p>
-<h2>As Time Went On</h2>
-<p>Slowly, it started to nag at us.<br>
-&quot;This thing makes bugs.&quot;<br>
-&quot;It's bad for the environment.&quot;<br>
-&quot;It writes too much code.&quot;<br>
-&quot;We'll all be dumber for using it.&quot;<br>
-&quot;It's plagiarism.&quot;</p>
-<p>But those thoughts didn't make LLMs go away. They were getting more capable. Companies were developing new models. AI safety was a hot topic. And it kept going. <em>Spaghetti Will Smith</em>. <em>The Hess Truck Commercial</em>. <em>The ability to mimic voices accurately</em>. <em>Better and better code</em>... The wheels kept going. Felt like we were willingly feeding the beast. Humans, am I right?</p>
-<h2>How I Felt About It</h2>
-<p>I started using ChatGPT regularly in 2023. It was good, but not great. I thought, <em>&quot;Hell, if it can help me finish projects I haven’t had time for, why not?&quot;</em> It struggled with creative coding. Still not there. But it was good for stupid tasks—alphabetize JSON lists, convert functions from one language to another. Then I realized my favorite way of using it was as a kind of <em>Rubber Duck</em>. I would give it my opinions and basically see if I was on the right track or not. A little better than talking to a physical rubber duck.</p>
-<p>But I still felt that <em>real</em> developers needed to code everything themselves. I cared about my craft so much, I didn’t even use Copilot. I thought the human element of writing code is what would differentiate us from the LLM. The better my code, the more success was guaranteed. Many of us carry this kind of naive optimism that might actually be closer to a form of arrogance and pride.</p>
-<p>And I've always subscribed to the Field of Dreams method of product development: <em>&quot;If you build it, they (the customers) will come.&quot;</em></p>
-<h2>Fast Forward to 2025</h2>
-<p>By the beginning of this year, Vibe Coding platforms like <a href="https://www.cursor.sh">Cursor</a>, Bolt, Lovable, and Windsurf were popping up everywhere. I didn't give it any thought because I was still very much a purist. Truth be told, after 12 years in this industry, I was tired of the new trends, constant measuring contests, volatility—and I was thinking of leaving the professional coding space for good. Still building the occasional passion project. I'm a tinkerer.</p>
-<p>But I decided to look for new job opportunities and called my friend Bogdan. He said, <em>&quot;If you're going to go back to the workforce, I strongly suggest you learn Cursor.&quot;</em> Bogdan is a senior dev with 10+ years of professional experience like me... and he suggested I... cheated??</p>
-<p>So I tried it. It was good. But like GPT, it wasn’t great with complex, creative projects. I was seeing its limitations. But... I was also seeing its strengths. Understanding the context of your code, reading files... spooky stuff! I ended up using it a bit on my blog site. It helped me clean up my vanilla CSS. I reviewed the code—and it was pretty good.</p>
-<p>But I still wasn’t really convinced.</p>
-<h2>The Light Bulb Moment</h2>
-<p>Bogdan built a joke application called <a href="https://layoffbot.ai/">LayoffBot</a> after a conversation we had about how inhumane tech companies were when laying off the people that built their businesses. It went viral. I took a peek and said, <em>&quot;Damn dude, nice design.&quot;</em> He said, <em>&quot;Oh I did that in Bolt.&quot;</em></p>
-<p>So I tried <a href="https://bolt.new">Bolt.new</a>. I gave it a prompt to build an application that I was working on for my kids.</p>
-<p><strong>Man....</strong></p>
-<p>Have you ever been so impressed and freaked out that you literally laugh out loud? That was my reaction. This thing could code, and design, and give you a preview in the browser—without you paying a dime. That’s when I realized...</p>
-<h2>We're Cooked</h2>
-<p>Not because it could code better than a developer. Not because it was more creative than a designer. Not because it was secure, performant, accessible, or could read your mind.</p>
-<p>All of those things were still <strong>NOT</strong> the case.</p>
-<p>But I realized... <em>it's good enough</em>.</p>
-<p>As an American, I recognize that our society doesn’t necessarily praise meticulous artistry as much as it settles for what’s convenient. I spent years of my life trying to build the next best thing. Arrogantly thinking that I knew what that thing was, and having it fall on deaf ears. <em>&quot;Why didn’t it go viral? My code... my precious code...&quot;</em></p>
-<p>No one cares.</p>
-<p>The only thing most people care about is the finished product. And when they interact with said product, you have a very limited time to make sure that it is engaging and simple enough for them to invest in it. You don't decide—the market decides.</p>
-<p>Likewise, if you're selling your software services to a company and they think an LLM coding platform is more convenient (whether it's true or not), they're probably NOT going to purchase your &quot;services&quot;. Don't take it personal.</p>
-<p>One thing is for sure, we're not in Kansas anymore.</p>
-<h2>A Little Optimism</h2>
-<p>As I started to accept these new technologies, I thought, <em>&quot;Fuck it, I’m going to build my app with it.&quot;</em></p>
-<p>Took me 4 days from start to finish to create the project, export to Cursor, integrate Supabase, and deploy. Perfect? No. Good enough to test and gather feedback? <strong>Hell yes.</strong></p>
-<p>Shortly after, Bogdan started launching more apps. We partnered together to start reviewing some vibe coded apps under the name <em><a href="https://v-combinator.com">V-Combinator</a></em>. And we got more and more interested in this space.</p>
-<h2>The Small Flame of Rebellion Is Sparked</h2>
-<p>We started seeing apps and websites that had <em>no business existing</em>. Things that no one in their right mind would hire a designer and a developer to build and deploy. Regular people with no experience were trying to build things <em>just because</em>.</p>
-<p>I've seen dating apps for dwarves, VR goggles for cows, retro snake games, and so many broken and unfinished projects.</p>
-<p>While many high-brow developers looked at this and said, <em>&quot;You see! They don’t know what they’re doing! No one will ever replace me!&quot;</em>, I thought, <em>&quot;This is genius.&quot;</em></p>
-<p>The lack of polish. The lack of <em>Give me your email so I can give you something in return</em>. The lack of bullshit that has made the web boring, predictable, and monopolized to a few large companies. I was seeing a rise of what Bogdan and I call &quot;alternative tech&quot;, and it was refreshing.</p>
-<p>I saw personality. I saw freedom.</p>
-<p>At one point I would have said cynically, <em>&quot;if you can't beat 'em, join 'em&quot;</em>.<br>
-Now I thought... <em>maybe.</em></p>
-<h2>Fanning the Flame</h2>
-<p>The web is unrecognizable from what it used to be. It started to lose its soul somewhere in the middle of the MySpace era. Back then, it was chaotic and unpolished, but you could still stumble into little corners of community. It felt more human. Less corporate.</p>
-<p>Now, we’re all funneled into a handful of massive platforms where <em>you</em> are the product. They harvest your data, monetize your attention, and call it “user engagement.” You're left feeling empty and used. If you try to speak your mind, you're either banned outright or quietly buried by the algorithm.</p>
-<p>I think we’ve had enough.</p>
-<p><strong>Let’s break shit again.</strong></p>
-<p>We've started a project called <a href="https://chaosbyte.io">CHAOS BYTE</a> to do just that. I don’t know exactly where it’ll go or how we’ll get there, and honestly, I don’t care.. What matters is helping creatives use the tools we have to speak truth to power in a world that’s becoming more about centralized control than freedom of thought or expression.</p>
-<p>We’re kicking things off with funny, thought-provoking content we’ve made, but we can’t do this alone. We’re actively looking for contributors to help fan the flame and push this movement forward.</p>
-<p>If you'd like to get involved, go to:</p>
-<p><a href="https://chaosbyte.io/contact">https://chaosbyte.io/contact</a></p>
-<p>Whoever you are, make something that amplifies your voice.</p>
-<p><strong>Before the Technocrats take it away.</strong></p>
+                  <div class="article-image-wrapper">
+    <img src="/img/articles/smacss.webp" alt="An image of the Draw The Owl exercise." width="100%" loading="lazy">
+</div>
+<h2>What is SMACSS</h2>
+<p>Well, it stands for Scalable Modular Architecture for CSS. It was created by <strong>Jonathan Snook</strong> during his time at Yahoo. It was developed right around the time that CSS preprocessors Sass and Less were on the rise. Preprocessors allowed us for the first time to split up our code into partials, nest our code with <code>&amp;</code> selectors, and even add logic. Today these things are available in the browser. Anyway, with great power comes great spaghetti code. Preprocessors were great but we needed structure. Enter <a href="https://smacss.com/" target="_blank" title="Go to SMACSS website">SMACSS</a>, a design pattern that helped break up our CSS into logical groups:</p>
+<ol>
+<li>Base - <em>base styles and resets</em></li>
+<li>Layout - <em>header, nav, footer</em></li>
+<li>Module - <em>components, cards, modals</em></li>
+<li>Theme - <em>light/dark mode</em></li>
+<li>State - <em>open/closed states</em></li>
+</ol>
+<p>These directories would live within your main CSS directory. They would all have their own <code>index.css</code> that would import all the partials of that section. Each <code>index.css</code> would then be imported (in order) into the main <code>styles.css</code> file. The directory names are self explanatory for the most part. It's structured with the 'cascade' in mind. Layout styles should override base styles, and module styles should override layout, etc.</p>
+<h2>So, What Problems Does This Solve Exactly?</h2>
+<p>I'm pretty convinced that we'll never completely be able to solve the problem of, &quot;What the hell am I looking at?&quot;. We've all experienced entering into a codebase whether our own or someone else's and wondering, &quot;what's going on here?&quot;. It's only exacerbated by generative AI tools and IDE's. Code that is complicated, structureless, or too abstract. Especially when working on a team that doesn't enforce conventions. The solution is, well, structure. SMACSS allows you and your team to know where things are without having to do a global search. And even with a global search, it will help you avoid running into cascade and hierarchy issues.</p>
+<p>You might be thinking &quot;sounds like a lot of ceremony&quot;, if you are, you probably haven't experienced the pain of managing large application UI. I have, and I've implemented this in every large team I've worked on from <a href="https://www.theladders.com/" target="_blank">The Ladders</a> to <a href="https://www.belk.com/" target="_blank">Belk</a>.</p>
+<h2>Aren't There Better Ways?</h2>
+<p>Today we have modularized CSS and utility classes like Tailwind. That's fine. I've used almost all of these tools. Unless you're using a &quot;tree shaking&quot; approach or Tailwind's <abbr title="Just In Time">JIT</abbr> compilation, the old issues are going to come back to haunt your code. In Tailwind, we end up creating our own utility classes in order to avoid a soup of class names in our HTML. In JS libraries, our scoped CSS becomes unmanageable - inevitably duplicating styles across components and creating a messy final build. Not to mention there are multiple different approaches to scoped CSS and utility class libraries.</p>
+<h2>My Approach</h2>
+<p>Today, modern CSS offers the benefits of Sass (plus a little extra) that makes using the SMACSS method easy, without any additional tooling. Here's my current SMACSS-like approach:</p>
+<pre class="language-text"><code class="language-text">css/
+├── base/
+│   ├── reset.css
+│   ├── variables.css
+│   ├── base.css
+│   ├── typography.css
+│   └── index.css
+├── layout/
+│   ├── layout.css
+│   ├── grid.css
+│   ├── header.css
+│   ├── footer.css
+│   ├── sections.css
+│   └── index.css
+├── components/
+│   ├── buttons.css
+│   ├── cards.css
+│   ├── modals.css
+│   ├── forms.css
+│   └── index.css
+├── utilities/
+│   ├── helpers.css
+│   ├── animations.css
+│   └── index.css
+├── libraries/
+│   ├── prism.css
+│   └── index.css
+└── style.css</code></pre>
+<p>And in my <code>style.css</code> the imports look something like this:</p>
+<pre class="language-css"><code class="language-css"><span class="token comment">/* Set Layers */</span>
+<span class="token atrule"><span class="token rule">@layer</span> base<span class="token punctuation">,</span> layout<span class="token punctuation">,</span> components<span class="token punctuation">,</span> utilities<span class="token punctuation">,</span> libraries<span class="token punctuation">;</span></span>
+
+<span class="token comment">/* Import Layers */</span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">"./base/index.css"</span> <span class="token function">layer</span><span class="token punctuation">(</span>base<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">"./layout/index.css"</span> <span class="token function">layer</span><span class="token punctuation">(</span>layout<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">"./components/index.css"</span> <span class="token function">layer</span><span class="token punctuation">(</span>components<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">"./utilities/index.css"</span> <span class="token function">layer</span><span class="token punctuation">(</span>utilities<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">"./libraries/index.css"</span> <span class="token function">layer</span><span class="token punctuation">(</span>libraries<span class="token punctuation">)</span><span class="token punctuation">;</span></span> 
+
+</code></pre>
+<p>I consider this a bare-bones setup. From here, you can expand on it by creating more utility classes, implementing critical CSS, enabling tree shaking, or building components with scoped CSS. The beauty of this approach is that you have a solid foundation that functions effectively with or without additional tooling.</p>
+<h2>Final Thoughts</h2>
+<p>If you don't want to use a library, scoped CSS, JIT compilation, or you have to tame the beast of a preexisting front-end, use the SMACSS method and make it your own.</p>
 
                </main>
             </article>
