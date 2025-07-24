@@ -18,14 +18,14 @@ summary: |
 accomplishments:
   [
     "Designed an app using Bolt.new",
-    "Created custom avatars for family members using the Personas avatar maker",
-    "Built features to write and save personal family stories",
-    "Enabled story generation featuring family members",
-    "Built story browsing for shared inspiration",
-    "Created a collection view of family memories",
+    "Accelerated development with the Cursor IDE",
     "Application developed with Nuxt.js full-stack framework",
-    "Implemented profiles and back-end using Supabase and Netlify Serverless Functions",
-    "Accelerated development with the Cursor AI coding assistant"
+    "Implemented back-end using Supabase and Netlify Serverless Functions",
+    "Created custom avatars for family members using the Dicebear API",
+    "Created a collection view of short stories",
+    "Built features to write and save short stories",
+    "Enabled story generation of custom characters",
+    "Built story browsing for shared inspiration",
   ]
 ---
 
