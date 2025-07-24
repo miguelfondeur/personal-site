@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap');
+
 :root {
     /* Allows animation from units to intrisic values like 'auto' */
     interpolate-size: allow-keywords; 
@@ -35,8 +37,8 @@
     --color-text-error: var(--color-fire-brick);
 
     /* Font Family */
-    --font-family-heading: Baskerville, 'Libre Baskerville', 'Times New Roman', serif;;
-    --font-family-body: Georgia, serif;
+    --font-family-heading: "Baskervville", Baskerville, 'Libre Baskerville', 'Times New Roman', serif;;
+    --font-family-body: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
 
     /* UI Spacing - vertical and horizontal rhythm - divisible by 4 */
     --ui-spacing-0: 0;

@@ -11,7 +11,7 @@
 
    <!-- Open Graph (for social media sharing) -->
    <meta property="og:title" content="Miguel Fondeur | Articles | Why SMACSS Still Slaps">
-   <meta property="og:description" content="The thought that I'm probably too old to be using Gen-Z vernacular is not lost on me. That aside, SMACSS does indeed "slap". In my over a decade of building large front-end applications, I have yet to find a more comprehensive approach towards structuring CSS. Here's my praise of Jonathan Snook's approach as well as my own additions to it.">
+   <meta property="og:description" content="I know I'm probably too old to say something "slaps", but SMACSS really does. After over a decade building front-end apps, I’ve yet to find a more practical, scalable way to structure CSS. Here’s why it still holds up.">
    <meta property="og:image" content="/img/articles/smacss.webp">
    <meta property="og:url" content="https://miguelfondeur.com">
    <meta property="og:type" content="website">
@@ -20,7 +20,7 @@
    <!-- Twitter Card -->
    <meta name="twitter:card" content="/img/articles/smacss.webp">
    <meta name="twitter:title" content="Miguel Fondeur | Articles | Why SMACSS Still Slaps">
-   <meta name="twitter:description" content="The thought that I'm probably too old to be using Gen-Z vernacular is not lost on me. That aside, SMACSS does indeed "slap". In my over a decade of building large front-end applications, I have yet to find a more comprehensive approach towards structuring CSS. Here's my praise of Jonathan Snook's approach as well as my own additions to it.">
+   <meta name="twitter:description" content="I know I'm probably too old to say something "slaps", but SMACSS really does. After over a decade building front-end apps, I’ve yet to find a more practical, scalable way to structure CSS. Here’s why it still holds up.">
    <meta name="twitter:image" content="/img/articles/smacss.webp">
    <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
 
@@ -149,29 +149,32 @@
                      June 22, 2025
                   </time>
                   <h1>Why SMACSS Still Slaps</h1>
-                  <p>The thought that I'm probably too old to be using Gen-Z vernacular is not lost on me. That aside, SMACSS does indeed "slap". In my over a decade of building large front-end applications, I have yet to find a more comprehensive approach towards structuring CSS. Here's my praise of Jonathan Snook's approach as well as my own additions to it.</p>
+                  <p>I know I'm probably too old to say something "slaps", but SMACSS really does. After over a decade building front-end apps, I’ve yet to find a more practical, scalable way to structure CSS. Here’s why it still holds up.</p>
                </header>
                <main>
                   <div class="article-image-wrapper">
     <img src="/img/articles/smacss.webp" alt="An image of the Draw The Owl exercise." width="100%" loading="lazy">
 </div>
 <h2>What is SMACSS</h2>
-<p>Well, it stands for Scalable Modular Architecture for CSS. It was created by <strong>Jonathan Snook</strong> during his time at Yahoo. It was developed right around the time that CSS preprocessors Sass and Less were on the rise. Preprocessors allowed us for the first time to split up our code into partials, nest our code with <code>&amp;</code> selectors, and even add logic. Today these things are available in the browser. Anyway, with great power comes great spaghetti code. Preprocessors were great but we needed structure. Enter <a href="https://smacss.com/" target="_blank" title="Go to SMACSS website">SMACSS</a>, a design pattern that helped break up our CSS into logical groups:</p>
+<p>SMACSS stands for Scalable Modular Architecture for CSS. It was created by <strong>Jonathan Snook</strong> during his time at Yahoo, around the rise of CSS preprocessors like Sass and Less. These tools allowed us, for the first time, to split code into partials, nest styles using <code>&amp;</code> selectors, and even add logic.</p>
+<p>Today, many of those features are built into the browser. Still, with great power came a lot of spaghetti code. Preprocessors gave us flexibility, but we needed structure. Enter <a href="https://smacss.com/">SMACSS</a>, a design pattern that organizes CSS into logical groups:</p>
 <ol>
-<li>Base - <em>base styles and resets</em></li>
-<li>Layout - <em>header, nav, footer</em></li>
-<li>Module - <em>components, cards, modals</em></li>
-<li>Theme - <em>light/dark mode</em></li>
-<li>State - <em>open/closed states</em></li>
+<li><strong>Base</strong> – resets and base styles</li>
+<li><strong>Layout</strong> – overall page structure (header, nav, footer)</li>
+<li><strong>Module</strong> – reusable components like cards and modals</li>
+<li><strong>Theme</strong> – design variations such as light and dark mode</li>
+<li><strong>State</strong> – UI states like <code>is-open</code> or <code>is-active</code></li>
 </ol>
-<p>These directories would live within your main CSS directory. They would all have their own <code>index.css</code> that would import all the partials of that section. Each <code>index.css</code> would then be imported (in order) into the main <code>styles.css</code> file. The directory names are self explanatory for the most part. It's structured with the 'cascade' in mind. Layout styles should override base styles, and module styles should override layout, etc.</p>
-<h2>So, What Problems Does This Solve Exactly?</h2>
-<p>I'm pretty convinced that we'll never completely be able to solve the problem of, &quot;What the hell am I looking at?&quot;. We've all experienced entering into a codebase whether our own or someone else's and wondering, &quot;what's going on here?&quot;. It's only exacerbated by generative AI tools and IDE's. Code that is complicated, structureless, or too abstract. Especially when working on a team that doesn't enforce conventions. The solution is, well, structure. SMACSS allows you and your team to know where things are without having to do a global search. And even with a global search, it will help you avoid running into cascade and hierarchy issues.</p>
-<p>You might be thinking &quot;sounds like a lot of ceremony&quot;, if you are, you probably haven't experienced the pain of managing large application UI. I have, and I've implemented this in every large team I've worked on from <a href="https://www.theladders.com/" target="_blank">The Ladders</a> to <a href="https://www.belk.com/" target="_blank">Belk</a>.</p>
-<h2>Aren't There Better Ways?</h2>
-<p>Today we have modularized CSS and utility classes like Tailwind. That's fine. I've used almost all of these tools. Unless you're using a &quot;tree shaking&quot; approach or Tailwind's <abbr title="Just In Time">JIT</abbr> compilation, the old issues are going to come back to haunt your code. In Tailwind, we end up creating our own utility classes in order to avoid a soup of class names in our HTML. In JS libraries, our scoped CSS becomes unmanageable - inevitably duplicating styles across components and creating a messy final build. Not to mention there are multiple different approaches to scoped CSS and utility class libraries.</p>
+<p>Each group would live in its own folder inside your main CSS directory. Every folder would have an <code>index.css</code> file that imports all partials in that section. These would then be imported in order into the main <code>style.css</code>. The idea is to respect the cascade. Layout styles override base styles, module styles override layout styles, and so on.</p>
+<h2>So, What Problems Does This Solve?</h2>
+<p>I’m convinced we’ll never fully solve the problem of “What the hell am I looking at?” when stepping into an unfamiliar codebase. Whether it’s your own work or someone else's, figuring out the structure can be frustrating, especially when conventions aren’t followed and tools like AI or smart IDEs generate structureless code.</p>
+<p>SMACSS provides that missing structure. It gives your team a clear idea of where everything lives, even without relying on a global search. And when you do need to search across files, you’re less likely to run into unexpected cascade or specificity issues.</p>
+<p>You might be thinking, &quot;This sounds like a lot of ceremony.&quot; If so, you probably haven't experienced the pain of maintaining a large-scale UI. I have. And I’ve used SMACSS on every large team I’ve worked with, from <a href="https://www.theladders.com/">The Ladders</a> to <a href="https://www.belk.com/">Belk</a>.</p>
+<h2>Aren’t There Better Ways?</h2>
+<p>Today, we have scoped CSS, CSS modules, and utility-first frameworks like Tailwind. All of these tools are valid. I’ve used most of them. But unless you're using a build process that includes tree shaking or Tailwind's Just-in-Time (JIT) compilation, many of the same problems will reappear.</p>
+<p>With Tailwind, we often end up creating our own utility classes just to avoid cluttering our HTML with endless class names. In component-based libraries, scoped CSS can lead to duplication and bloated final builds. And there’s little consistency between the many approaches to scoped styles and utility libraries.</p>
 <h2>My Approach</h2>
-<p>Today, modern CSS offers the benefits of Sass (plus a little extra) that makes using the SMACSS method easy, without any additional tooling. Here's my current SMACSS-like approach:</p>
+<p>Modern CSS gives us the core benefits of Sass, along with new features that make SMACSS easier to implement without any additional tooling. Here’s my current structure:</p>
 <pre class="language-text"><code class="language-text">css/
 ├── base/
 │   ├── reset.css
@@ -200,7 +203,7 @@
 │   ├── prism.css
 │   └── index.css
 └── style.css</code></pre>
-<p>And in my <code>style.css</code> the imports look something like this:</p>
+<p>And in <code>style.css</code>, I import the layers like this:</p>
 <pre class="language-css"><code class="language-css"><span class="token comment">/* Set Layers */</span>
 <span class="token atrule"><span class="token rule">@layer</span> base<span class="token punctuation">,</span> layout<span class="token punctuation">,</span> components<span class="token punctuation">,</span> utilities<span class="token punctuation">,</span> libraries<span class="token punctuation">;</span></span>
 
@@ -212,9 +215,9 @@
 <span class="token atrule"><span class="token rule">@import</span> <span class="token string">"./libraries/index.css"</span> <span class="token function">layer</span><span class="token punctuation">(</span>libraries<span class="token punctuation">)</span><span class="token punctuation">;</span></span> 
 
 </code></pre>
-<p>I consider this a bare-bones setup. From here, you can expand on it by creating more utility classes, implementing critical CSS, enabling tree shaking, or building components with scoped CSS. The beauty of this approach is that you have a solid foundation that functions effectively with or without additional tooling.</p>
+<p>This is just the foundation. From here, you can add more utility classes, implement critical CSS, enable tree shaking, or scope styles as needed. The benefit of this approach is that it works well as-is, but can also evolve with your tooling.</p>
 <h2>Final Thoughts</h2>
-<p>If you don't want to use a library, scoped CSS, JIT compilation, or you have to tame the beast of a preexisting front-end, use the SMACSS method and make it your own.</p>
+<p>If you don’t want to use a library, scoped CSS, or JIT compilation, or if you’re trying to wrangle an existing front-end, use SMACSS. It’s a battle-tested, flexible system you can adapt to your needs. And yes, it still slaps.</p>
 
                </main>
             </article>
