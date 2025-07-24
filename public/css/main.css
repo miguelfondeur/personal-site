@@ -1,34 +1,20 @@
 /* Set Layers */
-@layer reset, base, layout, components, utilities;
+@layer base, layout, components, utilities, libraries;
 
 /* Base Layer */
-@import "./base/reset.css" layer(reset);
-@import "./base/variables.css" layer(base);
-@import "./base/base.css" layer(base);
-@import "./base/typography.css" layer(base);
+@import "./base/index.css" layer(base);
 
 /* Layout Layer */
-@import "./layout/layout.css" layer(layout);
-@import "./layout/grid.css" layer(layout);
-@import "./layout/header.css" layer(layout);
-@import "./layout/footer.css" layer(layout);
-@import "./layout/sections.css" layer(layout);
+@import "./layout/index.css" layer(layout);
 
 /* Components Layer */
-@import "./components/lists.css" layer(components);
-@import "./components/buttons.css" layer(components);
-@import "./components/cards.css" layer(components);
-@import "./components/articles.css" layer(components);
-@import "./components/modals.css" layer(components);
-@import "./components/forms.css" layer(components);
-@import "./components/navigation.css" layer(components);
+@import "./components/index.css" layer(components);
 
 /* Utilities Layer */
-@import "./utilities/helpers.css" layer(utilities);
-@import "./utilities/animations.css" layer(utilities);
+@import "./utilities/index.css" layer(utilities);
 
 /* Prism Syntax Highlighting */
-@import "./prism.css"; 
+@import "./libraries/index.css" layer(libraries);
 
 
 /* Design IS the details */
