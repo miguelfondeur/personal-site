@@ -7,9 +7,9 @@ role: Product Engineer
 start: Apr 2025
 end: May 2025
 order: 6
-thumb: /img/cv/cv-kintales.png
-logo: /img/work/kintales/kintales-homepage.png
-header_image: /img/work/kintales/kintales-homepage.png
+thumb: /img/cv/cv-kintales.webp
+logo: /img/work/kintales/kintales-homepage.webp
+header_image: /img/work/kintales/kintales-homepage.webp
 tech:
   [Nuxt.js, Bolt.new, Cursor, APIs, Netlify, Supabase, Serverless Functions]
 description: Create fun stories, share family memories, and build unique characters.
@@ -35,7 +35,7 @@ accomplishments:
   <div class="details-content">
     <div class="detail-image-wrapper" data-scrollable="true">
       <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
-        <img src="/img/work/kintales/kintales-homepage.png" alt="Kintales homepage example" loading="lazy">
+        <img src="/img/work/kintales/kintales-homepage.webp" alt="Kintales homepage example" loading="lazy">
       </div>
       <div class="scroll-indicator">
         <em><span class="sr-only">This Section is</span> Scrollable</em>
@@ -57,7 +57,7 @@ accomplishments:
   <summary>Kintales Stories</summary>
   <div class="details-content">
     <div class="detail-image-wrapper">
-      <img src="/img/work/kintales/kintales-madlibs.png" alt="Kintales story UI" loading="lazy">
+      <img src="/img/work/kintales/kintales-madlibs.webp" alt="Kintales story UI" loading="lazy">
     </div>
     <p>
       By eliminating a lot of grunt work, I could focus on defining features and guiding Cursor toward my product goals. I took on the role of Product Manager and made sure we had everything needed for an MVP:
@@ -91,7 +91,7 @@ accomplishments:
   <div class="details-content">
     <div class="detail-image-wrapper" data-scrollable="true">
       <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
-        <img src="/img/work/kintales/kintales-story-creator.png" alt="Kintales story creator UI" loading="lazy">
+        <img src="/img/work/kintales/kintales-story-creator.webp" alt="Kintales story creator UI" loading="lazy">
       </div>
       <div class="scroll-indicator">
         <em><span class="sr-only">This Section is</span> Scrollable</em>
