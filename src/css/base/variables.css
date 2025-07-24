@@ -37,7 +37,7 @@
     --color-text-error: var(--color-fire-brick);
 
     /* Font Family */
-    --font-family-heading: "Baskervville", Baskerville, 'Libre Baskerville', 'Times New Roman', serif;;
+    --font-family-heading: Baskerville, 'Libre Baskerville', "Baskervville", 'Times New Roman', serif;;
     --font-family-body: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
 
     /* UI Spacing - vertical and horizontal rhythm - divisible by 4 */
