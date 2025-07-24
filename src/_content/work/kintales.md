@@ -1,0 +1,134 @@
+---
+tags: work
+permalink: false
+name: Kintales
+id: kintales
+role: Product Engineer
+start: Apr 2025
+end: May 2025
+order: 6
+thumb: /img/cv/cv-kintales.png
+logo: /img/work/kintales/kintales-homepage.png
+header_image: /img/work/kintales/kintales-homepage.png
+tech:
+  [Nuxt.js, Bolt.new, Cursor, APIs, Netlify, Supabase, Serverless Functions]
+description: Create fun stories, share family memories, and build unique characters.
+summary: |
+  Kintales was a platform designed to help families create, share, and preserve their stories across generations. Whether it’s a silly anecdote about Grandpa’s fishing trip, a heartwarming memory of your first family vacation, or an amusing tale about your child’s adventures, Kintales was built to give these memories a permanent home. This project was designed, developed, and deployed in just four days with the help of AI-assisted tools like Bolt.new and Cursor.
+accomplishments:
+  [
+    "Designed an app using Bolt.new",
+    "Created custom avatars for family members using the Personas avatar maker",
+    "Built features to write and save personal family stories",
+    "Enabled story generation featuring family members",
+    "Built story browsing for shared inspiration",
+    "Created a collection view of family memories",
+    "Application developed with Nuxt.js full-stack framework",
+    "Implemented profiles and back-end using Supabase and Netlify Serverless Functions",
+    "Accelerated development with the Cursor AI coding assistant"
+  ]
+---
+
+<!-- Details -->
+<details>
+  <summary>Building Kintales with AI</summary>
+  <div class="details-content">
+    <div class="detail-image-wrapper" data-scrollable="true">
+      <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+        <img src="/img/work/kintales/kintales-homepage.png" alt="Kintales homepage example" loading="lazy">
+      </div>
+      <div class="scroll-indicator">
+        <em><span class="sr-only">This Section is</span> Scrollable</em>
+      </div>
+    </div>
+    <p>
+      This idea started as a way to tell stories to my kids about their late grandpa. I built a small prototype called <strong>Grandpa Stories</strong>, still available <a href="https://grandpa-stories.netlify.app/" target="_blank" rel="noopener">here</a>. But I knew building a fully featured app with authentication, persistence, and user profiles would take more time than I had. A friend encouraged me to try AI-powered tools like <strong>Bolt.new</strong> and <strong>Cursor</strong>.
+    </p>
+    <p>
+      I entered a basic prompt into Bolt.new to recreate Grandpa Stories and got a working prototype almost instantly, including <a href="https://www.dicebear.com/styles/personas/" target="_blank" rel="noopener">Dicebear</a> API integration. However, the result was a tangled mess of Next.js and React code. I moved the project into <strong>Cursor</strong> for better control and rewrote it in Nuxt. I chose Nuxt.js because it's based on Vue.js, which I find more human-readable—very important when working with AI-generated code.
+    </p>
+    <p>
+      With Cursor, I was able to "vibe code" my way through the app. The only slow parts were the unavoidable ones: setting up Google Auth, configuring Supabase, and managing environment variables. For everything else, prompting Cursor was fast and effective. Build a Nuxt.js app? Done. Add a homepage? Done. Add a new feature? Done. Not perfect, but definitely good enough to test with real users.
+    </p>
+  </div>
+</details>
+
+<details>
+  <summary>Kintales Stories</summary>
+  <div class="details-content">
+    <div class="detail-image-wrapper">
+      <img src="/img/work/kintales/kintales-madlibs.png" alt="Kintales story UI" loading="lazy">
+    </div>
+    <p>
+      By eliminating a lot of grunt work, I could focus on defining features and guiding Cursor toward my product goals. I took on the role of Product Manager and made sure we had everything needed for an MVP:
+    </p>
+    <ul>
+      <li>Create an account with Google Auth</li>
+      <li>Create a public-facing user profile</li>
+      <li>Account settings page for editing user info</li>
+      <li>CRUD support for stories (create, read, update, delete)</li>
+    </ul>
+    <p>
+      I set up two tables in <strong>Supabase</strong>: <code>profiles</code> and <code>stories</code>. Each user could save multiple stories to their personal collection. The stories table included:
+    </p>
+    <ul>
+      <li><code>character_name</code></li>
+      <li><code>author</code></li>
+      <li><code>title</code></li>
+      <li><code>content</code></li>
+      <li><code>avatar_url</code></li>
+      <li><code>background_color</code></li>
+      <li><code>is_public</code></li>
+    </ul>
+    <p>
+      The <code>id</code> field allowed for clean relationships between stories and users. I used the Nuxt Supabase module, which works like a lightweight ORM to access data from the front-end. Image URLs were generated by Dicebear and stored directly. The <code>is_public</code> field gave users control over whether stories were visible to others.
+    </p>
+  </div>
+</details>
+
+<details>
+  <summary>Kintales Story Generator</summary>
+  <div class="details-content">
+    <div class="detail-image-wrapper" data-scrollable="true">
+      <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+        <img src="/img/work/kintales/kintales-story-creator.png" alt="Kintales story creator UI" loading="lazy">
+      </div>
+      <div class="scroll-indicator">
+        <em><span class="sr-only">This Section is</span> Scrollable</em>
+      </div>
+    </div>
+    <p>
+      The story generator lived inside a modal on the user's profile page. There were two modes: a mad-libs–style generator that picked a random avatar from Dicebear, and a manual editor where users could fully customize their stories and avatars.
+    </p>
+    <p>
+      Dicebear’s Personas API lets you pass traits like:
+    </p>
+    <ul>
+      <li><code>?eyes</code></li>
+      <li><code>?hair</code></li>
+      <li><code>?mouth</code></li>
+      <li><code>?skinColor</code></li>
+    </ul>
+    <p>
+      I built the avatar URL string using options from the UI and saved the result in the database. The same modal allowed users to edit, delete, or toggle the visibility of each story.
+    </p>
+  </div>
+</details>
+
+<details>
+  <summary>Lessons Learned</summary>
+  <div class="details-content">
+    <h3>Lesson One – Build With AI</h3>
+    <p>
+      If you want to move fast, build with AI. But understand what you're doing. AI tools can't read your mind, and they don't understand your full application context. The more domain knowledge you bring to the table, the better the results. With good system prompts, Cursor can follow your preferred conventions and patterns.
+    </p>
+    <h3>Lesson Two – It's Great for Prototypes</h3>
+    <p>
+      Low-code tools are best for testing ideas, not long-term scale. I wanted to validate the concept with real users (mostly my kids). Mission accomplished. That said, if your Supabase instance sits inactive for too long, it may be deactivated to save costs. For long-term projects, you'd need active engagement and better infrastructure planning.
+    </p>
+    <h3>Lesson Three – Keep the Stack Simple</h3>
+    <p>
+      Especially when working with AI, a simple stack is your best friend. You need to be able to read and debug what it outputs. While it's fun to explore new tech, now’s not the time to experiment with Rust backends if your goal is speed and usability.
+    </p>
+  </div>
+</details>
