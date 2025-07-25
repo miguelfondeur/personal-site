@@ -1,9 +1,14 @@
 ---
 title: "Stories Are More Important Than Facts"
-summary: "We know this at an instinctive level, but we don't really think this way. We assume our decisions, especially in tech, are based on facts. But in tech, marketing, and life, narratives drive decisions. Not facts. Let’s explore why."
+summary: "We know this at an instinctive level, but we don't really think this way. We assume our decisions, especially in tech, are based on facts. But in tech, marketing, and life, narratives drive decisions. Not facts. Here are my thoughts."
 date: 2025-07-25
 draft: false
+og_image: /img/articles/washington.webp
 ---
+
+<div class="article-image-wrapper">
+    <img src="/img/articles/washington.webp" alt="An image of the Draw The Owl exercise." width="100%" loading="lazy">
+</div>
 
 <h2> In Hi<u style="text-underline-position: under;">story</u> </h2>
 
@@ -54,14 +59,14 @@ But facts serve the story, not the other way around.
 
 ## My Latest Projects
 
-Tech is already full of stories.  
+<!-- Tech is already full of stories.  
 We chase trends and act like they're one-size-fits-all solutions.  
 Odd, for an industry that supposedly puts science above all else.
 
 Marketing is storytelling.  
 Data analytics is storytelling.  
 Design is storytelling.  
-Project management is storytelling. They literally write "user stories" for development tasks.
+Project management is storytelling. They literally write "user stories" for development tasks. -->
 
 Lately, I’ve been experimenting with new ways to create and share stories.  
 After building the “Grandpa Stories” app for my kids, I built a fuller version called **Kintales** (check it out on my [work page](/work)).  

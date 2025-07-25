@@ -1,7 +1,7 @@
 ---
 title: Why SMACSS Still Slaps
 summary: I know I'm probably too old to say something "slaps", but SMACSS really does. After over a decade building front-end apps, I’ve yet to find a more practical, scalable way to structure CSS. Here’s why it still holds up.
-date: 2025-06-23
+date: 2025-07-23
 og_image: /img/articles/smacss.webp
 draft: false
 ---

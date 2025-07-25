@@ -88,6 +88,7 @@ code {
 hr {
     margin-block: var(--ui-spacing-xl) var(--ui-spacing-7);
     border-color: light-dark(var(--color-gray-2), var(--color-dark-gray-1));
+    opacity: 0.5;
 }
 
 /* Drop Cap */
