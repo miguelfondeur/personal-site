@@ -1,7 +1,7 @@
 ---
 title: "Stories Are More Important Than Facts"
 summary: "We know this at an instinctive level, but we don't really think this way. We assume our decisions, especially in tech, are based on facts. But in tech, marketing, and life, narratives drive decisions. Not facts. Let’s explore why."
-date: 2025-07-24
+date: 2025-07-25
 draft: false
 ---
 
