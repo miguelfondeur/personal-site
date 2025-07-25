@@ -5,7 +5,7 @@ date: 2025-07-25
 draft: false
 ---
 
-<h2> Hi<u style="text-underline-position: under;">story</u> </h2>
+<h2> In Hi<u style="text-underline-position: under;">story</u> </h2>
 
 When thinking about the past, even when recording historical events, we think in narratives.  
 I've been a fan of <strong>Jonathan</strong> and <strong>Matheau Pageau</strong> for years now, and I've adobted their idea that reality unfolds in nested stories, or what Jonathan might call superstructures.
@@ -21,7 +21,7 @@ We remember him as brave, heroic, victorious. Not because of granular data, but 
 
 ---
 
-## Daily Life
+## In Daily Life
 
 Most of our decisions aren't based purely on facts.  
 Even when presented with raw data, we form stories to interpret it.  
@@ -34,7 +34,7 @@ It’s instinctive. Even animals do it.
 
 ---
 
-## Planning
+## In Planning
 
 Plans are stories too.  
 They organize facts, but they aren’t guaranteed outcomes.  
@@ -69,7 +69,7 @@ I learned a lot, but oddly enough, my kids liked the first version better.
 It had a personal feel the second version lacked.
 
 My wife, a conversation designer, came up with a new idea: help kids write their own stories using simple prompts.  
-We’re calling it [promptshorty.com](https://promptshorty.com).  
+We’re calling it <a href="https://promptshorty.com" target="_blank">promptshorty</a>.  
 Our daughter has already used it to write stories, often inserting herself into existing ones.  
 Fan fiction.  
 So far, so good.
