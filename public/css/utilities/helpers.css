@@ -2,6 +2,12 @@
     display: none !important;
 }
 
+.inline-flex {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
 .sr-only {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);

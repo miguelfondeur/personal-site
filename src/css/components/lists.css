@@ -50,7 +50,7 @@ ul.social-list {
         color: light-dark(var(--color-gray-6), var(--color-gray-4));
     }
 
-    & li:last-child {
+    & li:nth-child(4) {
         margin-top: var(--ui-spacing-4);
         padding-top: var(--ui-spacing-8);
         border-top: 1px solid;

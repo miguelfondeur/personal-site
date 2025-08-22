@@ -1,5 +1,5 @@
 .content-section {
-    margin-top: 11.2rem;
+    margin-top: 10.2rem;
 
     @media (max-width: 767px) {
         margin-top: 9.6rem;
@@ -189,6 +189,13 @@ aside.aside-section {
     }
 }
 
+.tool-grid {
+    .brand {
+        max-height: 75px;
+    }
+
+}
+
 .work-grid {
     display: grid;
     margin-top: var(--ui-spacing-6);
@@ -288,4 +295,38 @@ aside.aside-section {
     @media (min-width:  1024px){
         grid-template-columns: repeat(3, 1fr); 
     }
+}
+
+.services-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--ui-spacing-8);
+
+    @media (min-width:  520px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width:  1024px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    & .service-item {
+        display: flex;
+        flex-direction: column;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    & .service-item h3 {
+        font-size: var(--font-size-base);
+    }
+
+    & .service-item ul {
+        padding-left: 1.2rem;
+    }
+
+    & .service-item p {
+        color: light-dark(var(--color-gray-6), var(--color-gray-4));
+        line-height: var(--ui-spacing-6);
+    }
+
 }

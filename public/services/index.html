@@ -4,14 +4,14 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Miguel Fondeur - Software Engineer | Texture Library</title>
+   <title>Miguel Fondeur - Software Engineer | Work</title>
    <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
    <meta name="author" content="Miguel Fondeur">
    <meta name="robots" content="index, follow">
 
    <!-- Open Graph (for social media sharing) -->
    <meta property="og:title" content="Miguel Fondeur - Software Engineer">
-   <meta property="og:description" content="Visual assets that evoke the tactile quality of materials used in ancient and medieval Christian art.">
+   <meta property="og:description" content="">
    <meta property="og:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <meta property="og:url" content="https://miguelfondeur.com">
    <meta property="og:type" content="website">
@@ -20,7 +20,7 @@
    <!-- Twitter Card -->
    <meta name="twitter:card" content="summary_large_image">
    <meta name="twitter:title" content="Miguel Fondeur - Software Engineer">
-   <meta name="twitter:description" content="Visual assets that evoke the tactile quality of materials used in ancient and medieval Christian art.">
+   <meta name="twitter:description" content="">
    <meta name="twitter:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
 
@@ -46,11 +46,8 @@
    <!-- Canonical URL (to prevent duplicate content issues) -->
    <link rel="canonical" href="https://miguelfondeur.com">
 
-    <!-- CSS -->
-    <link href="/css/main.min.css" rel="stylesheet">
-    
-        <link rel="stylesheet" href="/css/layout/resources.css">
-    
+   <!-- CSS -->
+   <link href="/css/main.min.css" rel="stylesheet">
 
    <!-- JS -->
    <script>
@@ -83,12 +80,10 @@
       }
    </script>
    <script src="/js/index.js" type="module" defer></script>
-    
-        <script src="/js/modules/resources.js" type="module" defer></script>
-    
+   <script src="/js/popover.min.js" type="module" defer></script>
 </head>
 <body data-theme="">
-   <div class="site-wrapper resources-page">
+   <div class="site-wrapper">
 
       <header id="site-header" class="site-header">
     <nav class="container">
@@ -107,7 +102,7 @@
           <menu role="list">
             <!-- <li><a href="/" >Home</a></li> -->
             <li><a href="/portfolio/" >Portfolio</a></li>
-            <li><a href="/services/" >Services</a></li>
+            <li><a href="/services/"  aria-current="page" >Services</a></li>
             <li><a href="/articles/" >Articles</a></li>
             <li><a href="/about/" >About</a></li>
           </menu>
@@ -145,250 +140,122 @@
    
       <main id="site-content">
          <div class="container">
-
-            <div class="with-sidebar">
-                <div class="sidebar-column">
-                    <!-- MENU -->
-                    <menu class="resource-menu">
-                        <h2>Sections</h2>
-                        <ul>
-                            
-                                <li>
-                                    <a href="#intro">Intro</a>
-                                    
-                                </li>
-                            
-                                <li>
-                                    <a href="#parchment">Parchment & Vellum</a>
-                                    
-                                </li>
-                            
-                                <li>
-                                    <a href="#fabric">Fabric Textures</a>
-                                    
-                                </li>
-                            
-                                <li>
-                                    <a href="#paint">Paint & Brush Strokes</a>
-                                    
-                                </li>
-                            
-                                <li>
-                                    <a href="#other">Other Surfaces</a>
-                                    
-                                </li>
-                            
-                        </ul>                      
-                    </menu>
-                </div>
-                <div>
-                    <header>
-                        <!-- Breadcrumbs -->
-                        <div class="breadcrumbs">
-                            <a href="/">Home</a> ⋅ <a href="/orthodox-digital-arts/">ODA</a> ⋅ <span>Texture Library</span>
-                        </div>
-                        <h1>Texture Library</h1>
-                    </header>
-                    
-                    <section class="content-section">
-  <header id="intro">
-    <h2>Intro</h2>
-    <p>
-      This texture library collects visual assets that evoke the tactile quality of materials used in ancient and medieval Christian art—from parchment and vellum to brushstrokes and handwoven fabrics. These textures were sourced from various libraries and have been curated for stylistic relevance rather than strict historical accuracy.
-    </p>
-  </header>
+            <section class="hero-section">
+   <div class="container" data-width="small">
+       <h1>Let's improve your web <span class="text-accent">UI</span>.</h1>
+       <p>
+         I have over a decade of experience in designing and developing user interfaces that are not only visually appealing but also highly functional. My approach combines creativity with a deep understanding of user needs, ensuring that every project I undertake delivers real value.
+       </p>
+   </div>
 </section>
 <section class="content-section">
-    <header>
-        <h2>Settings</h2>
-    </header>
-    <div class="sub-section">
-        <h3>Select a Color:</h3>
-        <div class="swatch-wrapper">
-            <label class="swatch-button" data-category="color" title="oklch(0.99 0 0)">
-                <input type="radio" name="color">
-                <div class="swatch-color" style="background-color: oklch(0.99 0 0)"></div>
-                <p class="font-xs">Lead White</p>
-            </label>
-            <label class="swatch-button" data-category="color" title="oklch(.93 .02 75.98)">
-                <input type="radio" name="color">
-                <div class="swatch-color" style="background-color: oklch(.93 .02 75.98)"></div>
-                <p class="font-xs">Parchment</p>
-            </label>
-            <label class="swatch-button" data-category="color" title="oklch(0.39 0.12 257.36)">
-                <input type="radio" name="color" checked>
-                <div class="swatch-color" style="background-color: oklch(0.39 0.12 257.36)"></div>
-                <p class="font-xs">Lapis Lazuli</p>
-            </label>
-            <label class="swatch-button" data-category="color" title="oklch(0.52 0.14 27.27)">
-                <input type="radio" name="color">
-                <div class="swatch-color" style="background-color: oklch(0.52 0.14 27.27)"></div>
-                <p class="font-xs">Red Ochre</p>
-            </label>
-            <label class="swatch-button" data-category="color" title="oklch(0.48 0.07 152.63)">
-                <input type="radio" name="color" >
-                <div class="swatch-color" style="background-color: oklch(0.48 0.07 152.63)"></div>
-                <p class="font-xs">Green Earth</p>
-            </label>
-            <label class="swatch-button" data-category="color" title="oklch(0.26 0.01 0)">
-                <input type="radio" name="color" >
-                <div class="swatch-color" style="background-color: oklch(0.26 0.01 0)"></div>
-                <p class="font-xs">Iron Gall</p>
-            </label>
-        </div>
-    </div>
-    <!-- Parchment & Vellum -->
-    <div class="container sub-section" data-width="micro">
-        <h3>Select Blend Mode:</h3>
-        <select id="active-blend-mode">
-            <option value="normal" selected>normal</option>
-            <option value="color">color</option>
-            <option value="color-burn">color-burn</option>
-            <option value="color-dodge">color-dodge</option>
-            <option value="darkness">darkness</option>
-            <option value="exclusion">exclusion</option>
-            <option value="hard-light">hard-light</option>
-            <option value="hue">hue</option>
-            <option value="lighten">lighten</option>
-            <option value="luminosity">luminosity</option>
-            <option value="multiply">multiply</option>
-            <option value="overlay">overlay</option>
-            <option value="saturation">saturation</option>
-            <option value="screen">screen</option>
-            <option value="soft-light">soft-light</option>
-        </select>
-    </div>
+   <h2>What I offer</h2>
+   <ul>
+      <li>Design Systems</li>
+      <li>UI Component Libraries</li>
+      <li>CSS Restructuring</li>
+      <li>Front-end Performance</li>
+      <li>Mobile Web Development</li>
+      <li>Progressive Web Apps</li>
+      <li>Single Page Applications</li>
+      <li>Multi Page Sites/Applications</li>
+   </ul>
+   <p><strong>I’m currently booking out into November. Please feel free to get in touch.</strong></p>
+   <div class="inline-flex">
+      <a href="https://calendly.com/miguelfondeur/30min" target="_blank" class="button-link">Book an Intro Call</a>
+      <a href="mailto:miguelfondeur@gmail.com">Or send me an email...</a>
+   </div>
+</section>
 </section>
 <section class="content-section">
-    <header id="parchment">
-        <h2>Parchment & Vellum</h2>
-        <p>
-        Subtle textures inspired by natural materials like animal skin (vellum) and handmade parchment. Often used as the base surface for illuminated manuscripts.
-        </p>
-    </header>
-    <!-- Add individual textures here -->
-    <div class="swatch-wrapper texture-wrapper">
-        <div class="swatch-button">                            
-            <div class="swatch-color swatch-large texture-paper"></div>                            
-            <p class="font-xs">Paper</p>                        
-        </div>
-        <div class="swatch-button ">                            
-            <div class="swatch-color swatch-large texture-exclusive-paper"></div>                            
-            <p class="font-xs">Exclusive Paper</p>                        
-        </div>
-        <div class="swatch-button ">                            
-            <div class="swatch-color swatch-large texture-paper-fibers"></div>                            
-            <p class="font-xs">Paper Fibers</p>                        
-        </div>
-        <div class="swatch-button ">                            
-            <div class="swatch-color swatch-large texture-groove-paper"></div>                            
-            <p class="font-xs">Groove Paper</p>                        
-        </div>
-        <div class="swatch-button ">                            
-            <div class="swatch-color swatch-large texture-gray-paper"></div>                            
-            <p class="font-xs">Gray Paper</p>                        
-        </div>
-        <div class="swatch-button ">                            
-            <div class="swatch-color swatch-large texture-cream-paper"></div>                            
-            <p class="font-xs">Cream Paper</p>                        
-        </div>
-    </div>
+      <h2>Tooling</h2>
+      <p>
+         I prioritize writing clean, semantic HTML, CSS, and JavaScript. Starting with core web technologies ensures performance, accessibility, and long-term maintainability, while giving me full control over the final product. Native JS components also work reliably across environments.
+      </p>
+      <p>
+         At the same time, I leverage modern tools and frameworks where they add value—streamlining workflow, improving collaboration, and enhancing the overall quality of the work.
+      </p>
+      <div class="tool-grid brand-grid">
+         
+            <a href="https://vuejs.org/" class="grid-item" title="Go to Vue" target="_blank">
+               <div class="brand">
+                  <svg class="logo" viewBox="0 0 128 128" width="48" height="48" data-v-a5664777=""><path fill="#42b883" d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z" data-v-a5664777=""></path><path fill="#35495e" d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z" data-v-a5664777=""></path></svg>
+               </div>
+            </a>
+         
+            <a href="https://react.dev" class="grid-item" title="Go to React" target="_blank">
+               <div class="brand">
+                  <svg style="color: #58c4dc;" width="48" height="48" viewBox="-10.5 -9.45 21 18.9" fill="none" xmlns="http://www.w3.org/2000/svg" class="uwu-hidden mt-4 mb-3 text-brand dark:text-brand-dark w-24 lg:w-28 self-center text-sm me-0 flex origin-center transition-all ease-in-out"><circle cx="0" cy="0" r="2" fill="currentColor"></circle><g stroke="currentColor" stroke-width="1" fill="none"><ellipse rx="10" ry="4.5"></ellipse><ellipse rx="10" ry="4.5" transform="rotate(60)"></ellipse><ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse></g></svg>
+               </div>
+            </a>
+         
+            <a href="https://nuxt.com/" class="grid-item" title="Go to Nuxt Progressive Framework" target="_blank">
+               <div class="brand">
+                  <svg class="" width="800" height="200" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M377 200C379.16 200 381 198.209 381 196V103C381 103 386 112 395 127L434 194C435.785 197.74 439.744 200 443 200H470V50H443C441.202 50 439 51.4941 439 54V148L421 116L385 55C383.248 51.8912 379.479 50 376 50H350V200H377Z" fill="currentColor"></path><path d="M726 92H739C742.314 92 745 89.3137 745 86V60H773V92H800V116H773V159C773 169.5 778.057 174 787 174H800V200H783C759.948 200 745 185.071 745 160V116H726V92Z" fill="currentColor"></path><path d="M591 92V154C591 168.004 585.742 179.809 578 188C570.258 196.191 559.566 200 545 200C530.434 200 518.742 196.191 511 188C503.389 179.809 498 168.004 498 154V92H514C517.412 92 520.769 92.622 523 95C525.231 97.2459 526 98.5652 526 102V154C526 162.059 526.457 167.037 530 171C533.543 174.831 537.914 176 545 176C552.217 176 555.457 174.831 559 171C562.543 167.037 563 162.059 563 154V102C563 98.5652 563.769 96.378 566 94C567.96 91.9107 570.028 91.9599 573 92C573.411 92.0055 574.586 92 575 92H591Z" fill="currentColor"></path><path d="M676 144L710 92H684C680.723 92 677.812 93.1758 676 96L660 120L645 97C643.188 94.1758 639.277 92 636 92H611L645 143L608 200H634C637.25 200 640.182 196.787 642 194L660 167L679 195C680.818 197.787 683.75 200 687 200H713L676 144Z" fill="currentColor"></path><path d="M168 200H279C282.542 200 285.932 198.756 289 197C292.068 195.244 295.23 193.041 297 190C298.77 186.959 300.002 183.51 300 179.999C299.998 176.488 298.773 173.04 297 170.001L222 41C220.23 37.96 218.067 35.7552 215 34C211.933 32.2448 207.542 31 204 31C200.458 31 197.067 32.2448 194 34C190.933 35.7552 188.77 37.96 187 41L168 74L130 9.99764C128.228 6.95784 126.068 3.75491 123 2C119.932 0.245087 116.542 0 113 0C109.458 0 106.068 0.245087 103 2C99.9323 3.75491 96.7717 6.95784 95 9.99764L2 170.001C0.226979 173.04 0.00154312 176.488 1.90993e-06 179.999C-0.0015393 183.51 0.229648 186.959 2 190C3.77035 193.04 6.93245 195.244 10 197C13.0675 198.756 16.4578 200 20 200H90C117.737 200 137.925 187.558 152 164L186 105L204 74L259 168H186L168 200ZM89 168H40L113 42L150 105L125.491 147.725C116.144 163.01 105.488 168 89 168Z" fill="#00DC82"></path></svg>
+               </div>
+            </a>
+         
+            <a href="https://tailwindcss.com/" class="grid-item" title="Go to Tailwind CSS" target="_blank">
+               <div class="brand">
+                  <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 4.8rem;" width="1037" viewBox="0 0 1037 623" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M481.653 1.4378C443.549 5.3728 415.854 13.2248 384.951 28.8548C364.698 39.0988 348.529 51.1278 331.153 68.8788C316.732 83.6118 310.398 91.2998 302.098 104.143C298.832 109.197 295.803 113.782 295.367 114.332C293.753 116.37 283.905 135.386 282.124 139.905C281.11 142.478 279.381 146.551 278.28 148.957C270.512 165.949 258.029 204.118 259.728 205.686C260.112 206.041 260.632 205.757 260.882 205.055C261.632 202.953 268.527 194.586 276.799 185.741C307.456 152.959 336.524 134.839 369.653 127.859C383.618 124.917 386.488 124.615 400.015 124.666C431.112 124.782 458.579 132.839 481.57 148.589C499.285 160.725 505.839 166.561 539.72 200.369C582.209 242.766 597.541 255.65 627.393 274.043C633.792 277.986 653.44 287.586 661.076 290.501C672.196 294.747 690.564 300.827 692.277 300.829C693.171 300.831 695.811 301.506 698.145 302.329C700.478 303.152 704.923 304.258 708.02 304.785C728.014 308.19 733.32 308.916 746.246 310.017C775.42 312.503 816.986 310.645 842.153 305.73C845.178 305.139 849.903 304.213 852.653 303.672C855.403 303.131 858.553 302.322 859.653 301.874C860.753 301.426 866.153 299.825 871.653 298.316C893.286 292.38 919.933 279.011 941.153 263.447C957.028 251.802 979.698 227.967 990.875 211.168C991.547 210.158 993.596 207.082 995.429 204.332C1010.59 181.583 1023.99 150.739 1034.1 115.332C1035.04 112.032 1036.14 108.319 1036.55 107.082C1037.34 104.679 1035.74 103.855 1034.84 106.2C1033.03 110.918 1007.79 138.074 996.445 147.512C981.05 160.317 959.07 173.389 946.153 177.42C943.128 178.365 940.203 179.457 939.653 179.848C938.682 180.538 930.93 182.443 918.653 185.008C908.786 187.069 880.787 186.511 867.153 183.981C851.604 181.096 843.822 178.472 829.653 171.337C817.266 165.1 813.88 162.884 799.846 151.832C788.093 142.576 786.757 141.32 756.199 110.832C729.657 84.3488 711.324 67.4238 698.653 57.7048C692.354 52.8738 668.657 36.8318 667.819 36.8318C667.551 36.8318 664.141 35.0238 660.241 32.8138C647.299 25.4798 622.31 15.3538 605.153 10.4898C594.27 7.4048 568.345 2.9008 552.726 1.3818C533.565 -0.483203 499.995 -0.456203 481.653 1.4378ZM238.153 311.948C223.847 312.761 204.878 314.899 194.153 316.908C180.85 319.399 154.18 327.005 146.153 330.597C120.322 342.153 102.97 352.424 86.6529 365.815C74.7429 375.588 54.3589 398.172 45.4209 411.496C33.5709 429.16 24.7759 445.392 17.3319 463.332C8.95388 483.524 -1.79612 517.832 0.254877 517.832C0.748877 517.832 1.15288 517.412 1.15288 516.898C1.15288 513.978 26.9039 486.174 39.6529 475.328C54.3359 462.837 79.7169 447.798 91.1529 444.812C93.6279 444.165 96.1029 443.292 96.6529 442.871C97.6159 442.134 105.013 440.297 117.653 437.656C121.179 436.92 130.663 436.425 140.653 436.457C154.942 436.502 159.879 436.946 171.61 439.241C179.287 440.742 186.037 442.262 186.61 442.618C187.184 442.974 190.447 444.243 193.863 445.438C201.147 447.987 217.418 456.517 223.764 461.114C241.746 474.141 247.097 478.93 277.084 508.833C317.219 548.857 333.05 562.763 354.653 576.968C369.738 586.887 378.564 591.709 394.716 598.86C413.458 607.156 430.058 612.564 445.603 615.438C450.03 616.256 455.003 617.343 456.653 617.852C463.425 619.944 498.712 622.832 517.46 622.829C564.384 622.82 606.475 614.814 639.002 599.709C643.594 597.577 647.591 595.832 647.884 595.832C649.11 595.832 667.26 585.096 674.653 579.997C686.563 571.783 691.394 567.625 705.153 553.745C718.284 540.499 726.652 530.315 734.661 517.832C737.308 513.707 740.229 509.207 741.152 507.832C745.458 501.417 757.779 475.614 763.118 461.832C765.993 454.408 768.024 448.226 775.846 423.079C776.745 420.19 777.243 417.589 776.953 417.299C776.663 417.009 775.352 418.195 774.04 419.934C765.692 430.993 747.853 449.797 737.548 458.4C711.289 480.321 686.719 491.981 656.469 496.875C643.41 498.988 615.752 497.946 604.153 494.903C602.228 494.398 596.897 493.022 592.306 491.846C585.126 490.007 565.057 481.401 561.75 478.744C560.551 477.78 549.859 470.344 543.917 466.341C536.921 461.629 520.694 446.515 495.653 421.388C481.903 407.591 466.378 392.466 461.153 387.776C426.217 356.419 393.495 337.065 355.153 325.08C331.273 317.617 314.845 314.681 283.653 312.307C263.037 310.737 259.892 310.712 238.153 311.948Z" fill="#06B6D4"/></svg>
+               </div>
+            </a>
+         
+            <a href="https://gohugo.io" class="grid-item" title="Go to Hugo Static Site Generator" target="_blank">
+               <div class="brand">
+                  <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 4.8rem;" width="345" viewBox="0 0 345 388" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M194.81 21.13L309.22 87.67C315.877 91.5414 321.402 97.0922 325.241 103.768C329.081 110.443 331.101 118.009 331.1 125.71V262.14C331.099 270.653 328.834 279.012 324.538 286.361C320.241 293.709 314.068 299.783 306.65 303.96L193.1 367.9C185.694 372.07 177.329 374.241 168.83 374.201C160.33 374.16 151.987 371.91 144.62 367.67L40.0502 307.48C31.9775 302.833 25.272 296.141 20.6092 288.078C15.9464 280.014 13.4909 270.865 13.4902 261.55V132.08C13.4894 122.701 15.887 113.478 20.4552 105.286C25.0234 97.0952 31.6104 90.2082 39.5902 85.28L142.39 21.82C150.247 16.9708 159.273 14.3455 168.505 14.224C177.737 14.1024 186.829 16.4893 194.81 21.13Z" fill="#FF4088" stroke="#C9177E" stroke-width="27"/><path fill-rule="evenodd" clip-rule="evenodd" d="M92.9102 296.92V89.7H136.26V165.18H208.18V89.7H251.66V296.92H208.18V206.31H136.26V296.92H92.9102Z" fill="white"/></svg>
+               </div>
+            </a>
+         
+            <a href="https://www.11ty.dev/" class="grid-item" title="Go to 11ty Static Site Generator" target="_blank">
+               <div class="brand">
+                  <svg viewBox="0 0 1569.4 2186" style="max-width: 4.8rem;" xmlns="http://www.w3.org/2000/svg"><g fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="28"><path d="m562.2 1410.1c-9 0-13.5-12-13.5-36.1v-595.1c0-11.5-2.3-16.9-7-16.2-28.4 7.2-42.7 10.8-43.1 10.8-7.9.7-11.8-7.2-11.8-23.7v-51.7c0-14.3 4.3-22.4 12.9-24.2l142.2-36.6c1.1-.3 2.7-.5 4.8-.5 7.9 0 11.8 8.4 11.8 25.3v712c0 24.1-4.7 36.1-14 36.1zm368.3 1.1c-14.4 0-26.8-1-37.4-3s-21.6-6.5-33.1-13.5-20.9-16.6-28.3-28.8-13.4-29.3-18-51.2-7-47.9-7-78.1v-276.2c0-7.2-2-10.8-5.9-10.8h-33.4c-9 0-13.5-8.6-13.5-25.8v-29.1c0-17.6 4.5-26.4 13.5-26.4h33.4c3.9 0 5.9-4.8 5.9-14.5l9.7-209.5c1.1-19 5.7-28.5 14-28.5h53.9c9 0 13.5 9.5 13.5 28.5v209.5c0 9.7 2.1 14.5 6.5 14.5h68.7c9 0 13.5 8.8 13.5 26.4v29.1c0 17.2-4.5 25.8-13.5 25.8h-68.9c-2.5 0-4.2.6-5.1 1.9-.9 1.2-1.3 4.2-1.3 8.9v277.9c0 20.8 1.3 38.2 4 52s6.6 24 11.8 30.4 10.4 10.8 15.6 12.9c5.2 2.2 11.6 3.2 19.1 3.2h38.2c9.7 0 14.5 6.7 14.5 19.9v32.3c0 14.7-5.2 22.1-15.6 22.1zm206.7 64.6c8.2 0 15.4-6.7 21.5-20.2s9.2-32.6 9.2-57.4c0-5.8-3.6-25.7-10.8-59.8l-105.6-438.9c-.7-5-1.1-9-1.1-11.9 0-12.9 2.7-19.4 8.1-19.4h65.2c5 0 9.1 1.7 12.4 5.1s5.8 10.3 7.5 20.7l70 370.5c1.4 4.3 2.3 6.5 2.7 6.5 1.4 0 2.2-2 2.2-5.9l54.9-369.5c1.4-10.8 3.7-18 6.7-21.8s6.9-5.7 11.6-5.7h45.2c6.1 0 9.2 7 9.2 21 0 3.2-.4 7.4-1.1 12.4l-95.9 499.3c-7.5 41.3-15.8 72.9-24.8 94.8s-19 36.8-30.2 44.7c-11.1 7.9-25.8 12-44.2 12.4h-5.4c-29.1 0-48.8-7.7-59.2-23.2-2.9-3.2-4.3-11.5-4.3-24.8 0-26.6 4.3-39.9 12.9-39.9.7 0 7.2 1.8 19.4 5.4 12.4 3.8 20.3 5.6 23.9 5.6z"></path><path d="m291.2 1411.1c-9 0-13.5-12-13.5-36.1v-595.1c0-11.5-2.3-16.9-7-16.2-28.4 7.2-42.7 10.8-43.1 10.8-7.9.7-11.8-7.2-11.8-23.7v-51.7c0-14.3 4.3-22.4 12.9-24.2l142.3-36.7c1.1-.3 2.7-.5 4.8-.5 7.9 0 11.8 8.4 11.8 25.3v712c0 24.1-4.7 36.1-14 36.1z"></path></g></svg>
+               </div>
+            </a>
+         
+      </div>   
 </section>
 <section class="content-section">
-    <header id="fabric">
-        <h2>Fabric Textures</h2>
-        <p>
-        Textures mimicking linen, wool, and woven cloth used in religious garments, bindings, or backgrounds in iconographic art.
-        </p>
-    </header>
-    <!-- Add more as needed -->
-    <div class="swatch-wrapper texture-wrapper">
-        <div class="swatch-button ">                            
-            <div class="swatch-color swatch-large texture-binding"></div>                            
-            <p class="font-xs">Binding</p>                        
-        </div>
-        <div class="swatch-button ">                            
-            <div class="swatch-color swatch-large texture-fabric"></div>                            
-            <p class="font-xs">Fabric</p>                        
-        </div>
-        <div class="swatch-button ">                            
-            <div class="swatch-color swatch-large texture-fabric-dark"></div>                            
-            <p class="font-xs">Fabric Dark</p>                        
-        </div>
-    </div>
+   <h2>All Services</h2>
+   <div class="services-wrapper">
+      <!-- Design Systems -->
+      <div class="card service-item">
+         <h3>Design Systems</h3>
+         <ul>
+            <li>Style Guide Creation</li>
+            <li>Component Library Development</li>
+            <li>Design Tokens Implementation</li>
+         </ul>
+      </div>
+      <!-- UI Component Libraries -->
+      <div class="card service-item">
+         <h3>UI Component Libraries</h3>
+         <ul>
+            <li>Custom Component Development</li>
+            <li>Accessibility Audits</li>
+            <li>Performance Optimization</li>
+         </ul>
+      </div>
+      <!-- Multi Page Applications -->
+      <div class="card service-item">
+         <h3>Multi Page Applications</h3>
+         <ul>
+            <li>Information Architecture</li>
+            <li>Responsive Design</li>
+            <li>SEO Best Practices</li>
+         </ul>
+      </div>
+      <!-- Single Page Applications -->
+      <div class="card service-item">
+         <h3>Single Page Applications</h3>
+         <ul>
+            <li>Client-Side Routing</li>
+            <li>State Management</li>
+            <li>API Integration</li>
+         </ul>
+      </div>
+   </div>
 </section>
-<section class="content-section">
-  <header id="paint">
-    <h2>Paint & Brush Strokes</h2>
-    <p>
-      Surface effects that resemble hand-painted details, egg tempera layers, and brushwork often seen in iconography and manuscript illumination.
-    </p>
-  </header>
-  <div class="swatch-wrapper texture-wrapper">
-        <div class="swatch-button swatch-wide">                            
-            <div class="swatch-color swatch-large texture-brush-1"></div>                            
-            <p class="font-xs">Brush 1</p>                        
-        </div>
-        <div class="swatch-button swatch-wide">                            
-            <div class="swatch-color swatch-large texture-brush-2"></div>                            
-            <p class="font-xs">Brush 2</p>                        
-        </div>
-        <div class="swatch-button swatch-wide">                            
-            <div class="swatch-color swatch-large texture-brush-3"></div>                            
-            <p class="font-xs">Brush 3</p>                        
-        </div>
-        <div class="swatch-button swatch-wide">                            
-            <div class="swatch-color swatch-large texture-brush-4"></div>                            
-            <p class="font-xs">Brush 4</p>                        
-        </div>
-        <div class="swatch-button swatch-wide">                            
-            <div class="swatch-color swatch-large texture-brush-5"></div>                            
-            <p class="font-xs">Brush 5</p>                        
-        </div>
-        <div class="swatch-button swatch-wide">                            
-            <div class="swatch-color swatch-large texture-brush-6"></div>                            
-            <p class="font-xs">Brush 6</p>                        
-        </div>
-        <div class="swatch-button swatch-wide">                            
-            <div class="swatch-color swatch-large texture-brush-7"></div>                            
-            <p class="font-xs">Brush 7</p>                        
-        </div>
-        <div class="swatch-button swatch-wide">                            
-            <div class="swatch-color swatch-large texture-brush-8"></div>                            
-            <p class="font-xs">Brush 8</p>                        
-        </div>
-        <div class="swatch-button swatch-wide">                            
-            <div class="swatch-color swatch-large texture-brush-white-1"></div>                            
-            <p class="font-xs">Brush White 1</p>                        
-        </div>
-    </div>
-</section>
-<section class="content-section">
-  <header id="other">
-    <h2>Other Surfaces</h2>
-    <p>
-        Additional textures inspired by stone, wood, gilding, and mosaic backgrounds found in medieval architecture and devotional artwork.
-    </p>
-  </header>
-    <div class="swatch-wrapper texture-wrapper">
-        <div class="swatch-button ">                            
-            <div class="swatch-color swatch-large texture-scribble"></div>                            
-            <p class="font-xs">Scribble</p>                        
-        </div>
-        <div class="swatch-button ">                            
-            <div class="swatch-color swatch-large texture-subtle-white"></div>                            
-            <p class="font-xs">Subtle White</p>                        
-        </div>
-        <div class="swatch-button ">                            
-            <div class="swatch-color swatch-large texture-fresh-snow"></div>                            
-            <p class="font-xs">Fresh Snow</p>                        
-        </div>
-    </div>
-</section>
-
-                </div>
-            </div>
-            
          </div>
       </main>
    
@@ -397,7 +264,7 @@
        <menu>
           <li><a href="/" >Home</a></li>
           <li><a href="/portfolio/" >Portfolio</a></li>
-          <li><a href="/services/" >Services</a></li>
+          <li><a href="/services/"  aria-current="page" >Services</a></li>
           <li><a href="/articles/" >Articles</a></li>
           <li><a href="/about/" >About</a></li>
           <li><a href="https://donate.stripe.com/28o01a9Gdaz15HOeUU" title="donate via stripe payments">

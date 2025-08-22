@@ -1,0 +1,90 @@
+---
+title: Work
+layout: layout.html 
+---
+<section class="hero-section">
+   <div class="container" data-width="small">
+       <h1>Let's improve your web <span class="text-accent">UI</span>.</h1>
+       <p>
+         I have over a decade of experience in designing and developing user interfaces that are not only visually appealing but also highly functional. My approach combines creativity with a deep understanding of user needs, ensuring that every project I undertake delivers real value.
+       </p>
+   </div>
+</section>
+<section class="content-section">
+   <h2>What I offer</h2>
+   <ul>
+      <li>Design Systems</li>
+      <li>UI Component Libraries</li>
+      <li>CSS Restructuring</li>
+      <li>Front-end Performance</li>
+      <li>Mobile Web Development</li>
+      <li>Progressive Web Apps</li>
+      <li>Single Page Applications</li>
+      <li>Multi Page Sites/Applications</li>
+   </ul>
+   <p><strong>I’m currently booking out into November. Please feel free to get in touch.</strong></p>
+   <div class="inline-flex">
+      <a href="https://calendly.com/miguelfondeur/30min" target="_blank" class="button-link">Book an Intro Call</a>
+      <a href="mailto:miguelfondeur@gmail.com">Or send me an email...</a>
+   </div>
+</section>
+</section>
+<section class="content-section">
+      <h2>Tooling</h2>
+      <p>
+         I prioritize writing clean, semantic HTML, CSS, and JavaScript. Starting with core web technologies ensures performance, accessibility, and long-term maintainability, while giving me full control over the final product. Native JS components also work reliably across environments.
+      </p>
+      <p>
+         At the same time, I leverage modern tools and frameworks where they add value—streamlining workflow, improving collaboration, and enhancing the overall quality of the work.
+      </p>
+      <div class="tool-grid brand-grid">
+         {% for tool in tools %}
+            <a href="{{ tool.link }}" class="grid-item" title="Go to {{ tool.name }}" target="_blank">
+               <div class="brand">
+                  {{ tool.svg | raw }}
+               </div>
+            </a>
+         {% endfor %}
+      </div>   
+</section>
+<section class="content-section">
+   <h2>All Services</h2>
+   <div class="services-wrapper">
+      <!-- Design Systems -->
+      <div class="card service-item">
+         <h3>Design Systems</h3>
+         <ul>
+            <li>Style Guide Creation</li>
+            <li>Component Library Development</li>
+            <li>Design Tokens Implementation</li>
+         </ul>
+      </div>
+      <!-- UI Component Libraries -->
+      <div class="card service-item">
+         <h3>UI Component Libraries</h3>
+         <ul>
+            <li>Custom Component Development</li>
+            <li>Accessibility Audits</li>
+            <li>Performance Optimization</li>
+         </ul>
+      </div>
+      <!-- Multi Page Applications -->
+      <div class="card service-item">
+         <h3>Multi Page Applications</h3>
+         <ul>
+            <li>Information Architecture</li>
+            <li>Responsive Design</li>
+            <li>SEO Best Practices</li>
+         </ul>
+      </div>
+      <!-- Single Page Applications -->
+      <div class="card service-item">
+         <h3>Single Page Applications</h3>
+         <ul>
+            <li>Client-Side Routing</li>
+            <li>State Management</li>
+            <li>API Integration</li>
+         </ul>
+      </div>
+   </div>
+</section>
