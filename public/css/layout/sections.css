@@ -300,7 +300,7 @@ aside.aside-section {
 .services-wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: var(--ui-spacing-8);
+    gap: var(--ui-spacing-4);
 
     @media (min-width:  520px) {
         grid-template-columns: repeat(2, 1fr);
@@ -314,19 +314,56 @@ aside.aside-section {
         display: flex;
         flex-direction: column;
         transition: background-color 0.2s ease-in-out;
+        font-family: var(--font-family-body);
     }
 
     & .service-item h3 {
-        font-size: var(--font-size-base);
+        font-size: 1.3rem;
+        margin-bottom: var(--ui-spacing-3);
+        color: var(--color-text-accent);
+        font-weight: 900;
+        letter-spacing: 0.05rem;
+    }
+
+    & .service-item h4 {
+        color: light-dark(var(--color-black), var(--color-white));
+        font-size: 2.8rem;
+        margin-bottom: var(--ui-spacing-4);
+        font-family: var(--font-family-body);
+        margin-top: var(--ui-spacing-2)
+    }
+
+    small {
+        font-size: var(--font-size-xs);
+        color: light-dark(var(--color-black), var(--color-white));
+        display: block;
+        font-size: 1.5;
+    }
+
+    h4 + small {
+        color: light-dark(var(--color-gray-6), var(--color-gray-4));
     }
 
     & .service-item ul {
         padding-left: 1.2rem;
+        font-size: var(--font-size-sm);
+        color: light-dark(var(--color-black), var(--color-white));
+        margin-bottom: var(--ui-spacing-6);
+    }
+
+    & .service-item ul li {
+        text-wrap: normal;
+        margin-bottom: var(--ui-spacing-1);
     }
 
     & .service-item p {
         color: light-dark(var(--color-gray-6), var(--color-gray-4));
-        line-height: var(--ui-spacing-6);
+        line-height: var(--ui-spacing-8);
+        margin-bottom: 0;
+    }
+
+    & a.button-link {
+        margin-top: auto;
     }
 
 }
