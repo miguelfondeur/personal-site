@@ -30,29 +30,34 @@ layout: layout.html
 </section>
 </section>
 <section class="content-section">
-      <h2>Tooling</h2>
-      <p>
-         I prioritize writing clean, semantic HTML, CSS, and JavaScript. Starting with core web technologies ensures performance, accessibility, and long-term maintainability, while giving me full control over the final product. Native JS components also work reliably across environments.
-      </p>
-      <p>
-         At the same time, I leverage modern tools and frameworks where they add value—streamlining workflow, improving collaboration, and enhancing the overall quality of the work.
-      </p>
-      <div class="tool-grid brand-grid">
-         {% for tool in tools %}
-            <a href="{{ tool.link }}" class="grid-item" title="Go to {{ tool.name }}" target="_blank">
-               <div class="brand">
-                  {{ tool.svg | raw }}
-               </div>
-            </a>
-         {% endfor %}
-      </div>   
+   <h2>Tooling</h2>
+   <p>
+      I prioritize writing clean, semantic HTML, CSS, and JavaScript. Starting with core web technologies ensures performance, accessibility, and long-term maintainability, while giving me full control over the final product. Native JS components also work reliably across environments.
+   </p>
+   <p>
+      At the same time, I leverage modern tools and frameworks where they add value—streamlining workflow, improving collaboration, and enhancing the overall quality of the work.
+   </p>
+   <div class="tool-grid brand-grid">
+      {% for tool in tools %}
+         <a href="{{ tool.link }}" class="grid-item" title="Go to {{ tool.name }}" target="_blank">
+            <div class="brand">
+               {{ tool.svg | raw }}
+            </div>
+         </a>
+      {% endfor %}
+   </div>   
 </section>
+
 <section class="content-section">
    <h2>All Services</h2>
    <div class="services-wrapper">
       <!-- Design Systems -->
       <div class="card service-item">
          <h3>Design Systems</h3>
+         <div class="price">
+            <p class="font-xs">Starts at</p>
+            <h4>$4995/mo</h4>
+         </div>
          <ul>
             <li>Style Guide Creation</li>
             <li>Component Library Development</li>
@@ -62,15 +67,26 @@ layout: layout.html
       <!-- UI Component Libraries -->
       <div class="card service-item">
          <h3>UI Component Libraries</h3>
+         <div class="price">
+            <p class="font-xs">Pause or cancel anytime</p>
+            <h4>$4995/mo</h4>
+         </div>
          <ul>
-            <li>Custom Component Development</li>
-            <li>Accessibility Audits</li>
-            <li>Performance Optimization</li>
+            <li>As many components as you need</li>
+            <li>Documentation and Usage Guidelines</li>
+            <li>Design Tokens Implementation</li>
+            <li>Native Web Components</li>
+            <li>Unlimited Revisions</li>
+            <li>Cursor or Windsurf System Prompts</li>
          </ul>
       </div>
       <!-- Multi Page Applications -->
       <div class="card service-item">
          <h3>Multi Page Applications</h3>
+         <div class="price">
+            <p class="font-xs">Starts at</p>
+            <h4>$12,499/mo</h4>
+         </div>
          <ul>
             <li>Information Architecture</li>
             <li>Responsive Design</li>
@@ -80,6 +96,10 @@ layout: layout.html
       <!-- Single Page Applications -->
       <div class="card service-item">
          <h3>Single Page Applications</h3>
+         <div class="price">
+            <p class="font-xs">Starts at</p>
+            <h4>$12,499/mo</h4>
+         </div>
          <ul>
             <li>Client-Side Routing</li>
             <li>State Management</li>
@@ -87,4 +107,33 @@ layout: layout.html
          </ul>
       </div>
    </div>
+</section>
+
+<section class="content-section">
+   <h2>Need Components Now?</h2>
+   <p>I have a free component library called "Light Components" that you can use to quickly prototype your ideas. Check them out now:</p>
+   <a href="https://lightcomponents.com" target="_blank" class="button-link">Visit Light Components</a>
+</section>
+
+<section class="content-section">
+   <div class="callout">
+      <div class="container" data-width="small">
+         <h2>Need something else?</h2>
+         <p>I'm here to help with any additional questions or requirements you may have. Let's discuss your unique needs and find the best solution together.</p>
+         <a href="https://calendly.com/miguelfondeur/30min" target="_blank" class="button-link">Book an Intro Call</a>
+      </div>
+   </div>
+</section>
+
+
+<section class="content-section">
+   <h2>Testimonials</h2>
+   <blockquote>
+      <p>"Miguel was an exceptional Lead Frontend Engineer during his time with us at Musora. He brought a high level of care, thoughtfulness, and technical depth to everything he worked on, from architecture and system design to team mentorship and cross-functional collaboration. His leadership helped shape a culture of quality and consistency, and he played a central role in improving how we build, communicate, and deliver as a frontend team."</p>
+      <footer>- Caleb Favor - <em>CTO, Musora</em></footer>
+   </blockquote>
+   <blockquote>
+      <p>"Miguel and I worked together on adjacent teams delivering on technology initiatives and the e-commerce customer experience at Belk. His kind, respectful, and open nature makes working together on projects feel seamless. He is quick to dive into problems and initiate collaboration to get the best results. He encouraged improved processes within his team and collaborated with design on how we can work better together. Miguel’s professionalism, quick wit, and user-focused mindset make him a delight to work with and an asset to any team."</p>
+      <footer>- Gifton Gamon - <em>UX Lead, Belk</em></footer>
+   </blockquote>
 </section>
