@@ -47,6 +47,8 @@ h4, .h4 {
 p {
     line-height: var(--line-height-base);
     margin-bottom: var(--ui-spacing-6);
+    max-width: 84ch;
+    text-wrap-style: pretty;
 }
 
 a { 
