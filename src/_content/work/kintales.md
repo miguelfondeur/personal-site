@@ -31,7 +31,7 @@ draft: true
 ---
 
 <!-- Details -->
-<details>
+<details name="accordion">
   <summary>Building Kintales with AI</summary>
   <div class="details-content">
     <div class="detail-image-wrapper" data-scrollable="true">
@@ -54,7 +54,7 @@ draft: true
   </div>
 </details>
 
-<details>
+<details name="accordion">
   <summary>Kintales Stories</summary>
   <div class="details-content">
     <div class="detail-image-wrapper">
@@ -87,7 +87,7 @@ draft: true
   </div>
 </details>
 
-<details>
+<details name="accordion">
   <summary>Kintales Story Generator</summary>
   <div class="details-content">
     <div class="detail-image-wrapper" data-scrollable="true">
@@ -116,7 +116,7 @@ draft: true
   </div>
 </details>
 
-<details>
+<details name="accordion">
   <summary>Lessons Learned</summary>
   <div class="details-content">
     <h3>Lesson One – Build With AI</h3>

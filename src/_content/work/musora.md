@@ -29,7 +29,7 @@ accomplishments:
 ---
 
 <!-- Details -->
-<details>
+<details name="accordion">
     <summary>Guitar Quest</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -45,7 +45,7 @@ accomplishments:
     </div>
 </details>
 
-<details>
+<details name="accordion">
     <summary>Musora's Unified Platform</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -84,7 +84,7 @@ accomplishments:
     </div>
 </details>
 
-<details>
+<details name="accordion">
     <summary>Playlists Feature</summary>
     <div class="details-content">
         <p>
@@ -110,7 +110,7 @@ accomplishments:
     </div>
 </details>
 
-<details>
+<details name="accordion">
   <summary>Workouts Feature</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -130,7 +130,7 @@ accomplishments:
     </div>
 </details>
 
-<details>
+<details name="accordion">
   <summary>Musora UI</summary>
     <div class="details-content">
         <div class="detail-image-wrapper" data-scrollable="true">
@@ -154,7 +154,7 @@ accomplishments:
     </div>
 </details>
 
-<details>
+<details name="accordion">
     <summary>Stylesora Library</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -170,7 +170,7 @@ accomplishments:
     </div>
 </details>
 
-<details>
+<details name="accordion">
     <summary>Sanity CMS Migration</summary>
     <div class="details-content">
         <p>
@@ -203,7 +203,7 @@ accomplishments:
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Lessons Learned</summary>
     <div class="details-content">
         <p>

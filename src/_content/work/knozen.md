@@ -37,7 +37,7 @@ links:
 ---
 
 <!-- Details -->
-<details>
+<details name="accordion">
     <summary>Joining The Team</summary>
     <div class="details-content">
         <p>
@@ -54,7 +54,7 @@ links:
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Mobile Performance Optimizations</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -77,7 +77,7 @@ links:
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
    <summary>Feelings Feature</summary>
    <div class="details-content">
       <div class="detail-image-wrapper">
@@ -102,7 +102,7 @@ links:
       </p>
    </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Themed Quizzes</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -130,7 +130,7 @@ links:
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Lessons Learned</summary>
     <div class="details-content">
         <p>

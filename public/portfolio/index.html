@@ -154,111 +154,515 @@
       
       
       
-         <li class="work-item">
-            <button class="work-item-button" popovertarget="musora" aria-label="Click to view details for Musora">
-               <div class="expand-icon">
-                  <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
-               </div>
-               <div class="work-thumb">
-                  <img loading="lazy" src="/img/cv/cv-musora.webp" alt="Musora thumbnail">
-               </div>
-               <h3>Musora</h3>
-               <p>Music Education Platform. Home of Drumeo, Pianote, Guitareo, and Singeo.</p>
-            </button>
-            <div class="work-hover-state"></div>
-         </li>
+         
+            <li class="work-item">
+               <button class="work-item-button" popovertarget="sweetwater" aria-label="Click to view details for Sweetwater">
+                  <div class="expand-icon">
+                     <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
+                  </div>
+                  <div class="work-thumb">
+                     <img loading="lazy" src="/img/cv/cv-sweetwater.webp" alt="Sweetwater thumbnail">
+                  </div>
+                  <h3>Sweetwater</h3>
+                  <p>The world's leading music technology and instrument retailer.</p>
+               </button>
+               <div class="work-hover-state"></div>
+            </li>
 
-         <!-- Work Dialog -->
-         <dialog class="work-modal" id="musora" popover aria-labelledby="musora-header" aria-describedby="musora-content">
-            <button class="close-dialog-button" popovertarget="musora" popovertargetaction="hide">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>                
-            </button>
-            <div class="container" data-width="small-center">
-               <header id="musora-header">
-                  <div class="work-thumb" data-size="large">
+            <!-- Work Dialog -->
+            <dialog class="work-modal" id="sweetwater" popover aria-labelledby="sweetwater-header" aria-describedby="sweetwater-content">
+               <button class="close-dialog-button" popovertarget="sweetwater" popovertargetaction="hide">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>                
+               </button>
+               <div class="container" data-width="small-center">
+                  <header id="sweetwater-header">
+                     <div class="work-thumb" data-size="large">
+                        <img loading="lazy" src="/img/cv/cv-sweetwater.webp" alt="Sweetwater thumbnail">
+                     </div>
+                     <div class="work-header">
+                        <h1>Sweetwater</h1>
+                        <div class="work-subtitle">
+                           <h3>Senior UX Engineer | Consultant</h3>
+                           <p>
+                              <time datetime="Dec 2025">Dec 2025</time> 
+                              <span aria-hidden="true">—</span> 
+                              <time datetime="May 2026">May 2026</time>
+                           </p>
+                        </div>
+                     </div>
+                  </header>
+                  <main id="sweetwater-content">
+                     
+                        <div class="work-header-image">
+                           <video controls="" muted="" width="100%" alt="Sweetwater Mobile Video Demo" loading="lazy">
+                              <source src="/img/work/sweetwater/taggy-bot.mp4" type="video/mp4">
+                           </video>
+                        </div>
+                     
+                     <!-- Description -->
+                     <h2>Description</h2>
+                     <p>Sweetwater is one of the largest pro audio retailers globally, providing a wide selection of musical instruments and audio equipment along with supporting services such as technical assistance and flexible payment options. My work focused on improving core front-end systems that power product discovery and merchandising experiences.
+</p>
+                     <!-- Accomplishments -->
+                     <section class="content-section">
+                        <h2>Accomplishments</h2>
+                        <ul class="work-accomplishments">
+                           
+                              <li>Built a reusable Algolia collection host component capable of rendering any product collection through the Algolia REST API</li>
+                           
+                              <li>Introduced a state-driven development architecture to improve cross-component communication, scalability, and maintainability</li>
+                           
+                              <li>Rebuilt the "What's New" experience using client-side rendering to improve performance and user experience</li>
+                           
+                              <li>Developed Sweetwater’s "Top Selling" product experience using the reusable Algolia collection architecture</li>
+                           
+                              <li>Contributed to "Sugar," a front-end design system built with native Web Components, including Storybook.js documentation and component testing</li>
+                           
+                              <li>Improved global JavaScript and CSS architecture for better developer ergonomics and long-term maintainability</li>
+                           
+                              <li>Prototyped an LLM-powered chatbot integrated with the Algolia collection architecture to deliver contextual product recommendations</li>
+                           
+                        </ul>
+                     </section>
+                     <!-- Technologies -->
+                     <section class="content-section">
+                        <h2>Technologies</h2>
+                        <ul class="tags" role="list">
+                           
+                              <li>Web Components</li>
+                           
+                              <li>Storybook.js</li>
+                           
+                              <li>Design System</li>
+                           
+                              <li>View Transitions</li>
+                           
+                              <li>Algolia</li>
+                           
+                        </ul>
+                     </section>
+                     
+                        <section class="content-section">
+                           <h2>Links</h2>
+                              <ul role="list" class="links">
+                                 
+                                    
+                                       <li>
+                                          <a href="https://www.sweetwater.com/whats-new/" target="_blank" title="Go to Sweetwater | What's New">
+                                             <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                             Sweetwater | What's New
+                                          </a>
+                                       </li>
+                                    
+                                 
+                                    
+                                       <li>
+                                          <a href="https://www.sweetwater.com/top-selling/" target="_blank" title="Go to Sweetwater | Top Selling">
+                                             <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                             Sweetwater | Top Selling
+                                          </a>
+                                       </li>
+                                    
+                                 
+                              </ul>
+                        </section>
+                     
+                     <!-- Details -->
+                     
+                        <section class="content-section">
+                           <h2>Details</h2>
+                           <!-- Details -->
+<details name="accordion">
+   <summary>Sugar Design System</summary>
+   <div class="details-content">
+      <div class="detail-image-wrapper">
+         <img src="/img/work/sweetwater/sugar-home.webp" alt="Sugar Design System homepage" loading="lazy">
+      </div>
+      <h3>The Problem</h3>
+      <p>
+         Sweetwater’s ecommerce ecosystem spans multiple repositories and technologies maintained by different teams. Parts of the platform were built with React, Vue, jQuery, Tailwind, vanilla JavaScript, and varying Sass architectures. There was no shared component strategy, documentation system, or agreed-upon front-end conventions across teams.
+      </p>
+      <p>
+         Because the UX team was responsible for maintaining the visual consistency of the entire platform, this created major challenges around scalability, maintainability, and developer experience.
+      </p>
+      <h3>The Solution</h3>
+      <p>
+         I was brought in to help establish a more maintainable front-end architecture. After reviewing the existing ecosystem, it became clear that the missing piece was a framework-agnostic design system built around reusable components and shared design tokens.
+      </p>
+      <p>
+         The goal was not to enforce a rigid framework or heavily opinionated architecture. Instead, the focus was on creating lightweight tools developers could adopt incrementally regardless of their stack.
+      </p>
+      <p>
+         To support documentation, testing, and component discoverability, I implemented the system using <a href="https://storybook.js.org/" target="_blank">Storybook.js</a>, giving teams a centralized environment for previewing and validating components.
+      </p>
+      <div class="detail-image-wrapper">
+         <img src="/img/work/sweetwater/sugar-tokens.webp" alt="Sugar design tokens" loading="lazy">
+      </div>
+      <h3>Design Tokens</h3>
+      <p>
+         With the help of the design team’s existing Figma specs, I created a design token system powered by CSS Custom Properties. Drawing inspiration from projects like <a href="https://open-props.style/" target="_blank">Open Props</a> and guidelines from Tailwind's <a href="https://refactoringui.com/" target="_blank">Refactoring UI</a>, I established a scalable naming convention using the <code>--sds</code> prefix to avoid collisions across applications.
+      </p>
+      <p>
+         These tokens standardized spacing, typography, colors, shadows, sizing, and other foundational design primitives across the platform.
+      </p>
+      <div class="detail-image-wrapper">
+         <img src="/img/work/sweetwater/sugar-product-card.webp" alt="Sugar product card component" loading="lazy">
+      </div>
+      <h3>Web Components</h3>
+      <p>
+         Rather than rebuilding every interface on the site, I focused on defining a strong baseline component library that teams could compose and extend as needed.
+      </p>
+      <p>
+         The system included two categories of components:
+      </p>
+      <ul>
+         <li>
+            <strong>UI Components:</strong> for small reusable interface elements such as buttons, badges, and checkboxes
+         </li>
+         <li>
+            <strong>Composite Components:</strong> for larger experiences composed of multiple UI components, such as product cards and collection layouts
+         </li>
+      </ul>
+      <p>
+         By building these with native Web Components, the system could be consumed across React, Vue, PHP templates, or plain HTML without requiring framework-specific rewrites.
+      </p>
+      <h3>Utilities</h3>
+      <p>
+         To improve developer ergonomics, I also created several supporting utilities around the component ecosystem. This included lightweight framework adapters for React and Vue, shared accessibility helpers, skeleton loading utilities, and a small reactive state manager inspired by publish/subscribe patterns and modern signal-based architectures.
+      </p>
+      <h3>Deployment & Adoption</h3>
+      <p>
+         I worked closely with the DevOps team to distribute the design system as a shared <abbr title="Node Package Manager">NPM</abbr> package consumed across multiple repositories. I also integrated Google’s <a href="https://github.com/GoogleChromeLabs/postcss-jit-props">postcss-jit-props</a> which made custom properties globally available without having to import them in the CSS/SCSS.
+      </p>
+      <p>
+         The system was successfully adopted across several major customer-facing experiences, including 
+         <a href="https://sweetwater.com/whats-new/">What's New</a>, 
+         <a href="https://sweetwater.com/top-selling/">Top Selling</a>, and 
+         <a href="https://sweetwater.com/giveaways/">Giveaways</a>.
+      </p>
+   </div>
+</details>
+<details name="accordion">
+   <summary>Algolia Collection</summary>
+   <div class="details-content">
+      <div class="detail-image-wrapper" data-scrollable="true">
+         <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+            <img src="/img/work/sweetwater/old-nowshipping.webp" alt="Legacy Now Shipping collection page" loading="lazy">
+         </div>
+         <div class="scroll-indicator">
+            <em><span class="sr-only">This section is</span> Scrollable</em>
+         </div>
+      </div>
+      <h3>The Problem</h3>
+      <p>
+         The UX team wanted to redesign Sweetwater’s “Now Shipping” page to provide a more modern collection browsing experience. The existing implementation lacked many standard ecommerce features such as filtering, sorting, searching, and client-side pagination.
+      </p>
+      <p>
+         Additionally, the company wanted to move away from hard page reloads and rely more heavily on their Algolia datasets rather than traditional backend-rendered collection pages. Since Algolia exposes highly optimized JSON responses, this approach offered major performance and UX advantages.
+      </p>
+      <h3>The Solution</h3>
+      <p>
+         Fortunately, much of the foundational work had already been established through the Sugar Design System. I already had reusable product card components, shared design tokens, and a lightweight reactive state manager that could support a highly interactive collection experience.
+      </p>
+      <p>
+         From there, I designed and built a reusable collection “host component” responsible for:
+      </p>
+      <ul>
+         <li>Fetching collection data from the Algolia REST API</li>
+         <li>Updating a centralized store</li>
+         <li>Hydrating child UI components</li>
+         <li>Rendering products client-side</li>
+      </ul>
+      <h3>Architecture</h3>
+      <p>
+         I wanted the collection system to be modular, reusable, and framework-agnostic. The architecture was built around a centralized reactive store with isolated UI components subscribing to shared state updates.
+      </p>
+      <ul>
+         <li>Host/parent collection component</li>
+         <li>Centralized store and state manager</li>
+         <li>Child components subscribed to store updates</li>
+         <li>Algolia service layer for data fetching and query management</li>
+         <li>Utility functions for normalization and shared logic</li>
+         <li>Native Web Components throughout the entire system</li>
+      </ul>
+      <div class="detail-image-wrapper" data-scrollable="true">
+         <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+            <img src="/img/work/sweetwater/algolia-diagram.webp" alt="Algolia collection architecture diagram" loading="lazy">
+         </div>
+         <div class="scroll-indicator">
+            <em><span class="sr-only">This section is</span> Scrollable</em>
+         </div>
+      </div>
+      <h3>Reusability</h3>
+      <p>
+         One of the primary goals was making the collection highly configurable with minimal implementation overhead. I exposed a set of declarative <code>data-attributes</code> that allowed consuming applications to quickly render entirely different collections without modifying the underlying component logic.
+      </p>
+      <p>
+         Because the system was fully self-contained, there was effectively no frontend coupling to backend-rendered templates. The collection handled its own data fetching, state updates, rendering, and UI interactions internally.
+      </p>
+      <p>
+         Some configurable collection properties included:
+      </p>
+      <ul>
+         <li>Filter queries for preconfigured collection views</li>
+         <li>Algolia index selection</li>
+         <li>Total hit limits</li>
+         <li>Hits per page</li>
+         <li>Sorting configuration</li>
+         <li>Feature toggles for collection behaviors</li>
+      </ul>
+      <p>
+         This architecture made it extremely fast for teams to launch entirely new collection experiences using the same underlying system.
+      </p>
+   </div>
+</details>
+<details name="accordion">
+    <summary>"What's New" Page Rebuild</summary>
+    <div class="details-content">
+        <div class="detail-image-wrapper">
+            <img src="/img/work/sweetwater/whats-new.webp" alt="Image of Sweetwater's What's New page" loading="lazy">
+        </div>
+        <p>
+            As described in the previous section, the team wanted to rebuild their existing "Now Shipping" page. 
+            Thanks to the reusable <code>algolia-collection</code> component, implementation was straightforward. 
+            I simply configured the collection using data attributes to pre-filter new products and limit the collection to 1000 items.
+        </p>
+        <h3>Enhancements</h3>
+        <p>
+            Alongside the core collection experience, we wanted to improve product discovery by adding quick category filters above the collection itself. 
+            This allowed customers to jump directly into a category without needing to use the filter sidebar, creating a faster and more intuitive browsing experience.
+        </p>
+        <p>
+            To support this, I built a reusable <code>category-filters</code> web component within the Sugar Design System. 
+            Each category button dispatched custom events that could be consumed by the parent application. 
+            Inside the <code>algolia-collection</code> host component, I listened for these events and updated the centralized collection store accordingly, automatically synchronizing all subscribed child components downstream.
+        </p>
+        <p>
+            I also wanted to improve the visual experience during collection reloads. 
+            Even though the new implementation was significantly faster than the previous server-rendered version, rapid DOM updates created noticeable blinking when filters or sorting changed.
+        </p>
+        <p>
+            To solve this, I implemented a lightweight <code>withViewTransition</code> helper built around the browser's native View Transitions API. 
+            With minimal code, the collection could smoothly crossfade and intelligently animate DOM updates between states. 
+            Since the feature progressively enhances the experience, unsupported browsers simply fall back to the default behavior without issue.
+        </p>
+        <p>
+            You can view the live implementation 
+            <a href="https://sweetwater.com/whats-new/" target="_blank">here</a>.
+        </p>
+    </div>
+</details>
+<details name="accordion">
+    <summary>"Top Selling" Page</summary>
+    <div class="details-content">
+        <div class="detail-image-wrapper">
+            <img src="/img/work/sweetwater/top-selling.webp" alt="Image of Sweetwater's Top Selling page" loading="lazy">
+        </div>
+        <p>
+            This page was intentionally very similar to the "What's New" implementation, and that was a good thing. 
+            One of the primary goals of the <code>algolia-collection</code> architecture was reusability. 
+            By simply changing a few data attributes, I was able to render an entirely different collection experience tailored to a new business goal.
+        </p>
+        <p>
+            In this case, the collection pointed to a different Algolia index containing Sweetwater's top-selling products. 
+            I also introduced an additional attribute to disable sorting controls since changing the order of a curated top-selling collection would not have aligned with the intended UX.
+        </p>
+        <p>
+            You can view the live implementation 
+            <a href="https://sweetwater.com/top-selling/" target="_blank">here</a>.
+        </p>
+    </div>
+</details>
+<details name="accordion">
+    <summary>Taggy: Prototype Chat Bot</summary>
+    <div class="details-content">
+        <div class="detail-image-wrapper">
+            <img src="/img/work/sweetwater/taggy-bot.webp" alt="Taggy prototype chat assistant" loading="lazy">
+        </div>
+        <p>
+            As a final experimental project, I built a prototype conversational assistant to explore what a more contextual shopping experience could look like on top of the existing <code>algolia-collection</code> architecture. 
+            Because the collection was already built around a centralized store with a publish/subscribe model, it was straightforward to integrate additional components that could both read from and influence collection state.
+        </p>
+        <h3>Concept: Taggy</h3>
+        <p>
+            During development, I identified a gap in the empty-state experience of the collection. The default fallback message was functional but not helpful. 
+            I explored existing internal patterns for inspiration and found a more engaging empty state in another application that introduced "Taggy", a playful internal mascot.
+        </p>
+        <p>
+            I extended this concept into a conversational assistant inspired by early UI companions such as Microsoft’s Clippy. 
+            The goal was to create a lightweight, friendly interface that could guide users toward products when traditional filtering was not sufficient.
+        </p>
+        <h3>Implementation</h3>
+        <p>
+            Taggy was implemented as a set of native Web Components using the same host + store architecture as the rest of the system. 
+            It leveraged the OpenAI API to interpret natural language queries and convert them into structured JSON parameters compatible with the Algolia collection layer.
+        </p>
+        <p>
+            The response flow was bidirectional: user input was converted into structured search parameters, the Algolia results were returned, and then passed back into the LLM to generate a conversational explanation of the results.
+        </p>
+        <p>
+            This created a unified experience where natural language input could seamlessly drive existing search infrastructure without modifying the underlying data model.
+        </p>
+        <h3>Outcome and Exploration</h3>
+        <p>
+            The primary value of this prototype was demonstrating contextual search on top of a traditional faceted filtering system. 
+            While functionally equivalent to existing filters, the conversational interface lowered friction for non-technical queries such as “find me a blue guitar for my uncle’s birthday.”
+        </p>
+        <p>
+            Additional enhancements included prompting the assistant to recommend sales support when no results were found and shaping responses in a more personable tone for engagement.
+        </p>
+        <p>
+            This was built in approximately one day as a proof of concept and served as an exploration of how LLM-driven interfaces could augment existing e-commerce search systems without replacing them.
+        </p>
+        <p>
+            If you have not already, feel free to click the video at the top of the window to view the demo, and enjoy some light Brazilian background music while you watch.
+        </p>
+    </div>
+</details>
+<details name="accordion">
+    <summary>Lessons Learned</summary>
+    <div class="details-content">
+        <p>
+            I spent four action-packed years at Sweetwater across three different roles. During that time, I worked on everything from managing teams and defining Jira workflows to building front-end experiences from the ground up. Below are some key technical and personal lessons from that period.
+        </p>
+        <h3>Lesson One: Knowing when architecture matters</h3>  
+        <p>  
+            I enjoy building systems from scratch and often prefer native browser APIs over third-party frameworks. That said, I learned that architecture should always match the problem. Over-engineering can slow teams down just as easily as poor structure.
+        </p> 
+        <h3>Lesson Two: Change needs buy-in</h3>  
+        <p>  
+            Technical improvements are only effective when the team understands and supports them. Even well-designed systems can fail if you do not bring other developers along with you before introducing major changes.
+        </p>  
+        <h3>Lesson Three: Voice controls are not always the answer</h3>  
+        <p>  
+            Accessibility features like voice control are powerful, but real-world usability often depends on context. I learned that “technically supported” does not always mean “practically usable.”
+        </p>  
+        <h3>Lesson Four: Use structured metadata early</h3>
+        <p>
+            I learned the importance of structured data like JSON-LD when working with heavily client-rendered applications. Search engines and crawlers still rely on clear, pre-defined metadata, especially when content is rendered dynamically. It is far easier to design for this from the start than to retrofit it later.
+        </p>
+        <h3>Lesson Five: Define device support up front</h3>
+        <p>
+            Do not wait until late in a project to discover which browsers and devices are officially supported. Cutting-edge features like <code>@scope</code> can introduce unexpected compatibility issues. Establishing a clear support matrix early prevents rework and surprises later in development.
+        </p>
+    </div>  
+</details>
+
+                        </section>
+                     
+                  </main>
+               </div>
+            </dialog>
+         
+      
+         
+            <li class="work-item">
+               <button class="work-item-button" popovertarget="musora" aria-label="Click to view details for Musora">
+                  <div class="expand-icon">
+                     <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
+                  </div>
+                  <div class="work-thumb">
                      <img loading="lazy" src="/img/cv/cv-musora.webp" alt="Musora thumbnail">
                   </div>
-                  <div class="work-header">
-                     <h1>Musora</h1>
-                     <div class="work-subtitle">
-                        <h3>Lead Frontend Engineer</h3>
-                        <p>
-                           <time datetime="Oct 2020">Oct 2020</time> 
-                           <span aria-hidden="true">—</span> 
-                           <time datetime="Jan 2025">Jan 2025</time>
-                        </p>
+                  <h3>Musora</h3>
+                  <p>Music Education Platform. Home of Drumeo, Pianote, Guitareo, and Singeo.</p>
+               </button>
+               <div class="work-hover-state"></div>
+            </li>
+
+            <!-- Work Dialog -->
+            <dialog class="work-modal" id="musora" popover aria-labelledby="musora-header" aria-describedby="musora-content">
+               <button class="close-dialog-button" popovertarget="musora" popovertargetaction="hide">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>                
+               </button>
+               <div class="container" data-width="small-center">
+                  <header id="musora-header">
+                     <div class="work-thumb" data-size="large">
+                        <img loading="lazy" src="/img/cv/cv-musora.webp" alt="Musora thumbnail">
                      </div>
-                  </div>
-               </header>
-               <main id="musora-content">
-                  
-                     <div class="work-header-image">
-                        <img src="/img/work/musora/platform-workouts.webp" alt="Example image of Musora">
+                     <div class="work-header">
+                        <h1>Musora</h1>
+                        <div class="work-subtitle">
+                           <h3>Lead Frontend Engineer</h3>
+                           <p>
+                              <time datetime="Oct 2020">Oct 2020</time> 
+                              <span aria-hidden="true">—</span> 
+                              <time datetime="Jan 2025">Jan 2025</time>
+                           </p>
+                        </div>
                      </div>
-                  
-                  <!-- Description -->
-                  <h2>Description</h2>
-                  <p>Musora is an online platform that provides comprehensive music education for piano, guitar, drums, and singing. It combines world-class teaching with interactive practice tools like speed control, looping, and progress tracking. Students can engage with a supportive community, receive live feedback, and refine their skills at their own pace in an immersive learning environment. As a musician myself, I took great joy in building features that provided value for other musicians and music lovers.
+                  </header>
+                  <main id="musora-content">
+                     
+                        <div class="work-header-image">
+                           <img src="/img/work/musora/platform-workouts.webp" alt="Example image of Musora">
+                        </div>
+                     
+                     <!-- Description -->
+                     <h2>Description</h2>
+                     <p>Musora is an online platform that provides comprehensive music education for piano, guitar, drums, and singing. It combines world-class teaching with interactive practice tools like speed control, looping, and progress tracking. Students can engage with a supportive community, receive live feedback, and refine their skills at their own pace in an immersive learning environment. As a musician myself, I took great joy in building features that provided value for other musicians and music lovers.
 </p>
-                  <!-- Accomplishments -->
-                  <section class="content-section">
-                     <h2>Accomplishments</h2>
-                     <ul class="work-accomplishments">
-                        
-                           <li>Guitar Quest: Developed the marketing page and gamified learning experience, featuring an interactive map for learning guitar.</li>
-                        
-                           <li>Unified Platform: Helped build the Musora Platform, a centralized hub for all brand channels.</li>
-                        
-                           <li>Stylesora: Created a Tailwind CSS utility class library to share common styles across brand applications.</li>
-                        
-                           <li>Custom Playlists: Developed a feature that allows students to organize content based on their preferences, enhancing user experience.</li>
-                        
-                           <li>Workouts/Challenges: Built short-form video lessons designed for busy schedules, providing value to musicians.</li>
-                        
-                           <li>Refactored Laravel templates into full-page Vue components, migrating many legacy components to Vue 3's Composition API.</li>
-                        
-                           <li>Created and maintained NPM packages for shared use across web and mobile teams.</li>
-                        
-                           <li>Led the transition of our web platform to a new Sanity CMS, improving content management and scalability.</li>
-                        
-                     </ul>
-                  </section>
-                  <!-- Technologies -->
-                  <section class="content-section">
-                     <h2>Technologies</h2>
-                     <ul class="tags" role="list">
-                        
-                           <li>Vue.js</li>
-                        
-                           <li>Alpine</li>
-                        
-                           <li>AWS</li>
-                        
-                           <li>Laravel</li>
-                        
-                           <li>Tailwind</li>
-                        
-                           <li>Sanity</li>
-                        
-                           <li>NPM</li>
-                        
-                           <li>Jest</li>
-                        
-                           <li>Github</li>
-                        
-                           <li>Docker</li>
-                        
-                     </ul>
-                  </section>
-                  
-                  <!-- Details -->
-                  
+                     <!-- Accomplishments -->
                      <section class="content-section">
-                        <h2>Details</h2>
-                        <!-- Details -->
-<details>
+                        <h2>Accomplishments</h2>
+                        <ul class="work-accomplishments">
+                           
+                              <li>Guitar Quest: Developed the marketing page and gamified learning experience, featuring an interactive map for learning guitar.</li>
+                           
+                              <li>Unified Platform: Helped build the Musora Platform, a centralized hub for all brand channels.</li>
+                           
+                              <li>Stylesora: Created a Tailwind CSS utility class library to share common styles across brand applications.</li>
+                           
+                              <li>Custom Playlists: Developed a feature that allows students to organize content based on their preferences, enhancing user experience.</li>
+                           
+                              <li>Workouts/Challenges: Built short-form video lessons designed for busy schedules, providing value to musicians.</li>
+                           
+                              <li>Refactored Laravel templates into full-page Vue components, migrating many legacy components to Vue 3's Composition API.</li>
+                           
+                              <li>Created and maintained NPM packages for shared use across web and mobile teams.</li>
+                           
+                              <li>Led the transition of our web platform to a new Sanity CMS, improving content management and scalability.</li>
+                           
+                        </ul>
+                     </section>
+                     <!-- Technologies -->
+                     <section class="content-section">
+                        <h2>Technologies</h2>
+                        <ul class="tags" role="list">
+                           
+                              <li>Vue.js</li>
+                           
+                              <li>Alpine</li>
+                           
+                              <li>AWS</li>
+                           
+                              <li>Laravel</li>
+                           
+                              <li>Tailwind</li>
+                           
+                              <li>Sanity</li>
+                           
+                              <li>NPM</li>
+                           
+                              <li>Jest</li>
+                           
+                              <li>Github</li>
+                           
+                              <li>Docker</li>
+                           
+                        </ul>
+                     </section>
+                     
+                     <!-- Details -->
+                     
+                        <section class="content-section">
+                           <h2>Details</h2>
+                           <!-- Details -->
+<details name="accordion">
     <summary>Guitar Quest</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -273,7 +677,7 @@
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Musora's Unified Platform</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -311,7 +715,7 @@
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Playlists Feature</summary>
     <div class="details-content">
         <p>
@@ -336,7 +740,7 @@
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
   <summary>Workouts Feature</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -355,7 +759,7 @@
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
   <summary>Musora UI</summary>
     <div class="details-content">
         <div class="detail-image-wrapper" data-scrollable="true">
@@ -378,7 +782,7 @@
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Stylesora Library</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -393,7 +797,7 @@
         </div>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Sanity CMS Migration</summary>
     <div class="details-content">
         <p>
@@ -426,7 +830,7 @@
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Lessons Learned</summary>
     <div class="details-content">
         <p>
@@ -508,131 +912,133 @@
     </div>  
 </details>
 
-                     </section>
-                  
-               </main>
-            </div>
-         </dialog>
+                        </section>
+                     
+                  </main>
+               </div>
+            </dialog>
+         
       
-         <li class="work-item">
-            <button class="work-item-button" popovertarget="brickArt" aria-label="Click to view details for Brick Art Creator">
-               <div class="expand-icon">
-                  <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
-               </div>
-               <div class="work-thumb">
-                  <img loading="lazy" src="/img/cv/cv-brickart.webp" alt="Brick Art Creator thumbnail">
-               </div>
-               <h3>Brick Art Creator</h3>
-               <p>Web app to convert images to mosaic art. Inspired by Lego's Art series.</p>
-            </button>
-            <div class="work-hover-state"></div>
-         </li>
-
-         <!-- Work Dialog -->
-         <dialog class="work-modal" id="brickArt" popover aria-labelledby="brickArt-header" aria-describedby="brickArt-content">
-            <button class="close-dialog-button" popovertarget="brickArt" popovertargetaction="hide">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>                
-            </button>
-            <div class="container" data-width="small-center">
-               <header id="brickArt-header">
-                  <div class="work-thumb" data-size="large">
+         
+            <li class="work-item">
+               <button class="work-item-button" popovertarget="brickArt" aria-label="Click to view details for Brick Art Creator">
+                  <div class="expand-icon">
+                     <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
+                  </div>
+                  <div class="work-thumb">
                      <img loading="lazy" src="/img/cv/cv-brickart.webp" alt="Brick Art Creator thumbnail">
                   </div>
-                  <div class="work-header">
-                     <h1>Brick Art Creator</h1>
-                     <div class="work-subtitle">
-                        <h3>Creator</h3>
-                        <p>
-                           <time datetime="Jan 2024">Jan 2024</time> 
-                           <span aria-hidden="true">—</span> 
-                           <time datetime="Oct 2024">Oct 2024</time>
-                        </p>
+                  <h3>Brick Art Creator</h3>
+                  <p>Web app to convert images to mosaic art. Inspired by Lego's Art series.</p>
+               </button>
+               <div class="work-hover-state"></div>
+            </li>
+
+            <!-- Work Dialog -->
+            <dialog class="work-modal" id="brickArt" popover aria-labelledby="brickArt-header" aria-describedby="brickArt-content">
+               <button class="close-dialog-button" popovertarget="brickArt" popovertargetaction="hide">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>                
+               </button>
+               <div class="container" data-width="small-center">
+                  <header id="brickArt-header">
+                     <div class="work-thumb" data-size="large">
+                        <img loading="lazy" src="/img/cv/cv-brickart.webp" alt="Brick Art Creator thumbnail">
                      </div>
-                  </div>
-               </header>
-               <main id="brickArt-content">
-                  
-                     <div class="work-header-image">
-                        <img src="/img/work/brickart/brickart-conversion.webp" alt="Example image of Brick Art Creator">
+                     <div class="work-header">
+                        <h1>Brick Art Creator</h1>
+                        <div class="work-subtitle">
+                           <h3>Creator</h3>
+                           <p>
+                              <time datetime="Jan 2024">Jan 2024</time> 
+                              <span aria-hidden="true">—</span> 
+                              <time datetime="Oct 2024">Oct 2024</time>
+                           </p>
+                        </div>
                      </div>
-                  
-                  <!-- Description -->
-                  <h2>Description</h2>
-                  <p>This was a personal project I built inspired by Lego's Art series. The app creates a grid mosaic based on the 
+                  </header>
+                  <main id="brickArt-content">
+                     
+                        <div class="work-header-image">
+                           <img src="/img/work/brickart/brickart-conversion.webp" alt="Example image of Brick Art Creator">
+                        </div>
+                     
+                     <!-- Description -->
+                     <h2>Description</h2>
+                     <p>This was a personal project I built inspired by Lego's Art series. The app creates a grid mosaic based on the 
 size and specification of the lego sets. You can upload an image and edit your own image, then transform it into
 a grid mosaic. You can then view the lego(esque) instructions and even purchase parts through a third party by uploading 
 parts data to their platform.
 </p>
-                  <!-- Accomplishments -->
-                  <section class="content-section">
-                     <h2>Accomplishments</h2>
-                     <ul class="work-accomplishments">
-                        
-                           <li>Created a web app to translate images to mosaics, inspired by the Lego Art series.</li>
-                        
-                           <li>Used canvas to analyze image in an two dimensional grid.</li>
-                        
-                           <li>Allowed users to edit mosaic.</li>
-                        
-                           <li>Used events library to share state across multiple components.</li>
-                        
-                           <li>Step Two allowed generated instructions on how to build mosaic based on grid data.</li>
-                        
-                           <li>Step Three allowed users to purchase parts and download parts data as XML.</li>
-                        
-                     </ul>
-                  </section>
-                  <!-- Technologies -->
-                  <section class="content-section">
-                     <h2>Technologies</h2>
-                     <ul class="tags" role="list">
-                        
-                           <li>HTML Canvas</li>
-                        
-                           <li>Web Components</li>
-                        
-                           <li>Hugo</li>
-                        
-                           <li>Tailwind</li>
-                        
-                           <li>UI/UX</li>
-                        
-                     </ul>
-                  </section>
-                  
+                     <!-- Accomplishments -->
                      <section class="content-section">
-                        <h2>Links</h2>
-                           <ul role="list" class="links">
-                              
-                                 
-                                    <li>
-                                       <a href="https://github.com/miguelfondeur/legoartcreator" target="_blank" title="Go to github.com">
-                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
-                                          github.com
-                                       </a>
-                                    </li>
-                                 
-                              
-                                 
-                                    <li>
-                                       <a href="https://brickartcreator.com/#creator" target="_blank" title="Go to brickartcreator.com">
-                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
-                                          brickartcreator.com
-                                       </a>
-                                    </li>
-                                 
-                              
-                           </ul>
+                        <h2>Accomplishments</h2>
+                        <ul class="work-accomplishments">
+                           
+                              <li>Created a web app to translate images to mosaics, inspired by the Lego Art series.</li>
+                           
+                              <li>Used canvas to analyze image in an two dimensional grid.</li>
+                           
+                              <li>Allowed users to edit mosaic.</li>
+                           
+                              <li>Used events library to share state across multiple components.</li>
+                           
+                              <li>Step Two allowed generated instructions on how to build mosaic based on grid data.</li>
+                           
+                              <li>Step Three allowed users to purchase parts and download parts data as XML.</li>
+                           
+                        </ul>
                      </section>
-                  
-                  <!-- Details -->
-                  
+                     <!-- Technologies -->
                      <section class="content-section">
-                        <h2>Details</h2>
-                        <!-- Details -->
-<details>
+                        <h2>Technologies</h2>
+                        <ul class="tags" role="list">
+                           
+                              <li>HTML Canvas</li>
+                           
+                              <li>Web Components</li>
+                           
+                              <li>Hugo</li>
+                           
+                              <li>Tailwind</li>
+                           
+                              <li>UI/UX</li>
+                           
+                        </ul>
+                     </section>
+                     
+                        <section class="content-section">
+                           <h2>Links</h2>
+                              <ul role="list" class="links">
+                                 
+                                    
+                                       <li>
+                                          <a href="https://github.com/miguelfondeur/legoartcreator" target="_blank" title="Go to github.com">
+                                             <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                             github.com
+                                          </a>
+                                       </li>
+                                    
+                                 
+                                    
+                                       <li>
+                                          <a href="https://brickartcreator.com/#creator" target="_blank" title="Go to brickartcreator.com">
+                                             <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                             brickartcreator.com
+                                          </a>
+                                       </li>
+                                    
+                                 
+                              </ul>
+                        </section>
+                     
+                     <!-- Details -->
+                     
+                        <section class="content-section">
+                           <h2>Details</h2>
+                           <!-- Details -->
+<details name="accordion">
     <summary>Goal and Approach</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -666,7 +1072,7 @@ parts data to their platform.
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Building "Create"</summary>
     <div class="details-content">
         <p>
@@ -734,7 +1140,7 @@ parts data to their platform.
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Building "Buy Parts"</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -761,7 +1167,7 @@ Users can also download the parts data as an <abbr title="eXtensible Markup Lang
 </p>
 </div></p>
 </details>
-<details>
+<details name="accordion">
     <summary>Building "Instructions"</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -801,7 +1207,7 @@ Users can also download the parts data as an <abbr title="eXtensible Markup Lang
         </div>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Lessons Learned</summary>
     <div class="details-content">
         <p>
@@ -843,108 +1249,110 @@ Users can also download the parts data as an <abbr title="eXtensible Markup Lang
     </div>
 </details>
 
-                     </section>
-                  
-               </main>
-            </div>
-         </dialog>
+                        </section>
+                     
+                  </main>
+               </div>
+            </dialog>
+         
       
-         <li class="work-item">
-            <button class="work-item-button" popovertarget="blockDigital" aria-label="Click to view details for Block Digital">
-               <div class="expand-icon">
-                  <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
-               </div>
-               <div class="work-thumb">
-                  <img loading="lazy" src="/img/cv/cv-block.webp" alt="Block Digital thumbnail">
-               </div>
-               <h3>Block Digital</h3>
-               <p>Website templates built with the JAM Stack to simplify development and content management.</p>
-            </button>
-            <div class="work-hover-state"></div>
-         </li>
-
-         <!-- Work Dialog -->
-         <dialog class="work-modal" id="blockDigital" popover aria-labelledby="blockDigital-header" aria-describedby="blockDigital-content">
-            <button class="close-dialog-button" popovertarget="blockDigital" popovertargetaction="hide">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>                
-            </button>
-            <div class="container" data-width="small-center">
-               <header id="blockDigital-header">
-                  <div class="work-thumb" data-size="large">
+         
+            <li class="work-item">
+               <button class="work-item-button" popovertarget="blockDigital" aria-label="Click to view details for Block Digital">
+                  <div class="expand-icon">
+                     <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
+                  </div>
+                  <div class="work-thumb">
                      <img loading="lazy" src="/img/cv/cv-block.webp" alt="Block Digital thumbnail">
                   </div>
-                  <div class="work-header">
-                     <h1>Block Digital</h1>
-                     <div class="work-subtitle">
-                        <h3>Business Owner / Solutions Architect</h3>
-                        <p>
-                           <time datetime="Sep 2017">Sep 2017</time> 
-                           <span aria-hidden="true">—</span> 
-                           <time datetime="Mar 2020">Mar 2020</time>
-                        </p>
+                  <h3>Block Digital</h3>
+                  <p>Website templates built with the JAM Stack to simplify development and content management.</p>
+               </button>
+               <div class="work-hover-state"></div>
+            </li>
+
+            <!-- Work Dialog -->
+            <dialog class="work-modal" id="blockDigital" popover aria-labelledby="blockDigital-header" aria-describedby="blockDigital-content">
+               <button class="close-dialog-button" popovertarget="blockDigital" popovertargetaction="hide">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>                
+               </button>
+               <div class="container" data-width="small-center">
+                  <header id="blockDigital-header">
+                     <div class="work-thumb" data-size="large">
+                        <img loading="lazy" src="/img/cv/cv-block.webp" alt="Block Digital thumbnail">
                      </div>
-                  </div>
-               </header>
-               <main id="blockDigital-content">
-                  
-                     <div class="work-header-image">
-                        <img src="/img/work/block/block-homepage.webp" alt="Example image of Block Digital">
+                     <div class="work-header">
+                        <h1>Block Digital</h1>
+                        <div class="work-subtitle">
+                           <h3>Business Owner / Solutions Architect</h3>
+                           <p>
+                              <time datetime="Sep 2017">Sep 2017</time> 
+                              <span aria-hidden="true">—</span> 
+                              <time datetime="Mar 2020">Mar 2020</time>
+                           </p>
+                        </div>
                      </div>
-                  
-                  <!-- Description -->
-                  <h2>Description</h2>
-                  <p>"Sites Made Simple." BLOCK Digital was built to deliver modern, high-performance, and lightweight websites using JAMstack technologies. At its core, BLOCK leveraged the Hugo Static Site Generator, where I developed reusable components—or “blocks”—that could be referenced in Markdown files to generate pages dynamically. The sites were deployed via Netlify, with a fully editable CMS powered by Netlify CMS and React.js.<br>
+                  </header>
+                  <main id="blockDigital-content">
+                     
+                        <div class="work-header-image">
+                           <img src="/img/work/block/block-homepage.webp" alt="Example image of Block Digital">
+                        </div>
+                     
+                     <!-- Description -->
+                     <h2>Description</h2>
+                     <p>"Sites Made Simple." BLOCK Digital was built to deliver modern, high-performance, and lightweight websites using JAMstack technologies. At its core, BLOCK leveraged the Hugo Static Site Generator, where I developed reusable components—or “blocks”—that could be referenced in Markdown files to generate pages dynamically. The sites were deployed via Netlify, with a fully editable CMS powered by Netlify CMS and React.js.<br>
 Each site also included a custom Style Guide, serving as both a UI reference for clients and a developer-friendly resource with code examples, ensuring seamless content management and scalability. There were many aspects to this project but in the details below I go through what I believe are the key points that were worth sharing.
 </p>
-                  <!-- Accomplishments -->
-                  <section class="content-section">
-                     <h2>Accomplishments</h2>
-                     <ul class="work-accomplishments">
-                        
-                           <li>Developed a custom CMS using Netlify CMS for streamlined content management.</li>
-                        
-                           <li>Built live preview functionality using React components for real-time content editing.</li>
-                        
-                           <li>Automated deployments directly to Netlify from GitHub repositories.</li>
-                        
-                           <li>Designed and Developed six unique website templates tailored for different business needs.</li>
-                        
-                           <li>Built all websites, including the Block Digital, site using Hugo for speed and flexibility.</li>
-                        
-                           <li>Optimized assets using Gulp to enhance performance and load times.</li>
-                        
-                           <li>Integrated third-party APIs for custom functionality based on business requirements.</li>
-                        
-                     </ul>
-                  </section>
-                  <!-- Technologies -->
-                  <section class="content-section">
-                     <h2>Technologies</h2>
-                     <ul class="tags" role="list">
-                        
-                           <li>Hugo</li>
-                        
-                           <li>React</li>
-                        
-                           <li>Sass</li>
-                        
-                           <li>Gulp</li>
-                        
-                           <li>Netlify</li>
-                        
-                           <li>Github</li>
-                        
-                     </ul>
-                  </section>
-                  
-                  <!-- Details -->
-                  
+                     <!-- Accomplishments -->
                      <section class="content-section">
-                        <h2>Details</h2>
-                        <!-- Details -->
-<details>
+                        <h2>Accomplishments</h2>
+                        <ul class="work-accomplishments">
+                           
+                              <li>Developed a custom CMS using Netlify CMS for streamlined content management.</li>
+                           
+                              <li>Built live preview functionality using React components for real-time content editing.</li>
+                           
+                              <li>Automated deployments directly to Netlify from GitHub repositories.</li>
+                           
+                              <li>Designed and Developed six unique website templates tailored for different business needs.</li>
+                           
+                              <li>Built all websites, including the Block Digital, site using Hugo for speed and flexibility.</li>
+                           
+                              <li>Optimized assets using Gulp to enhance performance and load times.</li>
+                           
+                              <li>Integrated third-party APIs for custom functionality based on business requirements.</li>
+                           
+                        </ul>
+                     </section>
+                     <!-- Technologies -->
+                     <section class="content-section">
+                        <h2>Technologies</h2>
+                        <ul class="tags" role="list">
+                           
+                              <li>Hugo</li>
+                           
+                              <li>React</li>
+                           
+                              <li>Sass</li>
+                           
+                              <li>Gulp</li>
+                           
+                              <li>Netlify</li>
+                           
+                              <li>Github</li>
+                           
+                        </ul>
+                     </section>
+                     
+                     <!-- Details -->
+                     
+                        <section class="content-section">
+                           <h2>Details</h2>
+                           <!-- Details -->
+<details name="accordion">
     <summary>Building Block Digital</summary>
     <div class="details-content">
         <div class="detail-image-wrapper" data-scrollable="true">
@@ -1012,7 +1420,7 @@ Each site also included a custom Style Guide, serving as both a UI reference for
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Building The CMS</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -1097,7 +1505,7 @@ While this CMS setup successfully met my goals, it also introduced some challeng
 </p>
 </div></p>
 </details>
-<details>
+<details name="accordion">
     <summary>Building Custom Templates</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -1160,7 +1568,7 @@ While this CMS setup successfully met my goals, it also introduced some challeng
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Lessons Learned</summary>
     <div class="details-content">
         <p>
@@ -1185,164 +1593,166 @@ While this CMS setup successfully met my goals, it also introduced some challeng
     </div>
 </details>
 
-                     </section>
-                  
-               </main>
-            </div>
-         </dialog>
+                        </section>
+                     
+                  </main>
+               </div>
+            </dialog>
+         
       
-         <li class="work-item">
-            <button class="work-item-button" popovertarget="knozen" aria-label="Click to view details for Knozen">
-               <div class="expand-icon">
-                  <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
-               </div>
-               <div class="work-thumb">
-                  <img loading="lazy" src="/img/cv/cv-knozen.webp" alt="Knozen thumbnail">
-               </div>
-               <h3>Knozen</h3>
-               <p>Personality quiz that gave users a personality chart with 12 traits.</p>
-            </button>
-            <div class="work-hover-state"></div>
-         </li>
-
-         <!-- Work Dialog -->
-         <dialog class="work-modal" id="knozen" popover aria-labelledby="knozen-header" aria-describedby="knozen-content">
-            <button class="close-dialog-button" popovertarget="knozen" popovertargetaction="hide">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>                
-            </button>
-            <div class="container" data-width="small-center">
-               <header id="knozen-header">
-                  <div class="work-thumb" data-size="large">
+         
+            <li class="work-item">
+               <button class="work-item-button" popovertarget="knozen" aria-label="Click to view details for Knozen">
+                  <div class="expand-icon">
+                     <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
+                  </div>
+                  <div class="work-thumb">
                      <img loading="lazy" src="/img/cv/cv-knozen.webp" alt="Knozen thumbnail">
                   </div>
-                  <div class="work-header">
-                     <h1>Knozen</h1>
-                     <div class="work-subtitle">
-                        <h3>Lead Frontend Engineer</h3>
-                        <p>
-                           <time datetime="Jan 2016">Jan 2016</time> 
-                           <span aria-hidden="true">—</span> 
-                           <time datetime="Aug 2016">Aug 2016</time>
-                        </p>
+                  <h3>Knozen</h3>
+                  <p>Personality quiz that gave users a personality chart with 12 traits.</p>
+               </button>
+               <div class="work-hover-state"></div>
+            </li>
+
+            <!-- Work Dialog -->
+            <dialog class="work-modal" id="knozen" popover aria-labelledby="knozen-header" aria-describedby="knozen-content">
+               <button class="close-dialog-button" popovertarget="knozen" popovertargetaction="hide">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>                
+               </button>
+               <div class="container" data-width="small-center">
+                  <header id="knozen-header">
+                     <div class="work-thumb" data-size="large">
+                        <img loading="lazy" src="/img/cv/cv-knozen.webp" alt="Knozen thumbnail">
                      </div>
-                  </div>
-               </header>
-               <main id="knozen-content">
-                  
-                     <div class="work-header-mobile-video">
-                        <video controls="" muted="" width="100%" alt="Knozen Mobile Video Demo" loading="lazy">
-                           <source src="/img/work/knozen/knozen-video.mp4" type="video/mp4">
-                        </video>
+                     <div class="work-header">
+                        <h1>Knozen</h1>
+                        <div class="work-subtitle">
+                           <h3>Lead Frontend Engineer</h3>
+                           <p>
+                              <time datetime="Jan 2016">Jan 2016</time> 
+                              <span aria-hidden="true">—</span> 
+                              <time datetime="Aug 2016">Aug 2016</time>
+                           </p>
+                        </div>
                      </div>
-                  
-                  <!-- Description -->
-                  <h2>Description</h2>
-                  <p>Knozen was a fun, engaging, fast way to get a beautiful personality profile.
+                  </header>
+                  <main id="knozen-content">
+                     
+                        <div class="work-header-mobile-video">
+                           <video controls="" muted="" width="100%" alt="Knozen Mobile Video Demo" loading="lazy">
+                              <source src="/img/work/knozen/knozen-video.mp4" type="video/mp4">
+                           </video>
+                        </div>
+                     
+                     <!-- Description -->
+                     <h2>Description</h2>
+                     <p>Knozen was a fun, engaging, fast way to get a beautiful personality profile.
 Over three years,
 1,000,000
 people completed our quiz, answered over
 50,000,000
 questions, and shared thousands of their profiles on Instagram We were also featured in various media channels such as Techcrunch, Business Insider, and Product Hunt.
 </p>
-                  <!-- Accomplishments -->
-                  <section class="content-section">
-                     <h2>Accomplishments</h2>
-                     <ul class="work-accomplishments">
-                        
-                           <li>Built new features for the popular Knozen personality quiz to enhance user engagement.</li>
-                        
-                           <li>Optimized mobile performance by hardware-accelerating style- and animation-intensive experiences.</li>
-                        
-                           <li>Translated Zeplin design specs into mobile web interfaces using Django</li>
-                        
-                           <li>Sass</li>
-                        
-                           <li>and jQuery.</li>
-                        
-                           <li>Designed Facebook assets in Photoshop to support marketing efforts for the Knozen Quiz.</li>
-                        
-                           <li>Built all websites including the business site using Hugo.</li>
-                        
-                     </ul>
-                  </section>
-                  <!-- Technologies -->
-                  <section class="content-section">
-                     <h2>Technologies</h2>
-                     <ul class="tags" role="list">
-                        
-                           <li>Django</li>
-                        
-                           <li>JQuery</li>
-                        
-                           <li>Sass</li>
-                        
-                           <li>Photoshop</li>
-                        
-                           <li>Mobile Web</li>
-                        
-                     </ul>
-                  </section>
-                  
+                     <!-- Accomplishments -->
                      <section class="content-section">
-                        <h2>Links</h2>
-                           <ul role="list" class="links">
-                              
-                                 
-                                    <li>
-                                       <a href="https://medium.com/@cenedella/knozen-for-business-get-a-free-personality-profile-of-your-users-for-marketing-product-or-sales-76e0551912c6" target="_blank" title="Go to Knozen for business">
-                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
-                                          Knozen for business
-                                       </a>
-                                    </li>
-                                 
-                              
-                                 
-                                    <li>
-                                       <a href="https://byrslf.co/why-don-t-introverts-break-laws-43701c141af0" target="_blank" title="Go to Why don’t introverts break laws?">
-                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
-                                          Why don’t introverts break laws?
-                                       </a>
-                                    </li>
-                                 
-                              
-                                 
-                                    <li>
-                                       <a href="https://medium.com/@cenedella/knozen-launches-feelings-7016c4833fa8" target="_blank" title="Go to Knozen launches Feelings">
-                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
-                                          Knozen launches Feelings
-                                       </a>
-                                    </li>
-                                 
-                              
-                                 
-                                    <li>
-                                       <a href="https://medium.com/@cenedella/customize-knozen-with-your-headline-and-story-33caac97541d" target="_blank" title="Go to Customize Knozen with your headline and story">
-                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
-                                          Customize Knozen with your headline and story
-                                       </a>
-                                    </li>
-                                 
-                              
-                                 
-                                    <li>
-                                       <a href="https://medium.com/rooting-for-you/is-it-crush-or-clash-be0ec78cd219" target="_blank" title="Go to Is it crush or crash?">
-                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
-                                          Is it crush or crash?
-                                       </a>
-                                    </li>
-                                 
-                              
-                           </ul>
+                        <h2>Accomplishments</h2>
+                        <ul class="work-accomplishments">
+                           
+                              <li>Built new features for the popular Knozen personality quiz to enhance user engagement.</li>
+                           
+                              <li>Optimized mobile performance by hardware-accelerating style- and animation-intensive experiences.</li>
+                           
+                              <li>Translated Zeplin design specs into mobile web interfaces using Django</li>
+                           
+                              <li>Sass</li>
+                           
+                              <li>and jQuery.</li>
+                           
+                              <li>Designed Facebook assets in Photoshop to support marketing efforts for the Knozen Quiz.</li>
+                           
+                              <li>Built all websites including the business site using Hugo.</li>
+                           
+                        </ul>
                      </section>
-                  
-                  <!-- Details -->
-                  
+                     <!-- Technologies -->
                      <section class="content-section">
-                        <h2>Details</h2>
-                        <!-- Details -->
-<details>
+                        <h2>Technologies</h2>
+                        <ul class="tags" role="list">
+                           
+                              <li>Django</li>
+                           
+                              <li>JQuery</li>
+                           
+                              <li>Sass</li>
+                           
+                              <li>Photoshop</li>
+                           
+                              <li>Mobile Web</li>
+                           
+                        </ul>
+                     </section>
+                     
+                        <section class="content-section">
+                           <h2>Links</h2>
+                              <ul role="list" class="links">
+                                 
+                                    
+                                       <li>
+                                          <a href="https://medium.com/@cenedella/knozen-for-business-get-a-free-personality-profile-of-your-users-for-marketing-product-or-sales-76e0551912c6" target="_blank" title="Go to Knozen for business">
+                                             <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                             Knozen for business
+                                          </a>
+                                       </li>
+                                    
+                                 
+                                    
+                                       <li>
+                                          <a href="https://byrslf.co/why-don-t-introverts-break-laws-43701c141af0" target="_blank" title="Go to Why don’t introverts break laws?">
+                                             <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                             Why don’t introverts break laws?
+                                          </a>
+                                       </li>
+                                    
+                                 
+                                    
+                                       <li>
+                                          <a href="https://medium.com/@cenedella/knozen-launches-feelings-7016c4833fa8" target="_blank" title="Go to Knozen launches Feelings">
+                                             <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                             Knozen launches Feelings
+                                          </a>
+                                       </li>
+                                    
+                                 
+                                    
+                                       <li>
+                                          <a href="https://medium.com/@cenedella/customize-knozen-with-your-headline-and-story-33caac97541d" target="_blank" title="Go to Customize Knozen with your headline and story">
+                                             <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                             Customize Knozen with your headline and story
+                                          </a>
+                                       </li>
+                                    
+                                 
+                                    
+                                       <li>
+                                          <a href="https://medium.com/rooting-for-you/is-it-crush-or-clash-be0ec78cd219" target="_blank" title="Go to Is it crush or crash?">
+                                             <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                             Is it crush or crash?
+                                          </a>
+                                       </li>
+                                    
+                                 
+                              </ul>
+                        </section>
+                     
+                     <!-- Details -->
+                     
+                        <section class="content-section">
+                           <h2>Details</h2>
+                           <!-- Details -->
+<details name="accordion">
     <summary>Joining The Team</summary>
     <div class="details-content">
         <p>
@@ -1359,7 +1769,7 @@ questions, and shared thousands of their profiles on Instagram We were also feat
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Mobile Performance Optimizations</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -1382,7 +1792,7 @@ questions, and shared thousands of their profiles on Instagram We were also feat
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
    <summary>Feelings Feature</summary>
    <div class="details-content">
       <div class="detail-image-wrapper">
@@ -1407,7 +1817,7 @@ questions, and shared thousands of their profiles on Instagram We were also feat
       </p>
    </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Themed Quizzes</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -1435,7 +1845,7 @@ questions, and shared thousands of their profiles on Instagram We were also feat
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Lessons Learned</summary>
     <div class="details-content">
         <p>
@@ -1470,107 +1880,109 @@ questions, and shared thousands of their profiles on Instagram We were also feat
     </div>
 </details>
 
-                     </section>
-                  
-               </main>
-            </div>
-         </dialog>
+                        </section>
+                     
+                  </main>
+               </div>
+            </dialog>
+         
       
-         <li class="work-item">
-            <button class="work-item-button" popovertarget="s360" aria-label="Click to view details for Simply360">
-               <div class="expand-icon">
-                  <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
-               </div>
-               <div class="work-thumb">
-                  <img loading="lazy" src="/img/cv/cv-s360.webp" alt="Simply360 thumbnail">
-               </div>
-               <h3>Simply360</h3>
-               <p>App to help non-profit organizations manage their data.</p>
-            </button>
-            <div class="work-hover-state"></div>
-         </li>
-
-         <!-- Work Dialog -->
-         <dialog class="work-modal" id="s360" popover aria-labelledby="s360-header" aria-describedby="s360-content">
-            <button class="close-dialog-button" popovertarget="s360" popovertargetaction="hide">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>                
-            </button>
-            <div class="container" data-width="small-center">
-               <header id="s360-header">
-                  <div class="work-thumb" data-size="large">
+         
+            <li class="work-item">
+               <button class="work-item-button" popovertarget="s360" aria-label="Click to view details for Simply360">
+                  <div class="expand-icon">
+                     <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
+                  </div>
+                  <div class="work-thumb">
                      <img loading="lazy" src="/img/cv/cv-s360.webp" alt="Simply360 thumbnail">
                   </div>
-                  <div class="work-header">
-                     <h1>Simply360</h1>
-                     <div class="work-subtitle">
-                        <h3>UX Developer</h3>
-                        <p>
-                           <time datetime="Jun 2014">Jun 2014</time> 
-                           <span aria-hidden="true">—</span> 
-                           <time datetime="Jun 2015">Jun 2015</time>
-                        </p>
+                  <h3>Simply360</h3>
+                  <p>App to help non-profit organizations manage their data.</p>
+               </button>
+               <div class="work-hover-state"></div>
+            </li>
+
+            <!-- Work Dialog -->
+            <dialog class="work-modal" id="s360" popover aria-labelledby="s360-header" aria-describedby="s360-content">
+               <button class="close-dialog-button" popovertarget="s360" popovertargetaction="hide">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>                
+               </button>
+               <div class="container" data-width="small-center">
+                  <header id="s360-header">
+                     <div class="work-thumb" data-size="large">
+                        <img loading="lazy" src="/img/cv/cv-s360.webp" alt="Simply360 thumbnail">
                      </div>
-                  </div>
-               </header>
-               <main id="s360-content">
-                  
-                     <div class="work-header-image">
-                        <img src="/img/work/s360/s360-people.webp" alt="Example image of Simply360">
+                     <div class="work-header">
+                        <h1>Simply360</h1>
+                        <div class="work-subtitle">
+                           <h3>UX Developer</h3>
+                           <p>
+                              <time datetime="Jun 2014">Jun 2014</time> 
+                              <span aria-hidden="true">—</span> 
+                              <time datetime="Jun 2015">Jun 2015</time>
+                           </p>
+                        </div>
                      </div>
-                  
-                  <!-- Description -->
-                  <h2>Description</h2>
-                  <p>"Nonprofit software made easy". Simply360 was created by SolveItSimply to aid nonprofits with all of their administrative needs. It's simple and user-friendly interface will allow them to manage staff, create reports, and even handle event check-ins. It is the first nonprofit software to be built as a single page responsive application using the latest industry tools.
+                  </header>
+                  <main id="s360-content">
+                     
+                        <div class="work-header-image">
+                           <img src="/img/work/s360/s360-people.webp" alt="Example image of Simply360">
+                        </div>
+                     
+                     <!-- Description -->
+                     <h2>Description</h2>
+                     <p>"Nonprofit software made easy". Simply360 was created by SolveItSimply to aid nonprofits with all of their administrative needs. It's simple and user-friendly interface will allow them to manage staff, create reports, and even handle event check-ins. It is the first nonprofit software to be built as a single page responsive application using the latest industry tools.
 </p>
-                  <!-- Accomplishments -->
-                  <section class="content-section">
-                     <h2>Accomplishments</h2>
-                     <ul class="work-accomplishments">
-                        
-                           <li>Developed user interfaces and key features for responsive web applications.</li>
-                        
-                           <li>Built the UI for a responsive single-page web application designed to help non-profit organizations efficiently manage their data.</li>
-                        
-                     </ul>
-                  </section>
-                  <!-- Technologies -->
-                  <section class="content-section">
-                     <h2>Technologies</h2>
-                     <ul class="tags" role="list">
-                        
-                           <li>Ember.js</li>
-                        
-                           <li>Sass</li>
-                        
-                           <li>PSD to HTML</li>
-                        
-                     </ul>
-                  </section>
-                  
+                     <!-- Accomplishments -->
                      <section class="content-section">
-                        <h2>Links</h2>
-                           <ul role="list" class="links">
-                              
-                                 
-                                    <li>
-                                       <a href="https://www.simply360.com/" target="_blank" title="Go to simply360">
-                                          <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
-                                          simply360
-                                       </a>
-                                    </li>
-                                 
-                              
-                           </ul>
+                        <h2>Accomplishments</h2>
+                        <ul class="work-accomplishments">
+                           
+                              <li>Developed user interfaces and key features for responsive web applications.</li>
+                           
+                              <li>Built the UI for a responsive single-page web application designed to help non-profit organizations efficiently manage their data.</li>
+                           
+                        </ul>
                      </section>
-                  
-                  <!-- Details -->
-                  
+                     <!-- Technologies -->
                      <section class="content-section">
-                        <h2>Details</h2>
-                        <!-- Details -->
-<details>
+                        <h2>Technologies</h2>
+                        <ul class="tags" role="list">
+                           
+                              <li>Ember.js</li>
+                           
+                              <li>Sass</li>
+                           
+                              <li>PSD to HTML</li>
+                           
+                        </ul>
+                     </section>
+                     
+                        <section class="content-section">
+                           <h2>Links</h2>
+                              <ul role="list" class="links">
+                                 
+                                    
+                                       <li>
+                                          <a href="https://www.simply360.com/" target="_blank" title="Go to simply360">
+                                             <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                             simply360
+                                          </a>
+                                       </li>
+                                    
+                                 
+                              </ul>
+                        </section>
+                     
+                     <!-- Details -->
+                     
+                        <section class="content-section">
+                           <h2>Details</h2>
+                           <!-- Details -->
+<details name="accordion">
     <summary>Building the Simply360 Application</summary>
     <div class="details-content">
         <div class="detail-image-wrapper" data-scrollable="true">
@@ -1634,7 +2046,7 @@ In the next section, I’ll share some of the lessons I learned.
 </p>
 </div></p>
 </details>
-<details>
+<details name="accordion">
   <summary>Lessons Learned</summary>
   <div class="details-content">
       <p>
@@ -1667,217 +2079,14 @@ In the next section, I’ll share some of the lessons I learned.
   </div>
 </details>
 
-                     </section>
-                  
-               </main>
-            </div>
-         </dialog>
+                        </section>
+                     
+                  </main>
+               </div>
+            </dialog>
+         
       
-         <li class="work-item">
-            <button class="work-item-button" popovertarget="kintales" aria-label="Click to view details for Kintales">
-               <div class="expand-icon">
-                  <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
-               </div>
-               <div class="work-thumb">
-                  <img loading="lazy" src="/img/cv/cv-kintales.webp" alt="Kintales thumbnail">
-               </div>
-               <h3>Kintales</h3>
-               <p>Create fun stories, share family memories, and build unique characters.</p>
-            </button>
-            <div class="work-hover-state"></div>
-         </li>
-
-         <!-- Work Dialog -->
-         <dialog class="work-modal" id="kintales" popover aria-labelledby="kintales-header" aria-describedby="kintales-content">
-            <button class="close-dialog-button" popovertarget="kintales" popovertargetaction="hide">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>                
-            </button>
-            <div class="container" data-width="small-center">
-               <header id="kintales-header">
-                  <div class="work-thumb" data-size="large">
-                     <img loading="lazy" src="/img/cv/cv-kintales.webp" alt="Kintales thumbnail">
-                  </div>
-                  <div class="work-header">
-                     <h1>Kintales</h1>
-                     <div class="work-subtitle">
-                        <h3>Product Engineer</h3>
-                        <p>
-                           <time datetime="Apr 2025">Apr 2025</time> 
-                           <span aria-hidden="true">—</span> 
-                           <time datetime="May 2025">May 2025</time>
-                        </p>
-                     </div>
-                  </div>
-               </header>
-               <main id="kintales-content">
-                  
-                     <div class="work-header-image">
-                        <img src="/img/work/kintales/kintales-homepage.webp" alt="Example image of Kintales">
-                     </div>
-                  
-                  <!-- Description -->
-                  <h2>Description</h2>
-                  <p>Kintales was a platform designed to help families create, share, and preserve their stories across generations. Whether it’s a silly anecdote about Grandpa’s fishing trip, a heartwarming memory of your first family vacation, or an amusing tale about your child’s adventures, Kintales was built to give these memories a permanent home. This project was designed, developed, and deployed in just four days with the help of AI-assisted tools like Bolt.new and Cursor.
-</p>
-                  <!-- Accomplishments -->
-                  <section class="content-section">
-                     <h2>Accomplishments</h2>
-                     <ul class="work-accomplishments">
-                        
-                           <li>Designed an app using Bolt.new</li>
-                        
-                           <li>Accelerated development with the Cursor IDE</li>
-                        
-                           <li>Application developed with Nuxt.js full-stack framework</li>
-                        
-                           <li>Implemented back-end using Supabase and Netlify Serverless Functions</li>
-                        
-                           <li>Created custom avatars for family members using the Dicebear API</li>
-                        
-                           <li>Created a collection view of short stories</li>
-                        
-                           <li>Built features to write and save short stories</li>
-                        
-                           <li>Enabled story generation of custom characters</li>
-                        
-                           <li>Built story browsing for shared inspiration</li>
-                        
-                     </ul>
-                  </section>
-                  <!-- Technologies -->
-                  <section class="content-section">
-                     <h2>Technologies</h2>
-                     <ul class="tags" role="list">
-                        
-                           <li>Nuxt.js</li>
-                        
-                           <li>Bolt.new</li>
-                        
-                           <li>Cursor</li>
-                        
-                           <li>APIs</li>
-                        
-                           <li>Netlify</li>
-                        
-                           <li>Supabase</li>
-                        
-                           <li>Serverless Functions</li>
-                        
-                     </ul>
-                  </section>
-                  
-                  <!-- Details -->
-                  
-                     <section class="content-section">
-                        <h2>Details</h2>
-                        <!-- Details -->
-<details>
-  <summary>Building Kintales with AI</summary>
-  <div class="details-content">
-    <div class="detail-image-wrapper" data-scrollable="true">
-      <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
-        <img src="/img/work/kintales/kintales-homepage.webp" alt="Kintales homepage example" loading="lazy">
-      </div>
-      <div class="scroll-indicator">
-        <em><span class="sr-only">This Section is</span> Scrollable</em>
-      </div>
-    </div>
-    <p>
-      This idea started as a way to tell stories to my kids about their late grandpa. I built a small prototype called <strong>Grandpa Stories</strong>, still available <a href="https://grandpa-stories.netlify.app/" target="_blank" rel="noopener">here</a>. But I knew building a fully featured app with authentication, persistence, and user profiles would take more time than I had. A friend encouraged me to try AI-powered tools like <strong>Bolt.new</strong> and <strong>Cursor</strong>.
-    </p>
-    <p>
-      I entered a basic prompt into Bolt.new to recreate Grandpa Stories and got a working prototype almost instantly, including <a href="https://www.dicebear.com/styles/personas/" target="_blank" rel="noopener">Dicebear</a> API integration. However, the result was a tangled mess of Next.js and React code. I moved the project into <strong>Cursor</strong> for better control and rewrote it in Nuxt. I chose Nuxt.js because it's based on Vue.js, which I find more human-readable—very important when working with AI-generated code.
-    </p>
-    <p>
-      With Cursor, I was able to "vibe code" my way through the app. The only slow parts were the unavoidable ones: setting up Google Auth, configuring Supabase, and managing environment variables. For everything else, prompting Cursor was fast and effective. Build a Nuxt.js app? Done. Add a homepage? Done. Add a new feature? Done. Not perfect, but definitely good enough to test with real users.
-    </p>
-  </div>
-</details>
-<details>
-  <summary>Kintales Stories</summary>
-  <div class="details-content">
-    <div class="detail-image-wrapper">
-      <img src="/img/work/kintales/kintales-madlibs.webp" alt="Kintales story UI" loading="lazy">
-    </div>
-    <p>
-      By eliminating a lot of grunt work, I could focus on defining features and guiding Cursor toward my product goals. I took on the role of Product Manager and made sure we had everything needed for an MVP:
-    </p>
-    <ul>
-      <li>Create an account with Google Auth</li>
-      <li>Create a public-facing user profile</li>
-      <li>Account settings page for editing user info</li>
-      <li>CRUD support for stories (create, read, update, delete)</li>
-    </ul>
-    <p>
-      I set up two tables in <strong>Supabase</strong>: <code>profiles</code> and <code>stories</code>. Each user could save multiple stories to their personal collection. The stories table included:
-    </p>
-    <ul>
-      <li><code>character_name</code></li>
-      <li><code>author</code></li>
-      <li><code>title</code></li>
-      <li><code>content</code></li>
-      <li><code>avatar_url</code></li>
-      <li><code>background_color</code></li>
-      <li><code>is_public</code></li>
-    </ul>
-    <p>
-      The <code>id</code> field allowed for clean relationships between stories and users. I used the Nuxt Supabase module, which works like a lightweight ORM to access data from the front-end. Image URLs were generated by Dicebear and stored directly. The <code>is_public</code> field gave users control over whether stories were visible to others.
-    </p>
-  </div>
-</details>
-<details>
-  <summary>Kintales Story Generator</summary>
-  <div class="details-content">
-    <div class="detail-image-wrapper" data-scrollable="true">
-      <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
-        <img src="/img/work/kintales/kintales-story-creator.webp" alt="Kintales story creator UI" loading="lazy">
-      </div>
-      <div class="scroll-indicator">
-        <em><span class="sr-only">This Section is</span> Scrollable</em>
-      </div>
-    </div>
-    <p>
-      The story generator lived inside a modal on the user's profile page. There were two modes: a mad-libs–style generator that picked a random avatar from Dicebear, and a manual editor where users could fully customize their stories and avatars.
-    </p>
-    <p>
-      Dicebear’s Personas API lets you pass traits like:
-    </p>
-    <ul>
-      <li><code>?eyes</code></li>
-      <li><code>?hair</code></li>
-      <li><code>?mouth</code></li>
-      <li><code>?skinColor</code></li>
-    </ul>
-    <p>
-      I built the avatar URL string using options from the UI and saved the result in the database. The same modal allowed users to edit, delete, or toggle the visibility of each story.
-    </p>
-  </div>
-</details>
-<details>
-  <summary>Lessons Learned</summary>
-  <div class="details-content">
-    <h3>Lesson One – Build With AI</h3>
-    <p>
-      If you want to move fast, build with AI. But understand what you're doing. AI tools can't read your mind, and they don't understand your full application context. The more domain knowledge you bring to the table, the better the results. With good system prompts, Cursor can follow your preferred conventions and patterns.
-    </p>
-    <h3>Lesson Two – It's Great for Prototypes</h3>
-    <p>
-      Low-code tools are best for testing ideas, not long-term scale. I wanted to validate the concept with real users (mostly my kids). Mission accomplished. That said, if your Supabase instance sits inactive for too long, it may be deactivated to save costs. For long-term projects, you'd need active engagement and better infrastructure planning.
-    </p>
-    <h3>Lesson Three – Keep the Stack Simple</h3>
-    <p>
-      Especially when working with AI, a simple stack is your best friend. You need to be able to read and debug what it outputs. While it's fun to explore new tech, now’s not the time to experiment with Rust backends if your goal is speed and usability.
-    </p>
-  </div>
-</details>
-
-                     </section>
-                  
-               </main>
-            </div>
-         </dialog>
+         
       
    </ul>
    

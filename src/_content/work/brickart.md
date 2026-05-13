@@ -31,7 +31,7 @@ accomplishments:
 ---
 
 <!-- Details -->
-<details>
+<details name="accordion">
     <summary>Goal and Approach</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -65,7 +65,7 @@ accomplishments:
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Building "Create"</summary>
     <div class="details-content">
         <p>
@@ -133,7 +133,7 @@ accomplishments:
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Building "Buy Parts"</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -165,7 +165,7 @@ accomplishments:
     </div>
 
 </details>
-<details>
+<details name="accordion">
     <summary>Building "Instructions"</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -205,7 +205,7 @@ accomplishments:
         </div>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Lessons Learned</summary>
     <div class="details-content">
         <p>

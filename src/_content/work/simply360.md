@@ -23,7 +23,7 @@ links:
 ---
 
 <!-- Details -->
-<details>
+<details name="accordion">
     <summary>Building the Simply360 Application</summary>
     <div class="details-content">
         <div class="detail-image-wrapper" data-scrollable="true">
@@ -92,7 +92,7 @@ ember generate component my-component-name
     </div>
 
 </details>
-<details>
+<details name="accordion">
   <summary>Lessons Learned</summary>
   <div class="details-content">
       <p>

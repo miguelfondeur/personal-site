@@ -27,7 +27,7 @@ accomplishments:
 ---
 
 <!-- Details -->
-<details>
+<details name="accordion">
     <summary>Building Block Digital</summary>
     <div class="details-content">
         <div class="detail-image-wrapper" data-scrollable="true">
@@ -95,7 +95,7 @@ accomplishments:
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Building The CMS</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -185,7 +185,7 @@ CMS.registerPreviewTemplate("settings", SettingsPreview);
     </div>
 
 </details>
-<details>
+<details name="accordion">
     <summary>Building Custom Templates</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
@@ -248,7 +248,7 @@ CMS.registerPreviewTemplate("settings", SettingsPreview);
         </p>
     </div>
 </details>
-<details>
+<details name="accordion">
     <summary>Lessons Learned</summary>
     <div class="details-content">
         <p>
