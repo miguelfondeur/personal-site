@@ -1,5 +1,12 @@
 [
     {
+        "company": "Miguel Fondeur UI",
+        "thumbnail": "/img/cv/cv-fondeur.webp",
+        "role": "Software Engineer & Consultant",
+        "start": "2025",
+        "end": "Present"
+    },
+    {
       "company": "Musora Media",
       "thumbnail": "/img/cv/cv-musora.webp",
       "role": "Lead Frontend Engineer",
@@ -19,12 +26,5 @@
         "role": "Solutions Architect",
         "start": "2017",
         "end": "2020"
-    },
-    {
-        "company": "Union",
-        "thumbnail": "/img/cv/cv-union.webp",
-        "role": "Senior Frontend Engineer",
-        "start": "2018",
-        "end": "2018"
     }
   ]
