@@ -1,0 +1,20 @@
+/* Set Layers */
+@layer base, layout, components, utilities, libraries;
+
+/* Base Layer */
+@import "./base/index.css" layer(base);
+
+/* Layout Layer */
+@import "./layout/index.css" layer(layout);
+
+/* Components Layer */
+@import "./components/index.css" layer(components);
+
+/* Utilities Layer */
+@import "./utilities/index.css" layer(utilities);
+
+/* Prism Syntax Highlighting */
+@import "./libraries/index.css" layer(libraries);
+
+
+/* Design IS the details */

@@ -178,11 +178,16 @@ links:
 </details>
 
 <details name="accordion">
-    <summary>"What's New" Page Rebuild</summary>
+    <summary>What's New Page</summary>
     <div class="details-content">
-        <div class="detail-image-wrapper">
+      <div class="detail-image-wrapper" data-scrollable="true">
+         <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
             <img src="/img/work/sweetwater/whats-new.webp" alt="Image of Sweetwater's What's New page" loading="lazy">
-        </div>
+         </div>
+         <div class="scroll-indicator">
+            <em><span class="sr-only">This section is</span> Scrollable</em>
+         </div>
+      </div>
         <p>
             As described in the previous section, the team wanted to rebuild their existing "Now Shipping" page. 
             Thanks to the reusable <code>algolia-collection</code> component, implementation was straightforward. 
@@ -191,19 +196,19 @@ links:
         <h3>Enhancements</h3>
         <p>
             Alongside the core collection experience, we wanted to improve product discovery by adding quick category filters above the collection itself. 
-            This allowed customers to jump directly into a category without needing to use the filter sidebar, creating a faster and more intuitive browsing experience.
+            This allowed customers to jump directly into a category without needing to use the filter sidebar.
         </p>
         <p>
             To support this, I built a reusable <code>category-filters</code> web component within the Sugar Design System. 
             Each category button dispatched custom events that could be consumed by the parent application. 
-            Inside the <code>algolia-collection</code> host component, I listened for these events and updated the centralized collection store accordingly, automatically synchronizing all subscribed child components downstream.
+            Inside the <code>algolia-collection</code> parent component, I listened for these events and updated the my <code>algolia-collection-store</code> accordingly, syncing all subscribed child components downstream.
         </p>
         <p>
             I also wanted to improve the visual experience during collection reloads. 
             Even though the new implementation was significantly faster than the previous server-rendered version, rapid DOM updates created noticeable blinking when filters or sorting changed.
         </p>
         <p>
-            To solve this, I implemented a lightweight <code>withViewTransition</code> helper built around the browser's native View Transitions API. 
+            To solve this, I implemented a lightweight <code>withViewTransition</code> helper built around the browser's native <a href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API" target="_blank">View Transitions API</a>. 
             With minimal code, the collection could smoothly crossfade and intelligently animate DOM updates between states. 
             Since the feature progressively enhances the experience, unsupported browsers simply fall back to the default behavior without issue.
         </p>
@@ -215,29 +220,34 @@ links:
 </details>
 
 <details name="accordion">
-    <summary>"Top Selling" Page</summary>
-    <div class="details-content">
-        <div class="detail-image-wrapper">
+   <summary>Top Selling Page</summary>
+   <div class="details-content">
+      <div class="detail-image-wrapper" data-scrollable="true">
+         <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
             <img src="/img/work/sweetwater/top-selling.webp" alt="Image of Sweetwater's Top Selling page" loading="lazy">
-        </div>
-        <p>
-            This page was intentionally very similar to the "What's New" implementation, and that was a good thing. 
+         </div>
+         <div class="scroll-indicator">
+            <em><span class="sr-only">This section is</span> Scrollable</em>
+         </div>
+      </div>
+      <p>
+            This page was intentionally very similar to the "What's New" implementation, and that was a good thing!
             One of the primary goals of the <code>algolia-collection</code> architecture was reusability. 
             By simply changing a few data attributes, I was able to render an entirely different collection experience tailored to a new business goal.
-        </p>
-        <p>
+      </p>
+      <p>
             In this case, the collection pointed to a different Algolia index containing Sweetwater's top-selling products. 
             I also introduced an additional attribute to disable sorting controls since changing the order of a curated top-selling collection would not have aligned with the intended UX.
-        </p>
-        <p>
+      </p>
+      <p>
             You can view the live implementation 
             <a href="https://sweetwater.com/top-selling/" target="_blank">here</a>.
-        </p>
-    </div>
+      </p>
+   </div>
 </details>
 
 <details name="accordion">
-    <summary>Taggy: Prototype Chat Bot</summary>
+    <summary>Taggy - Shopping Assistant</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
             <img src="/img/work/sweetwater/taggy-bot.webp" alt="Taggy prototype chat assistant" loading="lazy">
@@ -248,8 +258,8 @@ links:
         </p>
         <h3>Concept: Taggy</h3>
         <p>
-            During development, I identified a gap in the empty-state experience of the collection. The default fallback message was functional but not helpful. 
-            I explored existing internal patterns for inspiration and found a more engaging empty state in another application that introduced "Taggy", a playful internal mascot.
+            During development, I found a gap in the empty-state experience of the collection. 
+            I explored the site for inspiration and found a more engaging empty state that included "Taggy", Sweetwater's internal mascot.
         </p>
         <p>
             I extended this concept into a conversational assistant inspired by early UI companions such as Microsoft’s Clippy. 
@@ -264,12 +274,12 @@ links:
             The response flow was bidirectional: user input was converted into structured search parameters, the Algolia results were returned, and then passed back into the LLM to generate a conversational explanation of the results.
         </p>
         <p>
-            This created a unified experience where natural language input could seamlessly drive existing search infrastructure without modifying the underlying data model.
+            Natural language input could seamlessly drive existing search infrastructure without modifying the underlying data model.
         </p>
         <h3>Outcome and Exploration</h3>
         <p>
             The primary value of this prototype was demonstrating contextual search on top of a traditional faceted filtering system. 
-            While functionally equivalent to existing filters, the conversational interface lowered friction for non-technical queries such as “find me a blue guitar for my uncle’s birthday.”
+            While functionally equivalent to existing filters, the conversational interface lowered friction for non-technical queries such as <i>“Find me a blue guitar for my uncle’s birthday.”</i>
         </p>
         <p>
             Additional enhancements included prompting the assistant to recommend sales support when no results were found and shaping responses in a more personable tone for engagement.
@@ -278,36 +288,44 @@ links:
             This was built in approximately one day as a proof of concept and served as an exploration of how LLM-driven interfaces could augment existing e-commerce search systems without replacing them.
         </p>
         <p>
-            If you have not already, feel free to click the video at the top of the window to view the demo, and enjoy some light Brazilian background music while you watch.
+            If you haven't already, feel free to click the video at the top of the window to view the demo, and enjoy some light Brazilian background music while you watch.
         </p>
     </div>
 </details>
 
 <details name="accordion">
-    <summary>Lessons Learned</summary>
-    <div class="details-content">
-        <p>
-            I spent four action-packed years at Sweetwater across three different roles. During that time, I worked on everything from managing teams and defining Jira workflows to building front-end experiences from the ground up. Below are some key technical and personal lessons from that period.
-        </p>
-        <h3>Lesson One: Knowing when architecture matters</h3>  
-        <p>  
-            I enjoy building systems from scratch and often prefer native browser APIs over third-party frameworks. That said, I learned that architecture should always match the problem. Over-engineering can slow teams down just as easily as poor structure.
-        </p> 
-        <h3>Lesson Two: Change needs buy-in</h3>  
-        <p>  
-            Technical improvements are only effective when the team understands and supports them. Even well-designed systems can fail if you do not bring other developers along with you before introducing major changes.
-        </p>  
-        <h3>Lesson Three: Voice controls are not always the answer</h3>  
-        <p>  
-            Accessibility features like voice control are powerful, but real-world usability often depends on context. I learned that “technically supported” does not always mean “practically usable.”
-        </p>  
-        <h3>Lesson Four: Use structured metadata early</h3>
-        <p>
-            I learned the importance of structured data like JSON-LD when working with heavily client-rendered applications. Search engines and crawlers still rely on clear, pre-defined metadata, especially when content is rendered dynamically. It is far easier to design for this from the start than to retrofit it later.
-        </p>
-        <h3>Lesson Five: Define device support up front</h3>
-        <p>
-            Do not wait until late in a project to discover which browsers and devices are officially supported. Cutting-edge features like <code>@scope</code> can introduce unexpected compatibility issues. Establishing a clear support matrix early prevents rework and surprises later in development.
-        </p>
-    </div>  
+   <summary>Lessons Learned</summary>
+   <div class="details-content">
+      <p>
+         As a musician, I genuinely enjoyed helping the Sweetwater team. They gave me the freedom to fill gaps where needed and respected my opinions and experience throughout the process. At the same time, I gained a great deal from the experience myself. Below are a few lessons I took away from my time working with them.
+      </p>
+      <h3>Lesson One: Change Needs Buy-In</h3>  
+      <p>  
+         Technical improvements are only effective when the team understands and supports them. Even well-designed systems can fail if you do not bring other developers along before introducing major changes.
+      </p> 
+      <p>  
+         Many of the improvements I introduced were completely new to the team and required training and shared understanding before full adoption. At the same time, I felt confident that these new patterns would strengthen both the developer experience and the user experience. The biggest takeaway was learning to understand your audience before making architectural decisions.
+      </p>  
+      <h3>Lesson Two: Voice Controls</h3>  
+      <p>  
+         Many of us strive to create ADA-compliant web experiences, but very few of us regularly use VoiceOver controls to navigate them ourselves. At Sweetwater, this was a requirement. While well-structured semantic HTML gets you most of the way there, it quickly becomes apparent how suboptimal parts of your experience are once you begin testing with assistive technologies.
+      </p>  
+      <p>
+         I also learned that some semantic HTML elements are not always ideal in practice. Elements such as <code>details</code> and <code>summary</code> work well visually and are technically accessible, but can sound awkward and repetitive when read through Apple VoiceOver controls.
+      </p>
+      <p>
+         Another challenge is that "good" VoiceOver experiences can sometimes conflict with traditional accessibility patterns. Optimizing for screen readers may require removing redundant attributes such as <code>title</code> or overly descriptive labels. For example, card components often contain a wrapper link, image, title, and supporting text. If each element exposes similar content, VoiceOver will repeat the same information multiple times. I encountered similar issues with forms and interactive controls throughout the project.
+      </p>
+      <p>
+         There's a lot more I could say on the subject, so I plan to write about it in a future blog post.
+      </p>
+      <h3>Lesson Three: Structured Metadata</h3>
+      <p>
+         I learned the importance of structured data like JSON-LD when working with heavily client-rendered applications. Search engines and crawlers still rely on clear, pre-defined metadata, especially when content is rendered dynamically. It is far easier to design for this from the beginning than to retrofit it later.
+      </p>
+      <h3>Lesson Four: Define Device Support Early</h3>
+      <p>
+         Do not wait until late in a project to discover which browsers and devices are officially supported. Cutting-edge features like <code>@scope</code> can introduce unexpected compatibility issues. Establishing a clear support matrix early prevents unnecessary rework and surprises later in development.
+      </p>
+   </div>  
 </details>

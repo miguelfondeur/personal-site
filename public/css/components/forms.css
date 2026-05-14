@@ -1,0 +1,18 @@
+select {
+    font-size: var(--font-size-sm);
+    border: 1px solid;
+    border-color: light-dark(var(--color-gray-2), var(--color-dark-gray-1));
+    
+    color: light-dark(var(--color-dark-gray-2), var(--color-gray-2));
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--ui-spacing-3);
+    background-color: light-dark(var(--color-gray-2), var(--color-dark-gray-2));
+    border-radius: var(--border-radius-lg);
+    line-height: 1;
+    text-transform: capitalize;
+    transition: color 0.15s ease-in-out,
+                border-color 0.15s ease-in-out;
+    width: 100%;
+}
