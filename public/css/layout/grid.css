@@ -1,7 +1,0 @@
-[data-columns] {
-    display: grid;
-}
-
-[data-columns="2"] {
-    grid-template-columns: repeat(2, 1fr); 
-}
