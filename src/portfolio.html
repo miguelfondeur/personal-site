@@ -12,7 +12,6 @@ layout: layout.html
 </section>
 <section class="content-section">
    <ul class="work-grid" role="list">
-      
       {% assign sortedCollection = collections.work | sort: "data.order" %}
       {% for item in sortedCollection %}
          {% unless item.data.draft %}
@@ -35,7 +34,7 @@ layout: layout.html
                <button class="close-dialog-button" popovertarget="{{ item.data.id }}" popovertargetaction="hide">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                  </svg>                
+                  </svg>
                </button>
                <div class="container" data-width="small-center">
                   <header id="{{ item.data.id }}-header">
@@ -63,12 +62,12 @@ layout: layout.html
                         </div>
                      {% elsif item.data.id == "sweetwater" %}
                         <div class="work-header-image">
-                           <video 
-                              controls="" 
-                              width="100%" 
-                              height="100%" 
-                              style="object-fit: cover; aspect-ratio: 16 / 9;" 
-                              alt="Sweetwater Taggy Bot Video Demo" 
+                           <video
+                              controls=""
+                              width="100%"
+                              height="100%"
+                              style="object-fit: cover; aspect-ratio: 16 / 9;"
+                              alt="Sweetwater Taggy Bot Video Demo"
                               loading="lazy"
                            >
                               <source src="https://res.cloudinary.com/delgggt32/video/upload/v1778719299/taggy-bot_lofp1c.mp4" type="video/mp4">

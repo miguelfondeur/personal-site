@@ -16,6 +16,46 @@ draft: false
 <p>
     If you open up that object, you'll actually see an <code>href</code> property with the same value you set in the document. So why are there two? The <em>properties</em> you see on the element object are mapped from <em>attributes</em> when the browser loads the page. However, if you select that anchor tag in the console and change its <code>.href</code> property to, say, <em>https://google.com</em>, and inspect the DOM again, you'll notice something interesting: the <code>href</code> <strong>attribute</strong> has not changed, but the <code>href</code> <strong>property</strong> has. 
 </p>
+---
+
+<h2>Backstory - How the DOM Creates Attributes and Props</h2>
+<p><em>Feel free to <a href="#what-is-dataset" title="Go to next page section">skip to the next</a> section if you don't need the backstory..</em></p>
+<p>
+    The last time I went over attributes and props, we discussed how HTML attributes are static and JS properties are dynamic. The HTML elements in the document include attributes, and when the browser renders this document, it creates a Document Object Model (DOM). The DOM, to put it clearly, is a <strong>Model</strong> of the HTML <strong>Document</strong> represented as a Javascript <strong>Object</strong>. 
+</p>
+<p>
+    Let's look under the hood. If you type <code>window.document.all</code> in your console, you'll see an array-like collection of objects representing all of the elements in your HTML document. Eventually, you'll get to an element like an anchor tag <code>&lt;a&gt;</code> or a <code>&lt;button&gt;</code> tag. Let's use an anchor tag as an example. If you open the anchor tag object, you'll see some familiar properties and methods: things like <code>onclick</code>, ARIA labels, and properties like <code>id</code> and <code>href</code>. But if you keep searching, you'll also see a property called <code>attributes</code>. 
+</p>
+<p>
+    If you open up that object, you'll actually see an <code>href</code> property with the same value you set in the document. So why are there two? The <em>properties</em> you see on the element object are mapped from <em>attributes</em> when the browser loads the page. However, if you select that anchor tag in the console and change its <code>.href</code> property to, say, <em>https://google.com</em>, and inspect the DOM again, you'll notice something interesting: the <code>href</code> <strong>attribute</strong> has not changed, but the <code>href</code> <strong>property</strong> has. 
+</p>
+---
+
+<h2>Backstory - How the DOM Creates Attributes and Props</h2>
+<p><em>Feel free to <a href="#what-is-dataset" title="Go to next page section">skip to the next</a> section if you don't need the backstory..</em></p>
+<p>
+    The last time I went over attributes and props, we discussed how HTML attributes are static and JS properties are dynamic. The HTML elements in the document include attributes, and when the browser renders this document, it creates a Document Object Model (DOM). The DOM, to put it clearly, is a <strong>Model</strong> of the HTML <strong>Document</strong> represented as a Javascript <strong>Object</strong>. 
+</p>
+<p>
+    Let's look under the hood. If you type <code>window.document.all</code> in your console, you'll see an array-like collection of objects representing all of the elements in your HTML document. Eventually, you'll get to an element like an anchor tag <code>&lt;a&gt;</code> or a <code>&lt;button&gt;</code> tag. Let's use an anchor tag as an example. If you open the anchor tag object, you'll see some familiar properties and methods: things like <code>onclick</code>, ARIA labels, and properties like <code>id</code> and <code>href</code>. But if you keep searching, you'll also see a property called <code>attributes</code>. 
+</p>
+<p>
+    If you open up that object, you'll actually see an <code>href</code> property with the same value you set in the document. So why are there two? The <em>properties</em> you see on the element object are mapped from <em>attributes</em> when the browser loads the page. However, if you select that anchor tag in the console and change its <code>.href</code> property to, say, <em>https://google.com</em>, and inspect the DOM again, you'll notice something interesting: the <code>href</code> <strong>attribute</strong> has not changed, but the <code>href</code> <strong>property</strong> has. 
+</p>
+<p>raft: false
+---
+
+<h2>Backstory - How the DOM Creates Attributes and Props</h2>
+<p><em>Feel free to <a href="#what-is-dataset" title="Go to next page section">skip to the next</a> section if you don't need the backstory..</em></p>
+<p>
+    The last time I went over attributes and props, we discussed how HTML attributes are static and JS properties are dynamic. The HTML elements in the document include attributes, and when the browser renders this document, it creates a Document Object Model (DOM). The DOM, to put it clearly, is a <strong>Model</strong> of the HTML <strong>Document</strong> represented as a Javascript <strong>Object</strong>. 
+</p>
+<p>
+    Let's look under the hood. If you type <code>window.document.all</code> in your console, you'll see an array-like collection of objects representing all of the elements in your HTML document. Eventually, you'll get to an element like an anchor tag <code>&lt;a&gt;</code> or a <code>&lt;button&gt;</code> tag. Let's use an anchor tag as an example. If you open the anchor tag object, you'll see some familiar properties and methods: things like <code>onclick</code>, ARIA labels, and properties like <code>id</code> and <code>href</code>. But if you keep searching, you'll also see a property called <code>attributes</code>. 
+</p>
+<p>
+    If you open up that object, you'll actually see an <code>href</code> property with the same value you set in the document. So why are there two? The <em>properties</em> you see on the element object are mapped from <em>attributes</em> when the browser loads the page. However, if you select that anchor tag in the console and change its <code>.href</code> property to, say, <em>https://google.com</em>, and inspect the DOM again, you'll notice something interesting: the <code>href</code> <strong>attribute</strong> has not changed, but the <code>href</code> <strong>property</strong> has. 
+</p>
 <p>
     Hopefully, by now, you see how attributes and properties are not the same, and why some are available as properties of the element object while others are not. Now, if you look at this element object again, you might notice another property called <code>dataset</code>. 
 </p>
