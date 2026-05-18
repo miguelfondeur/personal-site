@@ -16,7 +16,6 @@ draft: false
 <p>
     If you open up that object, you'll actually see an <code>href</code> property with the same value you set in the document. So why are there two? The <em>properties</em> you see on the element object are mapped from <em>attributes</em> when the browser loads the page. However, if you select that anchor tag in the console and change its <code>.href</code> property to, say, <em>https://google.com</em>, and inspect the DOM again, you'll notice something interesting: the <code>href</code> <strong>attribute</strong> has not changed, but the <code>href</code> <strong>property</strong> has. 
 </p>
----
 
 <h2>Backstory - How the DOM Creates Attributes and Props</h2>
 <p><em>Feel free to <a href="#what-is-dataset" title="Go to next page section">skip to the next</a> section if you don't need the backstory..</em></p>
@@ -29,7 +28,6 @@ draft: false
 <p>
     If you open up that object, you'll actually see an <code>href</code> property with the same value you set in the document. So why are there two? The <em>properties</em> you see on the element object are mapped from <em>attributes</em> when the browser loads the page. However, if you select that anchor tag in the console and change its <code>.href</code> property to, say, <em>https://google.com</em>, and inspect the DOM again, you'll notice something interesting: the <code>href</code> <strong>attribute</strong> has not changed, but the <code>href</code> <strong>property</strong> has. 
 </p>
----
 
 <h2>Backstory - How the DOM Creates Attributes and Props</h2>
 <p><em>Feel free to <a href="#what-is-dataset" title="Go to next page section">skip to the next</a> section if you don't need the backstory..</em></p>
@@ -42,8 +40,7 @@ draft: false
 <p>
     If you open up that object, you'll actually see an <code>href</code> property with the same value you set in the document. So why are there two? The <em>properties</em> you see on the element object are mapped from <em>attributes</em> when the browser loads the page. However, if you select that anchor tag in the console and change its <code>.href</code> property to, say, <em>https://google.com</em>, and inspect the DOM again, you'll notice something interesting: the <code>href</code> <strong>attribute</strong> has not changed, but the <code>href</code> <strong>property</strong> has. 
 </p>
-<p>raft: false
----
+<p>
 
 <h2>Backstory - How the DOM Creates Attributes and Props</h2>
 <p><em>Feel free to <a href="#what-is-dataset" title="Go to next page section">skip to the next</a> section if you don't need the backstory..</em></p>
