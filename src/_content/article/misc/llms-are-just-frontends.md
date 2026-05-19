@@ -1,6 +1,6 @@
 ---
-title: Are LLM's Just UI's?
-summary: Ive had the experience of building LLM chat bots at an enterprise level and at an exploratory level and I've come to a realzation that.. they might just be a User Interface? It may seem obvious to some, or scandalous to others. I'm going to explore  this idea based on my own experience with this tech. Enjoy the short read. 
+title: Are LLMs Just UIs?
+summary: Ive had the experience of building LLM chat bots at both a production level and an exploratory level and I've come to a realzation that.. they might just be a User Interface? It may seem obvious to some, or scandalous to others. I'm going to explore  this idea based on my own experience with this tech. Enjoy the short read. 
 date: 2026-05-18
 draft: false
 ---
