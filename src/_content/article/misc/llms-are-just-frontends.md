@@ -3,7 +3,6 @@ title: Are LLM's Just UI's?
 summary: Ive had the experience of building LLM chat bots at an enterprise level and at an exploratory level and I've come to a realzation that.. they might just be a User Interface? It may seem obvious to some, or scandalous to others. I'm going to explore  this idea based on my own experience with this tech. Enjoy the short read. 
 date: 2026-05-18
 draft: false
-og_image: /img/articles/taggy-header.webp
 ---
 <h2>The LLM Experience</h2>
 <p>
@@ -19,9 +18,9 @@ og_image: /img/articles/taggy-header.webp
 <p>
   When <a href="celestefondeur.com" target="_blank">Celeste</a> and I created <i>Prompt Shorty</i>, a <abbr title="Proof of Concept">POC</abbr> storytelling application, I was surprised at how easy it was to implement and use LLM software. You give it context, it gives you responses. But likewise, without context, you're subject to whatever training data the model has available. <i>"Write Me A Story..."</i>, results may vary. In our case, we were using OpenAI's <strong>Completions API</strong> and passing user input into the "Sytem Prompt" to get more curated responses. We also created a <abbr title="Retrieval Augmented Generation">RAG</abbr> toolchain to add reading level data which further improved the responses. It was clear to us that models didn't just "work" out of the box. They need fine-tuning.
 </p>
-<div class="article-image-wrapper">
+<!-- <div class="article-image-wrapper">
     <img src="/img/articles/taggy-header.webp" alt="An image of Taggy, the e-commerce chat-bot." width="100%" loading="lazy">
-</div>
+</div> -->
 <p>
   Recently while working with the Sweetwater team, I decided to prototype another chat bot "Taggy" to allow contextual search of real product data from Algolia. I trained the bot to receive product questions, interpret them, and repsond in JSON which I could feed into the Algolia request. Then I would use the Algolia response to feed the bot product data. Finally, the bot would use this data in its response, and update the collecion UI. This worked too well.
 </p>
