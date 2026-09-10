@@ -74,7 +74,7 @@ I learned a lot, but oddly enough, my kids liked the first version better.
 It had a personal feel the second version lacked.
 
 My wife, a conversation designer, came up with a new idea: help kids write their own stories using simple prompts.  
-We’re calling it <a href="https://promptshorty.com" target="_blank">promptshorty</a>.  
+We’re calling it <a href="https://shortytales.com" target="_blank">promptshorty</a>.  
 Our daughter has already used it to write stories, often inserting herself into existing ones.  
 Fan fiction.  
 So far, so good.
