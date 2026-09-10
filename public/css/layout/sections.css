@@ -93,6 +93,8 @@ aside.aside-section {
     }
 
     & .about-image {
+        border: 2px solid var(--color-gray-5);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, .5);
         margin-inline: 1rem;
         max-width: none;
         aspect-ratio: 1;
@@ -110,6 +112,23 @@ aside.aside-section {
         /* Small Screens */
         @media (max-width: 1024px){
             max-width: 32rem;
+        }
+
+        /* The round headshot is already cut to a circle, so it needs no
+           frame, fill, or tilt behind it. */
+        &.is-round {
+            max-width: 20rem;
+            rotate: none;
+            border-radius: 100%;
+            background-color: transparent;
+
+            /* The reset caps width but leaves height alone, so the
+               intrinsic size attributes need scaling back down. */
+            & img {
+                width: 100%;
+                height: auto;
+                background-color: transparent;
+            }
         }
     }
 }
