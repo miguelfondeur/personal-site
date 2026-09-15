@@ -109,7 +109,6 @@ aside.aside-section {
         overflow: hidden;
 
         & img {
-            background-color: var(--color-bg-site);
             aspect-ratio: 1;
             object-fit: cover;
             visibility: hidden;

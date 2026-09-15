@@ -10,6 +10,9 @@ async function bundleCss() {
         bundle: true,
         minify: true,
         outfile: "public/css/main.min.css",
+        // Site-root asset paths are served by the passthrough copy, not the
+        // bundler. Leave them in the output instead of trying to resolve them.
+        external: ["/img/*", "/fonts/*"],
         loader: {
             ".css": "css"
         }
