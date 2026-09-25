@@ -94,7 +94,7 @@ aside.aside-section {
 
     & .about-image {
         background: 
-            linear-gradient(lightblue, var(--color-sea-green)), 
+            linear-gradient(transparent, lightblue), 
             url(/img/profile-headshot-round.png);
         background-blend-mode: color;
         background-size: contain;
