@@ -18,7 +18,7 @@ summary: |
   parts data to their platform.
 links:
   - github.com: https://github.com/miguelfondeur/legoartcreator
-  - brickartcreator.com: https://brickartcreator.com/#creator
+  - brickartcreator.netlify.app: https://brickartcreator.netlify.app/#creator
 accomplishments:
   [
     "Created a web app to translate images to mosaics, inspired by the Lego Art series.",
