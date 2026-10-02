@@ -1,54 +1,10 @@
-/* Article search and category filters */
+/* Article category filters */
 
 .article-search {
     display: flex;
     flex-direction: column;
     gap: var(--ui-spacing-4);
     margin-bottom: var(--ui-spacing-10);
-}
-
-.article-search-field {
-    display: flex;
-    align-items: center;
-    gap: var(--ui-spacing-3);
-    padding: var(--ui-spacing-3) var(--ui-spacing-4);
-    border: 1px solid;
-    border-color: light-dark(var(--color-gray-2), var(--color-dark-gray-1));
-    background-color: light-dark(var(--color-gray-1), var(--color-dark-gray-2));
-    border-radius: var(--border-radius-lg);
-    transition: border-color 0.15s ease-in-out;
-
-    &:focus-within {
-        border-color: var(--color-text-accent);
-    }
-
-    & svg {
-        width: var(--ui-spacing-5);
-        flex-shrink: 0;
-        color: light-dark(var(--color-gray-6), var(--color-gray-4));
-    }
-
-    /* The field itself owns the focus ring, so the input doesn't draw a second one. */
-    & input {
-        flex: 1;
-        min-width: 0;
-        border: none;
-        outline: none;
-        background: none;
-        padding: 0;
-        font-family: inherit;
-        font-size: var(--font-size-base);
-        color: light-dark(var(--color-black), var(--color-white));
-
-        &::placeholder {
-            color: light-dark(var(--color-gray-5), var(--color-gray-6));
-        }
-
-        /* Hide the browser's own clear button, Escape already clears the field. */
-        &::-webkit-search-cancel-button {
-            display: none;
-        }
-    }
 }
 
 .article-filters {
@@ -60,7 +16,7 @@
 .filter-chip {
     font-family: inherit;
     font-size: var(--font-size-sm);
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: .5px;
     line-height: 1;
     padding: var(--ui-spacing-2) var(--ui-spacing-4);
