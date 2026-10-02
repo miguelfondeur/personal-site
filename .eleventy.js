@@ -67,6 +67,24 @@ module.exports = function(eleventyConfig) {
         return fs.readFileSync(filepath, "utf8");
     });
 
+    // Articles live in src/_content/article/<category>/, so the folder they sit
+    // in is the category. Anything unfiled reads as Miscellaneous.
+    const articleCategories = {
+        css: "CSS",
+        javascript: "JavaScript",
+        misc: "Miscellaneous"
+    };
+
+    eleventyConfig.addFilter("articleCategory", function (inputPath) {
+        const folder = String(inputPath).split("/").slice(-2, -1)[0];
+        return articleCategories[folder] || "Miscellaneous";
+    });
+
+    eleventyConfig.addFilter("articleCategorySlug", function (inputPath) {
+        const folder = String(inputPath).split("/").slice(-2, -1)[0];
+        return articleCategories[folder] ? folder : "misc";
+    });
+
     return {
         dir: {
             input: "src",

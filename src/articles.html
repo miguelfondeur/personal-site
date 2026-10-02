@@ -1,5 +1,5 @@
 ---
-layout: layout.html 
+layout: layout.html
 ---
 
 <section class="hero-section">
@@ -12,11 +12,46 @@ layout: layout.html
 </section>
 <section class="content-section">
     <div class="container" data-width="medium">
-        <div class="article-wrapper split-wrapper"><!-- Sub Grid for Articles -->
+
+        <!-- Search is an enhancement. It stays hidden until the script runs,
+             so without JavaScript the full list below is still there. -->
+        <div class="article-search" data-article-search hidden>
+            <div class="article-search-field">
+                <label class="sr-only" for="article-search-input">Search articles</label>
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+                <input
+                    type="search"
+                    id="article-search-input"
+                    placeholder="Search articles"
+                    autocomplete="off"
+                    spellcheck="false"
+                    data-search-input>
+            </div>
+
+            <div class="article-filters" role="group" aria-label="Filter articles by category">
+                <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="filter-chip" data-filter="css" aria-pressed="false">CSS</button>
+                <button type="button" class="filter-chip" data-filter="javascript" aria-pressed="false">JavaScript</button>
+                <button type="button" class="filter-chip" data-filter="misc" aria-pressed="false">Miscellaneous</button>
+            </div>
+
+            <!-- Visually hidden, but still announced to screen readers when the
+                 list changes, since they can't see the cards appear and disappear. -->
+            <p class="sr-only" role="status" data-search-status></p>
+        </div>
+
+        <div class="article-wrapper split-wrapper" data-article-list><!-- Sub Grid for Articles -->
             {% assign sortedArticles = collections.articles | sort: "data.date" | reverse %}
             {% for article in sortedArticles %}
                 {% unless article.data.draft %}
-                    <article class="article-card card-split">
+                    {% assign category = article.inputPath | articleCategory %}
+                    {% assign categorySlug = article.inputPath | articleCategorySlug %}
+                    <article
+                        class="article-card card-split"
+                        data-category="{{ categorySlug }}"
+                        data-search-text="{{ article.data.title | append: ' ' | append: article.data.summary | append: ' ' | append: category | downcase | escape }}">
                         <time class="" datetime="{{ article.date | date: '%Y-%m-%d' }}">
                             {{ article.date | date: "%B %d, %Y" }}
                         </time>
@@ -38,6 +73,10 @@ layout: layout.html
                     </article>
                 {% endunless %}
             {% endfor %}
+
+            <p class="article-empty-state" data-empty-state hidden>
+                No articles matched that search. Try a different term or clear the filters.
+            </p>
         </div>
     </div>
 </section>

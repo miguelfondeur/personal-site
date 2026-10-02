@@ -4,23 +4,23 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Miguel Fondeur - Software Engineer | </title>
+   <title>Miguel Fondeur - Software Engineer | Articles | The Tale of Two Collection Pages</title>
    <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
    <meta name="author" content="Miguel Fondeur">
    <meta name="robots" content="index, follow">
 
    <!-- Open Graph (for social media sharing) -->
-   <meta property="og:title" content="Miguel Fondeur - Software Engineer">
-   <meta property="og:description" content="">
+   <meta property="og:title" content="Miguel Fondeur | Articles | The Tale of Two Collection Pages">
+   <meta property="og:description" content="Two collection pages on the same ecommerce domain, built years apart. One is vanilla JavaScript over server-rendered HTML, the other is React on Next.js. Same products, same grid, same job. I measured what each implementation actually costs the browser, and the gap is wider than the route code suggests.">
    <meta property="og:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <meta property="og:url" content="https://miguelfondeur.com">
    <meta property="og:type" content="website">
    <meta property="og:logo" content="https://miguelfondeur.com/img/og-image-2.jpg" />
 
    <!-- Twitter Card -->
-   <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:title" content="Miguel Fondeur - Software Engineer">
-   <meta name="twitter:description" content="">
+   <meta name="twitter:card" content="https://miguelfondeur.com/img/og-image-2.jpg">
+   <meta name="twitter:title" content="Miguel Fondeur | Articles | The Tale of Two Collection Pages">
+   <meta name="twitter:description" content="Two collection pages on the same ecommerce domain, built years apart. One is vanilla JavaScript over server-rendered HTML, the other is React on Next.js. Same products, same grid, same job. I measured what each implementation actually costs the browser, and the gap is wider than the route code suggests.">
    <meta name="twitter:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
    <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
 
@@ -73,7 +73,6 @@
                "/about/index.html",
                "/articles/index.html",
                "/apps/index.html",
-               "/thank-you/index.html",
                "/index.html"
             ]
          }]
@@ -140,541 +139,154 @@
  </header>
    
       <main id="site-content">
-         <div class="container">
-            
-<section class="hero-section">
-    <div class="container" data-width="small">
-        <h1>Writing about code, design, <em>&</em> <span class="text-accent">life lessons</span>.</h1>
-        <p>
-            A collection of my thoughts on programming, team leadership, product development, and the creative intersections of music and technology—organized chronologically.
-        </p>
-    </div>
-</section>
-<section class="content-section">
-    <div class="container" data-width="medium">
+         <div class="container" data-width="small-center">
+            <a class="back-button" href="/articles/" title="Go back to articles Page">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+               </svg>
+            </a>
+            <article>
+               <header class="hero-section long-copy">
+                  <time class="" datetime="2026-09-30">
+                     September 30, 2026
+                  </time>
+                  <h1>The Tale of Two Collection Pages</h1>
+                  <p>Two collection pages on the same ecommerce domain, built years apart. One is vanilla JavaScript over server-rendered HTML, the other is React on Next.js. Same products, same grid, same job. I measured what each implementation actually costs the browser, and the gap is wider than the route code suggests.</p>
+               </header>
+               <main>
+                  <h2>Two Pages, One Domain</h2>
+<p>
+    A collection page is a collection page. It lists products in a grid, it filters, it paginates, it lazy-loads images. The requirements have not meaningfully changed since 2010. So when a single ecommerce domain happens to serve two of them, built years apart on completely different stacks, you have something close to a natural experiment.
+</p>
+<p>
+    I found exactly that while poking at a music retailer's site. Two collection pages, same company, same catalog, same CDN, same design language. One is vanilla JavaScript enhancing server-rendered HTML. The other is React, running on Next.js. Two teams solved the same problem twice, and the browser gets to pay for both.
+</p>
+<p>
+    One note on scope before the numbers. The vanilla page does load jQuery, from a public CDN, as a site-wide dependency shared by every page on the domain. It is not part of the collection implementation, and it is third-party, so it is excluded from every measurement below. What I am comparing is the code each team wrote to render a product grid, plus whatever that code requires in order to run.
+</p>
+<h2>Identifying the Implementations</h2>
+<p>
+    You do not need source access to work out how a page is built. The vanilla page arrives with its grid already in the markup, and loads one route-specific bundle to enhance it:
+</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/dist/js/app/whats-new/index.js<span class="token punctuation">"</span></span> <span class="token attr-name">defer</span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>
+    Server-rendered HTML, progressively enhanced. The products are in the document when it lands. JavaScript shows up afterward to handle filtering, pagination, and lazy loading.
+</p>
+<p>
+    The React page announces itself differently:
+</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>__NEXT_DATA__<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>application/json<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript"><span class="token punctuation">{</span><span class="token string-property property">"props"</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token string-property property">"pageProps"</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/_next/static/chunks/framework-471a843c5613f1bc.js<span class="token punctuation">"</span></span> <span class="token attr-name">defer</span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/_next/static/chunks/pages/dealzone/[[...slug]]-45897dad35a6c3fb.js<span class="token punctuation">"</span></span> <span class="token attr-name">defer</span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/_next/static/_yoGcQVf2iXEU3EVqQbhj/_ssgManifest.js<span class="token punctuation">"</span></span> <span class="token attr-name">defer</span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>
+    Next.js with a catch-all dynamic route and an <code>_ssgManifest</code>, meaning the page is statically generated at build time. Markup gets sent, serialized props get sent alongside it, then React boots and hydrates what the server already built.
+</p>
+<h2>The Route Code, and What It Stands On</h2>
+<p>
+    Here is where the measurement gets interesting, and where a naive comparison would mislead you. I pulled first-party JavaScript from the Resource Timing API, reading <code>transferSize</code> for what crossed the network and <code>decodedBodySize</code> for what the main thread has to parse. Then I split it into the route's own code and the baseline that code cannot run without.
+</p>
+<table>
+    <thead>
+        <tr>
+            <th>Implementation</th>
+            <th>Route code</th>
+            <th>Baseline it requires</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Vanilla</td>
+            <td>75 KB wire / 292 KB decoded</td>
+            <td>313 KB / 1,144 KB</td>
+            <td><strong>388 KB / 1,436 KB</strong></td>
+        </tr>
+        <tr>
+            <td>React</td>
+            <td>15 KB wire / 47 KB decoded</td>
+            <td>584 KB / 2,077 KB</td>
+            <td>599 KB / 2,124 KB</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    Credit where it is due: <strong>React's route code is genuinely lean</strong>. Fifteen kilobytes over the wire to express an entire collection page, against seventy-five for the vanilla equivalent. If you stopped reading the numbers there, you would conclude React won decisively, and plenty of framework comparisons do stop exactly there.
+</p>
+<p>
+    But that 15 KB cannot do anything on its own. Before the route chunk runs, the browser must download, parse, and execute the React runtime, the Next.js runtime, the webpack runtime, and a shared application shell called <code>_app.js</code> that is <strong>512 KB gzipped and 1.8 MB decoded</strong>. One file. Every route on the site drags it in, whether that route needs any of it or not.
+</p>
+<p>
+    So the weight did not disappear. It moved. React's route code is small <em>because</em> the baseline is enormous, and the baseline is where 97% of its JavaScript lives. Counted honestly, from an empty cache to a rendered grid of products, the vanilla implementation ships <strong>35% less JavaScript over the wire and hands the parser 688 KB less work</strong>.
+</p>
+<p>
+    That parse figure is the one people skip, and on a mid-range Android phone it is the one that hurts. Gzip makes bytes cheap to move. It does nothing to make them cheap to compile.
+</p>
+<h2>The Document</h2>
+<p>
+    The HTML tells a related story. Both pages carry the same third-party A/B testing tool, injected as a single inline script:
+</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>__ss_csf_data<span class="token punctuation">"</span></span> <span class="token attr-name">data-sitespect</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+<table>
+    <thead>
+        <tr><th>Implementation</th><th>Total HTML</th><th>That one script tag</th><th>Share of document</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Vanilla</td><td><strong>850 KB</strong></td><td><strong>5.6 KB</strong></td><td><strong>0.7%</strong></td></tr>
+        <tr><td>React</td><td>2.06 MB</td><td>2.00 MB</td><td>97.1%</td></tr>
+    </tbody>
+</table>
+<p>
+    Same tool, same vendor, same site. On the vanilla page it costs 5.6 KB. On the React page it is <strong>97% of the entire document</strong>, and on a cache miss I watched it reach 9.1 MB of a 9.18 MB response.
+</p>
+<p>
+    It is worth being precise about what that payload is not. It is not product data. The markup around it is effectively identical on both pages, the same 578 <code>div</code> elements, the same 35 list items, the same 23 product links, and it contains only sixteen timestamp entries either way. Nothing in the page's content justifies megabytes.
+</p>
+<p>
+    I cannot tell you from the outside exactly why one tool behaves so differently across two pages on one domain. What I can say is that a document which is mostly serialized framework state offers a vendor script a lot more to attach itself to than a document which is mostly content. Fewer seams, fewer places for something to go wrong.
+</p>
+<h2>The Server</h2>
+<p>
+    Then the part that surprised me most. I wanted each implementation's true origin cost, with the CDN taken out of the picture, so I forced a cache miss on both and read the <code>x-timer</code> header, which reports how long the edge spent waiting on the backend.
+</p>
+<table>
+    <thead>
+        <tr><th>Implementation</th><th>Server time on a cache miss</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Vanilla</td><td><strong>~100 ms</strong></td></tr>
+        <tr><td>React</td><td>3,032 to 3,445 ms</td></tr>
+    </tbody>
+</table>
+<p>
+    The vanilla backend produces a complete, content-filled document in about a tenth of a second. The React page's origin takes <strong>three to three and a half seconds</strong>, roughly thirty times longer. Static generation plus a CDN hides that almost all the time, which is precisely the danger: when the cache entry expires, somebody waits three seconds, and nobody on the team hears about it.
+</p>
+<p>
+    The vanilla page has nowhere to hide a number like that. Its backend renders HTML and hands it over. When it is slow, it is slow in front of you.
+</p>
+<h2>What Vanilla Actually Buys You</h2>
+<p>
+    Pulling it together: for a functionally indistinguishable product grid, the vanilla implementation ships 35% less JavaScript, hands the parser 688 KB less work, keeps its document a quarter the size, holds a third-party script to 0.7% of the page instead of 97%, and renders on the server about thirty times faster.
+</p>
+<p>
+    None of that is because vanilla JavaScript is a better tool than React. React is a better tool than hand-rolled DOM code for a great many problems. It is because of what this architecture <em>does not do</em>. There is no application shell to fetch before the first product appears. There is no hydration pass that re-walks a DOM the server just finished building. There is no serialized copy of the page's data shipped alongside the page itself. The server sends HTML, the browser renders HTML, and the JavaScript arrives afterward to improve what is already on screen.
+</p>
+<p>
+    The deeper advantage is legibility. When something goes wrong in the vanilla implementation, the cause sits in plain sight, in a response header or one route bundle, and you can find it in an afternoon with <code>curl</code> and the Network panel. When something goes wrong in the React implementation, the cause is somewhere under static generation, a hydration boundary, an edge cache, and a 1.8 MB shared shell. You can go years without noticing a three second render, because the CDN is quietly covering for you.
+</p>
+<p>
+    Lean code is not only cheaper to download. It is cheaper to reason about, and on a codebase that has to survive fifteen years of team turnover, that is probably the thing that actually matters.
+</p>
+<h3>A Note on Method, and on Fairness</h3>
+<p>
+    Measurements came from <code>curl</code> for header and origin behavior, and from the Navigation and Resource Timing APIs in a real Chrome session for load behavior, four loads per page. jQuery is excluded throughout, as a shared site-wide third-party dependency rather than part of either collection implementation. React's <code>polyfills</code> chunk is also excluded, since modern Chrome skips it. Two caveats on the rest: the automation tab ran hidden and Chrome does not paint hidden tabs, so I have no First Contentful Paint or Largest Contentful Paint figures, these are network and parse metrics rather than perceived-render metrics. And forcing a cache miss required a query parameter, which also inflated that A/B payload, so the three second origin figure covers a larger response than the cached one. A like-for-like render would land somewhat lower, still far behind the other page.
+</p>
+<p>
+    In fairness, the vanilla page is not trouble-free in production. It has real problems, and on a repeat visit it currently loses to the React page on wall-clock load time. But those problems live entirely in caching configuration, a couple of response headers that stop the browser and the CDN from reusing anything they already have, and they are one-line fixes. They have nothing to do with the JavaScript implementation, which is what I set out to measure here. The front-end code is doing its job well. The delivery layer in front of it is throwing that work away, and that is a separate post.
+</p>
 
-        <!-- Search is an enhancement. It stays hidden until the script runs,
-             so without JavaScript the full list below is still there. -->
-        <div class="article-search" data-article-search hidden>
-            <div class="article-search-field">
-                <label class="sr-only" for="article-search-input">Search articles</label>
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                </svg>
-                <input
-                    type="search"
-                    id="article-search-input"
-                    placeholder="Search articles"
-                    autocomplete="off"
-                    spellcheck="false"
-                    data-search-input>
-            </div>
-
-            <div class="article-filters" role="group" aria-label="Filter articles by category">
-                <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All</button>
-                <button type="button" class="filter-chip" data-filter="css" aria-pressed="false">CSS</button>
-                <button type="button" class="filter-chip" data-filter="javascript" aria-pressed="false">JavaScript</button>
-                <button type="button" class="filter-chip" data-filter="misc" aria-pressed="false">Miscellaneous</button>
-            </div>
-
-            <!-- Visually hidden, but still announced to screen readers when the
-                 list changes, since they can't see the cards appear and disappear. -->
-            <p class="sr-only" role="status" data-search-status></p>
-        </div>
-
-        <div class="article-wrapper split-wrapper" data-article-list><!-- Sub Grid for Articles -->
-            
-            
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="misc"
-                        data-search-text="thoughts on art, atrophy, and economics generative ai has been making a lot of fun changes very quickly. like the american experiment that we&#39;re all living in, consensus is split on whether it&#39;s beneficial or not. we love art because it brings us closer together, and we&#39;ll pay for the things we love. but if something could create cheap art, is it more valuable or less? and if we use ai for art, what will happen to artists? miscellaneous">
-                        <time class="" datetime="2026-09-09">
-                            September 09, 2026
-                        </time>
-                        <a href="/articles/skill-atrophy/" title="Open Blog Post - Thoughts on Art, Atrophy, and Economics">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Thoughts on Art, Atrophy, and Economics
-                                </div>
-                                <p class="">Generative AI has been making a lot of fun changes very quickly. Like the American experiment that we're all living in, consensus is split on whether it's beneficial or not. We love Art because it brings us closer together, and we'll pay for the things we love. But if something could create cheap art, is it more valuable or less? And if we use AI for art, what will happen to artists?</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="misc"
-                        data-search-text="are llms just uis? ive had the experience of building llm chat bots at both a production level and an exploratory level and i&#39;ve come to a realzation that.. they might just be a user interface? it may seem obvious to some, or scandalous to others. i&#39;m going to explore  this idea based on my own experience with this tech. enjoy the short read. miscellaneous">
-                        <time class="" datetime="2026-05-17">
-                            May 17, 2026
-                        </time>
-                        <a href="/articles/llms-are-just-frontends/" title="Open Blog Post - Are LLMs Just UIs?">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Are LLMs Just UIs?
-                                </div>
-                                <p class="">Ive had the experience of building LLM chat bots at both a production level and an exploratory level and I've come to a realzation that.. they might just be a User Interface? It may seem obvious to some, or scandalous to others. I'm going to explore  this idea based on my own experience with this tech. Enjoy the short read.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="javascript"
-                        data-search-text="anatomy of a web component did you know you could build with components without using a framework? did you know you could use these components with other frameworks? you might be thinking, &#34;how in the..&#34;. let me show you the way... i&#39;ll walk you through the shape and usage of native js components (or custom elements). strap yourselves in kids, it&#39;s going to be a long one! javascript">
-                        <time class="" datetime="2026-01-08">
-                            January 08, 2026
-                        </time>
-                        <a href="/articles/anatomy-of-a-web-component/" title="Open Blog Post - Anatomy Of A Web Component">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Anatomy Of A Web Component
-                                </div>
-                                <p class="">Did you know you could build with components without using a framework? Did you know you could use these components with other frameworks? You might be thinking, "How in the..". Let me show you the way... I'll walk you through the shape and usage of native JS components (or custom elements). Strap yourselves in kids, it's going to be a long one!</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="misc"
-                        data-search-text="stories are more important than facts we know this at an instinctive level, but we don&#39;t really think this way. we assume our decisions, especially in tech, are based on facts. but in tech, marketing, and life, narratives drive decisions. not facts. here are my thoughts. miscellaneous">
-                        <time class="" datetime="2025-07-24">
-                            July 24, 2025
-                        </time>
-                        <a href="/articles/stories-vs-facts/" title="Open Blog Post - Stories Are More Important Than Facts">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Stories Are More Important Than Facts
-                                </div>
-                                <p class="">We know this at an instinctive level, but we don't really think this way. We assume our decisions, especially in tech, are based on facts. But in tech, marketing, and life, narratives drive decisions. Not facts. Here are my thoughts.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="css"
-                        data-search-text="why smacss still slaps i know i&#39;m probably too old to say something &#34;slaps&#34;, but smacss really does. after over a decade building front-end apps, i’ve yet to find a more practical, scalable way to structure css. here’s why it still holds up. css">
-                        <time class="" datetime="2025-07-22">
-                            July 22, 2025
-                        </time>
-                        <a href="/articles/smaccs-still-slaps/" title="Open Blog Post - Why SMACSS Still Slaps">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Why SMACSS Still Slaps
-                                </div>
-                                <p class="">I know I'm probably too old to say something "slaps", but SMACSS really does. After over a decade building front-end apps, I’ve yet to find a more practical, scalable way to structure CSS. Here’s why it still holds up.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="css"
-                        data-search-text="the :has selector is amazing this new css pseudo-class selector is amazing. for years we wanted a &#39;parent&#39; selector but never thought it would come. what we ended up with was even better than i could imagine. let&#39;s explore this powerful tool and how to use it. css">
-                        <time class="" datetime="2025-04-23">
-                            April 23, 2025
-                        </time>
-                        <a href="/articles/has-selector-is-amazing/" title="Open Blog Post - The :has Selector is Amazing">
-                            <div class="card-content">
-                                <div class="h3">
-                                    The :has Selector is Amazing
-                                </div>
-                                <p class="">This new CSS pseudo-class selector is amazing. For years we wanted a 'parent' selector but never thought it would come. What we ended up with was even better than I could imagine. Let's explore this powerful tool and how to use it.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="misc"
-                        data-search-text="the art vs. utility of web development we’ve all seen websites that stretch the limits of what a website can do—true works of art. but the ugliest websites are often the most performant and have higher conversion. so what is the real purpose of a website? here&#39;s what i learned from a recent project. miscellaneous">
-                        <time class="" datetime="2025-04-15">
-                            April 15, 2025
-                        </time>
-                        <a href="/articles/art-vs-utility/" title="Open Blog Post - The Art vs. Utility of Web Development">
-                            <div class="card-content">
-                                <div class="h3">
-                                    The Art vs. Utility of Web Development
-                                </div>
-                                <p class="">We’ve all seen websites that stretch the limits of what a website can do—true works of art. But the ugliest websites are often the most performant and have higher conversion. So what is the real purpose of a website? Here's what I learned from a recent project.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="javascript"
-                        data-search-text="working with objects: consuming json javascript object notation, or json, is a data structure that&#39;s hard to avoid if you&#39;re working on professional web applications. we&#39;ve already covered objects in the first three articles. let&#39;s now explore what makes json different from vanilla javascript objects, how to encode and parse, and how to receive json data from an api. javascript">
-                        <time class="" datetime="2025-04-14">
-                            April 14, 2025
-                        </time>
-                        <a href="/articles/objects-json/" title="Open Blog Post - Working with Objects: Consuming JSON">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Working with Objects: Consuming JSON
-                                </div>
-                                <p class="">JavaScript Object Notation, or JSON, is a data structure that's hard to avoid if you're working on professional web applications. We've already covered objects in the first three articles. Let's now explore what makes JSON different from vanilla JavaScript objects, how to encode and parse, and how to receive JSON data from an API.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="javascript"
-                        data-search-text="working with objects: traversing nested data in earlier parts of the *working with objects* series, we explored working with object data that&#39;s only one level deep. but in real-world applications, json data is often deeply nested. before we continue building our little application, let’s go over how to navigate that structure. javascript">
-                        <time class="" datetime="2025-04-13">
-                            April 13, 2025
-                        </time>
-                        <a href="/articles/objects-nested-data/" title="Open Blog Post - Working with Objects: Traversing Nested Data">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Working with Objects: Traversing Nested Data
-                                </div>
-                                <p class="">In earlier parts of the *Working with Objects* series, we explored working with object data that's only one level deep. But in real-world applications, JSON data is often deeply nested. Before we continue building our little application, let’s go over how to navigate that structure.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="javascript"
-                        data-search-text="working with objects: creating, updating &amp; deleting in my last post on objects, i mentioned how most of what we do as javascript developers is working with objects. it&#39;s foundational to building javascript applications. we spoke about filtering, searching, and sorting. in this post, i&#39;ll go through three aspects of crud: create, update, and delete. javascript">
-                        <time class="" datetime="2025-03-28">
-                            March 28, 2025
-                        </time>
-                        <a href="/articles/objects-create-update-delete/" title="Open Blog Post - Working with Objects: Creating, Updating & Deleting">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Working with Objects: Creating, Updating & Deleting
-                                </div>
-                                <p class="">In my last post on objects, I mentioned how most of what we do as JavaScript developers is working with objects. It's foundational to building JavaScript applications. We spoke about filtering, searching, and sorting. In this post, I'll go through three aspects of CRUD: Create, Update, and Delete.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="javascript"
-                        data-search-text="working with objects: filtering, searching &amp; sorting there are certain tasks so common that you&#39;re almost guaranteed to encounter them in any professional environment. one of those is working with objects. in this series, i&#39;m exploring some of the most common ways we work with objects. for this entry, we&#39;re starting with filtering, searching, and sorting. let&#39;s dig in. javascript">
-                        <time class="" datetime="2025-03-16">
-                            March 16, 2025
-                        </time>
-                        <a href="/articles/objects-search-filter-sort/" title="Open Blog Post - Working with Objects: Filtering, Searching & Sorting">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Working with Objects: Filtering, Searching & Sorting
-                                </div>
-                                <p class="">There are certain tasks so common that you're almost guaranteed to encounter them in any professional environment. One of those is working with objects. In this series, I'm exploring some of the most common ways we work with objects. For this entry, we're starting with filtering, searching, and sorting. Let's dig in.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="misc"
-                        data-search-text="using web fonts how many of us have struggled to find the right font for a web project? our first instinct is to use a custom font via a cdn or self-host it. we overlook web-safe fonts because we usually don&#39;t know what&#39;s available. but what if you could have the performance benefits without compromising style (too much)? let&#39;s talk about it. miscellaneous">
-                        <time class="" datetime="2025-03-08">
-                            March 08, 2025
-                        </time>
-                        <a href="/articles/web-safe-fonts/" title="Open Blog Post - Using Web Fonts">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Using Web Fonts
-                                </div>
-                                <p class="">How many of us have struggled to find the right font for a web project? Our first instinct is to use a custom font via a CDN or self-host it. We overlook web-safe fonts because we usually don't know what's available. But what if you could have the performance benefits without compromising style (too much)? Let's talk about it.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="javascript"
-                        data-search-text="a deeper dive into data attributes in my first post on attributes, we looked at the difference between attributes and props. this time we&#39;ll dive deeper into data attributes. learn how to leverage the javascript dataset api for dynamic data management in the dom. explore performance benefits, event delegation, mutationobserver, and best practices for using data attributes efficiently. javascript">
-                        <time class="" datetime="2025-03-03">
-                            March 03, 2025
-                        </time>
-                        <a href="/articles/data-attributes/" title="Open Blog Post - A Deeper Dive Into Data Attributes">
-                            <div class="card-content">
-                                <div class="h3">
-                                    A Deeper Dive Into Data Attributes
-                                </div>
-                                <p class="">In my first post on attributes, we looked at the difference between attributes and props. This time we'll dive deeper into data attributes. Learn how to leverage the JavaScript dataset API for dynamic data management in the DOM. Explore performance benefits, event delegation, MutationObserver, and best practices for using data attributes efficiently.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="misc"
-                        data-search-text="draw the owl the owl—besides being my site&#39;s unofficial mascot and my dad’s favorite animal—has had a pretty big impact on my life. during my time at the startup institute of new york, we were given the exercise to &#34;draw an owl.&#34; what seemed like a random task at the time ended up teaching me something that stuck with me for the rest of my life. let’s talk about it. miscellaneous">
-                        <time class="" datetime="2025-03-01">
-                            March 01, 2025
-                        </time>
-                        <a href="/articles/draw-the-owl/" title="Open Blog Post - Draw The Owl">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Draw The Owl
-                                </div>
-                                <p class="">The owl—besides being my site's unofficial mascot and my dad’s favorite animal—has had a pretty big impact on my life. During my time at the Startup Institute of New York, we were given the exercise to "Draw an Owl." What seemed like a random task at the time ended up teaching me something that stuck with me for the rest of my life. Let’s talk about it.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="javascript"
-                        data-search-text="properties vs attributes in javascript we&#39;ve all used properties and attributes in our code. but for a long time, i really didn’t understand the difference. in short, attributes set initial values, while properties reflect an element’s dynamic state after interaction or manipulation. simple enough, but how does that relate to data-attributes? what about custom elements? let’s take a deep dive and figure out the key differences. javascript">
-                        <time class="" datetime="2025-02-23">
-                            February 23, 2025
-                        </time>
-                        <a href="/articles/props-vs-attributes/" title="Open Blog Post - Properties Vs Attributes in Javascript">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Properties Vs Attributes in Javascript
-                                </div>
-                                <p class="">We've all used properties and attributes in our code. But for a long time, I really didn’t understand the difference. In short, attributes set initial values, while properties reflect an element’s dynamic state after interaction or manipulation. Simple enough, but how does that relate to data-attributes? What about custom elements? Let’s take a deep dive and figure out the key differences.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="javascript"
-                        data-search-text="javascript as a progressive enhancement many of us have grown accustomed to the current javascript landscape. we&#39;ve worked with various component libraries and frameworks, learned front-end routing and state management, and, at times, experienced &#39;javascript fatigue.&#39; but have we stretched the language too far beyond its original purpose? javascript">
-                        <time class="" datetime="2025-02-23">
-                            February 23, 2025
-                        </time>
-                        <a href="/articles/js-as-a-progressive-enhancement/" title="Open Blog Post - Javascript As a Progressive Enhancement">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Javascript As a Progressive Enhancement
-                                </div>
-                                <p class="">Many of us have grown accustomed to the current JavaScript landscape. We've worked with various component libraries and frameworks, learned front-end routing and state management, and, at times, experienced 'JavaScript fatigue.' But have we stretched the language too far beyond its original purpose?</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-                
-                    
-                    
-                    <article
-                        class="article-card card-split"
-                        data-category="css"
-                        data-search-text="dark and light mode with custom properties the typical way of adding dark and light mode themes to a website is to add a class on the body that all of your styles can inherit. using javascript, you toggle this class and even use localstorage to save the user&#39;s preferences. but with css custom properties and media queries, this process becomes much easier. css">
-                        <time class="" datetime="2025-02-23">
-                            February 23, 2025
-                        </time>
-                        <a href="/articles/dark-light-mode-with-custom-properties/" title="Open Blog Post - Dark and Light Mode with Custom Properties">
-                            <div class="card-content">
-                                <div class="h3">
-                                    Dark and Light Mode with Custom Properties
-                                </div>
-                                <p class="">The typical way of adding dark and light mode themes to a website is to add a class on the body that all of your styles can inherit. Using JavaScript, you toggle this class and even use localStorage to save the user's preferences. But with CSS custom properties and media queries, this process becomes much easier.</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                
-            
-
-            <p class="article-empty-state" data-empty-state hidden>
-                No articles matched that search. Try a different term or clear the filters.
-            </p>
-        </div>
-    </div>
-</section>
-
+               </main>
+            </article>
          </div>
       </main>
    
@@ -700,6 +312,7 @@
  </footer>
 
    </div>
+
    <!-- inline scripts -->
    <script>
       document.body.classList.add("js-enabled");

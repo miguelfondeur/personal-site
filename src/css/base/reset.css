@@ -50,6 +50,12 @@
         color: currentColor;
     }
 
+    /* The hidden attribute has to beat component display rules, otherwise a
+       selector like .article-card.card-split{display:flex} keeps it visible. */
+    [hidden] {
+        display: none !important;
+    }
+
     /* Make images easier to work with */
     img,
     picture {

@@ -6,6 +6,15 @@ html {
     /* Set on html for consistency  */
     font-family: var(--font-family-body);
     line-height: 1.5;
+
+    /* Reserve the scrollbar's space whether or not the page scrolls, so short
+       pages don't shift the layout sideways against long ones. */
+    scrollbar-gutter: stable;
+
+    /* Track blends into the page. The thumb stays faintly visible so there's
+       still something to grab and to read scroll position from. */
+    scrollbar-width: thin;
+    scrollbar-color: light-dark(var(--color-gray-3), var(--color-dark-gray-1)) var(--color-bg-site);
 }
 
 /* Dark Mode */
