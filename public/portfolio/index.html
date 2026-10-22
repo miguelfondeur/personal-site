@@ -81,6 +81,7 @@
    </script>
    <script src="/js/index.js" type="module" defer></script>
    <script src="/js/popover.min.js" type="module" defer></script>
+   <script src="/js/invokers.min.js" type="module" defer></script>
 </head>
 <body data-theme="">
    <div class="site-wrapper">
@@ -155,7 +156,7 @@
       
          
             <li class="work-item">
-               <button class="work-item-button" popovertarget="sweetwater" aria-label="Click to view details for Sweetwater">
+               <button class="work-item-button" command="show-modal" commandfor="sweetwater" aria-label="Click to view details for Sweetwater">
                   <div class="expand-icon">
                      <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
                   </div>
@@ -169,8 +170,8 @@
             </li>
 
             <!-- Work Dialog -->
-            <dialog class="work-modal" id="sweetwater" popover aria-labelledby="sweetwater-header" aria-describedby="sweetwater-content">
-               <button class="close-dialog-button" popovertarget="sweetwater" popovertargetaction="hide">
+            <dialog class="work-modal" id="sweetwater" aria-labelledby="sweetwater-header" aria-describedby="sweetwater-content">
+               <button class="close-dialog-button" command="close" commandfor="sweetwater" aria-label="Close Sweetwater details">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                   </svg>
@@ -582,7 +583,325 @@
       
          
             <li class="work-item">
-               <button class="work-item-button" popovertarget="musora" aria-label="Click to view details for Musora">
+               <button class="work-item-button" command="show-modal" commandfor="platformDesign" aria-label="Click to view details for Platform Design">
+                  <div class="expand-icon">
+                     <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
+                  </div>
+                  <div class="work-thumb">
+                     <img loading="lazy" src="/img/cv/cv-platform.webp" alt="Platform Design thumbnail">
+                  </div>
+                  <h3>Platform Design</h3>
+                  <p>A design token workspace for sharing one design system across frontend projects, Figma, and AI agents.</p>
+               </button>
+               <div class="work-hover-state"></div>
+            </li>
+
+            <!-- Work Dialog -->
+            <dialog class="work-modal" id="platformDesign" aria-labelledby="platformDesign-header" aria-describedby="platformDesign-content">
+               <button class="close-dialog-button" command="close" commandfor="platformDesign" aria-label="Close Platform Design details">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+               </button>
+               <div class="container" data-width="small-center">
+                  <header id="platformDesign-header">
+                     <div class="work-thumb" data-size="large">
+                        <img loading="lazy" src="/img/cv/cv-platform.webp" alt="Platform Design thumbnail">
+                     </div>
+                     <div class="work-header">
+                        <h1>Platform Design</h1>
+                        <div class="work-subtitle">
+                           <h3>Creator</h3>
+                           <p>
+                              <time datetime="Jul 2026">Jul 2026</time> 
+                              <span aria-hidden="true">—</span> 
+                              <time datetime="Oct 2026">Oct 2026</time>
+                           </p>
+                        </div>
+                     </div>
+                  </header>
+                  <main id="platformDesign-content">
+                     
+                        <div class="work-header-image">
+                           <img src="/img/work/platform/platform-homepage.webp" alt="Example image of Platform Design">
+                        </div>
+                     
+                     <!-- Description -->
+                     <h2>Description</h2>
+                     <p>Platform (platformdesign.app) helped developers and designers create, manage, and share UI design systems across frontend projects and Figma using MCP and direct JSON exports. Each project was a single JSON token document that you could edit visually, share with teammates, preview, and connect to AI tools through a built-in MCP server. I built it with a Go backend, a vanilla JavaScript frontend using Web Components and a custom state manager, and PostgreSQL, all hosted on Railway. I've since decided to sunset the project, so this is a record of what I built and how I built it.
+</p>
+                     <!-- Accomplishments -->
+                     <section class="content-section">
+                        <h2>Accomplishments</h2>
+                        <ul class="work-accomplishments">
+                           
+                              <li>Designed and built the full product, including the Go API, Postgres schema, marketing site, documentation, and workspace UI.</li>
+                           
+                              <li>Built a Go backend on net/http with JWT auth, Google sign-in, email verification, and project sharing.</li>
+                           
+                              <li>Built the workspace as a single-page app using native Web Components with no build step.</li>
+                           
+                              <li>Created a signals-based state manager (Signal, Effect, Computed, and batch) to share state across components.</li>
+                           
+                              <li>Built an MCP server so AI agents like Claude Code could read a project's tokens and usage rules while writing components.</li>
+                           
+                              <li>Exported tokens as CSS variables, DTCG JSON for Figma, and a flat JSON theme object for React Native and CSS-in-JS.</li>
+                           
+                              <li>Generated 50 to 950 color ramps from a single seed color using OKLCh.</li>
+                           
+                              <li>Added CSS and DTCG imports so teams could bring in an existing design system.</li>
+                           
+                        </ul>
+                     </section>
+                     <!-- Technologies -->
+                     <section class="content-section">
+                        <h2>Technologies</h2>
+                        <ul class="tags" role="list">
+                           
+                              <li>Go</li>
+                           
+                              <li>PostgreSQL</li>
+                           
+                              <li>Web Components</li>
+                           
+                              <li>Signals</li>
+                           
+                              <li>MCP</li>
+                           
+                              <li>Design Tokens</li>
+                           
+                              <li>Figma</li>
+                           
+                              <li>Railway</li>
+                           
+                        </ul>
+                     </section>
+                     
+                        <section class="content-section">
+                           <h2>Links</h2>
+                              <ul role="list" class="links">
+                                 
+                                    
+                                       <li>
+                                          <a href="https://github.com/Platform-DS/platform-design-skills" target="_blank" title="Go to Platform Design Agent Skill">
+                                             <svg viewBox="0 0 24 24" aria-hidden="true" class="" width="24"><path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor"></path></svg>
+                                             Platform Design Agent Skill
+                                          </a>
+                                       </li>
+                                    
+                                 
+                              </ul>
+                        </section>
+                     
+                     <!-- Details -->
+                     
+                        <section class="content-section">
+                           <h2>Details</h2>
+                           <!-- Details -->
+<details name="accordion">
+    <summary>Goal and Approach</summary>
+    <div class="details-content">
+        <p>
+            Every team I've worked with has had a design system in some form, and it usually lives in several places at once: a Figma library, a CSS file full of custom properties, a theme object somewhere in the app, and a Storybook that may or may not be up to date. Keeping all of those in sync is manual work, and that's usually where inconsistencies creep in.
+        </p>
+        <p>
+            AI coding tools made the problem even more noticeable. If an agent doesn't know your project has a <code>--color-primary</code> variable, it will happily make up its own hex value. I wanted to build a single place for a team's tokens to live, so that teammates, previews, exports, and AI agents were all reading from the same source.
+        </p>
+        <p><strong>The basic workflow looked like this:</strong></p>
+        <ul role="list">
+            <li><strong>Create a project</strong>: a single JSON token document, started from a default design system you could customize.</li>
+            <li><strong>Add tokens</strong>: organized into groups like color, typography, spacing, radius, and shadow, with live previews as you type.</li>
+            <li><strong>Share it</strong>: invite teammates by email so the project shows up in their workspace.</li>
+            <li><strong>Use it</strong>: export to CSS, Figma, or JSON, or connect an AI client to the MCP server.</li>
+        </ul>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/platform/platform-docs.webp" alt="Platform documentation page titled Create and share your design systems" loading="lazy">
+        </div>
+    </div>
+</details>
+<details name="accordion">
+    <summary>Building the Workspace</summary>
+    <div class="details-content">
+        <p>
+            I organized each project into four categories: <strong>Brand</strong>, <strong>Assets</strong>, <strong>Design Tokens</strong>, and <strong>Components</strong>. Each category had its own section in the sidebar, and you could add to it by opening the category and creating a new entry from its modal. New projects started from the <strong>Platform Starter</strong>, a complete design system with real values in every category, so users had something to work with right away. Let's go through each category.
+        </p>
+        <h3>Brand</h3>
+        <div class="detail-image-wrapper" data-scrollable="true">
+            <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+                <img src="/img/work/platform/brand-category.webp" alt="Platform's Brand category showing the Start Here document of the Platform Starter project" loading="lazy">
+            </div>
+            <div class="scroll-indicator">
+                <em><span class="sr-only">This Section is</span> Scrollable</em>
+            </div>
+        </div>
+        <p>
+            Brand held the written documentation for the design system, such as brand guidelines, design principles, how to use the tokens, component conventions, and a checklist to review before shipping. These were the documents I expected a new teammate, or an AI agent, to read first. The MCP server also sent these usage rules along with the tokens.
+        </p>
+        <h3>Assets</h3>
+        <div class="detail-image-wrapper" data-scrollable="true">
+            <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+                <img src="/img/work/platform/assets-category.webp" alt="Platform's Assets category showing a grid of SVG icon tokens" loading="lazy">
+            </div>
+            <div class="scroll-indicator">
+                <em><span class="sr-only">This Section is</span> Scrollable</em>
+            </div>
+        </div>
+        <p>
+            Assets were for SVG icons, images, and masks. Under the hood they worked just like tokens, but I gave them their own category since they point to a file rather than describe a value. For security, SVG markup was rendered as an image source instead of being injected into the page, which meant an icon could never run a script.
+        </p>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/platform/new-assets-modal.webp" alt="New asset group modal with a group name field and an SVG token type" loading="lazy">
+        </div>
+        <h3>Design Tokens</h3>
+        <div class="detail-image-wrapper" data-scrollable="true">
+            <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+                <img src="/img/work/platform/design-tokens-category.webp" alt="Platform's Design Tokens category showing seven color seeds, each with a generated 50 to 950 ramp" loading="lazy">
+            </div>
+            <div class="scroll-indicator">
+                <em><span class="sr-only">This Section is</span> Scrollable</em>
+            </div>
+        </div>
+        <p>
+            Design Tokens were the core of the app. Platform supported groups for color, size, font family, font size, font weight, line height, letter spacing, border radius, border width, shadows, opacity, gradients, filters, transforms, clip paths, and more. When you created a group, you gave it a name and chose a token type, and every token in that group shared the type. Exported variables were named by type, so you could name your groups however you liked. Each group also had space for its own documentation.
+        </p>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/platform/new-design-token-modal.webp" alt="New token group modal with a group name field and a Color token type" loading="lazy">
+        </div>
+        <p>
+            The palette in the screenshot above shows how color worked. You chose one seed color per hue, and Platform generated a full 50 to 950 ramp from it. The starter's seven hues became seventy-seven CSS variables on export. I'll explain how the ramps were generated in the backend section.
+        </p>
+        <h3>Components</h3>
+        <div class="detail-image-wrapper" data-scrollable="true">
+            <div class="scroll-container" tabindex="0" role="region" aria-label="Scrollable image content">
+                <img src="/img/work/platform/components-category.webp" alt="Platform's Components category showing button variants rendered above their HTML markup" loading="lazy">
+            </div>
+            <div class="scroll-indicator">
+                <em><span class="sr-only">This Section is</span> Scrollable</em>
+            </div>
+        </div>
+        <p>
+            Components let you build examples of your UI with HTML markup and a stylesheet that used the project's own tokens. Each component was previewed in a sandboxed frame that didn't run JavaScript. Since the styles referenced tokens, updating a value like <code>--color-primary</code> updated every button variant and state in the preview.
+        </p>
+        <div class="detail-image-wrapper">
+            <img src="/img/work/platform/new-component-modal.webp" alt="New component modal with a component name field and a Start from option" loading="lazy">
+        </div>
+    </div>
+</details>
+<details name="accordion">
+    <summary>Building the Backend</summary>
+    <div class="details-content">
+        <p>
+            The server was written in Go using the standard <code>net/http</code> package. Go 1.22 added method and path patterns to <code>ServeMux</code>, so I could write the route table with one handler per line. Handlers that required a signed-in user were wrapped in an auth middleware that passed the user in as an argument. The public pages (home, docs, and sign in) were rendered with Go HTML templates, and the workspace was a single-page app served as static files.
+        </p>
+        <p>
+            Data was stored in PostgreSQL behind small repository interfaces, which also made it easy to fake the database in tests. The schema migrated automatically on startup, so running the whole app locally only took a <code>docker compose up</code>.
+        </p>
+        <h3>Importing and Exporting Tokens</h3>
+        <p>
+            Most of the interesting work happened in the import and export code. A few decisions shaped how it worked:
+        </p>
+        <ul role="list" class="long-list">
+            <li>
+                <strong>Resolving aliases on import.</strong> When a design system referenced one token from another, I resolved the reference at import time, so every stored token was a literal value. This also worked well for Figma, since many Figma plugins can't resolve aliases.
+            </li>
+            <li>
+                <strong>Testing the round trip.</strong> A group called "Primitives Color" holding <code>green-500</code> exported as <code>primitives/color/green-500</code>, which is the same path it would have been imported from. I wrote a test to make sure an export could be imported back without any changes.
+            </li>
+            <li>
+                <strong>Working within Figma's limits.</strong> The DTCG export was meant to give a Figma file a starting point, but it didn't keep the two in sync. Figma also has no variable type for shadows, gradients, or images (those are styles in Figma), so I still exported them for importing back into Platform and noted in the docs that Figma plugins would skip them.
+            </li>
+            <li>
+                <strong>Separate files for authoring and code.</strong> The JSON export kept everything needed to edit the design system, including groups, order, and descriptions. The code export was a flat object with camelCased keys like <code>colorGreen500</code>, for React Native, styled-components, or a plain theme object. Flattening the keys lost the group information, so the code export couldn't be imported back.
+            </li>
+        </ul>
+        <h3>Generating Color Ramps</h3>
+        <p>
+            A color token stored the single value someone chose, and Platform generated an eleven-step ramp (50 to 950) wherever it was needed. I used the OKLCh color space for this. Mixing toward white and black in sRGB tends to produce muddy mid-tones and shift the hue, while OKLCh keeps the steps looking even. I also reduced the chroma at both ends of the ramp so the lightest shades didn't look neon and the darkest didn't look muddy. Step 500 was always the original seed color.
+        </p>
+        <p>
+            One challenge was that the CSS export was built in the browser and the code export was built in Go, so I had to write the same algorithm twice. To keep them consistent, I generated a fixtures file from the JavaScript version and wrote a Go test that checks its output against it.
+        </p>
+    </div>
+</details>
+<details name="accordion">
+    <summary>Building the Frontend</summary>
+    <div class="details-content">
+        <p>
+            After <strong>Brick Art Creator</strong>, I wanted to see how far I could take vanilla Web Components. The Platform workspace was a single-page app built entirely with native custom elements. There was no bundler or transpiler, so the <code>.mjs</code> files in the <code>public/</code> folder were exactly what the browser loaded, and the production Docker image didn't need Node at all.
+        </p>
+        <p>
+            I did use TypeScript as a development-only type checker. Running <code>tsc --checkJs --noEmit</code> over the JSDoc in my helper files (token documents, palettes, and exports) found sixteen real bugs on the first run, including three fields that were silently being dropped when a project loaded.
+        </p>
+        <h3>A Signals-Based State Manager</h3>
+        <p>
+            In the Brick Art Creator lessons, I wrote that you'll miss reactivity when working with Custom Elements. For Platform, I built a small signals library to fill that gap. A <code>Signal</code> holds a value and notifies its subscribers when it changes, an <code>Effect</code> keeps track of the signals it reads and re-runs when any of them change, and a <code>Computed</code> derives its value from other signals.
+        </p>
+        <p>
+            The part I'm most proud of is <code>batch()</code>. Editing a token can update several signals at once, and without batching, every subscriber would run after each update and briefly show a partially updated state. Inside a batch, notifications are queued and then delivered once after the last update. I also added a limit on how many times the queue can re-run, so if two effects ever kept triggering each other, the app logs an error and stops rather than freezing the browser tab.
+        </p>
+        <h3>The App's Own Design System</h3>
+        <p>
+            Of course, a design token app needed its own design tokens. The app's styles were built on CSS custom properties in a single <code>tokens.css</code> file, shared by the marketing site and the workspace in both light and dark modes. One example of a rule from that file: the bright brand green only had about 1.8:1 contrast against the light background, so I used <code>--color-primary</code> for fills and a separate, darker <code>--color-primary-text</code> for accent text in light mode.
+        </p>
+        <p>
+            Each project could also have a preview page, written in HTML and CSS by the project's author. Platform injected the project's tokens as CSS custom properties and rendered the page in a sandboxed iframe. This meant that <code>var(--color-primary)</code> in the preview used the same variable name a developer would use in production.
+        </p>
+    </div>
+</details>
+<details name="accordion">
+    <summary>Building the MCP Server</summary>
+    <div class="details-content">
+        <p>
+            The feature I was most excited about was the built-in <abbr title="Model Context Protocol">MCP</abbr> server. Any MCP client, like Claude Code, could connect to <code>/mcp</code> with a personal access token and use two tools: <code>list_projects</code> and <code>get_design_tokens</code>.
+        </p>
+<pre class="language-bash"><code class="language-bash">claude mcp <span class="token function">add</span> <span class="token parameter variable">--transport</span> http platform https://platformdesign.app/mcp <span class="token punctuation">\</span>
+  <span class="token parameter variable">--header</span> <span class="token string">"Authorization: Bearer YOUR_TOKEN"</span></code></pre>
+<p><p>
+I put a lot of thought into what the agent received. The response started with the project's <strong>rules</strong>, the usage guide written by the project's author, since that's the part that tells an agent which token to use and when. After that came the token groups, in the same order the author arranged them. Each token included both its CSS variable name and its JavaScript property name (<code>css_variable</code> and <code>js_property</code>), so the agent didn't have to guess how to reference it in code.
+</p>
+<p>
+I also published a companion <a href="https://github.com/Platform-DS/platform-design-skills" title="Go to the Platform Design Agent Skill on GitHub" target="_blank">Agent Skill</a> that teaches an agent how to use this data. Inside the app, there was also an AI sidebar, which went through the server so the API key never reached the browser.
+</p>
+</div></p>
+</details>
+<details name="accordion">
+    <summary>Lessons Learned</summary>
+    <div class="details-content">
+        <p>
+            Platform was a fun project, and I'm happy with what I built. I've decided to sunset it, though, and the reason behind that decision is probably the most valuable thing I learned.
+        </p>
+        <h3>Lesson One: Switching Has a Cost.</h3>
+        <p>
+            Many teams already have their own workflows for managing design systems. Asking them to adopt another platform means asking them to invest time in setup, migration, and learning something new. The productivity gains have to outweigh that effort, and for the teams I was hoping to help, I don't think the case was strong enough.
+        </p>
+        <h3>Lesson Two: I've Seen This Before.</h3>
+        <p>
+            In my Block Digital lessons, I wrote "maybe you shouldn't reinvent the wheel" and "simplicity is subjective." Platform reminded me of the same thing. Even if a tool is simpler or better integrated than what a team uses now, the team still has to choose to switch. Next time, I'd talk to more teams about what switching would actually cost them before building so much of the product.
+        </p>
+        <h3>Lesson Three: You Can Go a Long Way With Vanilla.</h3>
+        <p>
+            A Go server, native Web Components, and a signals library under 300 lines were enough to build a multi-user app with auth, sharing, imports, exports, and an MCP server. I never felt like I needed a framework, and the codebase stayed easy to understand the whole way through.
+        </p>
+        <h3>Lesson Four: Hosting Has Its Ups and Downs.</h3>
+        <p>
+            Railway made it easy to deploy a Dockerfile alongside a Postgres database, and the Go server shut down gracefully so in-flight requests could finish during each redeploy. It had its rough patches, though, and with managed hosting there's only so much you can control.
+        </p>
+        <p>
+            If you're interested in how design systems can speed up development on larger teams, with AI or otherwise, feel free to reach out. I'd love to talk about it.
+        </p>
+    </div>
+</details>
+
+                        </section>
+                     
+                  </main>
+               </div>
+            </dialog>
+         
+      
+         
+            <li class="work-item">
+               <button class="work-item-button" command="show-modal" commandfor="musora" aria-label="Click to view details for Musora">
                   <div class="expand-icon">
                      <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
                   </div>
@@ -596,8 +915,8 @@
             </li>
 
             <!-- Work Dialog -->
-            <dialog class="work-modal" id="musora" popover aria-labelledby="musora-header" aria-describedby="musora-content">
-               <button class="close-dialog-button" popovertarget="musora" popovertargetaction="hide">
+            <dialog class="work-modal" id="musora" aria-labelledby="musora-header" aria-describedby="musora-content">
+               <button class="close-dialog-button" command="close" commandfor="musora" aria-label="Close Musora details">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                   </svg>
@@ -944,7 +1263,7 @@
       
          
             <li class="work-item">
-               <button class="work-item-button" popovertarget="brickArt" aria-label="Click to view details for Brick Art Creator">
+               <button class="work-item-button" command="show-modal" commandfor="brickArt" aria-label="Click to view details for Brick Art Creator">
                   <div class="expand-icon">
                      <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
                   </div>
@@ -958,8 +1277,8 @@
             </li>
 
             <!-- Work Dialog -->
-            <dialog class="work-modal" id="brickArt" popover aria-labelledby="brickArt-header" aria-describedby="brickArt-content">
-               <button class="close-dialog-button" popovertarget="brickArt" popovertargetaction="hide">
+            <dialog class="work-modal" id="brickArt" aria-labelledby="brickArt-header" aria-describedby="brickArt-content">
+               <button class="close-dialog-button" command="close" commandfor="brickArt" aria-label="Close Brick Art Creator details">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                   </svg>
@@ -1281,7 +1600,7 @@ Users can also download the parts data as an <abbr title="eXtensible Markup Lang
       
          
             <li class="work-item">
-               <button class="work-item-button" popovertarget="blockDigital" aria-label="Click to view details for Block Digital">
+               <button class="work-item-button" command="show-modal" commandfor="blockDigital" aria-label="Click to view details for Block Digital">
                   <div class="expand-icon">
                      <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
                   </div>
@@ -1295,8 +1614,8 @@ Users can also download the parts data as an <abbr title="eXtensible Markup Lang
             </li>
 
             <!-- Work Dialog -->
-            <dialog class="work-modal" id="blockDigital" popover aria-labelledby="blockDigital-header" aria-describedby="blockDigital-content">
-               <button class="close-dialog-button" popovertarget="blockDigital" popovertargetaction="hide">
+            <dialog class="work-modal" id="blockDigital" aria-labelledby="blockDigital-header" aria-describedby="blockDigital-content">
+               <button class="close-dialog-button" command="close" commandfor="blockDigital" aria-label="Close Block Digital details">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                   </svg>
@@ -1625,7 +1944,7 @@ While this CMS setup successfully met my goals, it also introduced some challeng
       
          
             <li class="work-item">
-               <button class="work-item-button" popovertarget="knozen" aria-label="Click to view details for Knozen">
+               <button class="work-item-button" command="show-modal" commandfor="knozen" aria-label="Click to view details for Knozen">
                   <div class="expand-icon">
                      <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
                   </div>
@@ -1639,8 +1958,8 @@ While this CMS setup successfully met my goals, it also introduced some challeng
             </li>
 
             <!-- Work Dialog -->
-            <dialog class="work-modal" id="knozen" popover aria-labelledby="knozen-header" aria-describedby="knozen-content">
-               <button class="close-dialog-button" popovertarget="knozen" popovertargetaction="hide">
+            <dialog class="work-modal" id="knozen" aria-labelledby="knozen-header" aria-describedby="knozen-content">
+               <button class="close-dialog-button" command="close" commandfor="knozen" aria-label="Close Knozen details">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                   </svg>
@@ -1912,7 +2231,7 @@ questions, and shared thousands of their profiles on Instagram We were also feat
       
          
             <li class="work-item">
-               <button class="work-item-button" popovertarget="s360" aria-label="Click to view details for Simply360">
+               <button class="work-item-button" command="show-modal" commandfor="s360" aria-label="Click to view details for Simply360">
                   <div class="expand-icon">
                      <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
                   </div>
@@ -1926,8 +2245,8 @@ questions, and shared thousands of their profiles on Instagram We were also feat
             </li>
 
             <!-- Work Dialog -->
-            <dialog class="work-modal" id="s360" popover aria-labelledby="s360-header" aria-describedby="s360-content">
-               <button class="close-dialog-button" popovertarget="s360" popovertargetaction="hide">
+            <dialog class="work-modal" id="s360" aria-labelledby="s360-header" aria-describedby="s360-content">
+               <button class="close-dialog-button" command="close" commandfor="s360" aria-label="Close Simply360 details">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                   </svg>

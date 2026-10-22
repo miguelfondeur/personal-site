@@ -5,8 +5,31 @@ dialog.work-modal {
     height: 100%;
     min-height: 100%;
     background-color: light-dark(var(--color-white), var(--color-dark-gray-4));
-    padding-block: 0;
+    padding: 0;
     overflow-y: scroll;
+
+    /* A modal dialog is capped short of the viewport by the UA stylesheet;
+       this one is meant to fill it. */
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid;
+    border-color: light-dark(var(--color-gray-2), var(--color-dark-gray-1));
+
+    /* Fade in on open and out on close. display and overlay are discrete,
+       so they need allow-discrete to stay put until the fade finishes. */
+    opacity: 0;
+    transition:
+        opacity 0.2s,
+        display 0.2s allow-discrete,
+        overlay 0.2s allow-discrete;
+
+    &[open] {
+        opacity: 1;
+
+        @starting-style {
+            opacity: 0;
+        }
+    }
 
     /* Remove Scrollbars */
     &::-webkit-scrollbar {
@@ -238,7 +261,27 @@ dialog.work-modal {
                 height: 100%;
                 top:0;
                 left:0;
-                overflow-y: scroll;
+                overflow-y: auto;
+
+                /* Reserve the gutter so the image never reflows when the
+                   scrollbar appears. Track stays transparent; the thumb is
+                   hidden by color, never by width, so showing it costs no
+                   layout. */
+                scrollbar-gutter: stable;
+                scrollbar-width: thin;
+                scrollbar-color: light-dark(var(--color-gray-3), var(--color-dark-gray-1)) transparent;
+
+                /* Touch screens have no pointer to rest, so they keep the
+                   thumb visible. */
+                @media (hover: hover) {
+                    scrollbar-color: transparent transparent;
+                    transition: scrollbar-color 120ms linear;
+
+                    &:hover,
+                    &:focus-within {
+                        scrollbar-color: light-dark(var(--color-gray-3), var(--color-dark-gray-1)) transparent;
+                    }
+                }
             }
 
             & img {

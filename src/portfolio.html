@@ -16,7 +16,7 @@ layout: layout.html
       {% for item in sortedCollection %}
          {% unless item.data.draft %}
             <li class="work-item">
-               <button class="work-item-button" popovertarget="{{ item.data.id }}" aria-label="Click to view details for {{ item.data.name }}">
+               <button class="work-item-button" command="show-modal" commandfor="{{ item.data.id }}" aria-label="Click to view details for {{ item.data.name }}">
                   <div class="expand-icon">
                      <svg aria-label="Expand Icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg>
                   </div>
@@ -30,8 +30,8 @@ layout: layout.html
             </li>
 
             <!-- Work Dialog -->
-            <dialog class="work-modal" id="{{ item.data.id }}" popover aria-labelledby="{{ item.data.id }}-header" aria-describedby="{{ item.data.id }}-content">
-               <button class="close-dialog-button" popovertarget="{{ item.data.id }}" popovertargetaction="hide">
+            <dialog class="work-modal" id="{{ item.data.id }}" aria-labelledby="{{ item.data.id }}-header" aria-describedby="{{ item.data.id }}-content">
+               <button class="close-dialog-button" command="close" commandfor="{{ item.data.id }}" aria-label="Close {{ item.data.name }} details">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="4.8rem" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                   </svg>

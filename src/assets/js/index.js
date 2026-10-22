@@ -10,7 +10,7 @@ console.log('%cWelcome to MiguelFondeur.com', 'color: #b6a572; font-size: 18px; 
 initThemeToggle();
 
 // Initialize modals
-// initModals();
+initModals();
 
 // Initialize article search (no-ops on pages without the articles list)
 initArticleSearch();
