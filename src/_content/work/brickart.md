@@ -6,36 +6,69 @@ id: brickArt
 role: Creator
 order: 2
 start: Jan 2024
-end: Oct 2024
+end: Present
 thumb: /img/cv/cv-brickart.webp
 header_image: /img/work/brickart/brickart-conversion.webp
-tech: [HTML Canvas, Web Components, Hugo, Tailwind, UI/UX]
-description: Web app to convert images to mosaic art. Inspired by Lego's Art series.
+tech: [Go, PostgreSQL, Web Components, Signals, HTML Canvas, Stripe, Google OAuth, Railway]
+description: Web app that turns a photo into a buildable brick mosaic, with a parts list and step-by-step building instructions.
 summary: |
-  This was a personal project I built inspired by Lego's Art series. The app creates a grid mosaic based on the 
-  size and specification of the lego sets. You can upload an image and edit your own image, then transform it into
-  a grid mosaic. You can then view the lego(esque) instructions and even purchase parts through a third party by uploading 
-  parts data to their platform.
+  Brick Art Creator (brickartcreator.com) turns any photo into a brick mosaic you can actually build. You pick a canvas size,
+  upload a photo, convert it to bricks, and touch up any brick by hand. When you finish, you get a parts list you can order
+  from LEGO Pick a Brick or BrickLink, plus a step-by-step building booklet. I started it in 2024 as a personal project inspired
+  by LEGO's Art series, and in the fall of 2026 I rebuilt it as a product: a Go server, PostgreSQL, Google sign-in, saved mosaics,
+  and Stripe payments. Designing is free, and you pay $9 to unlock one build or $49 a year for unlimited builds.
 links:
+  - brickartcreator.com: https://brickartcreator.com
   - github.com: https://github.com/miguelfondeur/legoartcreator
-  - brickartcreator.netlify.app: https://brickartcreator.netlify.app/#creator
 accomplishments:
   [
-    "Created a web app to translate images to mosaics, inspired by the Lego Art series.",
-    "Used canvas to analyze image in an two dimensional grid.",
-    "Allowed users to edit mosaic.",
-    "Used events library to share state across multiple components.",
-    "Step Two allowed generated instructions on how to build mosaic based on grid data.",
-    "Step Three allowed users to purchase parts and download parts data as XML.",
+    "Designed and built the full product, including the landing page, the creator, accounts, payments, and the building booklet.",
+    "Rebuilt the backend in Go on net/http with PostgreSQL, embedded SQL migrations, and a single binary that serves the whole site.",
+    "Added Google sign-in and saved mosaics that sync from the browser to the account a few seconds after each change.",
+    "Integrated Stripe Checkout with verified, idempotent webhooks for one-time unlocks and a yearly Unlimited plan.",
+    "Kept the creator in vanilla JavaScript Web Components and moved shared state to signals.",
+    "Matched photo colors to the brick palette in CIELAB using CIEDE2000, averaging pixels in linear light so hues hold up in dark areas.",
+    "Exported parts lists for LEGO Pick a Brick (CSV) and BrickLink (XML), with price totals.",
+    "Generated a printable building booklet split into 16x16 sections, with a cover that shows the finished mosaic hanging in a room.",
+    "Covered the app with Go tests, unit tests, and end-to-end tests that drive the real binary in Chrome.",
   ]
 ---
 
 <!-- Details -->
 <details name="accordion">
-    <summary>Goal and Approach</summary>
+    <summary>Rebuilding It as a Product (2026)</summary>
+    <div class="details-content">
+        <p>
+            In the fall of 2026 I came back to Brick Art Creator with a bigger goal: I wanted to turn the proof of concept into something people could sign up for, save their work in, and pay for. The creator itself was still in good shape, so I kept it and rebuilt everything around it. It now lives at <a href="https://brickartcreator.com" title="Go to Brick Art Creator" target="_blank">brickartcreator.com</a>.
+        </p>
+        <h3>The Backend</h3>
+        <p>
+            I replaced Hugo with a <strong>Go</strong> server built on <code>net/http</code>. It renders the pages, owns the JSON API, and embeds the built front-end assets, so a single binary is the whole deployment. <strong>PostgreSQL</strong> stores users, subscriptions, and saved mosaics, and the SQL migrations run automatically at startup. People sign in with <strong>Google</strong>, and payments go through <strong>Stripe</strong> Checkout with signature-verified webhooks. Designing a mosaic is free. You pay $9 to unlock one build, or $49 a year for unlimited builds, and unlocking gives you the full parts list, the exports, and the building booklet.
+        </p>
+        <p>
+            I wanted saving to feel invisible. The browser keeps the working copy in <code>localStorage</code>, and when you're signed in, the same snapshot is pushed to your account a few seconds after each change. The server stores it as JSONB in the exact shape the browser writes, so I can add a new tool to the creator without writing a migration.
+        </p>
+        <h3>The Creator</h3>
+        <p>
+            The creator is still built with vanilla JavaScript custom elements, but I made two changes I talk about in Lessons Learned. I moved shared state from my pub/sub event bus to <strong>signals</strong>, and I moved the components to the light DOM so they could share one stylesheet. The steps are now Canvas, Image, Edit, and Finish. Finish holds the parts list, the building booklet, and a shareable picture of the finished mosaic.
+        </p>
+        <p>
+            I also rewrote the color matching. Comparing colors by straight distance in RGB treats every channel the same, which isn't how our eyes work, so dark, shaded colors were collapsing onto whatever brick happened to be closest. Now I average pixels in linear light and match them to the brick palette in <strong>CIELAB</strong> using <strong>CIEDE2000</strong>, which keeps hues intact. The before and after slider on the landing page runs the same matcher in the browser, so it shows the product's real output.
+        </p>
+        <h3>Parts and Instructions</h3>
+        <p>
+            Webrick is gone. The parts list now exports to <strong>LEGO Pick a Brick</strong> as CSV and to <strong>BrickLink</strong> as XML, so you can order genuine parts. The instructions became a printable booklet split into 16x16 sections, and its cover shows your mosaic hanging in a room, using a set of photos I processed to find where each size of board fits.
+        </p>
+        <p>
+            The sections below describe the original 2024 version and how I built it.
+        </p>
+    </div>
+</details>
+<details name="accordion">
+    <summary>Goal and Approach (2024)</summary>
     <div class="details-content">
         <div class="detail-image-wrapper">
-            <img src="/img/work/brickart/brickart-creator.webp" alt="Musora UI Colors" loading="lazy">
+            <img src="/img/work/brickart/brickart-creator.webp" alt="Brick Art Creator mosaic creator" loading="lazy">
         </div>
         <p>
             Inspired by the <a href="https://www.lego.com/en-us/product/jim-lee-batman-collection-31205" title="Go to Lego's Jim Lee Batman Art website" target="_blank">Lego Art Series</a>, I set out to build a web app for creating mosaic-style artwork similar to Lego’s Batman, Iron Man, and Beatles sets. The goal was to allow users to generate their own pixel art mosaics, visualize the grid layout, and receive step-by-step building instructions, including a list of required parts that could be purchased from 
@@ -206,7 +239,7 @@ accomplishments:
     </div>
 </details>
 <details name="accordion">
-    <summary>Lessons Learned</summary>
+    <summary>Lessons Learned (2024)</summary>
     <div class="details-content">
         <p>
             Wow, while the experiment of building a complex front-end application with JavaScript Custom Elements was ultimately a success, I definitely learned a lot about how they work <em>under the hood</em>.
@@ -243,6 +276,10 @@ accomplishments:
         </p>
         <p>
             They can be used with any framework. And I have a feeling that the language will evolve and browsers will start supporting new features that mimic some of the best parts of modern frameworks—without the headaches. I've seen it happen time and time again.
+        </p>
+        <h3>Looking Back from 2026</h3>
+        <p>
+            When I rebuilt the app, I acted on two of these lessons. I missed reactivity enough that I replaced the pub/sub event bus with signals, and now components update when the values they read change. I also moved the components out of the Shadow DOM and into the light DOM, which let me organize all of the CSS into one set of stylesheets. I still build with custom elements, and I'd still make the same choice.
         </p>
     </div>
 </details>

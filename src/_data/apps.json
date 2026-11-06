@@ -14,7 +14,7 @@
     {
         "name": "Brick Art Creator",
         "thumb": "/img/cv/cv-brickart.webp",
-        "summary": "Convert Images to mosaic art, view parts, and instructions. Inspired by Lego's Art series.",
-        "url": "https://brickartcreator.netlify.app/"
+        "summary": "Turn any photo into a brick mosaic you can build, with a parts list and step-by-step building instructions.",
+        "url": "https://brickartcreator.com/"
     }
 ]
